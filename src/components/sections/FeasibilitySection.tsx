@@ -1,15 +1,16 @@
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 const FeasibilitySection = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
-          entry.target.classList.add("animate-fade-in");
+          setIsVisible(true);
         }
       },
       { threshold: 0.2 }
@@ -30,7 +31,7 @@ const FeasibilitySection = () => {
     <section 
       id="feasibility"
       ref={sectionRef}
-      className="py-24 lg:py-32 relative opacity-0"
+      className={`py-24 lg:py-32 relative ${isVisible ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}
     >
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">

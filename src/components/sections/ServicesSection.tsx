@@ -1,5 +1,5 @@
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 const services = [
   {
@@ -50,13 +50,29 @@ const services = [
 const ServicesSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [isVisible, setIsVisible] = useState(false);
+  const [visibleCards, setVisibleCards] = useState<boolean[]>([false, false, false]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const cardObserver = new IntersectionObserver(
+      (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-in");
+          const index = cardRefs.current.findIndex(ref => ref === entry.target);
+          if (index !== -1 && entry.isIntersecting) {
+            setVisibleCards(prev => {
+              const newState = [...prev];
+              newState[index] = true;
+              return newState;
+            });
           }
         });
       },
@@ -68,7 +84,7 @@ const ServicesSection = () => {
     }
 
     cardRefs.current.forEach((card) => {
-      if (card) observer.observe(card);
+      if (card) cardObserver.observe(card);
     });
 
     return () => {
@@ -77,7 +93,7 @@ const ServicesSection = () => {
       }
       
       cardRefs.current.forEach((card) => {
-        if (card) observer.unobserve(card);
+        if (card) cardObserver.unobserve(card);
       });
     };
   }, []);
@@ -86,7 +102,7 @@ const ServicesSection = () => {
     <section 
       id="services"
       ref={sectionRef}
-      className="py-24 lg:py-32 relative opacity-0"
+      className={`py-24 lg:py-32 relative ${isVisible ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}
     >
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
@@ -105,8 +121,8 @@ const ServicesSection = () => {
               <div
                 key={index}
                 ref={(el) => (cardRefs.current[index] = el)}
-                className="service-card opacity-0"
-                style={{ animationDelay: `${index * 200}ms` }}
+                className={`service-card ${visibleCards[index] ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}
+                style={{ transitionDelay: `${index * 200}ms` }}
               >
                 <div className="mb-6">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-3 text-sas-white">{service.title}</h3>

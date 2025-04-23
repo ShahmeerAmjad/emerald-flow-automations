@@ -1,5 +1,5 @@
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { DollarSign, ArrowUp, X, ArrowUpRight } from "lucide-react";
 
 const valueProps = [
@@ -24,13 +24,14 @@ const valueProps = [
 const ValueSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const cardContainerRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
-          entry.target.classList.add("animate-fade-in");
+          setIsVisible(true);
         }
       },
       { threshold: 0.2 }
@@ -51,7 +52,7 @@ const ValueSection = () => {
     <section 
       id="values"
       ref={sectionRef}
-      className="py-24 lg:py-32 relative opacity-0 bg-sas-darkGray/30"
+      className={`py-24 lg:py-32 relative bg-sas-darkGray/30 ${isVisible ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}
     >
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
