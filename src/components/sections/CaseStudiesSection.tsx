@@ -3,29 +3,36 @@ import { useRef, useEffect, useState } from "react";
 
 const caseStudies = [
   {
-    client: "E-Commerce Platform",
-    metric1: "65%",
-    desc1: "Reduction in order processing time",
-    metric2: "42%",
-    desc2: "Increase in customer satisfaction",
-    description: "We implemented autonomous agents to handle inventory management and order processing, dramatically reducing operational costs and improving customer experience."
+    client: "Professional Services Firm",
+    metric1: "85%",
+    desc1: "Reduction in client onboarding time",
+    metric2: "$175K",
+    desc2: "Annual labor cost savings",
+    description: "We implemented an end-to-end workflow automation system that transformed their 12-step client onboarding process, eliminating manual data entry and automatically generating all required documentation. This allowed them to scale from 40 to 70 clients without adding staff."
   },
   {
-    client: "Financial Services Firm",
-    metric1: "78%",
-    desc1: "Automation of document processing",
-    metric2: "$1.2M",
-    desc2: "Annual cost savings",
-    description: "Our custom AI solution automated document verification and data entry, allowing the company to scale operations without adding headcount."
+    client: "E-Commerce Operations",
+    metric1: "68%",
+    desc1: "Decrease in order fulfillment errors",
+    metric2: "3.2x",
+    desc2: "Increase in processing capacity",
+    description: "Our intelligent inventory and customer service automation eliminated bottlenecks across their operation. Their team now processes 220+ orders daily with the same staff that previously handled 70, while dramatically reducing customer service tickets."
   },
   {
-    client: "Manufacturing Company",
-    metric1: "30%",
-    desc1: "Reduction in production errors",
-    metric2: "52%",
-    desc2: "Improvement in process efficiency",
-    description: "We implemented predictive maintenance and quality control AI systems that significantly reduced downtime and improved product quality."
+    client: "Healthcare Provider - Speech Therapist",
+    metric1: "94%",
+    desc1: "Automated appointment scheduling",
+    metric2: "$87K",
+    desc2: "Quarterly revenue increase",
+    description: "By implementing our patient engagement system with smart scheduling, automated follow-ups and intelligent billing workflows, no-show rates dropped from 18% to 4%. Staff previously handling scheduling were reassigned to revenue-generating activities."
   }
+];
+
+const automationAreas = [
+  "CRM Management - Winning Projects",
+  "Client Onboarding - Launching Projects",
+  "Customer Support & Sales - Maintaining Projects",
+  "Accounts Receivable - Invoicing Project Revenue"
 ];
 
 const CaseStudiesSection = () => {
@@ -90,11 +97,19 @@ const CaseStudiesSection = () => {
           <div className="text-center mb-16">
             <p className="text-sas-emerald font-semibold uppercase text-sm tracking-wider mb-4">Case Studies</p>
             <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">
-              Real Results. Real Growth.
+              We build systems that transform your profit margins, not just your technology stack.
             </h2>
-            <p className="text-lg text-sas-white/80 max-w-2xl mx-auto">
-              Our clients achieve measurable improvements in efficiency, cost reduction, and business growth.
-            </p>
+            <div className="text-lg text-sas-white/80 max-w-2xl mx-auto mb-12">
+              <p className="mb-6">We excel at what matters most: automating your core business processes.</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                {automationAreas.map((area, index) => (
+                  <div key={index} className="flex items-center space-x-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-sas-emerald"></div>
+                    <p>{area}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
