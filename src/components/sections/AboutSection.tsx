@@ -1,19 +1,20 @@
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import SLogo from "../SLogo";
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(true); // Start with visible state
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
-          entry.target.classList.add("animate-fade-in");
+          setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -31,7 +32,7 @@ const AboutSection = () => {
     <section 
       id="about"
       ref={sectionRef}
-      className="py-24 lg:py-32 relative opacity-0"
+      className={`py-24 lg:py-32 relative ${isVisible ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}
     >
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">

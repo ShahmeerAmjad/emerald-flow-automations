@@ -27,7 +27,7 @@ const steps = [
 const ProcessSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true); // Start as visible
   const [visibleSteps, setVisibleSteps] = useState<boolean[]>([false, false, false, false]);
 
   useEffect(() => {

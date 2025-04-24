@@ -1,5 +1,5 @@
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 const caseStudies = [
   {
@@ -31,13 +31,29 @@ const caseStudies = [
 const CaseStudiesSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [isVisible, setIsVisible] = useState(true); // Start with visible state
+  const [visibleCards, setVisibleCards] = useState<boolean[]>([false, false, false]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const cardObserver = new IntersectionObserver(
+      (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-in");
+          const index = cardRefs.current.findIndex(ref => ref === entry.target);
+          if (index !== -1 && entry.isIntersecting) {
+            setVisibleCards(prev => {
+              const newState = [...prev];
+              newState[index] = true;
+              return newState;
+            });
           }
         });
       },
@@ -49,7 +65,7 @@ const CaseStudiesSection = () => {
     }
 
     cardRefs.current.forEach((card) => {
-      if (card) observer.observe(card);
+      if (card) cardObserver.observe(card);
     });
 
     return () => {
@@ -58,7 +74,7 @@ const CaseStudiesSection = () => {
       }
       
       cardRefs.current.forEach((card) => {
-        if (card) observer.unobserve(card);
+        if (card) cardObserver.unobserve(card);
       });
     };
   }, []);
@@ -67,7 +83,7 @@ const CaseStudiesSection = () => {
     <section 
       id="case-studies"
       ref={sectionRef}
-      className="py-24 lg:py-32 relative opacity-0"
+      className={`py-24 lg:py-32 relative ${isVisible ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}
     >
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
@@ -86,8 +102,8 @@ const CaseStudiesSection = () => {
               <div
                 key={index}
                 ref={(el) => (cardRefs.current[index] = el)}
-                className="bg-sas-darkGray/40 border border-sas-emerald/20 rounded-lg p-6 opacity-0 hover:border-sas-emerald/50 transition-all duration-300"
-                style={{ animationDelay: `${index * 200}ms` }}
+                className={`bg-sas-darkGray/40 border border-sas-emerald/20 rounded-lg p-6 ${visibleCards[index] ? "opacity-100" : "opacity-0"} hover:border-sas-emerald/50 transition-all duration-300`}
+                style={{ transitionDelay: `${index * 200}ms` }}
               >
                 <div className="mb-6 text-sm font-medium text-sas-emerald/70">
                   {study.client}
