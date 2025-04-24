@@ -3,7 +3,7 @@ import { useRef, useEffect, useState } from "react";
 
 const CtaSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true); // Start as visible
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -13,7 +13,7 @@ const CtaSection = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -31,7 +31,7 @@ const CtaSection = () => {
     <section 
       id="contact"
       ref={sectionRef}
-      className={`py-24 lg:py-32 relative bg-gradient-to-b from-transparent to-sas-darkGray/50 ${isVisible ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}
+      className={`py-24 lg:py-32 relative bg-gradient-to-b from-transparent to-sas-darkGray/50 ${isVisible ? "opacity-100" : "opacity-0"} transition-opacity duration-300`}
     >
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
