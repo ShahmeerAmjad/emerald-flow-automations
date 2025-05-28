@@ -1,4 +1,3 @@
-
 import { useRef, useEffect, useState } from "react";
 
 const caseStudies = [
@@ -109,14 +108,6 @@ const CaseStudiesSection = () => {
             </h2>
             <div className="text-base md:text-lg text-sas-white/80 max-w-4xl mx-auto mb-8 md:mb-12 px-4">
               <p className="mb-6">We don't offer one-size-fits-all AI. We craft intelligent strategies tailored to your goals.</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 text-left max-w-3xl mx-auto">
-                {automationAreas.map((area, index) => (
-                  <div key={index} className="flex items-start space-x-2 text-sm md:text-base">
-                    <div className="w-1.5 h-1.5 rounded-full bg-sas-emerald mt-2 flex-shrink-0"></div>
-                    <p className="leading-relaxed">{area}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
           

@@ -133,7 +133,7 @@ const ServicesSection = () => {
           
           <div className="mt-12 text-center">
             <p className="text-lg italic text-sas-white/60">
-              "We don't try to do everything. We excel at what matters most."
+              "We don't offer one-size-fits-all AI. We craft intelligent strategies tailored to your goals."
             </p>
           </div>
         </div>
