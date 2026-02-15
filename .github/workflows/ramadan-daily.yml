@@ -1,0 +1,79 @@
+# .github/workflows/ramadan-daily.yml
+# Optional: Fully automated daily content generation
+# This runs at 2 AM UTC daily during Ramadan and generates that day's Juz
+#
+# Setup: Add ANTHROPIC_API_KEY as a GitHub repository secret
+
+name: Ramadan Daily Digest
+
+on:
+  # Manual trigger with day number input
+  workflow_dispatch:
+    inputs:
+      juz_number:
+        description: 'Juz number (1-30)'
+        required: true
+        type: number
+
+  # Automated daily schedule (uncomment and adjust for Ramadan dates)
+  # schedule:
+  #   - cron: '0 2 * * *'  # 2 AM UTC daily
+
+jobs:
+  generate-digest:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Calculate Juz number (for scheduled runs)
+        id: calc
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "juz=${{ inputs.juz_number }}" >> $GITHUB_OUTPUT
+          else
+            # Auto-calculate based on Ramadan start date
+            # Adjust RAMADAN_START to the first day of Ramadan
+            RAMADAN_START="2026-02-28"  # UPDATE THIS for actual Ramadan start
+            TODAY=$(date +%Y-%m-%d)
+            DIFF=$(( ($(date -d "$TODAY" +%s) - $(date -d "$RAMADAN_START" +%s)) / 86400 + 1 ))
+            if [ "$DIFF" -ge 1 ] && [ "$DIFF" -le 30 ]; then
+              echo "juz=$DIFF" >> $GITHUB_OUTPUT
+            else
+              echo "Not within Ramadan dates, skipping"
+              exit 0
+            fi
+          fi
+
+      - name: Generate Juz digest
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          JUZ=${{ steps.calc.outputs.juz }}
+          mkdir -p src/data/ramadan
+          
+          claude --model claude-opus-4-20250514 -p \
+            "Generate the Ramadan daily digest for Juz ${JUZ} of 30 (Day ${JUZ} of Ramadan). Follow the system prompt in prompts/ramadan-system-prompt.md exactly. Output valid JSON matching JuzDigest type in src/types/ramadan.ts. Write to src/data/ramadan/juz-${JUZ}.json. Verify the JSON is valid and run npm run build to check."
+
+      - name: Commit and push
+        run: |
+          JUZ=${{ steps.calc.outputs.juz }}
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/ramadan/
+          git diff --staged --quiet || (git commit -m "content: add Juz ${JUZ} daily digest" && git push)

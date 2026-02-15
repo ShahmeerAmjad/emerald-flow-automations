@@ -1,73 +1,115 @@
-# Welcome to your Lovable project
+# 🌙 Ramadan Challenge Automation System
+## For sassolutions.ai — Powered by Claude Code + Vercel
 
-## Project info
+---
 
-**URL**: https://lovable.dev/projects/602d7438-8055-410f-be92-e2ed6d563b56
+## Overview
 
-## How can I edit this code?
+This guide sets up two new pages (`/offer` and `/ramadan`) on your existing site and creates an automated pipeline where:
 
-There are several ways of editing your application.
+1. You run **one command** daily via Claude Code
+2. Claude Opus generates the Juz digest content using your system prompt
+3. Content is saved as JSON, committed to GitHub, and auto-deployed to Vercel
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/602d7438-8055-410f-be92-e2ed6d563b56) and start prompting.
+## Prerequisites
 
-Changes made via Lovable will be committed automatically to this repo.
+- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) installed (`npm install -g @anthropic-ai/claude-code`)
+- GitHub repo cloned locally
+- Vercel connected to your GitHub repo (not through Lovable)
+- Node.js 18+
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## PHASE 1: Project Setup
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 1.1 Disconnect Lovable
 
-Follow these steps:
+In your Vercel dashboard:
+- Go to **Project Settings → Git**
+- Ensure it's connected directly to `ShahmeerAmjad/emerald-flow-automations`
+- Set **Production Branch** to `main`
+- Set **Framework Preset** to `Vite`
+- Build command: `npm run build`
+- Output directory: `dist`
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 1.2 Add These Files to Your Repo
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Copy all files from this guide into your repo at the paths specified below.
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## PHASE 2: File Structure
+
+Add these to your existing repo:
+
+```
+src/
+├── data/
+│   └── ramadan/
+│       └── .gitkeep              # Juz JSON files go here
+├── pages/
+│   ├── Offer.tsx                 # New /offer page
+│   └── RamadanChallenge.tsx      # New /ramadan page
+├── components/
+│   └── ramadan/
+│       ├── JuzDigest.tsx         # Main digest renderer
+│       └── JuzSelector.tsx       # Day picker
+├── types/
+│   └── ramadan.ts                # TypeScript types for digest JSON
+prompts/
+│   └── ramadan-system-prompt.md  # Your system prompt (attached doc)
+scripts/
+│   └── generate-juz.sh           # The daily automation script
+CLAUDE.md                          # Claude Code project instructions
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## PHASE 3: Daily Automation — How It Works
 
-**Use GitHub Codespaces**
+### The One Command You Run Daily:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+cd /path/to/emerald-flow-automations
 
-## What technologies are used for this project?
+# Generate today's Juz (replace 5 with the current day number)
+./scripts/generate-juz.sh 5
+```
 
-This project is built with:
+### What Happens Behind the Scenes:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. The script invokes Claude Code with your system prompt
+2. Claude Opus generates Juz content as structured JSON
+3. The JSON is saved to `src/data/ramadan/juz-5.json`
+4. The script auto-commits and pushes to GitHub
+5. Vercel detects the push and redeploys (takes ~30 seconds)
+6. Your site at `sassolutions.ai/ramadan` now shows Day 5 content
 
-## How can I deploy this project?
+### For Full Automation (Optional — No Manual Run):
 
-Simply open [Lovable](https://lovable.dev/projects/602d7438-8055-410f-be92-e2ed6d563b56) and click on Share -> Publish.
+Use a **cron job** or **GitHub Actions** to run daily at a set time.
+See the GitHub Actions workflow file below.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## PHASE 4: Key Design Decisions
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+| Decision | Choice | Why |
+|----------|--------|-----|
+| Content format | JSON files | Simple, versionable, no database needed |
+| Rendering | React component reads JSON | Fast, static, SEO-friendly |
+| Deployment | Git push → Vercel | Zero config, instant deploys |
+| Content generation | Claude Code CLI | Uses Opus model, reads system prompt from repo |
+| Routing | React Router (already in your project) | Just add new routes |
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+
+## Troubleshooting
+
+**Content not showing?** Check that `src/data/ramadan/juz-X.json` exists and matches the TypeScript type.
+
+**Vercel not deploying?** Ensure the GitHub integration is active and the branch is `main`.
+
+**Claude Code errors?** Make sure your `ANTHROPIC_API_KEY` is set and the `CLAUDE.md` file is in the repo root.
