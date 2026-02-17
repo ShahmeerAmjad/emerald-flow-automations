@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, initial-scale=1">
+<title>The AI Superpower Program — SasSolutions.ai</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #050907;
+    --bg-elevated: #0A0F0D;
+    --bg-card: #0C1210;
+    --border-subtle: rgba(45, 184, 155, 0.06);
+    --border-medium: rgba(45, 184, 155, 0.12);
+    --border-strong: rgba(45, 184, 155, 0.25);
+    --emerald: #2DB89B;
+    --emerald-bright: #47ECCC;
+    --emerald-mid: #38D4B0;
+    --emerald-dim: rgba(45, 184, 155, 0.07);
+    --emerald-glow: rgba(71, 236, 204, 0.12);
+    --cream: #EDE8D0;
+    --white: #F0EDE6;
+    --white-90: rgba(240, 237, 230, 0.9);
+    --white-70: rgba(240, 237, 230, 0.7);
+    --white-50: rgba(240, 237, 230, 0.5);
+    --white-30: rgba(240, 237, 230, 0.28);
+    --white-15: rgba(240, 237, 230, 0.13);
+    --red: #F06050;
+    --red-soft: #E8705F;
+    --red-dim: rgba(240, 96, 80, 0.07);
+    --orange: #F0A830;
+    --orange-dim: rgba(240, 168, 48, 0.07);
+    --blue: #5B8DEF;
+    --blue-dim: rgba(91, 141, 239, 0.07);
+    --level1-color: var(--emerald-bright);
+    --level2-color: var(--orange);
+    --level3-color: var(--blue);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Sora', sans-serif;
+    width: 1080px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    width: 1080px;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+  }
+
+  /* ═══ AMBIENT ═══ */
+  .ambient {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .ambient .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(130px);
+    animation: orbFloat 22s ease-in-out infinite;
+  }
+
+  .ambient .orb-1 {
+    width: 700px; height: 700px;
+    top: -250px; left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(45, 184, 155, 0.1) 0%, transparent 70%);
+  }
+
+  .ambient .orb-2 {
+    width: 500px; height: 500px;
+    top: 1800px; right: -100px;
+    background: radial-gradient(circle, rgba(240, 168, 48, 0.05) 0%, transparent 70%);
+    animation-delay: -8s;
+    animation-duration: 26s;
+  }
+
+  .ambient .orb-3 {
+    width: 600px; height: 600px;
+    top: 3200px; left: -150px;
+    background: radial-gradient(circle, rgba(91, 141, 239, 0.05) 0%, transparent 70%);
+    animation-delay: -14s;
+    animation-duration: 24s;
+  }
+
+  .ambient .orb-4 {
+    width: 500px; height: 500px;
+    top: 4800px; left: 50%;
+    background: radial-gradient(circle, rgba(45, 184, 155, 0.08) 0%, transparent 70%);
+    animation-delay: -4s;
+  }
+
+  @keyframes orbFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(40px); }
+  }
+
+  .grain {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0.022;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .inner {
+    position: relative;
+    z-index: 1;
+    padding: 60px 68px 52px;
+  }
+
+  /* ═══ UTILITIES ═══ */
+  .micro {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--emerald);
+    font-weight: 500;
+  }
+
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  @keyframes livePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.5); }
+  }
+
+  @keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(45, 184, 155, 0.06); }
+    50% { box-shadow: 0 0 44px rgba(45, 184, 155, 0.16); }
+  }
+
+  @keyframes borderGlow {
+    0%, 100% { border-color: rgba(45, 184, 155, 0.1); }
+    50% { border-color: rgba(45, 184, 155, 0.3); }
+  }
+
+  @keyframes pathPulse {
+    0%, 100% { opacity: 0.15; }
+    50% { opacity: 0.5; }
+  }
+
+  @keyframes fomoGlow {
+    0%, 100% { border-color: rgba(240, 96, 80, 0.08); }
+    50% { border-color: rgba(240, 96, 80, 0.25); }
+  }
+
+  .anim-up {
+    animation: fadeSlideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.2s; }
+  .d3 { animation-delay: 0.3s; } .d4 { animation-delay: 0.4s; }
+  .d5 { animation-delay: 0.5s; } .d6 { animation-delay: 0.6s; }
+
+  .sep {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--border-medium) 30%, var(--border-strong) 50%, var(--border-medium) 70%, transparent 100%);
+    margin: 56px 0;
+    position: relative;
+  }
+
+  .sep::after {
+    content: '';
+    position: absolute;
+    top: -4px; left: 50%; transform: translateX(-50%);
+    width: 8px; height: 8px;
+    background: var(--emerald);
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+
+  /* ═══════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════ */
+  .hero {
+    text-align: center;
+    margin-bottom: 52px;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 28px;
+    border: 1px solid var(--border-medium);
+    margin-bottom: 36px;
+    background: var(--emerald-dim);
+    backdrop-filter: blur(8px);
+    animation: fadeSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both, borderGlow 4s ease-in-out infinite;
+  }
+
+  .hero-eyebrow .live-dot {
+    width: 8px; height: 8px;
+    background: var(--emerald-bright);
+    border-radius: 50%;
+    animation: livePulse 1.5s ease-in-out infinite;
+    box-shadow: 0 0 8px var(--emerald);
+  }
+
+  .hero h1 {
+    font-size: 78px;
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -4px;
+    margin-bottom: 10px;
+    animation: fadeSlideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+  }
+
+  .hero h1 .thin { font-weight: 300; color: var(--white-50); }
+
+  .hero h1 .accent {
+    background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-bright) 50%, var(--emerald) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 6s linear infinite;
+  }
+
+  .hero-sub {
+    font-size: 22px;
+    color: var(--white-50);
+    font-weight: 400;
+    margin-top: 24px;
+    line-height: 1.65;
+    max-width: 800px;
+    margin-left: auto; margin-right: auto;
+    animation: fadeSlideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+  }
+
+  .hero-sub strong { color: var(--white-90); font-weight: 600; }
+  .hero-sub .em { color: var(--emerald-bright); font-weight: 600; }
+
+  .hero-hook {
+    display: inline-block;
+    margin-top: 22px;
+    font-size: 16px;
+    color: var(--white-30);
+    animation: fadeSlideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+  }
+
+  /* ═══════════════════════════════════════════
+     MISSION BANNER
+     ═══════════════════════════════════════════ */
+  .mission {
+    padding: 40px 44px;
+    border: 1px solid var(--border-medium);
+    background: linear-gradient(135deg, var(--emerald-dim) 0%, transparent 60%);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  .mission::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--emerald), var(--emerald-bright), var(--emerald), transparent);
+  }
+
+  .mission-flag {
+    font-size: 36px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .mission h2 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    letter-spacing: -1px;
+  }
+
+  .mission h2 .em { color: var(--emerald-bright); }
+
+  .mission p {
+    font-size: 18px;
+    color: var(--white-50);
+    line-height: 1.7;
+    max-width: 820px;
+  }
+
+  .mission p strong { color: var(--white-90); font-weight: 600; }
+
+  /* ═══════════════════════════════════════════
+     PATH OVERVIEW
+     ═══════════════════════════════════════════ */
+  .path-overview {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr 40px 1fr;
+    gap: 0;
+    align-items: stretch;
+    margin-bottom: 0;
+  }
+
+  .path-card {
+    padding: 32px 28px;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    text-align: center;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .path-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-medium);
+  }
+
+  .path-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .path-card.l1::before { background: linear-gradient(90deg, var(--emerald), var(--emerald-bright)); }
+  .path-card.l2::before { background: linear-gradient(90deg, var(--orange), #FFD080); }
+  .path-card.l3::before { background: linear-gradient(90deg, var(--blue), #90B8FF); }
+
+  .path-card:hover.l1 { box-shadow: 0 12px 40px rgba(45, 184, 155, 0.08); }
+  .path-card:hover.l2 { box-shadow: 0 12px 40px rgba(240, 168, 48, 0.08); }
+  .path-card:hover.l3 { box-shadow: 0 12px 40px rgba(91, 141, 239, 0.08); }
+
+  .path-level {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .l1 .path-level { color: var(--emerald-bright); }
+  .l2 .path-level { color: var(--orange); }
+  .l3 .path-level { color: var(--blue); }
+
+  .path-name {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+
+  .path-tagline {
+    font-size: 14px;
+    color: var(--white-30);
+    line-height: 1.4;
+  }
+
+  .path-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-15);
+    font-size: 24px;
+    position: relative;
+  }
+
+  .path-arrow::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0; right: 0;
+    height: 1px;
+    background: var(--border-subtle);
+    animation: pathPulse 3s ease-in-out infinite;
+  }
+
+  .path-arrow span {
+    position: relative;
+    z-index: 1;
+    background: var(--bg);
+    padding: 4px;
+    color: var(--white-30);
+  }
+
+  /* ═══════════════════════════════════════════
+     LEVEL DETAIL SECTIONS
+     ═══════════════════════════════════════════ */
+  .level-section {
+    margin-bottom: 0;
+  }
+
+  .level-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+
+  .level-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    flex-shrink: 0;
+  }
+
+  .level-badge.l1 {
+    color: var(--emerald-bright);
+    border: 1px solid rgba(71, 236, 204, 0.2);
+    background: rgba(71, 236, 204, 0.04);
+  }
+
+  .level-badge.l2 {
+    color: var(--orange);
+    border: 1px solid rgba(240, 168, 48, 0.2);
+    background: rgba(240, 168, 48, 0.04);
+  }
+
+  .level-badge.l3 {
+    color: var(--blue);
+    border: 1px solid rgba(91, 141, 239, 0.2);
+    background: rgba(91, 141, 239, 0.04);
+  }
+
+  .level-header-text h3 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 4px;
+  }
+
+  .level-header-text p {
+    font-size: 16px;
+    color: var(--white-30);
+  }
+
+  .level-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  /* What you'll learn */
+  .level-learn {
+    padding: 32px;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    position: relative;
+  }
+
+  .level-learn h4 {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: var(--white-50);
+  }
+
+  .learn-item {
+    font-size: 17px;
+    line-height: 1.55;
+    margin-bottom: 14px;
+    padding-left: 26px;
+    position: relative;
+    color: var(--white-70);
+  }
+
+  .l1-section .learn-item::before {
+    content: '▸';
+    position: absolute;
+    left: 0; top: 0;
+    color: var(--emerald-bright);
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .l2-section .learn-item::before {
+    content: '▸';
+    position: absolute;
+    left: 0; top: 0;
+    color: var(--orange);
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .l3-section .learn-item::before {
+    content: '▸';
+    position: absolute;
+    left: 0; top: 0;
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  /* Outcome box */
+  .level-outcome {
+    padding: 32px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .l1-section .level-outcome {
+    border: 1px solid rgba(71, 236, 204, 0.1);
+    background: rgba(71, 236, 204, 0.02);
+  }
+
+  .l2-section .level-outcome {
+    border: 1px solid rgba(240, 168, 48, 0.1);
+    background: rgba(240, 168, 48, 0.02);
+  }
+
+  .l3-section .level-outcome {
+    border: 1px solid rgba(91, 141, 239, 0.1);
+    background: rgba(91, 141, 239, 0.02);
+  }
+
+  .level-outcome h4 {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+
+  .l1-section .level-outcome h4 { color: var(--emerald-bright); }
+  .l2-section .level-outcome h4 { color: var(--orange); }
+  .l3-section .level-outcome h4 { color: var(--blue); }
+
+  .outcome-item {
+    font-size: 17px;
+    line-height: 1.55;
+    margin-bottom: 14px;
+    padding-left: 26px;
+    position: relative;
+    color: var(--white-70);
+  }
+
+  .outcome-item::before {
+    content: '→';
+    position: absolute;
+    left: 0; top: 0;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .l1-section .outcome-item::before { color: var(--emerald-bright); }
+  .l2-section .outcome-item::before { color: var(--orange); }
+  .l3-section .outcome-item::before { color: var(--blue); }
+
+  .tools-row {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .tools-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--white-30);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .tools-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tool-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 5px 12px;
+    background: var(--bg);
+    border: 1px solid var(--border-subtle);
+    color: var(--white-50);
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+  }
+
+  .tool-tag:hover {
+    border-color: var(--border-medium);
+    color: var(--white-70);
+  }
+
+  /* ═══════════════════════════════════════════
+     WHO IS THIS FOR
+     ═══════════════════════════════════════════ */
+  .who { margin-bottom: 0; }
+
+  .who-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .who-box { padding: 32px; transition: all 0.3s; }
+
+  .who-for-box {
+    border: 1px solid rgba(45, 184, 155, 0.12);
+    background: rgba(45, 184, 155, 0.03);
+  }
+
+  .who-for-box:hover {
+    border-color: rgba(45, 184, 155, 0.25);
+    background: rgba(45, 184, 155, 0.05);
+  }
+
+  .who-not-box {
+    border: 1px solid rgba(240, 96, 80, 0.08);
+    background: rgba(240, 96, 80, 0.02);
+  }
+
+  .who-not-box:hover { border-color: rgba(240, 96, 80, 0.15); }
+
+  .who-box h3 {
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+  }
+
+  .who-for-box h3 { color: var(--emerald-bright); }
+  .who-not-box h3 { color: var(--red-soft); }
+
+  .who-line {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding-left: 26px;
+    position: relative;
+    color: var(--white-70);
+  }
+
+  .who-for-box .who-line::before {
+    content: '✓';
+    position: absolute; left: 0; top: 2px;
+    color: var(--emerald-bright);
+    font-weight: 700; font-size: 15px;
+  }
+
+  .who-not-box .who-line::before {
+    content: '✕';
+    position: absolute; left: 0; top: 2px;
+    color: var(--red-soft);
+    font-weight: 700;
+  }
+
+  /* ═══════════════════════════════════════════
+     CTA — WAITLIST
+     ═══════════════════════════════════════════ */
+  .cta-block {
+    text-align: center;
+    padding: 56px 48px 52px;
+    position: relative;
+    border: 1px solid var(--border-medium);
+    background: linear-gradient(180deg, rgba(45, 184, 155, 0.06) 0%, rgba(45, 184, 155, 0.02) 50%, rgba(45, 184, 155, 0.04) 100%);
+    animation: glowPulse 4s ease-in-out infinite;
+    overflow: hidden;
+  }
+
+  .cta-block::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 50%;
+    transform: translateX(-50%);
+    width: 300px; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--emerald-bright), transparent);
+  }
+
+  .cta-block::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: 50%;
+    transform: translateX(-50%);
+    width: 500px; height: 300px;
+    background: radial-gradient(ellipse, rgba(45, 184, 155, 0.06), transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-headline {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-headline .em { color: var(--emerald-bright); }
+
+  .cta-desc {
+    font-size: 19px;
+    color: var(--white-50);
+    line-height: 1.65;
+    max-width: 680px;
+    margin: 0 auto 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-desc strong { color: var(--white-90); }
+
+  .cta-nocharge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--emerald-bright);
+    letter-spacing: 2px;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-bright) 100%);
+    color: var(--bg);
+    font-family: 'Sora', sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 26px 80px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: 0 4px 24px rgba(45, 184, 155, 0.15);
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 48px rgba(45, 184, 155, 0.3);
+    letter-spacing: 7px;
+  }
+
+  .fomo {
+    margin-top: 32px;
+    padding: 24px 32px;
+    background: rgba(240, 96, 80, 0.04);
+    border: 1px solid rgba(240, 96, 80, 0.1);
+    display: inline-block;
+    max-width: 660px;
+    animation: fomoGlow 3s ease-in-out infinite;
+    position: relative;
+    z-index: 1;
+  }
+
+  .fomo-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .fomo-header .blink {
+    width: 10px; height: 10px;
+    background: var(--red);
+    border-radius: 50%;
+    animation: livePulse 1s ease-in-out infinite;
+    box-shadow: 0 0 12px var(--red);
+  }
+
+  .fomo-header span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    color: var(--red);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .fomo-text {
+    font-size: 16px;
+    color: var(--white-70);
+    line-height: 1.7;
+  }
+
+  .fomo-text strong { color: var(--white); font-weight: 700; }
+  .fomo-text .red { color: var(--red-soft); font-weight: 700; }
+
+  .cta-commit {
+    font-size: 17px;
+    color: var(--white-50);
+    margin-top: 28px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-commit strong { color: var(--white); }
+  .cta-commit .green { color: var(--emerald-bright); font-weight: 700; }
+
+  /* ═══════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════ */
+  .footer {
+    text-align: center;
+    padding: 36px 0 24px;
+  }
+
+  .footer-brand {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+  }
+
+  .footer-brand .sas { color: var(--emerald); }
+  .footer-brand .sol { color: var(--cream); }
+
+  .footer-tagline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--white-30);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .footer-tagline .acc { color: var(--emerald); }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="ambient">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+  <div class="grain"></div>
+
+  <div class="inner">
+
+    <!-- ══════════════════════════════════
+         HERO
+         ══════════════════════════════════ -->
+    <div class="hero">
+      <div class="hero-eyebrow">
+        <div class="live-dot"></div>
+        <span class="micro">Now Accepting Applications &nbsp;·&nbsp; Limited Cohort</span>
+      </div>
+      <h1>
+        <span class="thin">THE</span> <span class="accent">AI SUPERPOWER</span><br>
+        PROGRAM
+      </h1>
+      <p class="hero-sub">
+        A structured learning path from <strong>complete beginner to full-stack AI builder.</strong><br>
+        We're building the <span class="em">most capable AI community in Pakistan</span> — and we're hand-picking who gets in.
+      </p>
+      <span class="hero-hook">This isn't a course. It's a transformation. Applications closing soon.</span>
+    </div>
+
+    <!-- ══════════════════════════════════
+         MISSION
+         ══════════════════════════════════ -->
+    <div class="mission anim-up d1">
+      <span class="mission-flag">🇵🇰</span>
+      <h2>Pakistan will <span class="em">not</span> be left behind.</h2>
+      <p>
+        The rest of the world is sprinting. AI is rewriting every industry, every job, every skill that matters.
+        <strong>We refuse to let Pakistan watch from the sidelines.</strong>
+        This program exists to build a generation of AI-powered Pakistanis who can compete head-on with anyone on the planet — and win.
+        We're not just teaching tools. We're building a <strong>community of builders, earners, and leaders</strong> who will define what Pakistan's future looks like.
+      </p>
+    </div>
+
+    <div class="sep"></div>
+
+    <!-- ══════════════════════════════════
+         3-LEVEL PATH OVERVIEW
+         ══════════════════════════════════ -->
+    <div style="margin-bottom: 24px;">
+      <div class="micro" style="margin-bottom: 8px;">Your Learning Path</div>
+      <div style="font-size: 17px; color: var(--white-30);">Three levels. One destination: you become dangerous with AI.</div>
+    </div>
+
+    <div class="path-overview anim-up d2">
+      <div class="path-card l1">
+        <div class="path-level">Level 0 → 1</div>
+        <div class="path-name">Starter Pack</div>
+        <div class="path-tagline">AI Thinking &<br>Foundations</div>
+      </div>
+      <div class="path-arrow"><span>→</span></div>
+      <div class="path-card l2">
+        <div class="path-level">Level 2</div>
+        <div class="path-name">Builder</div>
+        <div class="path-tagline">Workflows, Agents<br>& Monetization</div>
+      </div>
+      <div class="path-arrow"><span>→</span></div>
+      <div class="path-card l3">
+        <div class="path-level">Level 3</div>
+        <div class="path-name">Agentic</div>
+        <div class="path-tagline">Full-Stack AI<br>& Deployment</div>
+      </div>
+    </div>
+
+    <div class="sep"></div>
+
+    <!-- ══════════════════════════════════
+         LEVEL 0→1: STARTER PACK
+         ══════════════════════════════════ -->
+    <div class="level-section l1-section">
+      <div class="level-header">
+        <div class="level-badge l1">Level 0 → 1</div>
+        <div class="level-header-text">
+          <h3>Starter Pack — AI Foundations</h3>
+          <p>For anyone starting from zero. You'll think, prompt, and create like a pro.</p>
+        </div>
+      </div>
+      <div class="level-content">
+        <div class="level-learn">
+          <h4>What You'll Learn</h4>
+          <div class="learn-item">Develop an AI-first mindset — understand what's happening and why it matters to your career</div>
+          <div class="learn-item">Master the art of asking the right questions and writing prompts that get real results</div>
+          <div class="learn-item">Navigate ChatGPT, Claude, and Gemini — know when to use which and why</div>
+          <div class="learn-item">Generate professional images with AI for content, branding, and client work</div>
+          <div class="learn-item">Build and ship a production-ready website using Loveable — no coding needed</div>
+        </div>
+        <div class="level-outcome">
+          <div>
+            <h4>What You Walk Away With</h4>
+            <div class="outcome-item">Confidence to use AI daily in your work and side projects</div>
+            <div class="outcome-item">A portfolio-ready website you built and launched yourself</div>
+            <div class="outcome-item">Prompt engineering skills that 95% of people don't have</div>
+            <div class="outcome-item">The ability to create visual content without hiring a designer</div>
+            <div class="outcome-item">A foundation that makes Level 2 and 3 feel effortless</div>
+          </div>
+          <div class="tools-row">
+            <div class="tools-label">Tools You'll Master</div>
+            <div class="tools-tags">
+              <span class="tool-tag">ChatGPT</span>
+              <span class="tool-tag">Claude</span>
+              <span class="tool-tag">Gemini</span>
+              <span class="tool-tag">Image Gen</span>
+              <span class="tool-tag">Loveable</span>
+              <span class="tool-tag">Prompt Engineering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sep"></div>
+
+    <!-- ══════════════════════════════════
+         LEVEL 2: BUILDER
+         ══════════════════════════════════ -->
+    <div class="level-section l2-section">
+      <div class="level-header">
+        <div class="level-badge l2">Level 2</div>
+        <div class="level-header-text">
+          <h3>Builder — Workflows, Agents & Monetization</h3>
+          <p>This is where you start making money. Automate, create, and freelance with AI.</p>
+        </div>
+      </div>
+      <div class="level-content">
+        <div class="level-learn">
+          <h4>What You'll Learn</h4>
+          <div class="learn-item">Build powerful automations with Make.com and n8n that run entire business processes</div>
+          <div class="learn-item">Create AI-generated videos and voice content — scale without a camera or mic</div>
+          <div class="learn-item">Implement RAG and vectorization for intelligent document retrieval systems</div>
+          <div class="learn-item">Scrape and collect data at scale with Apify and Firecrawl</div>
+          <div class="learn-item">Learn Python basics, APIs, JSON, databases, and React to build real products</div>
+          <div class="learn-item">Optimize your freelancing profile and start landing AI-related clients</div>
+        </div>
+        <div class="level-outcome">
+          <div>
+            <h4>What You Walk Away With</h4>
+            <div class="outcome-item">Working automations you can sell as services to businesses</div>
+            <div class="outcome-item">AI video and voice content creation skills worth Rs 50K+/month</div>
+            <div class="outcome-item">A freelancer profile positioned to attract high-ticket clients</div>
+            <div class="outcome-item">Technical skills (APIs, Python, React) that command premium rates</div>
+            <div class="outcome-item">The ability to solve real business problems — not just play with tools</div>
+          </div>
+          <div class="tools-row">
+            <div class="tools-label">Tools You'll Master</div>
+            <div class="tools-tags">
+              <span class="tool-tag">Make.com</span>
+              <span class="tool-tag">n8n</span>
+              <span class="tool-tag">Video Gen</span>
+              <span class="tool-tag">Voice AI</span>
+              <span class="tool-tag">Manus</span>
+              <span class="tool-tag">Apify</span>
+              <span class="tool-tag">Firecrawl</span>
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">API / JSON</span>
+              <span class="tool-tag">React</span>
+              <span class="tool-tag">Database</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sep"></div>
+
+    <!-- ══════════════════════════════════
+         LEVEL 3: AGENTIC
+         ══════════════════════════════════ -->
+    <div class="level-section l3-section">
+      <div class="level-header">
+        <div class="level-badge l3">Level 3</div>
+        <div class="level-header-text">
+          <h3>Agentic — Full-Stack AI & Deployment</h3>
+          <p>The top 1%. Build autonomous agents, deploy to production, and own the stack.</p>
+        </div>
+      </div>
+      <div class="level-content">
+        <div class="level-learn">
+          <h4>What You'll Learn</h4>
+          <div class="learn-item">Build with Claude Code and Clawd bot — ship AI-powered tools from your terminal</div>
+          <div class="learn-item">Deploy on VPS with Docker — own your infrastructure, not just borrow it</div>
+          <div class="learn-item">Orchestrate multi-agent systems with LangChain and CrewAI</div>
+          <div class="learn-item">Use GitHub like a pro — version control, collaboration, open source</div>
+          <div class="learn-item">Create skills and markdown files that make your AI agents 10x more capable</div>
+        </div>
+        <div class="level-outcome">
+          <div>
+            <h4>What You Walk Away With</h4>
+            <div class="outcome-item">The ability to build and deploy full-stack AI products from scratch</div>
+            <div class="outcome-item">Autonomous agents running on your own servers 24/7</div>
+            <div class="outcome-item">Skills that put you in the top 1% of AI practitioners in Pakistan</div>
+            <div class="outcome-item">A GitHub portfolio that speaks for itself to any employer or client</div>
+            <div class="outcome-item">The power to build an AI agency, SaaS, or consulting business</div>
+          </div>
+          <div class="tools-row">
+            <div class="tools-label">Tools You'll Master</div>
+            <div class="tools-tags">
+              <span class="tool-tag">Claude Code</span>
+              <span class="tool-tag">Clawd Bot</span>
+              <span class="tool-tag">VPS + Docker</span>
+              <span class="tool-tag">LangChain</span>
+              <span class="tool-tag">CrewAI</span>
+              <span class="tool-tag">GitHub</span>
+              <span class="tool-tag">Skills & MD Files</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sep"></div>
+
+    <!-- ══════════════════════════════════
+         WHO IS THIS FOR
+         ══════════════════════════════════ -->
+    <div class="who">
+      <div class="micro" style="margin-bottom: 24px;">Who This Is For</div>
+      <div class="who-cols">
+        <div class="who-box who-for-box">
+          <h3>You belong here if</h3>
+          <div class="who-line">You're a freelancer who wants to offer AI services at premium rates</div>
+          <div class="who-line">You're a business owner watching competitors automate while you're stuck</div>
+          <div class="who-line">You're a student who wants skills that actually lead to income</div>
+          <div class="who-line">You're ready to commit, show up, and build — not just watch</div>
+          <div class="who-line">You believe Pakistan deserves a seat at the AI table</div>
+        </div>
+        <div class="who-box who-not-box">
+          <h3>Not for you if</h3>
+          <div class="who-line">You want shortcuts without putting in the reps</div>
+          <div class="who-line">You think AI is a passing trend</div>
+          <div class="who-line">You won't implement what you learn</div>
+          <div class="who-line">You want motivation speeches — this is execution</div>
+          <div class="who-line">You're comfortable where you are right now</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sep"></div>
+
+    <!-- ══════════════════════════════════
+         CTA — WAITLIST
+         ══════════════════════════════════ -->
+    <div class="cta-block">
+      <div class="cta-headline">
+        We're Not Selling a Course.<br>
+        We're <span class="em">Building a Movement.</span>
+      </div>
+      <div class="cta-desc">
+        We're gathering the first cohort of serious builders who want to be part of something bigger than a course — <strong>a community, a support system, and a launchpad</strong> for Pakistan's AI future. Join the waitlist to show us you're serious, and we'll build this together.
+      </div>
+      <div class="cta-nocharge">JOIN THE WAITLIST — SHOW YOUR INTEREST</div>
+
+      <button class="cta-btn">Apply For Early Access</button>
+
+      <div class="fomo">
+        <div class="fomo-header">
+          <div class="blink"></div>
+          <span>Only 10 spots in the first cohort</span>
+        </div>
+        <div class="fomo-text">
+          This is <strong>not</strong> an open enrollment. We're hand-selecting <strong>10 people</strong> for the founding cohort — people who are ready to put in the work and represent the standard we're setting. Once the 10 are in, <span class="red">the waitlist closes and you'll have to wait for the next cohort.</span> We don't know when that will be. If you're reading this, there's still a spot with your name on it. <strong>But not for long.</strong>
+        </div>
+      </div>
+
+      <div class="cta-commit">
+        This is your signal. The world is changing <strong>right now.</strong><br>
+        The question isn't whether AI will transform Pakistan.<br>
+        It's whether <span class="green">you'll be the one leading it.</span>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════
+         FOOTER
+         ══════════════════════════════════ -->
+    <div class="footer">
+      <div class="footer-brand">
+        <span class="sas">Sas</span><span class="sol">Solutions.ai</span>
+      </div>
+      <div class="footer-tagline">
+        The future belongs to <span class="acc">those who build</span> — not those who watch
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

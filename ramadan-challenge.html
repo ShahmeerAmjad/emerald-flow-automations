@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramadan Qur'an Challenge — 30 Days, 30 Juz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-deep: #0a0f0d;
+      --bg-card: #0f1a15;
+      --bg-card-hover: #142420;
+      --emerald: #1a7a5a;
+      --emerald-light: #22a67a;
+      --emerald-glow: #2ce8a0;
+      --gold: #c9a84c;
+      --gold-light: #e8c968;
+      --gold-dim: #8a7235;
+      --cream: #f0e8d8;
+      --cream-soft: #e0d5c0;
+      --text-primary: #eae4d8;
+      --text-secondary: #b0a898;
+      --text-muted: #7a7268;
+      --border: rgba(201, 168, 76, 0.12);
+      --border-glow: rgba(201, 168, 76, 0.25);
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── Geometric Islamic pattern overlay ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(26, 122, 90, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(201, 168, 76, 0.04) 0%, transparent 40%),
+        radial-gradient(circle at 60% 80%, rgba(26, 122, 90, 0.04) 0%, transparent 40%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Noise texture ── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 24px;
+      position: relative;
+    }
+
+    .hero-ornament {
+      width: 80px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin-bottom: 40px;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    .hero-crescent {
+      font-size: 56px;
+      margin-bottom: 24px;
+      animation: floatIn 1s ease-out;
+      filter: drop-shadow(0 0 20px rgba(201, 168, 76, 0.3));
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      color: var(--cream);
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      animation: fadeIn 1s ease-out 0.2s both;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 400;
+    }
+
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      color: var(--text-secondary);
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      margin-bottom: 32px;
+      animation: fadeIn 1s ease-out 0.4s both;
+    }
+
+    .hero-ayah {
+      font-family: 'Amiri', serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      color: var(--gold);
+      direction: rtl;
+      margin-bottom: 8px;
+      line-height: 1.8;
+      animation: fadeIn 1s ease-out 0.6s both;
+    }
+
+    .hero-ayah-translation {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 48px;
+      animation: fadeIn 1s ease-out 0.7s both;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--emerald), var(--emerald-light));
+      color: var(--cream);
+      padding: 16px 40px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 24px rgba(34, 166, 122, 0.25);
+      animation: fadeIn 1s ease-out 0.9s both;
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(34, 166, 122, 0.4);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 32px;
+      animation: pulse 2s ease-in-out infinite;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .scroll-hint::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 32px;
+      background: linear-gradient(to bottom, var(--gold-dim), transparent);
+      margin: 8px auto 0;
+    }
+
+    /* ── DAY NAV ── */
+    .day-nav {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 32px 24px;
+      position: sticky;
+      top: 0;
+      background: linear-gradient(to bottom, var(--bg-deep) 60%, transparent);
+      z-index: 10;
+    }
+
+    .day-dot {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .day-dot:hover {
+      border-color: var(--gold-dim);
+      color: var(--gold);
+    }
+
+    .day-dot.active {
+      background: var(--gold);
+      color: var(--bg-deep);
+      border-color: var(--gold);
+      font-weight: 600;
+    }
+
+    .day-dot.locked {
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    /* ── CONTENT SECTIONS ── */
+    .content {
+      padding-bottom: 120px;
+    }
+
+    .section {
+      margin-bottom: 64px;
+      animation: slideUp 0.6s ease-out both;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: var(--gold-dim);
+    }
+
+    .day-header {
+      text-align: center;
+      margin-bottom: 56px;
+      padding: 48px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .day-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+
+    .day-header h1 span {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .day-header .juz-info {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    .surahs-covered {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .surah-tag {
+      padding: 8px 20px;
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      background: var(--bg-card);
+    }
+
+    .surah-tag strong {
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    /* ── Summary Card ── */
+    .summary-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.85;
+    }
+
+    /* ── Surah Breakdown ── */
+    .surah-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      transition: border-color 0.3s ease;
+    }
+
+    .surah-block:hover {
+      border-color: var(--border-glow);
+    }
+
+    .surah-block h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      color: var(--cream);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .surah-block h3 .surah-num {
+      color: var(--gold);
+      font-size: 0.85rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      vertical-align: middle;
+    }
+
+    .surah-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .surah-meta-item {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .surah-meta-item strong {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .surah-detail {
+      margin-bottom: 16px;
+    }
+
+    .surah-detail-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold-dim);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .surah-detail p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .key-teaching {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+      padding: 12px 16px;
+      background: rgba(26, 122, 90, 0.06);
+      border-radius: 10px;
+      border-left: 2px solid var(--emerald);
+    }
+
+    .key-teaching-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: var(--emerald);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      color: white;
+      margin-top: 2px;
+    }
+
+    .key-teaching p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ── Ayah Highlight ── */
+    .ayah-card {
+      background: linear-gradient(135deg, rgba(201, 168, 76, 0.06), rgba(26, 122, 90, 0.04));
+      border: 1px solid var(--border-glow);
+      border-radius: 14px;
+      padding: 28px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .ayah-arabic {
+      font-family: 'Amiri', serif;
+      font-size: clamp(1.4rem, 4vw, 1.9rem);
+      color: var(--gold);
+      direction: rtl;
+      line-height: 2;
+      margin-bottom: 12px;
+    }
+
+    .ayah-translation {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--cream-soft);
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .ayah-ref {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .ayah-reflection {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      line-height: 1.6;
+    }
+
+    /* ── Theme Cards ── */
+    .theme-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 16px;
+    }
+
+    .theme-card h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: var(--gold-light);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .theme-card p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .theme-card .ramadan-tie {
+      font-size: 0.82rem;
+      color: var(--emerald-light);
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* ── Hadith Section ── */
+    .hadith-card {
+      background: linear-gradient(135deg, var(--bg-card), rgba(26, 122, 90, 0.08));
+      border: 1px solid var(--emerald);
+      border-radius: 16px;
+      padding: 32px;
+    }
+
+    .hadith-card .hadith-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      color: var(--cream-soft);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .hadith-card .hadith-source {
+      font-size: 0.78rem;
+      color: var(--gold-dim);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    .hadith-card .hadith-reflection {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      padding-top: 16px;
+      border-top: 1px solid rgba(26, 122, 90, 0.2);
+    }
+
+    /* ── Practice Card ── */
+    .practice-card {
+      background: var(--bg-card);
+      border: 1px solid var(--gold-dim);
+      border-radius: 16px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .practice-card::before {
+      content: '🤲';
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      font-size: 80px;
+      opacity: 0.05;
+    }
+
+    .practice-card p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ── Discussion ── */
+    .discussion-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 12px;
+    }
+
+    .discussion-card .q-type {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--emerald-light);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .discussion-card p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ── Habit Check ── */
+    .habit-section {
+      background: linear-gradient(135deg, rgba(201, 168, 76, 0.04), rgba(26, 122, 90, 0.04));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+    }
+
+    .habit-section p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .closing-dua {
+      font-family: 'Amiri', serif;
+      font-size: 1.1rem;
+      color: var(--gold);
+      margin-top: 20px;
+      direction: rtl;
+    }
+
+    .closing-message {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--cream-soft);
+      margin-top: 8px;
+    }
+
+    /* ── Dividers ── */
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+      margin: 48px auto;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 60px 24px;
+      border-top: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .footer a {
+      color: var(--gold-dim);
+      text-decoration: none;
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes floatIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
+    }
+
+    /* ── Scroll animations ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .surah-block, .summary-card, .hadith-card, .practice-card, .habit-section { padding: 24px; }
+      .ayah-card { padding: 20px; }
+      .surah-meta { flex-direction: column; gap: 6px; }
+      .day-nav { gap: 4px; padding: 20px 12px; }
+      .day-dot { width: 28px; height: 28px; font-size: 0.58rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════ HERO ════════════ -->
+  <section class="hero">
+    <div class="hero-ornament"></div>
+    <div class="hero-crescent">🌙</div>
+    <h1 class="hero-title">Ramadan Qur'an <em>Challenge</em></h1>
+    <p class="hero-subtitle">30 Days · 30 Juz · One Ummah</p>
+    <p class="hero-ayah">شَهْرُ رَمَضَانَ ٱلَّذِىٓ أُنزِلَ فِيهِ ٱلْقُرْءَانُ هُدًى لِّلنَّاسِ</p>
+    <p class="hero-ayah-translation">"The month of Ramadan in which the Qur'an was revealed, a guidance for the people." — 2:185</p>
+    <a href="#day-content" class="hero-cta">Begin Today's Reading ↓</a>
+    <div class="scroll-hint">Scroll</div>
+  </section>
+
+  <!-- ════════════ DAY NAV ════════════ -->
+  <nav class="day-nav" id="day-nav">
+    <a class="day-dot active" href="#day-content" title="Day 1">1</a>
+    <span class="day-dot locked">2</span>
+    <span class="day-dot locked">3</span>
+    <span class="day-dot locked">4</span>
+    <span class="day-dot locked">5</span>
+    <span class="day-dot locked">6</span>
+    <span class="day-dot locked">7</span>
+    <span class="day-dot locked">8</span>
+    <span class="day-dot locked">9</span>
+    <span class="day-dot locked">10</span>
+    <span class="day-dot locked">11</span>
+    <span class="day-dot locked">12</span>
+    <span class="day-dot locked">13</span>
+    <span class="day-dot locked">14</span>
+    <span class="day-dot locked">15</span>
+    <span class="day-dot locked">16</span>
+    <span class="day-dot locked">17</span>
+    <span class="day-dot locked">18</span>
+    <span class="day-dot locked">19</span>
+    <span class="day-dot locked">20</span>
+    <span class="day-dot locked">21</span>
+    <span class="day-dot locked">22</span>
+    <span class="day-dot locked">23</span>
+    <span class="day-dot locked">24</span>
+    <span class="day-dot locked">25</span>
+    <span class="day-dot locked">26</span>
+    <span class="day-dot locked">27</span>
+    <span class="day-dot locked">28</span>
+    <span class="day-dot locked">29</span>
+    <span class="day-dot locked">30</span>
+  </nav>
+
+  <!-- ════════════ CONTENT ════════════ -->
+  <main class="content" id="day-content">
+    <div class="container">
+
+      <!-- DAY HEADER -->
+      <div class="day-header reveal">
+        <h1>Day <span>1</span> of 30</h1>
+        <p class="juz-info">Juz 1 — The Foundation</p>
+        <div class="surahs-covered">
+          <span class="surah-tag"><strong>Al-Fatihah</strong> · The Opening · 1:1-7</span>
+          <span class="surah-tag"><strong>Al-Baqarah</strong> · The Cow · 2:1-141</span>
+        </div>
+      </div>
+
+      <!-- JUZ SUMMARY -->
+      <section class="section reveal">
+        <div class="section-label">📝 Juz Summary</div>
+        <div class="summary-card">
+          Juz 1 opens the Qur'an with Al-Fatihah — a perfect prayer that maps the entire relationship between Creator and creation — then launches into Al-Baqarah, the longest surah in the Qur'an. This Juz lays the foundation for everything that follows: it introduces the purpose of the Book (guidance for the God-conscious), categorizes humanity's response to divine truth (believers, disbelievers, hypocrites), recounts the story of Adam and the Children of Israel, and calls believers to embody their covenant with Allah through worship, gratitude, and trust. The spiritual arc moves from prayer (Al-Fatihah) to practice (Al-Baqarah's early commands about faith, prayer, charity, and patience).
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- SURAH BREAKDOWN: AL-FATIHAH -->
+      <section class="section reveal">
+        <div class="section-label">📖 Surah-by-Surah Breakdown</div>
+
+        <div class="surah-block">
+          <h3>Al-Fatihah <span class="surah-num">Surah 1, Verses 1-7</span></h3>
+          <div class="surah-meta">
+            <div class="surah-meta-item"><strong>Name:</strong> "The Opening"</div>
+            <div class="surah-meta-item"><strong>Revealed:</strong> Makkah</div>
+            <div class="surah-meta-item"><strong>Also called:</strong> Umm al-Kitab</div>
+          </div>
+
+          <div class="surah-detail">
+            <div class="surah-detail-label">Revelation Context</div>
+            <p>Among the earliest revelations, establishing the core relationship between the servant and the Lord — a template for all du'a and worship.</p>
+          </div>
+
+          <div class="surah-detail">
+            <div class="surah-detail-label">Core Theme</div>
+            <p>A complete prayer that acknowledges Allah's sovereignty, seeks His guidance, and asks for the straight path while avoiding misguidance.</p>
+          </div>
+
+          <div class="surah-detail">
+            <div class="surah-detail-label">Key Teachings</div>
+          </div>
+
+          <div class="key-teaching">
+            <div class="key-teaching-icon">١</div>
+            <p><strong>Praise belongs to Allah alone</strong> — He is the Lord of all worlds, the Most Merciful, and the Master of the Day of Judgment. Recognizing these attributes transforms how we approach life.</p>
+          </div>
+          <div class="key-teaching">
+            <div class="key-teaching-icon">٢</div>
+            <p><strong>Worship and help come only from Allah</strong> — "You alone we worship, and You alone we ask for help" is the pivot of the surah, balancing between devotion and dependence.</p>
+          </div>
+          <div class="key-teaching">
+            <div class="key-teaching-icon">٣</div>
+            <p><strong>Guidance is the greatest need</strong> — We ask Allah to guide us to the straight path daily because we are constantly at risk of straying or forgetting.</p>
+          </div>
+
+          <div class="ayah-card">
+            <div class="surah-detail-label" style="text-align:center; margin-bottom:12px;">Standout Ayah</div>
+            <div class="ayah-arabic">ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ</div>
+            <div class="ayah-translation">"Guide us to the straight path."</div>
+            <div class="ayah-ref">Surah Al-Fatihah 1:6 · Sahih International</div>
+            <div class="ayah-reflection">This single request is repeated at least 17 times daily in our prayers — because guidance isn't a one-time event. It's a constant, renewable gift we need in every moment.</div>
+          </div>
+        </div>
+
+        <!-- SURAH BREAKDOWN: AL-BAQARAH -->
+        <div class="surah-block">
+          <h3>Al-Baqarah <span class="surah-num">Surah 2, Verses 1-141</span></h3>
+          <div class="surah-meta">
+            <div class="surah-meta-item"><strong>Name:</strong> "The Cow"</div>
+            <div class="surah-meta-item"><strong>Revealed:</strong> Madinah</div>
+            <div class="surah-meta-item"><strong>Continues:</strong> Juz 2 →</div>
+          </div>
+
+          <div class="surah-detail">
+            <div class="surah-detail-label">Revelation Context</div>
+            <p>Revealed after the Hijrah, when the Muslim community was being built in Madinah. It addresses the new believers, the Jewish and Christian communities, and the hypocrites who posed internal threats.</p>
+          </div>
+
+          <div class="surah-detail">
+            <div class="surah-detail-label">Core Theme</div>
+            <p>Establishing the Qur'an as divine guidance, exposing hypocrisy, recounting the covenant with the Children of Israel as a warning and lesson, and calling believers to true faith demonstrated through action.</p>
+          </div>
+
+          <div class="surah-detail">
+            <div class="surah-detail-label">Key Teachings</div>
+          </div>
+
+          <div class="key-teaching">
+            <div class="key-teaching-icon">١</div>
+            <p><strong>Three categories of people:</strong> Believers (who accept guidance), disbelievers (who reject it openly), and hypocrites (who claim belief but harbor disbelief). The hypocrites receive the longest description because internal threats are the most dangerous.</p>
+          </div>
+          <div class="key-teaching">
+            <div class="key-teaching-icon">٢</div>
+            <p><strong>Faith requires action, not just words</strong> — Belief in the unseen, establishing prayer, spending from provision, and certainty in the Hereafter are the marks of true believers (2:2-5).</p>
+          </div>
+          <div class="key-teaching">
+            <div class="key-teaching-icon">٣</div>
+            <p><strong>The story of Adam teaches humility and mercy</strong> — Adam's sin, his repentance, and Allah's forgiveness show that humans will err, but sincere repentance is always accepted (2:30-39).</p>
+          </div>
+          <div class="key-teaching">
+            <div class="key-teaching-icon">٤</div>
+            <p><strong>Allah's covenant with the Children of Israel serves as a mirror</strong> — They were given countless blessings yet many disobeyed. This is a warning for us not to repeat their mistakes (2:40-141).</p>
+          </div>
+          <div class="key-teaching">
+            <div class="key-teaching-icon">٥</div>
+            <p><strong>True devotion over ritual</strong> — Allah rebukes making worship about identity and exclusivity rather than sincere submission to the One God (2:111-112).</p>
+          </div>
+
+          <div class="ayah-card">
+            <div class="surah-detail-label" style="text-align:center; margin-bottom:12px;">Standout Ayah</div>
+            <div class="ayah-arabic">ٱلَّذِينَ يُؤْمِنُونَ بِٱلْغَيْبِ وَيُقِيمُونَ ٱلصَّلَوٰةَ وَمِمَّا رَزَقْنَٰهُمْ يُنفِقُونَ</div>
+            <div class="ayah-translation">"Who believe in the unseen, establish prayer, and spend out of what We have provided for them."</div>
+            <div class="ayah-ref">Surah Al-Baqarah 2:3 · Sahih International</div>
+            <div class="ayah-reflection">This ayah defines the believer: faith isn't just intellectual assent — it's trusting what you cannot see, worshipping consistently, and giving generously.</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- CONNECTING THE DOTS -->
+      <section class="section reveal">
+        <div class="section-label">🔗 Connecting the Dots</div>
+        <div class="summary-card">
+          Al-Fatihah teaches us to ask for the straight path, and Al-Baqarah immediately shows us what that path looks like and who walks it. The opening surah is the question; Al-Baqarah begins the answer. Both emphasize guidance, warn against those who were shown the path but turned away, and call us to sincerity in worship and action — not empty claims.
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- CORE THEMES -->
+      <section class="section reveal">
+        <div class="section-label">🎯 Core Themes of This Juz</div>
+
+        <div class="theme-card">
+          <h4>1. Guidance as a Gift, Not a Given</h4>
+          <p>The Qur'an is guidance "for those who are conscious of Allah" (2:2) — it doesn't force itself on anyone. From Al-Fatihah's plea for guidance to Al-Baqarah's warnings about those who reject it, this Juz makes clear that divine direction is active and relational. You must seek it, guard it, and live it.</p>
+          <p class="ramadan-tie">During Ramadan, ask yourself daily — am I truly open to being guided, even if it means changing something I'm attached to?</p>
+        </div>
+
+        <div class="theme-card">
+          <h4>2. Sincerity Over Performance</h4>
+          <p>The hypocrites "say with their tongues what is not in their hearts" (2:8-20). The Children of Israel turned worship into ethnic pride rather than devotion (2:111-113). Allah is teaching us that He sees past our outward displays to the intention beneath.</p>
+          <p class="ramadan-tie">As you fast, pray, and give charity this month, check your niyyah (intention) regularly. Are you doing it for Allah, or for people's approval?</p>
+        </div>
+
+        <div class="theme-card">
+          <h4>3. Past Communities as Mirrors</h4>
+          <p>The stories of Adam and Bani Israel aren't ancient history — they're templates. Adam shows us that humans fall, but repentance restores us. The Children of Israel show us that blessings can be lost through arrogance and disobedience.</p>
+          <p class="ramadan-tie">What blessings are you taking for granted? What habits might you be repeating from those who were warned before you?</p>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- KEY AYAT COLLECTION -->
+      <section class="section reveal">
+        <div class="section-label">✨ Key Ayat Collection</div>
+
+        <div class="ayah-card" style="margin-bottom: 16px;">
+          <div class="ayah-arabic">إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ</div>
+          <div class="ayah-translation">"You alone we worship, and You alone we ask for help."</div>
+          <div class="ayah-ref">Surah Al-Fatihah 1:5 · Sahih International</div>
+          <div class="ayah-reflection">The covenant in a single sentence — total devotion, total dependence. Where in your life are you relying on yourself or others instead of turning first to Allah?</div>
+        </div>
+
+        <div class="ayah-card" style="margin-bottom: 16px;">
+          <div class="ayah-arabic">يَٰٓأَيُّهَا ٱلنَّاسُ ٱعْبُدُوا۟ رَبَّكُمُ ٱلَّذِى خَلَقَكُمْ وَٱلَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ</div>
+          <div class="ayah-translation">"O mankind, worship your Lord, who created you and those before you, that you may become righteous."</div>
+          <div class="ayah-ref">Surah Al-Baqarah 2:21 · Sahih International</div>
+          <div class="ayah-reflection">The purpose of creation stated plainly. How would your daily routine change if you truly lived as though worship was your life's purpose?</div>
+        </div>
+
+        <div class="ayah-card">
+          <div class="ayah-arabic">وَٱسْتَعِينُوا۟ بِٱلصَّبْرِ وَٱلصَّلَوٰةِ ۚ وَإِنَّهَا لَكَبِيرَةٌ إِلَّا عَلَى ٱلْخَٰشِعِينَ</div>
+          <div class="ayah-translation">"And seek help through patience and prayer, and indeed, it is difficult except for the humbly submissive [to Allah]."</div>
+          <div class="ayah-ref">Surah Al-Baqarah 2:45 · Sahih International</div>
+          <div class="ayah-reflection">Life is hard. Allah gives us two tools: sabr (patience) and salah (prayer). What challenge are you facing that requires both?</div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- HADITH OF THE DAY -->
+      <section class="section reveal">
+        <div class="section-label">📚 Hadith of the Day</div>
+        <div class="hadith-card">
+          <div class="hadith-text">
+            The Prophet Muhammad ﷺ said: "Allah the Almighty said: 'I have divided the prayer (Al-Fatihah) between Myself and My servant into two halves, and My servant shall have what he has asked for.' When the servant says 'Al-hamdu lillahi Rabbil-'alamin,' Allah says: 'My servant has praised Me.' And when he says 'Ar-Rahmanir-Rahim,' Allah says: 'My servant has extolled Me.' And when he says 'Maliki yawmid-din,' Allah says: 'My servant has glorified Me.' And when he says 'Iyyaka na'budu wa iyyaka nasta'in,' He says: 'This is between Me and My servant, and My servant shall have what he has asked for.' And when he says 'Ihdinas-siratal-mustaqim…,' He says: 'This is for My servant, and My servant shall have what he has asked for.'"
+          </div>
+          <div class="hadith-source">Sahih Muslim #395</div>
+          <div class="hadith-reflection">
+            Al-Fatihah isn't just recitation — it's a living conversation between you and Allah. Every time you pray, He is responding to your praise and granting your request for guidance. Let that transform how you stand in Salah today.
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- DAILY PRACTICE -->
+      <section class="section reveal">
+        <div class="section-label">🤲 Daily Practice</div>
+        <div class="practice-card">
+          <p>Today, recite Al-Fatihah slowly in one of your prayers — whether Fajr, Taraweeh, or a voluntary two rak'ah before bed. <strong>Pause after each verse and mean it.</strong> When you say "Guide us to the straight path," picture one specific area of your life where you need guidance right now — a relationship, a career decision, a habit you're struggling with — and ask Allah sincerely in that moment.</p>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- DISCUSSION QUESTIONS -->
+      <section class="section reveal">
+        <div class="section-label">💬 Community Discussion</div>
+
+        <div class="discussion-card">
+          <div class="q-type">Reflection Question</div>
+          <p>Al-Baqarah describes hypocrites as those who "deceive themselves, but they perceive it not" (2:9). What's one area where you might be spiritually complacent or deceiving yourself about your relationship with Allah?</p>
+        </div>
+
+        <div class="discussion-card">
+          <div class="q-type">Application Question</div>
+          <p>The believers are described as those who "spend out of what We have provided for them" (2:3). What's one form of sadaqah — time, money, knowledge, or kindness — you can give today, inspired by this ayah?</p>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- HABIT CHECK-IN -->
+      <section class="section reveal">
+        <div class="section-label">🕌 Ramadan Habit Check-In</div>
+        <div class="habit-section">
+          <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--gold-light); font-weight: 500; margin-bottom: 12px;">Praying with Presence</h4>
+          <p>Tonight in Taraweeh, you'll hear Juz 1 recited. Instead of letting your mind wander, anchor yourself by listening for the ayat you studied today. When you hear "Ihdinas-siratal-mustaqim" in Al-Fatihah, remember: Allah is responding to you in that moment.</p>
+          <p style="margin-top: 16px; font-style: italic; color: var(--cream-soft);">Ramadan is your annual reset. Day 1 is about intention — you've opened the Book, you've asked for guidance, and now you walk the path one day at a time.</p>
+          <div class="closing-dua">اللَّهُمَّ اهْدِنِي وَسَدِّدْنِي</div>
+          <div class="closing-message">O Allah, guide me and make me steadfast.</div>
+          <p style="margin-top: 24px; font-size: 1.2rem;">Let's begin. 🌙</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ════════════ FOOTER ════════════ -->
+  <footer class="footer">
+    <p>Ramadan Qur'an Challenge · 30 Days · 30 Juz · One Ummah</p>
+    <p style="margin-top: 4px;">Built with ❤️ by <a href="https://sassolutions.ai" target="_blank">SASsolutions.ai</a></p>
+  </footer>
+
+  <!-- ════════════ SCROLL REVEAL ════════════ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(el => observer.observe(el));
+    });
+  </script>
+
+</body>
+</html>

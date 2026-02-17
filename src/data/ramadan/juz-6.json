@@ -1,0 +1,131 @@
+{
+  "juzNumber": 6,
+  "dayNumber": 6,
+  "dateGenerated": "2026-02-23T00:00:00.000Z",
+  "surahsCovered": "An-Nisa (4:148-176) • Al-Ma'idah (5:1-81)",
+  "juzSummary": "Juz 6 closes out Surah An-Nisa and opens Al-Ma'idah, creating a powerful transition from defining the Muslim community's internal ethics to establishing its external obligations and contracts. The final verses of An-Nisa address the People of the Book, clarify the status of Prophet Isa (Jesus), and settle inheritance rulings. Then Al-Ma'idah opens with the monumental command to fulfill all contracts and covenants, delivers the declaration that Islam has been perfected as a religion, and moves into sweeping legislation on food, purity, justice, and criminal law. The story of Habil and Qabil (Cain and Abel) introduces the principle that taking one life is like destroying all of humanity, while extended passages on the Torah, Injeel, and Quran establish that divine guidance has always been one continuous message — and each community is accountable for judging by what Allah revealed to them.",
+  "surahBreakdowns": [
+    {
+      "name": "An-Nisa",
+      "englishMeaning": "The Women",
+      "surahNumber": 4,
+      "verseRange": "148-176",
+      "continuesFromPreviousJuz": true,
+      "meaningOfName": "Named 'The Women' because it addresses many rights and rulings related to women, orphans, and family — though its scope is far wider, covering community ethics and interfaith relations.",
+      "revelationContext": "Revealed in Madinah during the formative period of the Muslim state. These final verses address theological disputes with the People of the Book and clarify the nature of prophethood and the position of Isa (Jesus) in Islam.",
+      "coreTheme": "Clarifying the correct understanding of prophethood, warning against excess in religion, and closing with final inheritance rulings — tying up the Surah's emphasis on justice and proper belief.",
+      "keyTeachings": [
+        "Allah does not like the public utterance of evil speech except by one who has been wronged (4:148) — even free speech has ethical boundaries in Islam.",
+        "Believing in some prophets while rejecting others is equivalent to disbelief; faith in Allah's messengers is all-or-nothing (4:150-152).",
+        "Isa (Jesus) is honored as a messenger of Allah and a word bestowed upon Maryam, but he is not divine — 'do not say Three' is a clear correction to Trinitarian theology (4:171).",
+        "The Surah closes with the ruling on kalala (a person who dies without parents or children), ensuring that wealth is distributed justly even in complex inheritance scenarios (4:176)."
+      ],
+      "standoutAyah": {
+        "arabic": "يَا أَهْلَ الْكِتَابِ لَا تَغْلُوا فِي دِينِكُمْ وَلَا تَقُولُوا عَلَى اللَّهِ إِلَّا الْحَقَّ ۚ إِنَّمَا الْمَسِيحُ عِيسَى ابْنُ مَرْيَمَ رَسُولُ اللَّهِ وَكَلِمَتُهُ أَلْقَاهَا إِلَىٰ مَرْيَمَ وَرُوحٌ مِنْهُ",
+        "translation": "O People of the Scripture, do not commit excess in your religion or say about Allah except the truth. The Messiah, Jesus the son of Mary, was but a messenger of Allah and His word which He directed to Mary and a soul [created at a command] from Him.",
+        "translationSource": "Sahih International",
+        "surahName": "An-Nisa",
+        "verseNumber": "4:171",
+        "reflection": "This verse teaches balance: Isa (AS) is deeply honored in Islam — called a messenger, a word from Allah, and a spirit from Him — yet the boundary is clear. Excess in either direction (denying his prophethood or elevating him to divinity) distorts the truth. It's a lesson in holding firm to the middle path in all matters of faith."
+      }
+    },
+    {
+      "name": "Al-Ma'idah",
+      "englishMeaning": "The Table Spread",
+      "surahNumber": 5,
+      "verseRange": "1-81",
+      "continuesInNextJuz": true,
+      "meaningOfName": "Named after the table spread of food that the disciples of Isa (Jesus) asked to be sent down from heaven (mentioned later in 5:112-115), symbolizing the theme of divine provision and the weight of covenants.",
+      "revelationContext": "Revealed in Madinah and considered one of the last Surahs revealed. It contains final legislation on many matters, including the famous verse 5:3 — widely believed to be among the very last verses of legal ruling revealed to the Prophet (SAW). The Muslim state was established and these verses set the final terms of the social contract.",
+      "coreTheme": "Fulfilling covenants and contracts — with Allah, with people, and with justice itself. The Surah establishes that Islam's legal and ethical framework is now complete, and demands that believers uphold justice even when it goes against their own interests.",
+      "keyTeachings": [
+        "The command to fulfill all contracts (5:1) opens the Surah and sets its entire tone — your word, your agreements, and your covenants with Allah are sacred obligations.",
+        "'This day I have perfected for you your religion' (5:3) — Islam's legal framework was declared complete, a moment so significant that a Jewish scholar told Umar (RA) it would have been a day of celebration for them.",
+        "Cooperate in righteousness and piety, but never cooperate in sin and aggression (5:2) — a universal ethical principle for how to engage with the world.",
+        "The story of Habil and Qabil (5:27-31) establishes the sanctity of human life, culminating in the universal principle that saving one life is like saving all of humanity (5:32).",
+        "Multiple passages (5:44-50) affirm that the Torah, Injeel, and Quran are all from Allah — and those who do not judge by what Allah has revealed are described in the severest terms."
+      ],
+      "standoutAyah": {
+        "arabic": "مِنْ أَجْلِ ذَٰلِكَ كَتَبْنَا عَلَىٰ بَنِي إِسْرَائِيلَ أَنَّهُ مَن قَتَلَ نَفْسًا بِغَيْرِ نَفْسٍ أَوْ فَسَادٍ فِي الْأَرْضِ فَكَأَنَّمَا قَتَلَ النَّاسَ جَمِيعًا وَمَنْ أَحْيَاهَا فَكَأَنَّمَا أَحْيَا النَّاسَ جَمِيعًا",
+        "translation": "Because of that, We decreed upon the Children of Israel that whoever kills a soul unless for a soul or for corruption [done] in the land — it is as if he had slain mankind entirely. And whoever saves one — it is as if he had saved mankind entirely.",
+        "translationSource": "Sahih International",
+        "surahName": "Al-Ma'idah",
+        "verseNumber": "5:32",
+        "reflection": "This is one of the most quoted verses in the Quran — and for good reason. It establishes that every single human life carries the weight of all humanity. In a world where we've become desensitized to violence and suffering, this verse forces us to recalibrate: one life matters. Your kindness to one person, your standing up for one victim, your saving one soul — it counts as if you've saved the entire world."
+      }
+    }
+  ],
+  "connectingTheDots": "An-Nisa ends by correcting excess in religious belief and clarifying the true nature of prophets, while Al-Ma'idah opens by demanding that believers translate correct belief into correct action through fulfilling contracts and upholding justice. Together, these passages argue that sound theology and ethical living are inseparable — you cannot claim to believe correctly while acting unjustly. The recurring theme of previous scriptures and their communities reinforces that this accountability is not new; it is the consistent standard Allah has held every nation to.",
+  "coreThemes": [
+    {
+      "name": "Covenants and Accountability",
+      "explanation": "From the final warnings to the People of the Book in An-Nisa to the opening command of Al-Ma'idah ('fulfill your contracts'), this Juz centers on the idea that faith is a binding agreement. Contracts with Allah, with other people, and with society are sacred, and breaking them has consequences both in this life and the next.",
+      "dailyRelevance": "During Ramadan, you've made an implicit covenant with Allah through your fasting. Extend that sense of commitment beyond food and drink — are there promises you've made to family, friends, or colleagues that you've been neglecting? Today, fulfill one outstanding commitment you've been putting off."
+    },
+    {
+      "name": "Justice Without Compromise",
+      "explanation": "Al-Ma'idah 5:8 commands believers to stand firm for justice even if it means testifying against themselves or their loved ones. The Surah refuses to let personal loyalty override the truth. This is reinforced through the legislation on theft, corruption, and the demand that each community judge by the scripture Allah gave them.",
+      "dailyRelevance": "It's easy to be just when it costs you nothing. The real test comes when fairness requires you to speak against your own group, admit your own mistake, or give up an advantage. In your interactions today, choose truth even when it's uncomfortable."
+    },
+    {
+      "name": "The Sanctity of Life",
+      "explanation": "The story of Habil and Qabil (5:27-31) and the declaration in 5:32 establish human life as inviolable. The first murder in human history is recounted not as ancient history but as a living warning: jealousy and unchecked ego can lead to the ultimate transgression.",
+      "dailyRelevance": "Sanctity of life goes beyond not killing — it includes not destroying someone's reputation, livelihood, or spirit. During Ramadan especially, guard your tongue and your actions from causing harm to others in any form. One act of mercy or support you offer today carries the weight of saving an entire world."
+    }
+  ],
+  "keyAyat": [
+    {
+      "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا أَوْفُوا بِالْعُقُودِ",
+      "translation": "O you who have believed, fulfill [all] contracts.",
+      "translationSource": "Sahih International",
+      "reference": "Surah Al-Ma'idah, 5:1",
+      "significance": "The opening verse of Al-Ma'idah sets the entire Surah's agenda. The word 'uqud' (contracts) encompasses everything — contracts with Allah, with people, marriage contracts, business agreements, and even social obligations. It's a comprehensive demand for integrity.",
+      "reflectionPrompt": "What contracts — spoken or unspoken — have you entered into that you may not be fully honoring? What would it look like to fulfill them completely?"
+    },
+    {
+      "arabic": "وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ",
+      "translation": "And cooperate in righteousness and piety, but do not cooperate in sin and aggression.",
+      "translationSource": "Sahih International",
+      "reference": "Surah Al-Ma'idah, 5:2",
+      "significance": "A universal ethical principle that applies in every sphere of life — personal, professional, and political. Islam demands that cooperation itself has moral boundaries. Collaboration is not inherently good; it depends entirely on what you're cooperating toward.",
+      "reflectionPrompt": "Are there any relationships or groups in your life where you find yourself cooperating in something you know is wrong, even passively? How can you redirect that energy toward good?"
+    },
+    {
+      "arabic": "الْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِي وَرَضِيتُ لَكُمُ الْإِسْلَامَ دِينًا",
+      "translation": "This day I have perfected for you your religion and completed My favor upon you and have approved for you Islam as religion.",
+      "translationSource": "Sahih International",
+      "reference": "Surah Al-Ma'idah, 5:3",
+      "significance": "This verse was revealed during the Prophet's Farewell Hajj and is considered one of the final legislative verses. It declares Islam complete — nothing needs to be added or subtracted. When Umar (RA) heard a Jewish scholar say this verse would be a festival for them, Umar confirmed it was indeed revealed on two days of celebration: a Friday and the Day of Arafah.",
+      "reflectionPrompt": "If Islam is described as a 'perfected' religion and a 'completed favor,' what does that mean for how you approach it — do you treat it as something to be grateful for, or as a burden?"
+    },
+    {
+      "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا كُونُوا قَوَّامِينَ لِلَّهِ شُهَدَاءَ بِالْقِسْطِ ۖ وَلَا يَجْرِمَنَّكُمْ شَنَآنُ قَوْمٍ عَلَىٰ أَلَّا تَعْدِلُوا ۚ اعْدِلُوا هُوَ أَقْرَبُ لِلتَّقْوَىٰ",
+      "translation": "O you who have believed, be persistently standing firm for Allah, witnesses in justice, and do not let the hatred of a people prevent you from being just. Be just; that is nearer to righteousness.",
+      "translationSource": "Sahih International",
+      "reference": "Surah Al-Ma'idah, 5:8",
+      "significance": "One of the Quran's most powerful statements on justice. It explicitly commands fairness even toward people you dislike or who have wronged you. Justice in Islam is not conditional on your feelings — it is an absolute principle.",
+      "reflectionPrompt": "Is there someone you have a conflict with where your dislike may be affecting your fairness toward them? What would true justice look like in that situation?"
+    },
+    {
+      "arabic": "لَا يُحِبُّ اللَّهُ الْجَهْرَ بِالسُّوءِ مِنَ الْقَوْلِ إِلَّا مَن ظُلِمَ",
+      "translation": "Allah does not like the public mention of evil except by one who has been wronged.",
+      "translationSource": "Sahih International",
+      "reference": "Surah An-Nisa, 4:148",
+      "significance": "This verse establishes an important nuance: while Islam generally prohibits public negativity and backbiting, it makes an exception for the oppressed. Those who have been wronged have the right to speak out and seek justice. Silence should not be weaponized to protect oppressors.",
+      "reflectionPrompt": "How do you balance the Islamic values of concealing faults and speaking out against injustice in your own life? Are you staying silent when you should speak, or speaking when you should stay silent?"
+    }
+  ],
+  "hadithOfTheDay": {
+    "text": "The Messenger of Allah (SAW) said: 'Help your brother whether he is an oppressor or is oppressed.' A man asked: 'O Messenger of Allah, I can help him if he is oppressed, but how can I help him if he is an oppressor?' He said: 'By preventing him from oppressing others, for that is how you help him.'",
+    "source": "Sahih al-Bukhari #2444",
+    "reflection": "This hadith perfectly captures the Juz's theme of cooperative justice. Helping an oppressor by stopping their oppression is one of the most profound redefinitions in Islamic ethics. It reframes accountability as an act of love and brotherhood, not hostility. During Ramadan, this means gently correcting those you care about when they're in the wrong — that is the truest form of support."
+  },
+  "dailyPractice": "Today, identify one contract or commitment you've been neglecting — whether it's a promise to a family member, an obligation at work, a debt you owe, or even a commitment you made to yourself regarding your worship. Take one concrete step to fulfill it before the day ends. Al-Ma'idah opens with the command to fulfill contracts, and Ramadan is the perfect time to clear your conscience and restore trust.",
+  "discussionQuestions": {
+    "reflectionQuestion": "Verse 5:8 commands justice even toward those you dislike. Think honestly — is there someone in your life toward whom your personal feelings have compromised your fairness? What would it take to correct that?",
+    "applicationQuestion": "The story of Habil and Qabil (5:27-31) shows how unchecked jealousy can lead to the worst of actions. Jealousy often starts small. Is there an area of your life where you feel envious of someone else's blessings? What practical step can you take today to replace that envy with gratitude for what Allah has given you?"
+  },
+  "habitCheckIn": "Day 6 — You're one-fifth of the way through Ramadan. By now, your fasting routine should be settling in. Today, focus on the quality of your salah: before each prayer, take 30 seconds to consciously set your intention and remind yourself you're standing before Allah. The verses in this Juz about wudu (5:6) remind us that even the physical preparation for prayer is an act of worship — approach it with mindfulness, not just as a mechanical routine.",
+  "closingMessage": "Juz 6 asks a fundamental question: are you living up to your covenants? With Allah, with people, with truth itself? The Quran has been declared a perfected guidance — the question is no longer whether the system is complete, but whether you're engaging with it completely. Every contract you honor, every act of justice you uphold, every life you positively impact carries the weight of something far greater than you can see. Keep going.",
+  "closingDua": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ — O Allah, help me to remember You, be grateful to You, and worship You in the best manner."
+}
