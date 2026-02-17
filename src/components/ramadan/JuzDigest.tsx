@@ -48,16 +48,16 @@ export function JuzDigest({ digest }: Props) {
         </div>
 
         {/* Ramadan Welcome — Day 1 only */}
-        {digest.ramadanIntro && (
+        {digest.specialMessage && (
           <div className="rc-ramadan-intro rc-reveal">
             <div className="rc-intro-icon">﷽</div>
-            {digest.ramadanIntro.split("\n\n").map((paragraph, i) => (
+            {digest.specialMessage.split("\n\n").map((paragraph, i) => (
               <p key={i}>{paragraph}</p>
             ))}
           </div>
         )}
 
-        {digest.ramadanIntro && <div className="rc-divider" />}
+        {digest.specialMessage && <div className="rc-divider" />}
 
         {/* Juz Summary */}
         <RcSection emoji="📝" label="Juz Summary">

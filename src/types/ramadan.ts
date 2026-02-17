@@ -60,8 +60,8 @@ export interface JuzDigest {
   // Header
   surahsCovered: string; // Summary line for header
 
-  // Day 1 only — Ramadan welcome intro
-  ramadanIntro?: string;
+  // Optional special message — use for Day 1 welcome, Fridays, last 10 nights, etc.
+  specialMessage?: string;
 
   // Sections
   juzSummary: string; // 3-5 sentences

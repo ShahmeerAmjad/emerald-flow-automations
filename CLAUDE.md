@@ -42,7 +42,7 @@ The following files have been finalized. **Never overwrite, rewrite, or "improve
 | `src/pages/Offer.tsx` | **FINAL** | Matches `ai-program-path.html`. Uses Sora + JetBrains Mono fonts. Dark theme `bg-[#050907]`. |
 | `src/pages/RamadanChallenge.tsx` | **FINAL** | Matches `ramadan-challenge.html`. Day selector, dynamic Juz loading. |
 | `src/components/ramadan/JuzDigest.tsx` | **FINAL** | Rich renderer with Arabic text (Amiri font), amber accents, section cards. |
-| `src/types/ramadan.ts` | **FINAL** | JuzDigest TypeScript schema. All generated JSON must match this exactly. Includes optional `ramadanIntro` field (Day 1 only). |
+| `src/types/ramadan.ts` | **FINAL** | JuzDigest TypeScript schema. All generated JSON must match this exactly. Includes optional `specialMessage` field (see below). |
 | `index.html` | **FINAL** | Loads Inter, Playfair Display, Amiri, Cormorant Garamond, Outfit, Sora, JetBrains Mono. |
 | `vercel.json` | **FINAL** | SPA rewrites for /offer and /ramadan. |
 | `ai-program-path.html` | Reference | HTML source-of-truth for Offer page design. |
@@ -99,6 +99,12 @@ Then commit and push:
 - `habitCheckIn` — compassionate, specific accountability (not preachy)
 - `discussionQuestions` — push toward real behavioral change
 - `closingMessage` — reinforce personal transformation, not just reading completion
+
+**`specialMessage` (optional field):**
+- Use for Day 1 (Ramadan welcome), Fridays (Jumu'ah reminders), and last 10 nights (Juz 26-30)
+- Renders as a highlighted card with Bismillah header before the Juz Summary
+- Tone: Secrets of Divine Love — poetic, intimate, connecting the soul to the Creator's voice
+- Keep to 3-6 paragraphs, separated by `\n\n` in JSON
 
 **Quality bar (match Juz 1):**
 - `juzSummary`: 3-5 sentences, conversational but scholarly

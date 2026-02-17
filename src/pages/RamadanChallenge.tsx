@@ -43,7 +43,7 @@ export default function RamadanChallenge() {
   }
 
   const unlockedDays = Array.from({ length: 30 }, (_, i) => i + 1).filter(isDayUnlocked);
-  const defaultDay = unlockedDays.length > 0 ? unlockedDays[unlockedDays.length - 1] : 1;
+  const defaultDay = 1;
   const [selectedDay, setSelectedDay] = useState<number>(defaultDay);
   const digest = juzData[selectedDay];
 
