@@ -21,11 +21,12 @@ When asked to generate a Juz digest:
 
 ### Critical Rules:
 - Use Sahih International or The Clear Quran translations ONLY
-- Only cite Sahih hadith with full source references
-- If unsure about hadith authenticity, set `unableToVerify: true`
+- Cite hadiths broadly accepted across Sunni AND Shia traditions; include dual sourcing where possible
+- If unsure about cross-traditional acceptance, set `unableToVerify: true`
 - Arabic text must be accurate — do not fabricate ayat
 - Keep total content concise and readable (designed for WhatsApp/mobile)
 - Each juz file must be valid JSON that passes TypeScript compilation
+- `dailyPractice`, `habitCheckIn`, and `closingMessage` must serve the mission of helping readers leave bad habits and become their best selves
 
 ### After generating content:
 - Run `npx tsc --noEmit` to verify no type errors
