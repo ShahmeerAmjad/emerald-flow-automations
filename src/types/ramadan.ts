@@ -56,10 +56,13 @@ export interface JuzDigest {
   juzNumber: number;
   dayNumber: number;
   dateGenerated: string; // ISO date
-  
+
   // Header
   surahsCovered: string; // Summary line for header
-  
+
+  // Day 1 only — Ramadan welcome intro
+  ramadanIntro?: string;
+
   // Sections
   juzSummary: string; // 3-5 sentences
   surahBreakdowns: SurahBreakdown[];

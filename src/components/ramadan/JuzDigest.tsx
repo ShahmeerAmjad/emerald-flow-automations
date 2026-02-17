@@ -47,6 +47,18 @@ export function JuzDigest({ digest }: Props) {
           </div>
         </div>
 
+        {/* Ramadan Welcome — Day 1 only */}
+        {digest.ramadanIntro && (
+          <div className="rc-ramadan-intro rc-reveal">
+            <div className="rc-intro-icon">﷽</div>
+            {digest.ramadanIntro.split("\n\n").map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
+        )}
+
+        {digest.ramadanIntro && <div className="rc-divider" />}
+
         {/* Juz Summary */}
         <RcSection emoji="📝" label="Juz Summary">
           <div className="rc-summary-card">{digest.juzSummary}</div>
@@ -272,6 +284,51 @@ const digestStyles = `
   .rc-reveal.rc-visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* ── Ramadan Intro (Day 1) ── */
+  .rc-ramadan-intro {
+    text-align: center;
+    margin-bottom: 48px;
+    padding: 48px 32px;
+    background: linear-gradient(135deg, rgba(201, 168, 76, 0.06), rgba(26, 122, 90, 0.06));
+    border: 1px solid var(--rc-border-glow);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rc-ramadan-intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--rc-gold), transparent);
+  }
+
+  .rc-intro-icon {
+    font-family: 'Amiri', serif;
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    color: var(--rc-gold);
+    margin-bottom: 24px;
+  }
+
+  .rc-ramadan-intro p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    color: var(--rc-cream-soft);
+    line-height: 2;
+    margin-bottom: 16px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rc-ramadan-intro p:last-child {
+    margin-bottom: 0;
   }
 
   /* ── Day Header ── */

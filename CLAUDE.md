@@ -42,7 +42,7 @@ The following files have been finalized. **Never overwrite, rewrite, or "improve
 | `src/pages/Offer.tsx` | **FINAL** | Matches `ai-program-path.html`. Uses Sora + JetBrains Mono fonts. Dark theme `bg-[#050907]`. |
 | `src/pages/RamadanChallenge.tsx` | **FINAL** | Matches `ramadan-challenge.html`. Day selector, dynamic Juz loading. |
 | `src/components/ramadan/JuzDigest.tsx` | **FINAL** | Rich renderer with Arabic text (Amiri font), amber accents, section cards. |
-| `src/types/ramadan.ts` | **FINAL** | JuzDigest TypeScript schema. All generated JSON must match this exactly. |
+| `src/types/ramadan.ts` | **FINAL** | JuzDigest TypeScript schema. All generated JSON must match this exactly. Includes optional `ramadanIntro` field (Day 1 only). |
 | `index.html` | **FINAL** | Loads Inter, Playfair Display, Amiri, Cormorant Garamond, Outfit, Sora, JetBrains Mono. |
 | `vercel.json` | **FINAL** | SPA rewrites for /offer and /ramadan. |
 | `ai-program-path.html` | Reference | HTML source-of-truth for Offer page design. |
