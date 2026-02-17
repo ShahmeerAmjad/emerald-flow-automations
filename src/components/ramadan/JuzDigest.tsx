@@ -89,7 +89,7 @@ export function JuzDigest({ digest }: Props) {
             <div key={i} className="rc-ayah-card" style={{ marginBottom: i < digest.keyAyat.length - 1 ? "16px" : 0 }}>
               <div className="rc-ayah-arabic" dir="rtl">{ayah.arabic}</div>
               <div className="rc-ayah-translation">"{ayah.translation}"</div>
-              <div className="rc-ayah-ref">{ayah.reference} · {ayah.translationSource}</div>
+              <div className="rc-ayah-ref">{ayah.reference}</div>
               <div className="rc-ayah-reflection">{ayah.reflectionPrompt}</div>
             </div>
           ))}
@@ -227,7 +227,7 @@ function SurahBlock({ surah, index }: { surah: SurahBreakdown; index: number }) 
         <div className="rc-ayah-arabic" dir="rtl">{surah.standoutAyah.arabic}</div>
         <div className="rc-ayah-translation">"{surah.standoutAyah.translation}"</div>
         <div className="rc-ayah-ref">
-          Surah {surah.standoutAyah.surahName} {surah.standoutAyah.verseNumber} · {surah.standoutAyah.translationSource}
+          Surah {surah.standoutAyah.surahName} {surah.standoutAyah.verseNumber}
         </div>
         <div className="rc-ayah-reflection">{surah.standoutAyah.reflection}</div>
       </div>
