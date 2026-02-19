@@ -73,7 +73,7 @@ export default function RamadanChallenge() {
           return unlocked ? (
             <Link
               key={day}
-              to={`/ramadan-day${day}`}
+              to={`/ramadan/${day}`}
               className={`ramadan-day-dot${isCurrent ? " current" : ""}`}
               title={`Day ${day}`}
             >

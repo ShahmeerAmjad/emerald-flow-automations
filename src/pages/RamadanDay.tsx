@@ -76,14 +76,14 @@ export default function RamadanDay() {
             {/* Prev / Next navigation */}
             <div className="rd-prev-next">
               {prevDay ? (
-                <Link to={`/ramadan-day${prevDay}`} className="rd-nav-btn">
+                <Link to={`/ramadan/${prevDay}`} className="rd-nav-btn">
                   ← Day {prevDay}
                 </Link>
               ) : (
                 <div />
               )}
               {nextDay ? (
-                <Link to={`/ramadan-day${nextDay}`} className="rd-nav-btn">
+                <Link to={`/ramadan/${nextDay}`} className="rd-nav-btn">
                   Day {nextDay} →
                 </Link>
               ) : (
