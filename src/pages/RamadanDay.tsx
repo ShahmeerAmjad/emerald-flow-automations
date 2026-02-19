@@ -126,6 +126,25 @@ export default function RamadanDay() {
 }
 
 const dayPageStyles = `
+  :root {
+    --rc-bg-deep: #0a0f0d;
+    --rc-bg-card: #0f1a15;
+    --rc-bg-card-hover: #142420;
+    --rc-emerald: #1a7a5a;
+    --rc-emerald-light: #22a67a;
+    --rc-emerald-glow: #2ce8a0;
+    --rc-gold: #c9a84c;
+    --rc-gold-light: #e8c968;
+    --rc-gold-dim: #8a7235;
+    --rc-cream: #f0e8d8;
+    --rc-cream-soft: #e0d5c0;
+    --rc-text-primary: #eae4d8;
+    --rc-text-secondary: #b0a898;
+    --rc-text-muted: #7a7268;
+    --rc-border: rgba(201, 168, 76, 0.12);
+    --rc-border-glow: rgba(201, 168, 76, 0.25);
+  }
+
   .ramadan-page {
     font-family: 'Outfit', sans-serif;
     background: var(--rc-bg-deep);
