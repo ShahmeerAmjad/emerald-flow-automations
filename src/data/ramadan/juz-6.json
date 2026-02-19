@@ -22,6 +22,7 @@
       ],
       "standoutAyah": {
         "arabic": "يَا أَهْلَ الْكِتَابِ لَا تَغْلُوا فِي دِينِكُمْ وَلَا تَقُولُوا عَلَى اللَّهِ إِلَّا الْحَقَّ ۚ إِنَّمَا الْمَسِيحُ عِيسَى ابْنُ مَرْيَمَ رَسُولُ اللَّهِ وَكَلِمَتُهُ أَلْقَاهَا إِلَىٰ مَرْيَمَ وَرُوحٌ مِنْهُ",
+        "transliteration": "Ya ahla al-kitabi la taghlu fi dinikum wa la taqulu 'ala Allahi illa al-haqq. Innama al-Masihu 'Isa ibnu Maryama rasulu Allahi wa kalimatuhu alqaha ila Maryama wa ruhun minh",
         "translation": "O People of the Scripture, do not commit excess in your religion or say about Allah except the truth. The Messiah, Jesus the son of Mary, was but a messenger of Allah and His word which He directed to Mary and a soul [created at a command] from Him.",
         "translationSource": "Sahih International",
         "surahName": "An-Nisa",
@@ -47,6 +48,7 @@
       ],
       "standoutAyah": {
         "arabic": "مِنْ أَجْلِ ذَٰلِكَ كَتَبْنَا عَلَىٰ بَنِي إِسْرَائِيلَ أَنَّهُ مَن قَتَلَ نَفْسًا بِغَيْرِ نَفْسٍ أَوْ فَسَادٍ فِي الْأَرْضِ فَكَأَنَّمَا قَتَلَ النَّاسَ جَمِيعًا وَمَنْ أَحْيَاهَا فَكَأَنَّمَا أَحْيَا النَّاسَ جَمِيعًا",
+        "transliteration": "Min ajli dhalika katabna 'ala Bani Isra'ila annahu man qatala nafsan bighayri nafsin aw fasadin fil-ardi faka'annama qatala al-nasa jami'an, wa man ahyaha faka'annama ahya al-nasa jami'a",
         "translation": "Because of that, We decreed upon the Children of Israel that whoever kills a soul unless for a soul or for corruption [done] in the land — it is as if he had slain mankind entirely. And whoever saves one — it is as if he had saved mankind entirely.",
         "translationSource": "Sahih International",
         "surahName": "Al-Ma'idah",
@@ -76,6 +78,7 @@
   "keyAyat": [
     {
       "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا أَوْفُوا بِالْعُقُودِ",
+      "transliteration": "Ya ayyuha alladhina amanu awfu bil-'uqud",
       "translation": "O you who have believed, fulfill [all] contracts.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-Ma'idah, 5:1",
@@ -84,6 +87,7 @@
     },
     {
       "arabic": "وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ",
+      "transliteration": "Wa ta'awanu 'ala al-birri wal-taqwa, wa la ta'awanu 'ala al-ithmi wal-'udwan",
       "translation": "And cooperate in righteousness and piety, but do not cooperate in sin and aggression.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-Ma'idah, 5:2",
@@ -92,6 +96,7 @@
     },
     {
       "arabic": "الْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِي وَرَضِيتُ لَكُمُ الْإِسْلَامَ دِينًا",
+      "transliteration": "Al-yawma akmaltu lakum dinakum wa atmamtu 'alaykum ni'mati wa raditu lakumu al-Islama dina",
       "translation": "This day I have perfected for you your religion and completed My favor upon you and have approved for you Islam as religion.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-Ma'idah, 5:3",
@@ -100,6 +105,7 @@
     },
     {
       "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا كُونُوا قَوَّامِينَ لِلَّهِ شُهَدَاءَ بِالْقِسْطِ ۖ وَلَا يَجْرِمَنَّكُمْ شَنَآنُ قَوْمٍ عَلَىٰ أَلَّا تَعْدِلُوا ۚ اعْدِلُوا هُوَ أَقْرَبُ لِلتَّقْوَىٰ",
+      "transliteration": "Ya ayyuha alladhina amanu kunu qawwamina lillahi shuhada'a bil-qisti, wa la yajrimannakum shana'anu qawmin 'ala alla ta'dilu. I'dilu huwa aqrabu lil-taqwa",
       "translation": "O you who have believed, be persistently standing firm for Allah, witnesses in justice, and do not let the hatred of a people prevent you from being just. Be just; that is nearer to righteousness.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-Ma'idah, 5:8",
@@ -108,6 +114,7 @@
     },
     {
       "arabic": "لَا يُحِبُّ اللَّهُ الْجَهْرَ بِالسُّوءِ مِنَ الْقَوْلِ إِلَّا مَن ظُلِمَ",
+      "transliteration": "La yuhibbu Allahu al-jahra bil-su'i mina al-qawli illa man dhulim",
       "translation": "Allah does not like the public mention of evil except by one who has been wronged.",
       "translationSource": "Sahih International",
       "reference": "Surah An-Nisa, 4:148",
@@ -127,5 +134,132 @@
   },
   "habitCheckIn": "Day 6 — You're one-fifth of the way through Ramadan. By now, your fasting routine should be settling in. Today, focus on the quality of your salah: before each prayer, take 30 seconds to consciously set your intention and remind yourself you're standing before Allah. The verses in this Juz about wudu (5:6) remind us that even the physical preparation for prayer is an act of worship — approach it with mindfulness, not just as a mechanical routine.",
   "closingMessage": "Juz 6 asks a fundamental question: are you living up to your covenants? With Allah, with people, with truth itself? The Quran has been declared a perfected guidance — the question is no longer whether the system is complete, but whether you're engaging with it completely. Every contract you honor, every act of justice you uphold, every life you positively impact carries the weight of something far greater than you can see. Keep going.",
-  "closingDua": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ — O Allah, help me to remember You, be grateful to You, and worship You in the best manner."
+  "closingDua": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ — O Allah, help me to remember You, be grateful to You, and worship You in the best manner.",
+  "closingDuaTransliteration": "Allahumma a'inni 'ala dhikrika wa shukrika wa husni 'ibadatik",
+  "stories": [
+    {
+      "id": "habil-and-qabil",
+      "title": "The First Murder: Habil and Qabil",
+      "subtitle": "How jealousy led to the first shedding of human blood and established the sanctity of all life",
+      "triggerLabel": "The Story of Habil & Qabil (Abel & Cain)",
+      "paragraphs": [
+        "The sons of Adam, Habil (Abel) and Qabil (Cain), each offered a sacrifice to Allah. Habil, a shepherd, offered the best of his flock — a healthy, fattened ram — while Qabil, a farmer, offered a portion of his crops that was less than his best. Allah accepted Habil's offering and rejected Qabil's. The difference was not in the type of offering but in the sincerity behind it: Habil gave his finest, while Qabil gave carelessly.",
+        "Consumed by jealousy and wounded pride, Qabil threatened his brother: 'I will surely kill you.' Habil's response was extraordinary in its moral clarity. He did not threaten back, did not escalate, and did not flee. Instead, he said: 'If you should raise your hand against me to kill me, I shall not raise my hand against you to kill you. Indeed, I fear Allah, Lord of the worlds' (5:28). This was not weakness — it was the highest form of moral courage.",
+        "Qabil, unable to overcome his rage, carried out the murder — becoming the first human being to take another's life. But then came the most poignant moment: he did not even know what to do with his brother's body. Allah sent a crow that scratched the ground to show him how to bury his brother. Watching the bird, Qabil was overcome with regret, saying: 'O woe to me! Have I failed to be like this crow and hide the body of my brother?' (5:31).",
+        "The Quran uses this story not as mere history but as the foundation for a universal law: because of this first murder, Allah decreed that killing one innocent soul is equivalent to killing all of humanity, and saving one life is equivalent to saving all of humanity (5:32). Every act of violence or mercy since then carries this cosmic weight.",
+        "The lessons radiate outward from the personal to the universal. Jealousy, when left unchecked, can escalate from resentment to destruction. Habil's refusal to retaliate represents the Islamic ideal of restraint and God-consciousness even in the face of mortal danger. And Qabil's regret — too late to undo what he had done — serves as a warning that the consequences of unchecked rage are irreversible."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "وَاتْلُ عَلَيْهِمْ نَبَأَ ابْنَيْ آدَمَ بِالْحَقِّ إِذْ قَرَّبَا قُرْبَانًا فَتُقُبِّلَ مِنْ أَحَدِهِمَا وَلَمْ يُتَقَبَّلْ مِنَ الْآخَرِ قَالَ لَأَقْتُلَنَّكَ ۖ قَالَ إِنَّمَا يَتَقَبَّلُ اللَّهُ مِنَ الْمُتَّقِينَ",
+          "transliteration": "Watlu 'alayhim naba'a ibnay Adama bil-haqqi idh qarraba qurbanan fataqqubbila min ahadihima wa lam yutaqabbal mina al-akhari, qala la-aqtulannaka, qala innama yataqabbalu Allahu mina al-muttaqin",
+          "translation": "And recite to them the story of Adam's two sons, in truth, when they both offered a sacrifice [to Allah], and it was accepted from one of them but was not accepted from the other. Said [the latter], 'I will surely kill you.' Said [the former], 'Indeed, Allah only accepts from the righteous.'",
+          "reference": "5:27"
+        },
+        {
+          "arabic": "لَئِن بَسَطتَ إِلَيَّ يَدَكَ لِتَقْتُلَنِي مَا أَنَا بِبَاسِطٍ يَدِيَ إِلَيْكَ لِأَقْتُلَكَ ۖ إِنِّي أَخَافُ اللَّهَ رَبَّ الْعَالَمِينَ",
+          "transliteration": "La'in basatta ilayya yadaka litaqtulani ma ana bibasitin yadiya ilayka li-aqtulaka, inni akhafu Allaha Rabba al-'alamin",
+          "translation": "If you should raise your hand against me to kill me — I shall not raise my hand against you to kill you. Indeed, I fear Allah, Lord of the worlds.",
+          "reference": "5:28"
+        },
+        {
+          "arabic": "مِنْ أَجْلِ ذَٰلِكَ كَتَبْنَا عَلَىٰ بَنِي إِسْرَائِيلَ أَنَّهُ مَن قَتَلَ نَفْسًا بِغَيْرِ نَفْسٍ أَوْ فَسَادٍ فِي الْأَرْضِ فَكَأَنَّمَا قَتَلَ النَّاسَ جَمِيعًا وَمَنْ أَحْيَاهَا فَكَأَنَّمَا أَحْيَا النَّاسَ جَمِيعًا",
+          "transliteration": "Min ajli dhalika katabna 'ala Bani Isra'ila annahu man qatala nafsan bighayri nafsin aw fasadin fil-ardi faka'annama qatala al-nasa jami'an, wa man ahyaha faka'annama ahya al-nasa jami'a",
+          "translation": "Because of that, We decreed upon the Children of Israel that whoever kills a soul unless for a soul or for corruption [done] in the land — it is as if he had slain mankind entirely. And whoever saves one — it is as if he had saved mankind entirely.",
+          "reference": "5:32"
+        }
+      ],
+      "lessonsLearned": [
+        "Jealousy is the root of destruction. Qabil's downfall began not with the act of murder but with the refusal to accept Allah's decree. When someone else is blessed, your test is whether you can be grateful for your own blessings.",
+        "Sincerity in worship matters more than the form. Both brothers offered sacrifices, but only the one given with genuine taqwa was accepted. Allah looks at your heart, not your hand.",
+        "Moral courage means restraint, not retaliation. Habil's refusal to fight back was not passivity — it was the highest expression of faith and fear of Allah.",
+        "The consequences of unchecked anger are irreversible. Qabil's regret came too late. The time to address jealousy and rage is before they lead to action, not after."
+      ]
+    },
+    {
+      "id": "isa-in-islamic-theology",
+      "title": "Prophet Isa (Jesus) in the Quran",
+      "subtitle": "How Islam honors Isa while correcting the excess of those who elevated him beyond his station",
+      "triggerLabel": "The Story of Prophet Isa (AS) in the Quran",
+      "paragraphs": [
+        "The closing verses of Surah An-Nisa contain one of the Quran's most detailed theological statements about Prophet Isa (Jesus), peace be upon him. In a direct address to the People of the Book, Allah commands: do not commit excess in your religion. The verse identifies Isa as the Messiah, a messenger of Allah, His word directed to Maryam, and a spirit from Him — titles of immense honor that nonetheless fall short of divinity.",
+        "The Quran's position on Isa is unique in religious history. It does not diminish him as some polemicists might expect. Instead, it elevates him remarkably — he is born of a virgin, he speaks from the cradle, he heals the sick and raises the dead by Allah's permission, and he is one of the greatest messengers ever sent. What the Quran corrects is not the honor given to Isa but the theological conclusion drawn from it. Being miraculous does not make one divine; it makes one a sign of the Divine.",
+        "The verse 4:171 specifically warns against saying 'Three' — a direct correction of Trinitarian theology. It clarifies that Allah is One God, far exalted above having a son. This is not stated with hostility but with a call to truth: 'It would be better for you' to understand this correctly. The Quran's tone here is one of genuine theological concern, not mere argumentation.",
+        "For Muslims, this passage establishes an important principle: honoring the prophets means accepting all of them in their rightful stations, without diminishing any or elevating any beyond what Allah Himself stated. Isa occupies a place of profound respect in Islam — but as a servant and messenger of Allah, not as a partner in divinity. This balanced understanding is what the Quran calls 'not committing excess.'"
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "يَا أَهْلَ الْكِتَابِ لَا تَغْلُوا فِي دِينِكُمْ وَلَا تَقُولُوا عَلَى اللَّهِ إِلَّا الْحَقَّ ۚ إِنَّمَا الْمَسِيحُ عِيسَى ابْنُ مَرْيَمَ رَسُولُ اللَّهِ وَكَلِمَتُهُ أَلْقَاهَا إِلَىٰ مَرْيَمَ وَرُوحٌ مِنْهُ",
+          "transliteration": "Ya ahla al-kitabi la taghlu fi dinikum wa la taqulu 'ala Allahi illa al-haqq. Innama al-Masihu 'Isa ibnu Maryama rasulu Allahi wa kalimatuhu alqaha ila Maryama wa ruhun minh",
+          "translation": "O People of the Scripture, do not commit excess in your religion or say about Allah except the truth. The Messiah, Jesus the son of Mary, was but a messenger of Allah and His word which He directed to Mary and a soul [created at a command] from Him.",
+          "reference": "4:171"
+        },
+        {
+          "arabic": "إِنَّ الَّذِينَ يَكْفُرُونَ بِاللَّهِ وَرُسُلِهِ وَيُرِيدُونَ أَن يُفَرِّقُوا بَيْنَ اللَّهِ وَرُسُلِهِ وَيَقُولُونَ نُؤْمِنُ بِبَعْضٍ وَنَكْفُرُ بِبَعْضٍ",
+          "transliteration": "Inna alladhina yakfuruna billahi wa rusulihi wa yuriduna an yufarriqu bayna Allahi wa rusulihi wa yaquluna nu'minu biba'din wa nakfuru biba'din",
+          "translation": "Indeed, those who disbelieve in Allah and His messengers and wish to discriminate between Allah and His messengers and say, 'We believe in some and disbelieve in others'...",
+          "reference": "4:150"
+        }
+      ],
+      "lessonsLearned": [
+        "Excess in religion — whether elevating a prophet to divinity or rejecting one entirely — is a distortion of truth. Islam calls for the balanced middle path in theology as in all things.",
+        "Honoring all prophets is a requirement of faith. Believing in some while rejecting others is described in the Quran as disbelief itself (4:150-152). True faith embraces the entire chain of divine guidance.",
+        "The Quran engages in theological correction with respect, not hostility. When discussing differences with the People of the Book, the tone is 'it would be better for you' — an invitation to truth, not an attack."
+      ]
+    },
+    {
+      "id": "the-perfection-of-religion",
+      "title": "The Day Islam Was Perfected",
+      "subtitle": "The revelation of verse 5:3 on the plains of Arafah during the Prophet's Farewell Hajj",
+      "triggerLabel": "The Day Religion Was Completed (5:3)",
+      "paragraphs": [
+        "It was the 9th of Dhul Hijjah, the Day of Arafah, during the Prophet Muhammad's (SAW) Farewell Pilgrimage. Over 100,000 companions stood on the plains of Arafah, and the Prophet delivered his final sermon — a speech that addressed the rights of women, the abolition of interest and blood feuds, and the equality of all human beings regardless of race. It was on this momentous day that one of the final verses of the Quran was revealed.",
+        "The verse declared: 'This day I have perfected for you your religion and completed My favor upon you and have approved for you Islam as religion' (5:3). The weight of this statement was immediately felt. When Umar ibn al-Khattab (RA) heard it, his eyes filled with tears. A Jewish scholar later asked him about the verse, saying: 'If this verse had been revealed to us, we would have taken that day as a day of celebration.' Umar replied: 'It was indeed revealed on two days of celebration — a Friday and the Day of Arafah.'",
+        "The significance of this verse cannot be overstated. It marks the moment when the divine legislative process that began with the first revelation in the Cave of Hira reached its completion. Every ruling on worship, family law, criminal justice, economics, governance, and personal ethics had been delivered. The system was complete — not because human problems would cease, but because the principles to address them had all been established.",
+        "For the companions, this verse also carried an undertone of farewell. The completion of the message signaled that the Prophet's mission was nearing its end. Indeed, the Prophet (SAW) passed away approximately 81 days after this revelation. The verse thus represents both a culmination and a trust — the religion is complete, and now its preservation and practice rests with the ummah."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "الْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِي وَرَضِيتُ لَكُمُ الْإِسْلَامَ دِينًا",
+          "transliteration": "Al-yawma akmaltu lakum dinakum wa atmamtu 'alaykum ni'mati wa raditu lakumu al-Islama dina",
+          "translation": "This day I have perfected for you your religion and completed My favor upon you and have approved for you Islam as religion.",
+          "reference": "5:3"
+        }
+      ],
+      "lessonsLearned": [
+        "Islam is a complete system. The declaration that the religion has been perfected means that its core principles are sufficient to address every human challenge — our task is to understand and apply them, not to add to or subtract from them.",
+        "Divine favor demands gratitude. The verse describes Islam as a 'completed favor' — approaching the religion with gratitude rather than reluctance transforms your entire spiritual experience.",
+        "With completion comes responsibility. The ummah inherited a perfected message and bears the trust of preserving, understanding, and living it. Ramadan is a yearly renewal of that commitment."
+      ]
+    }
+  ],
+  "dailyDuas": [
+    {
+      "arabic": "رَبَّنَا آمَنَّا بِمَا أَنزَلْتَ وَاتَّبَعْنَا الرَّسُولَ فَاكْتُبْنَا مَعَ الشَّاهِدِينَ",
+      "transliteration": "Rabbana amanna bima anzalta wattaba'na al-rasula faktubna ma'a al-shahidin",
+      "translation": "Our Lord, we have believed in what You revealed and have followed the messenger, so register us among the witnesses [to truth].",
+      "reference": "3:53",
+      "surahName": "Aal-Imran",
+      "context": "This is the dua of the disciples of Isa (Jesus) when they declared their faith. It connects directly to the Juz's discussion of Isa's true nature and his followers. The disciples asked Allah to record their sincere belief — a model of the kind of unwavering commitment this Juz demands.",
+      "purpose": "Declaring Faith"
+    },
+    {
+      "arabic": "رَبَّنَا اغْفِرْ لَنَا ذُنُوبَنَا وَإِسْرَافَنَا فِي أَمْرِنَا وَثَبِّتْ أَقْدَامَنَا وَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
+      "transliteration": "Rabbana ighfir lana dhunubana wa israfana fi amrina wa thabbit aqdamana wansurna 'ala al-qawmi al-kafirin",
+      "translation": "Our Lord, forgive us our sins and the excess [committed] in our affairs and plant firmly our feet and give us victory over the disbelieving people.",
+      "reference": "3:147",
+      "surahName": "Aal-Imran",
+      "context": "A dua made by the righteous fighters and prophets who preceded us. It resonates with the Juz's themes of fulfilling covenants and standing firm for justice even in adversity. The acknowledgment of excess in one's own affairs connects to the warning against religious excess in 4:171.",
+      "purpose": "Seeking Steadfastness"
+    },
+    {
+      "arabic": "رَبَّنَا لَا تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا",
+      "transliteration": "Rabbana la tu'akhidhna in nasina aw akhta'na. Rabbana wa la tahmil 'alayna isran kama hamaltahu 'ala alladhina min qablina",
+      "translation": "Our Lord, do not impose blame upon us if we have forgotten or erred. Our Lord, and lay not upon us a burden like that which You laid upon those before us.",
+      "reference": "2:286",
+      "surahName": "Al-Baqarah",
+      "context": "One of the most beloved Quranic duas, from the closing of Surah Al-Baqarah. It connects to Juz 6's recurring theme of previous nations who were given scriptures and covenants but failed to uphold them. This dua asks Allah to not burden this ummah as He burdened those who came before — a plea for mercy and ease in fulfilling our own covenants.",
+      "purpose": "Seeking Mercy"
+    }
+  ]
 }

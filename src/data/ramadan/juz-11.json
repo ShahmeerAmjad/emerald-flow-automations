@@ -23,6 +23,7 @@
       ],
       "standoutAyah": {
         "arabic": "لَقَدْ جَاءَكُمْ رَسُولٌ مِّنْ أَنفُسِكُمْ عَزِيزٌ عَلَيْهِ مَا عَنِتُّمْ حَرِيصٌ عَلَيْكُم بِالْمُؤْمِنِينَ رَءُوفٌ رَّحِيمٌ",
+        "transliteration": "Laqad ja'akum rasulun min anfusikum 'azizun 'alayhi ma 'anittum harisun 'alaykum bil-mu'minina ra'ufun rahim",
         "translation": "There has certainly come to you a Messenger from among yourselves. Grievous to him is what you suffer; [he is] concerned over you and to the believers is kind and merciful.",
         "translationSource": "Sahih International",
         "surahName": "At-Tawbah",
@@ -47,6 +48,7 @@
       ],
       "standoutAyah": {
         "arabic": "أَلَا إِنَّ أَوْلِيَاءَ اللَّهِ لَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ",
+        "transliteration": "Ala inna awliya'Allahi la khawfun 'alayhim wa la hum yahzanun",
         "translation": "Unquestionably, [for] the allies of Allah there will be no fear concerning them, nor will they grieve.",
         "translationSource": "Sahih International",
         "surahName": "Yunus",
@@ -70,6 +72,7 @@
       ],
       "standoutAyah": {
         "arabic": "وَأَنِ اسْتَغْفِرُوا رَبَّكُمْ ثُمَّ تُوبُوا إِلَيْهِ يُمَتِّعْكُم مَّتَاعًا حَسَنًا إِلَىٰ أَجَلٍ مُّسَمًّى وَيُؤْتِ كُلَّ ذِي فَضْلٍ فَضْلَهُ",
+        "transliteration": "Wa ani-staghfiru rabbakum thumma tubu ilayhi yumatti'kum mata'an hasanan ila ajalin musamman wa yu'ti kulla dhi fadlin fadlah",
         "translation": "And [saying], 'Seek forgiveness of your Lord and repent to Him, [and] He will let you enjoy a good provision for a specified term and give every doer of favor his favor [i.e., reward].'",
         "translationSource": "Sahih International",
         "surahName": "Hud",
@@ -99,6 +102,7 @@
   "keyAyat": [
     {
       "arabic": "يَا أَيُّهَا النَّاسُ قَدْ جَاءَتْكُم مَّوْعِظَةٌ مِّن رَّبِّكُمْ وَشِفَاءٌ لِّمَا فِي الصُّدُورِ وَهُدًى وَرَحْمَةٌ لِّلْمُؤْمِنِينَ",
+      "transliteration": "Ya ayyuha'n-nasu qad ja'atkum maw'izhatun min rabbikum wa shifa'un lima fi's-suduri wa hudan wa rahmatun lil-mu'minin",
       "translation": "O mankind, there has come to you instruction from your Lord and healing for what is in the breasts and guidance and mercy for the believers.",
       "translationSource": "Sahih International",
       "reference": "Surah Yunus, 10:57",
@@ -107,6 +111,7 @@
     },
     {
       "arabic": "أَلَا إِنَّ أَوْلِيَاءَ اللَّهِ لَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ ۝ الَّذِينَ آمَنُوا وَكَانُوا يَتَّقُونَ",
+      "transliteration": "Ala inna awliya'Allahi la khawfun 'alayhim wa la hum yahzanun. Alladhina amanu wa kanu yattaqun",
       "translation": "Unquestionably, [for] the allies of Allah there will be no fear concerning them, nor will they grieve — those who believed and used to fear Allah.",
       "translationSource": "Sahih International",
       "reference": "Surah Yunus, 10:62-63",
@@ -115,6 +120,7 @@
     },
     {
       "arabic": "إِنَّمَا مَثَلُ الْحَيَاةِ الدُّنْيَا كَمَاءٍ أَنزَلْنَاهُ مِنَ السَّمَاءِ فَاخْتَلَطَ بِهِ نَبَاتُ الْأَرْضِ مِمَّا يَأْكُلُ النَّاسُ وَالْأَنْعَامُ",
+      "transliteration": "Innama mathalu'l-hayati'd-dunya kama'in anzalnahu mina's-sama'i fa-khtalata bihi nabatu'l-ardi mimma ya'kulu'n-nasu wa'l-an'am",
       "translation": "The example of [this] worldly life is but like rain which We have sent down from the sky that the plants of the earth absorb — [those] from which people and livestock eat.",
       "translationSource": "Sahih International",
       "reference": "Surah Yunus, 10:24",
@@ -123,6 +129,7 @@
     },
     {
       "arabic": "فَلَوْلَا كَانَتْ قَرْيَةٌ آمَنَتْ فَنَفَعَهَا إِيمَانُهَا إِلَّا قَوْمَ يُونُسَ لَمَّا آمَنُوا كَشَفْنَا عَنْهُمْ عَذَابَ الْخِزْيِ فِي الْحَيَاةِ الدُّنْيَا وَمَتَّعْنَاهُمْ إِلَىٰ حِينٍ",
+      "transliteration": "Falawla kanat qaryatun amanat fanafa'aha imanuha illa qawma Yunusa lamma amanu kashafna 'anhum 'adhaba'l-khizyi fi'l-hayati'd-dunya wa matta'nahum ila hin",
       "translation": "Then has there not been a [single] city that believed so its faith benefited it except the people of Yunus? When they believed, We removed from them the punishment of disgrace in worldly life and gave them enjoyment for a time.",
       "translationSource": "Sahih International",
       "reference": "Surah Yunus, 10:98",
@@ -131,6 +138,7 @@
     },
     {
       "arabic": "وَلَقَدْ تَّابَ اللَّهُ عَلَى النَّبِيِّ وَالْمُهَاجِرِينَ وَالْأَنصَارِ الَّذِينَ اتَّبَعُوهُ فِي سَاعَةِ الْعُسْرَةِ",
+      "transliteration": "Wa laqad taba'Allahu 'ala'n-nabiyyi wa'l-muhajirina wa'l-ansari'lladhina-ttaba'uhu fi sa'ati'l-'usrah",
       "translation": "Allah has already forgiven the Prophet and the Muhajireen and the Ansar who followed him in the hour of difficulty.",
       "translationSource": "Sahih International",
       "reference": "Surah At-Tawbah, 9:117",
@@ -151,5 +159,102 @@
   },
   "habitCheckIn": "Day 11 — you are now past the one-third mark of Ramadan. This is often where the middle slump hits. Be honest: has the quality of your fasting dipped? Are you going through the motions at iftar without the gratitude of the first few days? Here is a specific check: at Dhuhr today, notice how present you are in your prayer. If you catch yourself rushing through it or thinking about food, that is your signal. Slow down just that one prayer — make your ruku and sujood longer by three seconds each. Small recalibrations like this are what keep the middle of Ramadan from becoming autopilot. The companions at Tabuk were tested by discomfort in the middle of their journey too. You are in your Tabuk moment — show up.",
   "closingMessage": "Eleven days in, and you are still here. That matters more than you think. Surah Yunus teaches us that an entire nation was saved because they were sincere at the critical moment — and this is your critical moment. The middle of Ramadan is where transformation actually happens, because this is where consistency gets hard and the excuses get easier. You are not just reading the Quran — you are being reshaped by it. Every ayah you reflect on, every prayer you show up for, every temptation you resist is building a version of you that will outlast this month. Keep going. The person you are becoming is worth every effort.",
-  "closingDua": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً ۚ إِنَّكَ أَنتَ الْوَهَّابُ — Our Lord, do not let our hearts deviate after You have guided us, and grant us from Yourself mercy. Indeed, You are the Bestower. (3:8)"
+  "closingDua": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً ۚ إِنَّكَ أَنتَ الْوَهَّابُ — Our Lord, do not let our hearts deviate after You have guided us, and grant us from Yourself mercy. Indeed, You are the Bestower. (3:8)",
+  "closingDuaTransliteration": "Rabbana la tuzigh qulubana ba'da idh hadaytana wa hab lana min ladunka rahmah. Innaka anta'l-Wahhab.",
+  "stories": [
+    {
+      "id": "people-of-yunus-collective-repentance",
+      "title": "The People of Yunus: The Only Nation That Repented",
+      "subtitle": "How an entire city turned back to Allah at the edge of destruction",
+      "triggerLabel": "The Story of Prophet Yunus (AS) and His People",
+      "paragraphs": [
+        "Prophet Yunus (Jonah, peace be upon him) was sent to the people of Nineveh, a great city in ancient Mesopotamia (modern-day Iraq). His people were steeped in idol worship and moral corruption. Day after day, year after year, Yunus called them to the worship of Allah alone — and day after day, they refused.",
+        "Frustrated and exhausted by their persistent rejection, Yunus made a decision that would change his life forever. He left his people before receiving Allah's permission, boarding a ship to sail away from Nineveh. But the sea grew violent, and the sailors, fearing for their lives, cast lots to determine who was bringing misfortune upon the vessel. The lot fell on Yunus, and he was thrown into the sea, where a great whale swallowed him whole.",
+        "Inside the belly of the whale, in layers of darkness — the darkness of the whale's stomach, the darkness of the deep sea, the darkness of the night — Yunus called out with one of the most powerful duas in the Quran: 'There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.' Allah heard his prayer and commanded the whale to release him on a barren shore, where He caused a gourd plant to grow and shade him as he recovered.",
+        "Meanwhile, something extraordinary happened in Nineveh. After Yunus departed, the signs of impending punishment began to appear — the sky darkened, the air grew heavy with dread. But instead of ignoring the signs as every other nation had done, the people of Nineveh did something unprecedented: they collectively repented. Men, women, and children poured into the streets, crying out to Allah, separating animals from their young so even the beasts would cry in desperation. Their repentance was so sincere, so total, that Allah lifted the punishment entirely.",
+        "This is the only time in the entire Quran that an entire community repented and was saved after the warning had already been issued. Allah immortalized their example in verse 10:98, holding them up as proof that His mercy is vast enough to encompass even those who wait until the last possible moment — as long as their turning back is genuine."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "فَلَوْلَا كَانَتْ قَرْيَةٌ آمَنَتْ فَنَفَعَهَا إِيمَانُهَا إِلَّا قَوْمَ يُونُسَ لَمَّا آمَنُوا كَشَفْنَا عَنْهُمْ عَذَابَ الْخِزْيِ فِي الْحَيَاةِ الدُّنْيَا وَمَتَّعْنَاهُمْ إِلَىٰ حِينٍ",
+          "transliteration": "Falawla kanat qaryatun amanat fanafa'aha imanuha illa qawma Yunusa lamma amanu kashafna 'anhum 'adhaba'l-khizyi fi'l-hayati'd-dunya wa matta'nahum ila hin",
+          "translation": "Then has there not been a [single] city that believed so its faith benefited it except the people of Yunus? When they believed, We removed from them the punishment of disgrace in worldly life and gave them enjoyment for a time.",
+          "reference": "10:98"
+        },
+        {
+          "arabic": "وَذَا النُّونِ إِذ ذَّهَبَ مُغَاضِبًا فَظَنَّ أَن لَّن نَّقْدِرَ عَلَيْهِ فَنَادَىٰ فِي الظُّلُمَاتِ أَن لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",
+          "transliteration": "Wa dha'n-Nuni idh dhahaba mughadiban fazanna an lan naqdira 'alayhi fanada fi'z-zulumati an la ilaha illa Anta subhanaka inni kuntu mina'z-zalimin",
+          "translation": "And [mention] the man of the fish, when he went off in anger and thought that We would not decree [anything] upon him. And he called out within the darknesses, 'There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.'",
+          "reference": "21:87"
+        }
+      ],
+      "lessonsLearned": [
+        "It is never too late for sincere repentance. The people of Nineveh waited until the very last moment, and Allah still accepted them. No matter how far you feel you have strayed, the door of tawbah remains open.",
+        "Collective repentance has power that individual repentance cannot match. When a family, community, or group turns to Allah together, the impact is magnified. Ramadan is our collective repentance moment.",
+        "Even prophets face consequences for acting without Allah's permission. Yunus's time in the whale was not a punishment born of cruelty but a lesson in patience and submission to Allah's timeline.",
+        "Desperation can become the doorway to the most sincere dua. Yunus's prayer from the belly of the whale — made in total darkness and helplessness — became one of the most powerful supplications in Islamic tradition."
+      ]
+    },
+    {
+      "id": "three-companions-who-stayed-behind",
+      "title": "The Three Who Were Truthful: Ka'b, Murarah, and Hilal",
+      "subtitle": "How radical honesty during the Tabuk expedition led to divine forgiveness",
+      "triggerLabel": "The Story of the Three Truthful Companions",
+      "paragraphs": [
+        "In the scorching heat of a Madinah summer in the year 9 AH, the Prophet Muhammad (peace be upon him) called the Muslim community to march toward Tabuk — a grueling journey of over 600 kilometers through the desert to confront a rumored Byzantine army. It was harvest season, the dates were ripe, and the shade was inviting. Many hypocrites made excuses and stayed behind. But three sincere believers also failed to join: Ka'b ibn Malik, Murarah ibn al-Rabi', and Hilal ibn Umayyah.",
+        "When the Prophet returned from Tabuk, the hypocrites came to him with elaborate excuses and false oaths, and he accepted their outward statements and left their inner truth to Allah. But when Ka'b ibn Malik came before the Prophet, he made a decision that would change his life: he told the truth. 'O Messenger of Allah, I have no excuse. I was never in a better position than when I stayed behind.' The other two companions did the same.",
+        "What followed was one of the most painful trials recorded in the Seerah. The Prophet commanded the entire Muslim community to boycott the three men. For fifty days, no one spoke to them, no one greeted them, and no one responded to their salams. Ka'b later described how the earth, despite its vastness, felt constricted around him. Even his own wife was sent away. The king of Ghassan sent Ka'b a letter offering him refuge and honor — a temptation to abandon the community that had abandoned him. Ka'b threw the letter into the fire.",
+        "After fifty agonizing days, the revelation came. Allah announced their forgiveness in verse 9:118, declaring that He had turned to them in mercy because 'the earth closed in on them in spite of its vastness, and their own souls became straitened, and they were certain that there is no refuge from Allah except in Him.' The entire community celebrated. Ka'b said it was the happiest day of his life since he became Muslim.",
+        "Their story stands as a permanent testament in the Quran: the liars who made excuses were left to their hypocrisy, while the three who told the painful truth were immortalized in Allah's Book as examples of sincere faith."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "وَعَلَى الثَّلَاثَةِ الَّذِينَ خُلِّفُوا حَتَّىٰ إِذَا ضَاقَتْ عَلَيْهِمُ الْأَرْضُ بِمَا رَحُبَتْ وَضَاقَتْ عَلَيْهِمْ أَنفُسُهُمْ وَظَنُّوا أَن لَّا مَلْجَأَ مِنَ اللَّهِ إِلَّا إِلَيْهِ ثُمَّ تَابَ عَلَيْهِمْ لِيَتُوبُوا",
+          "transliteration": "Wa 'ala'th-thalathati'lladhina khullifu hatta idha daqat 'alayhimu'l-ardu bima rahubat wa daqat 'alayhim anfusuhum wa zannu an la malja'a mina'Allahi illa ilayhi thumma taba 'alayhim liyatubu",
+          "translation": "And [He also forgave] the three who were left behind [and regretted their error] to the point that the earth closed in on them in spite of its vastness and their souls confined them and they were certain that there is no refuge from Allah except in Him. Then He turned to them so they could repent.",
+          "reference": "9:118"
+        },
+        {
+          "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ",
+          "transliteration": "Ya ayyuha'lladhina amanu-ttaqu'Allaha wa kunu ma'a's-sadiqin",
+          "translation": "O you who have believed, fear Allah and be with those who are true.",
+          "reference": "9:119"
+        }
+      ],
+      "lessonsLearned": [
+        "Honesty, even when it is painful and costly, is always the path to Allah's mercy. The excuse-makers got temporary relief but permanent disgrace; the truthful three endured temporary pain but earned eternal honor.",
+        "Social pressure and isolation are among the hardest tests of faith. The fifty-day boycott was devastating, but Ka'b and his companions endured it because they knew their relationship with Allah mattered more than the approval of people.",
+        "When you are in a dark place because of your own mistake, the only refuge is in Allah — not in running away, not in someone else's offer of comfort, but in turning back to the One who can truly forgive."
+      ]
+    }
+  ],
+  "dailyDuas": [
+    {
+      "arabic": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً ۚ إِنَّكَ أَنتَ الْوَهَّابُ",
+      "transliteration": "Rabbana la tuzigh qulubana ba'da idh hadaytana wa hab lana min ladunka rahmah. Innaka anta'l-Wahhab.",
+      "translation": "Our Lord, do not let our hearts deviate after You have guided us, and grant us from Yourself mercy. Indeed, You are the Bestower.",
+      "reference": "3:8",
+      "surahName": "Aal-Imran",
+      "context": "This dua is made by those firmly grounded in knowledge, asking Allah to keep their hearts steadfast on guidance. It is especially relevant to Juz 11's theme of standing firm on truth (as emphasized in the opening of Surah Hud) and avoiding the deviation of the hypocrites exposed in At-Tawbah.",
+      "purpose": "Steadfastness in Faith"
+    },
+    {
+      "arabic": "رَبَّنَا افْتَحْ بَيْنَنَا وَبَيْنَ قَوْمِنَا بِالْحَقِّ وَأَنتَ خَيْرُ الْفَاتِحِينَ",
+      "transliteration": "Rabbana-ftah baynana wa bayna qawmina bi'l-haqqi wa Anta khayru'l-fatihin",
+      "translation": "Our Lord, decide between us and our people in truth, and You are the best of those who give decision.",
+      "reference": "7:89",
+      "surahName": "Al-A'raf",
+      "context": "This is the dua of Prophet Shu'ayb (AS) when his people rejected him and threatened to expel him. It resonates with the themes of Juz 11 where prophets face rejection and turn to Allah for judgment between them and the disbelievers, as echoed in Surah Yunus's accounts of prophets being denied by their people.",
+      "purpose": "Seeking Divine Justice"
+    },
+    {
+      "arabic": "رَبِّ إِنِّي أَعُوذُ بِكَ أَنْ أَسْأَلَكَ مَا لَيْسَ لِي بِهِ عِلْمٌ ۖ وَإِلَّا تَغْفِرْ لِي وَتَرْحَمْنِي أَكُن مِّنَ الْخَاسِرِينَ",
+      "transliteration": "Rabbi inni a'udhu bika an as'alaka ma laysa li bihi 'ilm. Wa illa taghfir li wa tarhamni akun mina'l-khasirin.",
+      "translation": "My Lord, I seek refuge in You from asking that of which I have no knowledge. And unless You forgive me and have mercy upon me, I will be among the losers.",
+      "reference": "11:47",
+      "surahName": "Hud",
+      "context": "This is the dua of Prophet Nuh (AS) after he asked Allah about his son who drowned in the flood. When Allah informed him that his son was not of his family due to his disbelief, Nuh immediately sought forgiveness for overstepping. Though this verse falls in Juz 12, it directly connects to the opening of Surah Hud in this Juz and the theme of submitting fully to Allah's wisdom even when it is painful.",
+      "purpose": "Humility Before Allah"
+    }
+  ]
 }

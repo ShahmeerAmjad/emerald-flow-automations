@@ -23,6 +23,7 @@
       ],
       "standoutAyah": {
         "arabic": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ",
+        "transliteration": "Allahu la ilaha illa Huwal-Hayyul-Qayyum. La ta'khudhuhu sinatun wa la nawm. Lahu ma fis-samawati wa ma fil-ard. Man dhal-ladhi yashfa'u 'indahu illa bi-idhnih. Ya'lamu ma bayna aydihim wa ma khalfahum. Wa la yuhituna bi-shay'im-min 'ilmihi illa bima sha'. Wasi'a Kursiyyuhus-samawati wal-ard. Wa la ya'uduhu hifdhuhuma. Wa Huwal-'Aliyyul-'Adhim.",
         "translation": "Allah - there is no deity except Him, the Ever-Living, the Sustainer of [all] existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is [presently] before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursi extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great.",
         "translationSource": "Sahih International",
         "surahName": "Al-Baqarah",
@@ -48,6 +49,7 @@
       ],
       "standoutAyah": {
         "arabic": "قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ تُؤْتِي الْمُلْكَ مَن تَشَاءُ وَتَنزِعُ الْمُلْكَ مِمَّن تَشَاءُ وَتُعِزُّ مَن تَشَاءُ وَتُذِلُّ مَن تَشَاءُ ۖ بِيَدِكَ الْخَيْرُ ۖ إِنَّكَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+        "transliteration": "Qulil-lahumma Malikal-Mulki tu'til-mulka man tasha'u wa tanzi'ul-mulka mimman tasha'u wa tu'izzu man tasha'u wa tudhillu man tasha'. Biyadikal-khayr. Innaka 'ala kulli shay'in qadir.",
         "translation": "Say, 'O Allah, Owner of Sovereignty, You give sovereignty to whom You will and You take sovereignty away from whom You will. You honor whom You will and You humble whom You will. In Your hand is [all] good. Indeed, You are over all things competent.'",
         "translationSource": "Sahih International",
         "surahName": "Aal-Imran",
@@ -77,6 +79,7 @@
   "keyAyat": [
     {
       "arabic": "اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ",
+      "transliteration": "Allahu la ilaha illa Huwal-Hayyul-Qayyum.",
       "translation": "Allah - there is no deity except Him, the Ever-Living, the Sustainer of [all] existence.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-Baqarah, 2:255",
@@ -85,6 +88,7 @@
     },
     {
       "arabic": "لَا إِكْرَاهَ فِي الدِّينِ ۖ قَد تَّبَيَّنَ الرُّشْدُ مِنَ الْغَيِّ",
+      "transliteration": "La ikraha fid-din. Qad tabayyanar-rushdu minal-ghayy.",
       "translation": "There shall be no compulsion in [acceptance of] the religion. The right course has become distinct from the wrong.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-Baqarah, 2:256",
@@ -93,6 +97,7 @@
     },
     {
       "arabic": "لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا",
+      "transliteration": "La yukallifullahu nafsan illa wus'aha.",
       "translation": "Allah does not charge a soul except [with that within] its capacity.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-Baqarah, 2:286",
@@ -101,6 +106,7 @@
     },
     {
       "arabic": "هُوَ الَّذِي أَنزَلَ عَلَيْكَ الْكِتَابَ مِنْهُ آيَاتٌ مُّحْكَمَاتٌ هُنَّ أُمُّ الْكِتَابِ وَأُخَرُ مُتَشَابِهَاتٌ",
+      "transliteration": "Huwal-ladhi anzala 'alaykal-Kitaba minhu ayatun muhkamatun hunna Ummul-Kitabi wa ukharu mutashabihat.",
       "translation": "It is He who has sent down to you the Book; in it are verses [that are] precise - they are the foundation of the Book - and others unspecific.",
       "translationSource": "Sahih International",
       "reference": "Surah Aal-Imran, 3:7",
@@ -109,6 +115,7 @@
     },
     {
       "arabic": "إِنَّ مَثَلَ عِيسَىٰ عِندَ اللَّهِ كَمَثَلِ آدَمَ ۖ خَلَقَهُ مِن تُرَابٍ ثُمَّ قَالَ لَهُ كُن فَيَكُونُ",
+      "transliteration": "Inna mathala 'Isa 'indallahi kamathali Adam. Khalaqahu min turabin thumma qala lahu kun fayakun.",
       "translation": "Indeed, the example of Jesus to Allah is like that of Adam. He created him from dust; then He said to him, 'Be,' and he was.",
       "translationSource": "Sahih International",
       "reference": "Surah Aal-Imran, 3:59",
@@ -128,5 +135,95 @@
   },
   "habitCheckIn": "Day 3 — you're building momentum. How is your Quran recitation consistency? By now, aim to have a fixed time for your daily reading — whether it's after Fajr, before Iftar, or after Taraweeh. Consistency beats quantity. Even if you read less some days, the habit of showing up at the same time trains your soul. Also check: are you reciting Ayat al-Kursi after each prayer yet? Start today if not.",
   "closingMessage": "You've just finished one of the most content-rich portions of the Quran. Ayat al-Kursi, the ethics of charity, the prohibition of interest, 'Allah does not burden a soul beyond its capacity,' the stories of Maryam and Isa — this single Juz contains enough guidance to transform your life. Don't let it just be information. Pick one verse from today that hit you hardest, write it down, and carry it with you through the rest of your day.",
-  "closingDua": "رَبَّنَا لَا تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ ۖ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا ۚ أَنتَ مَوْلَانَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ — Our Lord, do not impose blame upon us if we forget or err. Our Lord, and lay not upon us a burden like that which You laid upon those before us. Our Lord, and burden us not with that which we have no ability to bear. And pardon us, and forgive us, and have mercy upon us. You are our Protector, so give us victory over the disbelieving people. (2:286)"
+  "closingDua": "رَبَّنَا لَا تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ ۖ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا ۚ أَنتَ مَوْلَانَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ — Our Lord, do not impose blame upon us if we forget or err. Our Lord, and lay not upon us a burden like that which You laid upon those before us. Our Lord, and burden us not with that which we have no ability to bear. And pardon us, and forgive us, and have mercy upon us. You are our Protector, so give us victory over the disbelieving people. (2:286)",
+  "closingDuaTransliteration": "Rabbana la tu'akhidhna in nasina aw akhta'na. Rabbana wa la tahmil 'alayna isran kama hamaltahu 'alal-ladhina min qablina. Rabbana wa la tuhammilna ma la taqata lana bih. Wa'fu 'anna, waghfir lana, warhamna. Anta Mawlana fansurna 'alal-qawmil-kafirin.",
+  "stories": [
+    {
+      "id": "maryam-and-isa",
+      "title": "The Miraculous Birth of Isa (Jesus)",
+      "subtitle": "How Allah chose Maryam and brought forth a prophet without a father",
+      "triggerLabel": "The Story of Maryam & Isa (AS)",
+      "paragraphs": [
+        "The story begins not with Maryam herself, but with her mother — the wife of Imran — who made a vow while pregnant. She dedicated her unborn child entirely to Allah's service, expecting a son. When she gave birth to a girl, she was surprised, but Allah had greater plans than she could imagine. She named the baby Maryam and sought Allah's protection for her and her offspring from Shaytan.",
+        "Allah accepted Maryam with a beautiful acceptance and entrusted her upbringing to the Prophet Zakariyya (AS). Every time Zakariyya entered her prayer chamber, he found food already provided for her. When he asked where it came from, she simply said: 'It is from Allah. Indeed, Allah provides for whom He wills without account' (3:37). A young girl teaching an elderly prophet about trust in Allah.",
+        "Years later, the angel Jibreel appeared to Maryam and announced that she would bear a son — a word from Allah, honored in this world and the Hereafter. She asked how this was possible when no man had touched her. The angel replied: 'Such is Allah; He creates what He wills. When He decrees a matter, He only says to it \"Be,\" and it is' (3:47).",
+        "Isa (AS) was born as a miracle and a sign — speaking from the cradle to defend his mother's honor. He would go on to perform miracles by Allah's permission: healing the blind, curing lepers, and bringing the dead back to life. But through it all, his message was the same message of every prophet: worship Allah alone.",
+        "The Quran settles the theological debate with one elegant comparison: 'Indeed, the example of Jesus to Allah is like that of Adam. He created him from dust; then He said to him, \"Be,\" and he was' (3:59). If a fatherless birth makes someone divine, then Adam — born without father or mother — would have an even greater claim. The logic is simple. The truth is clear."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "إِذْ قَالَتِ الْمَلَائِكَةُ يَا مَرْيَمُ إِنَّ اللَّهَ يُبَشِّرُكِ بِكَلِمَةٍ مِّنْهُ اسْمُهُ الْمَسِيحُ عِيسَى ابْنُ مَرْيَمَ",
+          "transliteration": "Idh qalatil-mala'ikatu ya Maryamu innallaha yubashshiruki bi-kalimatin minhu-smuhul-Maseehu 'Isabnu Maryam.",
+          "translation": "When the angels said, 'O Mary, indeed Allah gives you good tidings of a word from Him, whose name will be the Messiah, Jesus, the son of Mary.'",
+          "reference": "Surah Aal-Imran, 3:45"
+        },
+        {
+          "arabic": "إِنَّ مَثَلَ عِيسَىٰ عِندَ اللَّهِ كَمَثَلِ آدَمَ ۖ خَلَقَهُ مِن تُرَابٍ ثُمَّ قَالَ لَهُ كُن فَيَكُونُ",
+          "transliteration": "Inna mathala 'Isa 'indallahi kamathali Adam. Khalaqahu min turabin thumma qala lahu kun fayakun.",
+          "translation": "Indeed, the example of Jesus to Allah is like that of Adam. He created him from dust; then He said to him, 'Be,' and he was.",
+          "reference": "Surah Aal-Imran, 3:59"
+        }
+      ],
+      "lessonsLearned": [
+        "A parent's sincere du'a can shape the destiny of generations — Maryam's mother's dedication changed history.",
+        "Allah provides from sources you cannot imagine. When you are devoted to Him, sustenance comes from where you least expect it.",
+        "Miracles are signs of Allah's power, not evidence of anyone's divinity. Every miracle Isa performed was 'by Allah's permission.'",
+        "The truth is always simple. Complex theological constructs often obscure rather than illuminate."
+      ]
+    },
+    {
+      "id": "zakariyya-dua",
+      "title": "Zakariyya's Impossible Du'a",
+      "subtitle": "When an elderly prophet asked for a child — and Allah answered",
+      "triggerLabel": "The Du'a of Zakariyya (AS)",
+      "paragraphs": [
+        "Prophet Zakariyya (AS) was an elderly man, his hair white with age, and his wife was barren. By every human measure, having a child was impossible. Yet when he saw young Maryam receiving miraculous provision from Allah in her prayer chamber, something stirred in his heart. If Allah could provide for this young girl from the unseen, could He not grant an old man a son?",
+        "So Zakariyya turned to his Lord in private — not with a demand, but with vulnerability: 'My Lord, indeed my bones have weakened, and my head has filled with white, and never have I been in my supplication to You, my Lord, unhappy' (19:4). Notice the beauty of this du'a — he doesn't complain about his condition; he reminds himself of Allah's track record of answering him.",
+        "Allah responded immediately: 'O Zakariyya, indeed We give you good tidings of a boy whose name will be Yahya. We have not assigned to any before this name' (19:7). A unique child with a unique name for a man who made a uniquely vulnerable du'a.",
+        "When Zakariyya asked how this could be possible — his wife was barren, he was ancient — the answer was not a biological explanation. It was a theological one: 'Such is Allah; He does what He wills' (3:40). Some things don't need to make sense to your mind. They just need to make sense to your faith."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "هُنَالِكَ دَعَا زَكَرِيَّا رَبَّهُ ۖ قَالَ رَبِّ هَبْ لِي مِن لَّدُنكَ ذُرِّيَّةً طَيِّبَةً ۖ إِنَّكَ سَمِيعُ الدُّعَاءِ",
+          "transliteration": "Hunalika da'a Zakariyya Rabbahu qala Rabbi hab li min ladunka dhurriyyatan tayyibah. Innaka sami'ud-du'a.",
+          "translation": "At that, Zakariyya called upon his Lord, saying, 'My Lord, grant me from Yourself a good offspring. Indeed, You are the Hearer of supplication.'",
+          "reference": "Surah Aal-Imran, 3:38"
+        }
+      ],
+      "lessonsLearned": [
+        "Never consider your du'a 'impossible.' The One you are asking created the heavens and earth from nothing.",
+        "Make du'a from a place of vulnerability, not entitlement. Zakariyya's humility is what made his prayer so powerful.",
+        "Seeing Allah's provision for others should increase YOUR hope, not your jealousy. Zakariyya saw Maryam's rizq and was inspired to ask."
+      ]
+    }
+  ],
+  "dailyDuas": [
+    {
+      "arabic": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً ۚ إِنَّكَ أَنتَ الْوَهَّابُ",
+      "transliteration": "Rabbana la tuzigh qulubana ba'da idh hadaytana wa hab lana min ladunka rahmah. Innaka Antal-Wahhab.",
+      "translation": "Our Lord, let not our hearts deviate after You have guided us and grant us from Yourself mercy. Indeed, You are the Bestower.",
+      "reference": "3:8",
+      "surahName": "Aal-Imran",
+      "context": "This du'a appears right after the discussion of clear vs. ambiguous verses. It is the prayer of those firmly grounded in knowledge — they ask Allah to keep their hearts steady on guidance and protect them from being led astray by confusion or doubt.",
+      "purpose": "Protection from Misguidance"
+    },
+    {
+      "arabic": "رَبَّنَا إِنَّكَ جَامِعُ النَّاسِ لِيَوْمٍ لَّا رَيْبَ فِيهِ ۚ إِنَّ اللَّهَ لَا يُخْلِفُ الْمِيعَادَ",
+      "transliteration": "Rabbana innaka jami'un-nasi li-Yawmin la rayba fih. Innallaha la yukhliful-mi'ad.",
+      "translation": "Our Lord, surely You will gather the people for a Day about which there is no doubt. Indeed, Allah does not fail in His promise.",
+      "reference": "3:9",
+      "surahName": "Aal-Imran",
+      "context": "A continuation of the previous du'a — the believers affirm their certainty in the Day of Judgment. This du'a grounds you in accountability: knowing that everyone will be gathered before Allah keeps your actions in check.",
+      "purpose": "Certainty in the Hereafter"
+    },
+    {
+      "arabic": "رَبَّنَا آمَنَّا بِمَا أَنزَلْتَ وَاتَّبَعْنَا الرَّسُولَ فَاكْتُبْنَا مَعَ الشَّاهِدِينَ",
+      "transliteration": "Rabbana amanna bima anzalta wattaba'nar-Rasula faktubna ma'ash-shahidin.",
+      "translation": "Our Lord, we have believed in what You revealed and have followed the messenger, so register us among the witnesses [to truth].",
+      "reference": "3:53",
+      "surahName": "Aal-Imran",
+      "context": "This is the du'a of the disciples of Isa (AS) when they declared their faith. It's a prayer of commitment — asking to be counted among those who witnessed and testified to the truth, not just passively believed it.",
+      "purpose": "Witnessing the Truth"
+    }
+  ]
 }

@@ -2,8 +2,8 @@
   "juzNumber": 10,
   "dayNumber": 10,
   "dateGenerated": "2026-03-09T00:00:00.000Z",
-  "surahsCovered": "Al-Anfal (8:41-75) • At-Tawbah (9:1-92)",
-  "juzSummary": "Juz 10 continues the lessons of Badr from Al-Anfal and then transitions into At-Tawbah — the only Surah in the Quran that begins without Bismillah, signaling the severity of its themes. Al-Anfal's final portion establishes rules for distribution of war gains, the significance of divine support at Badr, and the bonds of the believing community. At-Tawbah then delivers the Quran's most uncompromising call to accountability: a declaration of disavowal from those who broke their treaties, exposure of hypocrites who refused to join the Tabuk expedition, and a clear distinction between sincere believers and those who use faith as a mask. Together, these passages force us to confront a difficult question: is our commitment to Allah conditional, or are we willing to sacrifice when it truly costs us something?",
+  "surahsCovered": "Al-Anfal (8:41-75) \u2022 At-Tawbah (9:1-92)",
+  "juzSummary": "Juz 10 continues the lessons of Badr from Al-Anfal and then transitions into At-Tawbah \u2014 the only Surah in the Quran that begins without Bismillah, signaling the severity of its themes. Al-Anfal's final portion establishes rules for distribution of war gains, the significance of divine support at Badr, and the bonds of the believing community. At-Tawbah then delivers the Quran's most uncompromising call to accountability: a declaration of disavowal from those who broke their treaties, exposure of hypocrites who refused to join the Tabuk expedition, and a clear distinction between sincere believers and those who use faith as a mask. Together, these passages force us to confront a difficult question: is our commitment to Allah conditional, or are we willing to sacrifice when it truly costs us something?",
   "surahBreakdowns": [
     {
       "name": "Al-Anfal",
@@ -15,18 +15,19 @@
       "revelationContext": "Revealed in Madinah after the Battle of Badr (2 AH), the Muslims' first major military victory. This portion addresses the aftermath: how to handle victory with humility, the miraculous divine support at Badr, and the obligations of the believing community toward one another.",
       "coreTheme": "True victory comes from Allah alone, and the believing community must remain united, trust in divine support, and honor their covenants with one another and with Allah.",
       "keyTeachings": [
-        "One-fifth of any gains belongs to Allah, His Messenger, relatives, orphans, the needy, and travelers (8:41) — wealth has social obligations built into it from day one.",
-        "At Badr, Allah sent angels and made the enemy appear few to the believers, and the believers few to the enemy (8:43-44) — divine strategy operates beyond what our eyes perceive.",
-        "Allah does not change the condition of a people until they change what is in themselves (8:53) — blessings are maintained or lost based on our own choices and gratitude.",
-        "Prepare whatever strength you can to deter aggression, but always prefer peace when the enemy inclines toward it (8:60-61) — strength and peace are not contradictions in Islam."
+        "One-fifth of any gains belongs to Allah, His Messenger, relatives, orphans, the needy, and travelers (8:41) \u2014 wealth has social obligations built into it from day one.",
+        "At Badr, Allah sent angels and made the enemy appear few to the believers, and the believers few to the enemy (8:43-44) \u2014 divine strategy operates beyond what our eyes perceive.",
+        "Allah does not change the condition of a people until they change what is in themselves (8:53) \u2014 blessings are maintained or lost based on our own choices and gratitude.",
+        "Prepare whatever strength you can to deter aggression, but always prefer peace when the enemy inclines toward it (8:60-61) \u2014 strength and peace are not contradictions in Islam."
       ],
       "standoutAyah": {
-        "arabic": "ذَٰلِكَ بِأَنَّ اللَّهَ لَمْ يَكُ مُغَيِّرًا نِّعْمَةً أَنْعَمَهَا عَلَىٰ قَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنفُسِهِمْ",
+        "arabic": "\u0630\u0644\u0643 \u0628\u0623\u0646 \u0627\u0644\u0644\u0647 \u0644\u0645 \u064a\u0643 \u0645\u063a\u064a\u0631\u0627 \u0646\u0639\u0645\u0629 \u0623\u0646\u0639\u0645\u0647\u0627 \u0639\u0644\u0649 \u0642\u0648\u0645 \u062d\u062a\u0649 \u064a\u063a\u064a\u0631\u0648\u0627 \u0645\u0627 \u0628\u0623\u0646\u0641\u0633\u0647\u0645",
+        "transliteration": "Dhalika bi annal-Laha lam yaku mughayyiran ni'matan an'amaha 'ala qawmin hatta yughayyiru ma bi anfusihim",
         "translation": "That is because Allah would not change a favor which He had bestowed upon a people until they change what is within themselves.",
         "translationSource": "Sahih International",
         "surahName": "Al-Anfal",
         "verseNumber": "8:53",
-        "reflection": "This verse is a wake-up call: your blessings are not permanent guarantees. They are maintained by your gratitude and lost by your complacency. Ramadan itself is a blessing — how you treat it determines whether its benefits stay with you after the month ends."
+        "reflection": "This verse is a wake-up call: your blessings are not permanent guarantees. They are maintained by your gratitude and lost by your complacency. Ramadan itself is a blessing \u2014 how you treat it determines whether its benefits stay with you after the month ends."
       }
     },
     {
@@ -37,87 +38,218 @@
       "continuesInNextJuz": true,
       "meaningOfName": "Named 'The Repentance' (At-Tawbah) because despite its severe tone, the Surah ultimately calls people back to Allah's mercy through sincere repentance. It is also called Bara'ah (Disavowal) after its opening declaration.",
       "revelationContext": "Revealed in Madinah in 9 AH, among the last Surahs revealed. It addresses the aftermath of the Treaty of Hudaybiyyah being broken by polytheist tribes, the expedition to Tabuk against the Byzantine threat, and the growing problem of hypocrites in the Muslim community who refused to sacrifice for the cause.",
-      "coreTheme": "Absolute sincerity in faith — there is no room for half-hearted commitment, broken promises, or hiding behind excuses. Allah demands honesty, and this Surah strips away every mask.",
+      "coreTheme": "Absolute sincerity in faith \u2014 there is no room for half-hearted commitment, broken promises, or hiding behind excuses. Allah demands honesty, and this Surah strips away every mask.",
       "keyTeachings": [
-        "At-Tawbah begins without Bismillah — scholars note this reflects the severity of its opening declaration of disavowal from treaty-breakers, showing that Allah's mercy has conditions tied to human honesty.",
-        "True believers are those who sacrifice their wealth and lives in Allah's cause willingly (9:20) — not out of compulsion, but from deep conviction. Faith that costs nothing may be worth nothing.",
+        "At-Tawbah begins without Bismillah \u2014 scholars note this reflects the severity of its opening declaration of disavowal from treaty-breakers, showing that Allah's mercy has conditions tied to human honesty.",
+        "True believers are those who sacrifice their wealth and lives in Allah's cause willingly (9:20) \u2014 not out of compulsion, but from deep conviction. Faith that costs nothing may be worth nothing.",
         "The hypocrites made excuses to avoid the Tabuk expedition, preferring comfort over duty (9:42-48). Allah exposes that their real problem was not logistics but lack of faith.",
-        "Those who hoard gold and silver and do not spend in Allah's cause are warned of painful punishment (9:34-35) — wealth is a test, and attachment to it reveals where your real loyalty lies.",
-        "Allah calls on believers to go forth 'whether light or heavy' (9:41) — meaning there is no valid excuse for inaction. Your circumstances do not exempt you from striving in Allah's cause."
+        "Those who hoard gold and silver and do not spend in Allah's cause are warned of painful punishment (9:34-35) \u2014 wealth is a test, and attachment to it reveals where your real loyalty lies.",
+        "Allah calls on believers to go forth 'whether light or heavy' (9:41) \u2014 meaning there is no valid excuse for inaction. Your circumstances do not exempt you from striving in Allah's cause."
       ],
       "standoutAyah": {
-        "arabic": "قُلْ إِن كَانَ آبَاؤُكُمْ وَأَبْنَاؤُكُمْ وَإِخْوَانُكُمْ وَأَزْوَاجُكُمْ وَعَشِيرَتُكُمْ وَأَمْوَالٌ اقْتَرَفْتُمُوهَا وَتِجَارَةٌ تَخْشَوْنَ كَسَادَهَا وَمَسَاكِنُ تَرْضَوْنَهَا أَحَبَّ إِلَيْكُم مِّنَ اللَّهِ وَرَسُولِهِ وَجِهَادٍ فِي سَبِيلِهِ فَتَرَبَّصُوا حَتَّىٰ يَأْتِيَ اللَّهُ بِأَمْرِهِ",
+        "arabic": "\u0642\u0644 \u0625\u0646 \u0643\u0627\u0646 \u0622\u0628\u0627\u0624\u0643\u0645 \u0648\u0623\u0628\u0646\u0627\u0624\u0643\u0645 \u0648\u0625\u062e\u0648\u0627\u0646\u0643\u0645 \u0648\u0623\u0632\u0648\u0627\u062c\u0643\u0645 \u0648\u0639\u0634\u064a\u0631\u062a\u0643\u0645 \u0648\u0623\u0645\u0648\u0627\u0644 \u0627\u0642\u062a\u0631\u0641\u062a\u0645\u0648\u0647\u0627 \u0648\u062a\u062c\u0627\u0631\u0629 \u062a\u062e\u0634\u0648\u0646 \u0643\u0633\u0627\u062f\u0647\u0627 \u0648\u0645\u0633\u0627\u0643\u0646 \u062a\u0631\u0636\u0648\u0646\u0647\u0627 \u0623\u062d\u0628 \u0625\u0644\u064a\u0643\u0645 \u0645\u0646 \u0627\u0644\u0644\u0647 \u0648\u0631\u0633\u0648\u0644\u0647 \u0648\u062c\u0647\u0627\u062f \u0641\u064a \u0633\u0628\u064a\u0644\u0647 \u0641\u062a\u0631\u0628\u0635\u0648\u0627 \u062d\u062a\u0649 \u064a\u0623\u062a\u064a \u0627\u0644\u0644\u0647 \u0628\u0623\u0645\u0631\u0647",
+        "transliteration": "Qul in kana aba'ukum wa abna'ukum wa ikhwanukum wa azwajukum wa 'ashiratukum wa amwalun-iqtaraftumūha wa tijaratun takhshawna kasadaha wa masakinu tardawnaha ahabba ilaykum minal-Lahi wa Rasulihi wa jihadin fi sabilihi fatarabbasū hatta ya'tiyal-Lahu bi amrih",
         "translation": "Say, 'If your fathers, your sons, your brothers, your wives, your relatives, wealth which you have obtained, commerce you fear may decline, and dwellings with which you are pleased are more beloved to you than Allah and His Messenger and striving in His cause, then wait until Allah executes His command.'",
         "translationSource": "Sahih International",
         "surahName": "At-Tawbah",
         "verseNumber": "9:24",
-        "reflection": "This verse lists eight things people love — family, money, business, homes — and asks: do you love any of these MORE than Allah and His path? It does not say these things are bad. It says they cannot come FIRST. Ramadan is the time to re-examine your priority list honestly."
+        "reflection": "This verse lists eight things people love \u2014 family, money, business, homes \u2014 and asks: do you love any of these MORE than Allah and His path? It does not say these things are bad. It says they cannot come FIRST. Ramadan is the time to re-examine your priority list honestly."
       }
     }
   ],
-  "connectingTheDots": "Al-Anfal and At-Tawbah form a powerful pair — Al-Anfal shows what a sincere community looks like when they trust Allah and sacrifice together (the victory at Badr), while At-Tawbah exposes what happens when that sincerity erodes: excuses replace action, wealth replaces sacrifice, and comfort replaces commitment. The transition from Badr's triumph to Tabuk's test of loyalty is a warning that faith is not proven in one glorious moment but in the daily, unglamorous choice to show up when it costs you something.",
+  "connectingTheDots": "Al-Anfal and At-Tawbah form a powerful pair \u2014 Al-Anfal shows what a sincere community looks like when they trust Allah and sacrifice together (the victory at Badr), while At-Tawbah exposes what happens when that sincerity erodes: excuses replace action, wealth replaces sacrifice, and comfort replaces commitment. The transition from Badr's triumph to Tabuk's test of loyalty is a warning that faith is not proven in one glorious moment but in the daily, unglamorous choice to show up when it costs you something.",
   "coreThemes": [
     {
       "name": "Sincerity Under Pressure",
       "explanation": "Both Surahs test the genuineness of faith through real-world demands. At Badr, the believers had little but trusted Allah completely. By the time of Tabuk, the community was larger and wealthier, yet many found excuses to avoid sacrifice. Prosperity can weaken the very faith that hardship strengthens.",
-      "dailyRelevance": "Day 10 of Ramadan — you are past the initial excitement and entering the middle stretch. This is where sincerity is tested. Are you still praying with the same focus as Day 1? Are you still controlling your tongue, your screen time, your habits? The middle of any commitment reveals who you truly are."
+      "dailyRelevance": "Day 10 of Ramadan \u2014 you are past the initial excitement and entering the middle stretch. This is where sincerity is tested. Are you still praying with the same focus as Day 1? Are you still controlling your tongue, your screen time, your habits? The middle of any commitment reveals who you truly are."
     },
     {
       "name": "Exposing Hypocrisy",
-      "explanation": "At-Tawbah is the Quran's most detailed exposure of hypocrisy — not just denial of faith, but the subtle disease of saying one thing and doing another, of performing religion publicly while the heart is absent. The hypocrites at Tabuk swore oaths and made excuses, claiming they would have joined if they could (9:42-48), while secretly rejoicing at staying behind.",
-      "dailyRelevance": "During Ramadan, we fast publicly and pray in congregation — but how much of it is truly for Allah? Use this Juz as a mirror. Where in your life are you performing faith without feeling it? The goal is not guilt but honest self-awareness that leads to genuine change."
+      "explanation": "At-Tawbah is the Quran's most detailed exposure of hypocrisy \u2014 not just denial of faith, but the subtle disease of saying one thing and doing another, of performing religion publicly while the heart is absent. The hypocrites at Tabuk swore oaths and made excuses, claiming they would have joined if they could (9:42-48), while secretly rejoicing at staying behind.",
+      "dailyRelevance": "During Ramadan, we fast publicly and pray in congregation \u2014 but how much of it is truly for Allah? Use this Juz as a mirror. Where in your life are you performing faith without feeling it? The goal is not guilt but honest self-awareness that leads to genuine change."
     },
     {
       "name": "Wealth as a Test",
       "explanation": "From the distribution of war gains (8:41) to the hoarding of gold and silver (9:34), this Juz repeatedly frames wealth not as a reward but as a trial. What you do with your money reveals what you truly worship. The hypocrites clung to their wealth; the sincere believers gave freely.",
-      "dailyRelevance": "Ramadan is the month of generosity. This Juz challenges you to examine your relationship with money — are you giving sadaqah consistently, or is your charity limited to when it is convenient? Set a daily amount, even if small, and give it every single day for the rest of Ramadan."
+      "dailyRelevance": "Ramadan is the month of generosity. This Juz challenges you to examine your relationship with money \u2014 are you giving sadaqah consistently, or is your charity limited to when it is convenient? Set a daily amount, even if small, and give it every single day for the rest of Ramadan."
     }
   ],
   "keyAyat": [
     {
-      "arabic": "وَاعْلَمُوا أَنَّمَا غَنِمْتُم مِّن شَيْءٍ فَأَنَّ لِلَّهِ خُمُسَهُ وَلِلرَّسُولِ وَلِذِي الْقُرْبَىٰ وَالْيَتَامَىٰ وَالْمَسَاكِينِ وَابْنِ السَّبِيلِ",
-      "translation": "And know that anything you obtain of war booty — then indeed, for Allah is one fifth of it and for the Messenger and for [his] near relatives and the orphans, the needy, and the [stranded] traveler.",
+      "arabic": "\u0648\u0627\u0639\u0644\u0645\u0648\u0627 \u0623\u0646\u0645\u0627 \u063a\u0646\u0645\u062a\u0645 \u0645\u0646 \u0634\u064a\u0621 \u0641\u0623\u0646 \u0644\u0644\u0647 \u062e\u0645\u0633\u0647 \u0648\u0644\u0644\u0631\u0633\u0648\u0644 \u0648\u0644\u0630\u064a \u0627\u0644\u0642\u0631\u0628\u0649 \u0648\u0627\u0644\u064a\u062a\u0627\u0645\u0649 \u0648\u0627\u0644\u0645\u0633\u0627\u0643\u064a\u0646 \u0648\u0627\u0628\u0646 \u0627\u0644\u0633\u0628\u064a\u0644",
+      "transliteration": "Wa'lamu annama ghanimtum min shay'in fa anna lillahi khumusahu wa lir-Rasuli wa lidhil-qurba wal-yatama wal-masakini wabnis-sabil",
+      "translation": "And know that anything you obtain of war booty \u2014 then indeed, for Allah is one fifth of it and for the Messenger and for [his] near relatives and the orphans, the needy, and the [stranded] traveler.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-Anfal, 8:41",
-      "significance": "The very first verse of this Juz establishes a principle that runs through the entire portion: wealth is never entirely yours. Allah builds social responsibility into the structure of provision itself — orphans, the poor, and travelers have a right in what you earn.",
+      "significance": "The very first verse of this Juz establishes a principle that runs through the entire portion: wealth is never entirely yours. Allah builds social responsibility into the structure of provision itself \u2014 orphans, the poor, and travelers have a right in what you earn.",
       "reflectionPrompt": "Do you treat your wealth as entirely your own, or do you recognize that others have a right in it? What would change if you truly internalized that a portion of everything you earn was never meant for you?"
     },
     {
-      "arabic": "وَأَعِدُّوا لَهُم مَّا اسْتَطَعْتُم مِّن قُوَّةٍ",
+      "arabic": "\u0648\u0623\u0639\u062f\u0648\u0627 \u0644\u0647\u0645 \u0645\u0627 \u0627\u0633\u062a\u0637\u0639\u062a\u0645 \u0645\u0646 \u0642\u0648\u0629",
+      "transliteration": "Wa a'iddu lahum masta-ta'tum min quwwah",
       "translation": "And prepare against them whatever you are able of power.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-Anfal, 8:60",
-      "significance": "While revealed in a military context, this verse establishes a universal Islamic principle: preparation is an act of worship. Allah does not ask for miracles — He asks you to do what you CAN, then He handles what you cannot.",
-      "reflectionPrompt": "What spiritual 'preparation' have you been neglecting? Whether it is memorizing Quran, strengthening your prayer, or learning your deen — what is one thing within your ability that you can start building today?"
+      "significance": "While revealed in a military context, this verse establishes a universal Islamic principle: preparation is an act of worship. Allah does not ask for miracles \u2014 He asks you to do what you CAN, then He handles what you cannot.",
+      "reflectionPrompt": "What spiritual 'preparation' have you been neglecting? Whether it is memorizing Quran, strengthening your prayer, or learning your deen \u2014 what is one thing within your ability that you can start building today?"
     },
     {
-      "arabic": "وَالَّذِينَ يَكْنِزُونَ الذَّهَبَ وَالْفِضَّةَ وَلَا يُنفِقُونَهَا فِي سَبِيلِ اللَّهِ فَبَشِّرْهُم بِعَذَابٍ أَلِيمٍ",
-      "translation": "And those who hoard gold and silver and spend it not in the way of Allah — give them tidings of a painful punishment.",
+      "arabic": "\u0648\u0627\u0644\u0630\u064a\u0646 \u064a\u0643\u0646\u0632\u0648\u0646 \u0627\u0644\u0630\u0647\u0628 \u0648\u0627\u0644\u0641\u0636\u0629 \u0648\u0644\u0627 \u064a\u0646\u0641\u0642\u0648\u0646\u0647\u0627 \u0641\u064a \u0633\u0628\u064a\u0644 \u0627\u0644\u0644\u0647 \u0641\u0628\u0634\u0631\u0647\u0645 \u0628\u0639\u0630\u0627\u0628 \u0623\u0644\u064a\u0645",
+      "transliteration": "Wal-ladhina yaknizunadh-dhahaba wal-fidddata wa la yunfiqunaha fi sabilil-Lahi fabash-shirhum bi 'adhabin alim",
+      "translation": "And those who hoard gold and silver and spend it not in the way of Allah \u2014 give them tidings of a painful punishment.",
       "translationSource": "Sahih International",
       "reference": "Surah At-Tawbah, 9:34",
-      "significance": "This is one of the Quran's most direct warnings about wealth. The word 'kanz' (hoarding) does not mean saving — it means accumulating without fulfilling the rights others have in your wealth. The punishment described in the next verse is that the hoarded gold will be heated and used to brand their foreheads, sides, and backs.",
-      "reflectionPrompt": "Is there wealth you are holding onto that should be flowing outward — to family in need, to causes that matter, to the community around you? What is the difference between responsible saving and the 'hoarding' this verse warns about?"
+      "significance": "This is one of the Quran's most direct warnings about wealth. The word 'kanz' (hoarding) does not mean saving \u2014 it means accumulating without fulfilling the rights others have in your wealth. The punishment described in the next verse is that the hoarded gold will be heated and used to brand their foreheads, sides, and backs.",
+      "reflectionPrompt": "Is there wealth you are holding onto that should be flowing outward \u2014 to family in need, to causes that matter, to the community around you? What is the difference between responsible saving and the 'hoarding' this verse warns about?"
     },
     {
-      "arabic": "انفِرُوا خِفَافًا وَثِقَالًا وَجَاهِدُوا بِأَمْوَالِكُمْ وَأَنفُسِكُمْ فِي سَبِيلِ اللَّهِ ۚ ذَٰلِكُمْ خَيْرٌ لَّكُمْ إِن كُنتُمْ تَعْلَمُونَ",
+      "arabic": "\u0627\u0646\u0641\u0631\u0648\u0627 \u062e\u0641\u0627\u0641\u0627 \u0648\u062b\u0642\u0627\u0644\u0627 \u0648\u062c\u0627\u0647\u062f\u0648\u0627 \u0628\u0623\u0645\u0648\u0627\u0644\u0643\u0645 \u0648\u0623\u0646\u0641\u0633\u0643\u0645 \u0641\u064a \u0633\u0628\u064a\u0644 \u0627\u0644\u0644\u0647 \u0630\u0644\u0643\u0645 \u062e\u064a\u0631 \u0644\u0643\u0645 \u0625\u0646 \u0643\u0646\u062a\u0645 \u062a\u0639\u0644\u0645\u0648\u0646",
+      "transliteration": "Infiru khifafan wa thiqalan wa jahidu bi amwalikum wa anfusikum fi sabilil-Lah. Dhalikum khayrun lakum in kuntum ta'lamun",
       "translation": "Go forth, whether light or heavy, and strive with your wealth and your lives in the cause of Allah. That is better for you, if you only knew.",
       "translationSource": "Sahih International",
       "reference": "Surah At-Tawbah, 9:41",
-      "significance": "This verse removes every excuse. Whether you feel ready or not, strong or weak, rich or struggling — go forth. The command applies to every circumstance. Allah is not asking for your ideal version; He is asking for your present, imperfect self to show up.",
-      "reflectionPrompt": "What excuse have you been using to delay a spiritual commitment — 'I am too busy,' 'I am not ready,' 'After Ramadan'? What would it look like to go forth 'light or heavy' today, just as you are?"
+      "significance": "This verse removes every excuse. Whether you feel ready or not, strong or weak, rich or struggling \u2014 go forth. The command applies to every circumstance. Allah is not asking for your ideal version; He is asking for your present, imperfect self to show up.",
+      "reflectionPrompt": "What excuse have you been using to delay a spiritual commitment \u2014 'I am too busy,' 'I am not ready,' 'After Ramadan'? What would it look like to go forth 'light or heavy' today, just as you are?"
     }
   ],
   "hadithOfTheDay": {
-    "text": "The Messenger of Allah (ﷺ) said: 'Charity does not decrease wealth. No one forgives another except that Allah increases his honor. And no one humbles himself for the sake of Allah except that Allah raises his status.'",
+    "text": "The Messenger of Allah (\ufdfa) said: 'Charity does not decrease wealth. No one forgives another except that Allah increases his honor. And no one humbles himself for the sake of Allah except that Allah raises his status.'",
     "source": "Sahih Muslim #2588; also narrated in similar meaning in Nahj al-Balagha, Sermon 23, and referenced in Bihar al-Anwar, Vol. 71",
-    "reflection": "This Juz challenges us on wealth, sincerity, and ego — and this hadith addresses all three. Give charity without fear of loss. Forgive without counting the cost. Be humble without feeling diminished. These are the three acts that Ramadan is designed to train you in: generosity through fasting, forgiveness through patience, and humility through worship."
+    "reflection": "This Juz challenges us on wealth, sincerity, and ego \u2014 and this hadith addresses all three. Give charity without fear of loss. Forgive without counting the cost. Be humble without feeling diminished. These are the three acts that Ramadan is designed to train you in: generosity through fasting, forgiveness through patience, and humility through worship."
   },
-  "dailyPractice": "Today, set up a daily sadaqah commitment for the remaining 20 days of Ramadan. Pick a specific amount — even $1 or $2 — and give it every single day without fail. Use an app, a jar, or an automatic recurring donation. The point is not the amount but the consistency. This Juz warns about clinging to wealth (9:34-35) and praises those who give freely. Consistent charity rewires your relationship with money from scarcity to trust in Allah. By the end of Ramadan, you will have built a habit of daily generosity that can carry beyond the month.",
+  "dailyPractice": "Today, set up a daily sadaqah commitment for the remaining 20 days of Ramadan. Pick a specific amount \u2014 even $1 or $2 \u2014 and give it every single day without fail. Use an app, a jar, or an automatic recurring donation. The point is not the amount but the consistency. This Juz warns about clinging to wealth (9:34-35) and praises those who give freely. Consistent charity rewires your relationship with money from scarcity to trust in Allah. By the end of Ramadan, you will have built a habit of daily generosity that can carry beyond the month.",
   "discussionQuestions": {
-    "reflectionQuestion": "At-Tawbah 9:24 lists eight things people love — parents, children, siblings, spouses, relatives, wealth, business, and homes — and asks whether any of these are more beloved to you than Allah and His path. Without judging yourself, which of these eight has the strongest pull on your heart right now, and how does it sometimes compete with your commitment to Allah?",
-    "applicationQuestion": "The hypocrites at Tabuk made excuses to avoid sacrifice when it was difficult and uncomfortable (9:42-48). What is one act of worship or one good habit that you keep 'excusing' yourself from — and what would it take to stop making that excuse starting today?"
+    "reflectionQuestion": "At-Tawbah 9:24 lists eight things people love \u2014 parents, children, siblings, spouses, relatives, wealth, business, and homes \u2014 and asks whether any of these are more beloved to you than Allah and His path. Without judging yourself, which of these eight has the strongest pull on your heart right now, and how does it sometimes compete with your commitment to Allah?",
+    "applicationQuestion": "The hypocrites at Tabuk made excuses to avoid sacrifice when it was difficult and uncomfortable (9:42-48). What is one act of worship or one good habit that you keep 'excusing' yourself from \u2014 and what would it take to stop making that excuse starting today?"
   },
-  "habitCheckIn": "Day 10 — you are one-third of the way through Ramadan. This is often where the initial momentum fades and the routine starts to feel heavy. Check in honestly: Has your phone screen time crept back up after those first few disciplined days? Are you still making it to Fajr on time, or has the alarm become easier to ignore? Pick the ONE habit that has slipped the most since Day 1, and recommit to it today — not perfectly, just consistently. The middle of Ramadan separates those who finish strong from those who coast. You have 20 days left to build something real. Do not waste them.",
-  "closingMessage": "You have completed one-third of this Ramadan journey. Juz 10 drew a sharp line between those who show up when it matters and those who find excuses to stay comfortable. The beautiful truth is that Allah is not asking for perfection — He is asking for sincerity. He called this Surah 'The Repentance' because no matter how many times you have fallen short, the door back to Him is always open. The question is not whether you are worthy of that door. The question is whether you will walk through it. You are not just reading the Quran this Ramadan — you are being rebuilt by it. Keep going.",
-  "closingDua": "اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي — O Allah, You are the Pardoner, You love to pardon, so pardon me."
+  "habitCheckIn": "Day 10 \u2014 you are one-third of the way through Ramadan. This is often where the initial momentum fades and the routine starts to feel heavy. Check in honestly: Has your phone screen time crept back up after those first few disciplined days? Are you still making it to Fajr on time, or has the alarm become easier to ignore? Pick the ONE habit that has slipped the most since Day 1, and recommit to it today \u2014 not perfectly, just consistently. The middle of Ramadan separates those who finish strong from those who coast. You have 20 days left to build something real. Do not waste them.",
+  "closingMessage": "You have completed one-third of this Ramadan journey. Juz 10 drew a sharp line between those who show up when it matters and those who find excuses to stay comfortable. The beautiful truth is that Allah is not asking for perfection \u2014 He is asking for sincerity. He called this Surah 'The Repentance' because no matter how many times you have fallen short, the door back to Him is always open. The question is not whether you are worthy of that door. The question is whether you will walk through it. You are not just reading the Quran this Ramadan \u2014 you are being rebuilt by it. Keep going.",
+  "closingDua": "\u0627\u0644\u0644\u0647\u0645 \u0625\u0646\u0643 \u0639\u0641\u0648 \u062a\u062d\u0628 \u0627\u0644\u0639\u0641\u0648 \u0641\u0627\u0639\u0641 \u0639\u0646\u064a \u2014 O Allah, You are the Pardoner, You love to pardon, so pardon me.",
+  "closingDuaTransliteration": "Allahumma innaka 'Afuwwun tuhibbul-'afwa fa'fu 'anni",
+  "stories": [
+    {
+      "id": "expedition-to-tabuk",
+      "title": "The Expedition to Tabuk: When Comfort Was the Enemy",
+      "subtitle": "The campaign that separated the sincere from the insincere",
+      "triggerLabel": "The Story of the Tabuk Expedition",
+      "paragraphs": [
+        "In the ninth year after the Hijrah, news reached Madinah that the Byzantine Empire was amassing forces along the northern border of the Arabian Peninsula. The Prophet (\ufdfa) made a rare decision: he openly announced the destination and called for a full mobilization. This was unusual \u2014 in most campaigns, the target was kept secret. But Tabuk was different. It was far, it was summer, the harvest was ripe, and the heat was brutal. Allah wanted to expose who would sacrifice and who would make excuses.",
+        "The response revealed the true state of the community. The sincere believers gave everything they had. Abu Bakr (RA) brought his entire wealth. Umar (RA) brought half of his. Uthman (RA) financed a massive portion of the army. Poor companions who could not afford mounts came to the Prophet weeping, asking to be taken along, and he had to turn them away because there were not enough riding animals. The Quran immortalizes them: 'Nor [is there blame] upon those who, when they came to you to be carried, you said, \"I cannot find anything for you to ride upon,\" and they turned back while their eyes overflowed with tears' (9:92).",
+        "But others within the community \u2014 the hypocrites \u2014 found every excuse not to go. Some claimed the heat was too severe. Others said their farms needed them. Some even said, 'Do not go out in the heat,' to which Allah responded: 'Say, the fire of Hell is more intense in heat, if they only understood' (9:81). The expedition became a sieve: it separated those whose faith was real from those who performed religion only when it was convenient.",
+        "The army marched to Tabuk and found that the Byzantine forces had retreated. There was no battle. But that was not the point. The point was the journey itself \u2014 the willingness to leave comfort behind when Allah called. Those who went were honored, and those who stayed were exposed. Three sincere believers who stayed behind without valid excuse were subjected to fifty days of social isolation before Allah accepted their repentance \u2014 a story told later in At-Tawbah (9:118).",
+        "Tabuk teaches us that the test of faith is often not dramatic. It is the quiet moment when doing the right thing is inconvenient, uncomfortable, and no one is watching to applaud you. The hypocrites did not fail because the mission was impossible. They failed because it was hard."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "\u0627\u0646\u0641\u0631\u0648\u0627 \u062e\u0641\u0627\u0641\u0627 \u0648\u062b\u0642\u0627\u0644\u0627 \u0648\u062c\u0627\u0647\u062f\u0648\u0627 \u0628\u0623\u0645\u0648\u0627\u0644\u0643\u0645 \u0648\u0623\u0646\u0641\u0633\u0643\u0645 \u0641\u064a \u0633\u0628\u064a\u0644 \u0627\u0644\u0644\u0647",
+          "transliteration": "Infiru khifafan wa thiqalan wa jahidu bi amwalikum wa anfusikum fi sabilil-Lah",
+          "translation": "Go forth, whether light or heavy, and strive with your wealth and your lives in the cause of Allah.",
+          "reference": "9:41"
+        },
+        {
+          "arabic": "\u0648\u0644\u0627 \u0639\u0644\u0649 \u0627\u0644\u0630\u064a\u0646 \u0625\u0630\u0627 \u0645\u0627 \u0623\u062a\u0648\u0643 \u0644\u062a\u062d\u0645\u0644\u0647\u0645 \u0642\u0644\u062a \u0644\u0627 \u0623\u062c\u062f \u0645\u0627 \u0623\u062d\u0645\u0644\u0643\u0645 \u0639\u0644\u064a\u0647 \u062a\u0648\u0644\u0648\u0627 \u0648\u0623\u0639\u064a\u0646\u0647\u0645 \u062a\u0641\u064a\u0636 \u0645\u0646 \u0627\u0644\u062f\u0645\u0639 \u062d\u0632\u0646\u0627 \u0623\u0644\u0627 \u064a\u062c\u062f\u0648\u0627 \u0645\u0627 \u064a\u0646\u0641\u0642\u0648\u0646",
+          "transliteration": "Wa la 'alal-ladhina idha ma atawka litahmilahum qulta la ajidu ma ahmilukum 'alayhi tawallaw wa a'yunuhum tafidu minad-dam'i hazanan alla yajidu ma yunfiqun",
+          "translation": "Nor [is there blame] upon those who, when they came to you to be carried, you said, 'I cannot find anything for you to ride upon,' and they turned back while their eyes overflowed with tears out of grief that they could not find something to spend.",
+          "reference": "9:92"
+        }
+      ],
+      "lessonsLearned": [
+        "The greatest tests of faith are often not dramatic battles but quiet, unglamorous moments when doing the right thing is simply inconvenient. Ramadan fasting is this kind of test \u2014 no one sees your hunger, no one applauds your patience. That is precisely what makes it valuable.",
+        "Excuses reveal priorities. The hypocrites at Tabuk did not lack ability; they lacked willingness. Examine the excuses you make for spiritual commitments and ask honestly: is the obstacle real, or is my heart simply not in it?",
+        "Those who wept because they could not contribute teach us that sincerity is measured by desire, not just by action. If you genuinely want to do good but cannot, Allah sees that intention."
+      ]
+    },
+    {
+      "id": "divine-support-at-badr",
+      "title": "The Unseen Army at Badr",
+      "subtitle": "How Allah orchestrated victory through forces no eye could see",
+      "triggerLabel": "The Story of Divine Support at Badr",
+      "paragraphs": [
+        "The continuation of Surah Al-Anfal in this Juz reveals the intricate ways Allah orchestrated the Muslim victory at Badr \u2014 not just through angelic reinforcement, but through a series of subtle, invisible interventions that tilted every factor in the believers' favor. The Quran does not present Badr as a story of human bravery alone. It insists that behind every visible action was an unseen divine Hand.",
+        "The night before the battle, Allah cast a deep, peaceful sleep over the Muslim camp (8:11). Soldiers facing a force three times their size should have been anxious, restless, unable to close their eyes. Instead, they slept soundly and woke refreshed. Then Allah sent rain \u2014 enough to firm the sandy ground beneath the Muslims' feet and make it muddy and slippery for the approaching Quraysh (8:11). The battlefield itself was being prepared by its Creator.",
+        "Perhaps the most remarkable divine intervention was perceptual. Allah made each army appear smaller to the other (8:43-44). The Muslims saw the Quraysh as fewer, giving them courage to advance. The Quraysh saw the Muslims as fewer, making them overconfident and careless. Both sides acted on what they saw, but what they saw was shaped by Allah. The verse concludes: 'And to Allah are [all] matters returned' (8:44) \u2014 a reminder that even our perceptions are under His control.",
+        "After the victory, Allah delivered the most humbling statement possible: 'You did not kill them, but it was Allah who killed them. And you threw not when you threw, but it was Allah who threw' (8:17). The Prophet (\ufdfa) had thrown a handful of dust toward the enemy during the battle, and Allah turned it into a force that reached every opponent's eyes. But the deeper meaning is universal: every effort you make, every result you achieve, ultimately flows through Allah's power, not your own."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "\u0625\u0630 \u064a\u063a\u0634\u064a\u0643\u0645 \u0627\u0644\u0646\u0639\u0627\u0633 \u0623\u0645\u0646\u0629 \u0645\u0646\u0647 \u0648\u064a\u0646\u0632\u0644 \u0639\u0644\u064a\u0643\u0645 \u0645\u0646 \u0627\u0644\u0633\u0645\u0627\u0621 \u0645\u0627\u0621 \u0644\u064a\u0637\u0647\u0631\u0643\u0645 \u0628\u0647",
+          "transliteration": "Idh yughashshikumun-nu'asa amanatan minhu wa yunazzilu 'alaykum minas-sama'i ma'an liyutahhirakum bih",
+          "translation": "[Remember] when He overwhelmed you with drowsiness [giving] security from Him and sent down upon you from the sky rain by which to purify you.",
+          "reference": "8:11"
+        },
+        {
+          "arabic": "\u0641\u0644\u0645 \u062a\u0642\u062a\u0644\u0648\u0647\u0645 \u0648\u0644\u0643\u0646 \u0627\u0644\u0644\u0647 \u0642\u062a\u0644\u0647\u0645 \u0648\u0645\u0627 \u0631\u0645\u064a\u062a \u0625\u0630 \u0631\u0645\u064a\u062a \u0648\u0644\u0643\u0646 \u0627\u0644\u0644\u0647 \u0631\u0645\u0649",
+          "transliteration": "Falam taqtuluhum wa lakinnal-Laha qatalahum wa ma ramayta idh ramayta wa lakinnal-Laha rama",
+          "translation": "You did not kill them, but it was Allah who killed them. And you threw not when you threw, but it was Allah who threw.",
+          "reference": "8:17"
+        }
+      ],
+      "lessonsLearned": [
+        "Allah's help is not always visible or dramatic. Sometimes it comes as peace in your heart, clarity in your mind, or circumstances aligning in ways you did not plan. Trust that He is working behind the scenes of your life.",
+        "Success is never solely your achievement. The Quran's repeated insistence that 'Allah did it' at Badr is a permanent corrective against arrogance. Whatever you accomplish this Ramadan \u2014 extra prayers, better habits, more generosity \u2014 remember Whose support made it possible.",
+        "Preparation matters, but outcomes belong to Allah. The Muslims prepared, showed up, and fought \u2014 but the rain, the sleep, the angels, and the shifting perceptions were all from Him. Do your part and then surrender the results."
+      ]
+    },
+    {
+      "id": "masjid-ad-dirar",
+      "title": "The Mosque Built to Harm: Masjid Ad-Dirar",
+      "subtitle": "When a place of worship became a weapon of division",
+      "triggerLabel": "The Story of Masjid Ad-Dirar",
+      "paragraphs": [
+        "Among the most striking revelations in At-Tawbah is the story of Masjid Ad-Dirar \u2014 a mosque built by hypocrites in Madinah not for worship, but to divide the Muslim community. On the surface, it looked like any other mosque: a building dedicated to prayer. But its founders had a hidden purpose. They built it to serve as a meeting point for those who opposed the Prophet (\ufdfa) from within, and as a base for Abu Amir Ar-Rahib, a man who had openly allied with the Quraysh and later the Byzantines against the Muslims.",
+        "The hypocrites came to the Prophet (\ufdfa) before the Tabuk expedition and asked him to pray in their new mosque, hoping that his prayer there would legitimize it. The Prophet deferred, saying he would visit after returning from the campaign. But before he could, Allah revealed the truth: 'And [there are] those who took for themselves a mosque for causing harm and disbelief and division among the believers and as a station for whoever had warred against Allah and His Messenger before' (9:107).",
+        "Allah commanded the Prophet (\ufdfa) never to pray in it. Instead, He directed him to the mosque that was 'founded on righteousness from the first day' \u2014 Masjid Quba, which the Prophet himself had established during the Hijrah. The message was unmistakable: the value of a place of worship is not in its walls but in the intention behind it. A mosque built on sincerity, even if simple, is more beloved to Allah than an elaborate structure built on hypocrisy.",
+        "The Prophet (\ufdfa) ordered Masjid Ad-Dirar to be demolished and burned. It was a profound act \u2014 destroying a building that outwardly looked like a mosque \u2014 because it taught the community that labels do not determine reality. Something can bear the name of worship while its essence is corruption. This story is not just about a building in 7th-century Madinah. It is about every act of worship, charity, or service that is performed for show, reputation, or ulterior motives."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "\u0648\u0627\u0644\u0630\u064a\u0646 \u0627\u062a\u062e\u0630\u0648\u0627 \u0645\u0633\u062c\u062f\u0627 \u0636\u0631\u0627\u0631\u0627 \u0648\u0643\u0641\u0631\u0627 \u0648\u062a\u0641\u0631\u064a\u0642\u0627 \u0628\u064a\u0646 \u0627\u0644\u0645\u0624\u0645\u0646\u064a\u0646",
+          "transliteration": "Wal-ladhina-ttakhadhu masjidan diraran wa kufran wa tafri qan baynal-mu'minin",
+          "translation": "And [there are] those who took for themselves a mosque for causing harm and disbelief and division among the believers.",
+          "reference": "9:107"
+        },
+        {
+          "arabic": "\u0644\u0645\u0633\u062c\u062f \u0623\u0633\u0633 \u0639\u0644\u0649 \u0627\u0644\u062a\u0642\u0648\u0649 \u0645\u0646 \u0623\u0648\u0644 \u064a\u0648\u0645 \u0623\u062d\u0642 \u0623\u0646 \u062a\u0642\u0648\u0645 \u0641\u064a\u0647",
+          "transliteration": "Lamasjidun ussisa 'alat-taqwa min awwali yawmin ahaqqu an taquma fih",
+          "translation": "A mosque founded on righteousness from the first day is more worthy for you to stand in.",
+          "reference": "9:108"
+        }
+      ],
+      "lessonsLearned": [
+        "Intentions determine the value of actions, not appearances. A simple prayer with sincere focus is worth more than an elaborate display performed for reputation. Use this Ramadan to audit not just what you do, but why you do it.",
+        "Community division disguised as religious activity is one of the most dangerous forms of hypocrisy. Be wary of any effort \u2014 even one that looks Islamic \u2014 that creates division rather than unity among believers.",
+        "Allah sees through every mask. The hypocrites thought their mosque would go undetected, but revelation exposed their plot completely. This is a reminder that nothing is hidden from Allah, and sincerity is the only currency that matters."
+      ]
+    }
+  ],
+  "dailyDuas": [
+    {
+      "arabic": "\u062d\u0633\u0628\u0646\u0627 \u0627\u0644\u0644\u0647 \u0648\u0646\u0639\u0645 \u0627\u0644\u0648\u0643\u064a\u0644",
+      "transliteration": "Hasbunal-Lahu wa ni'mal-wakil",
+      "translation": "Sufficient for us is Allah, and [He is] the best Disposer of affairs.",
+      "reference": "9:129",
+      "surahName": "At-Tawbah",
+      "context": "This phrase also appears in 3:173 and is echoed as a principle throughout At-Tawbah. It was the declaration of Ibrahim (AS) when he was thrown into the fire, and of the believers when told that their enemies had gathered against them. It encapsulates complete trust in Allah when all worldly support seems insufficient.",
+      "purpose": "Complete Trust in Allah"
+    },
+    {
+      "arabic": "\u0631\u0628\u0646\u0627 \u0644\u0627 \u062a\u062c\u0639\u0644\u0646\u0627 \u0641\u062a\u0646\u0629 \u0644\u0644\u0642\u0648\u0645 \u0627\u0644\u0638\u0627\u0644\u0645\u064a\u0646 \u0648\u0646\u062c\u0646\u0627 \u0628\u0631\u062d\u0645\u062a\u0643 \u0645\u0646 \u0627\u0644\u0642\u0648\u0645 \u0627\u0644\u0643\u0627\u0641\u0631\u064a\u0646",
+      "transliteration": "Rabbana la taj'alna fitnatan lil-qawmidh-dhalimin wa najjina birahmatika minal-qawmil-kafirin",
+      "translation": "Our Lord, make us not [objects of] trial for the wrongdoing people, and save us by Your mercy from the disbelieving people.",
+      "reference": "10:85-86",
+      "surahName": "Yunus",
+      "context": "While this dua appears in the next surah (Yunus), it directly connects to the themes of Juz 10. It was the supplication of Musa's (AS) followers when they were oppressed by Fir'awn. It asks Allah for both protection from being a test for oppressors and deliverance from their harm \u2014 relevant to At-Tawbah's themes of standing firm against those who break covenants.",
+      "purpose": "Protection from Oppression"
+    },
+    {
+      "arabic": "\u0639\u0644\u064a\u0647 \u062a\u0648\u0643\u0644\u062a \u0648\u0625\u0644\u064a\u0647 \u0623\u0646\u064a\u0628",
+      "transliteration": "'Alayhi tawakkaltu wa ilayhi unib",
+      "translation": "Upon Him I have relied, and to Him I turn back.",
+      "reference": "11:88",
+      "surahName": "Hud",
+      "context": "The words of Prophet Shu'ayb (AS), whose story concluded in Al-A'raf in the previous Juz. This declaration of tawakkul captures the essence of what Juz 10 demands: complete reliance on Allah paired with turning to Him in every matter. It is a concise expression of the sincerity that At-Tawbah calls for.",
+      "purpose": "Reliance and Repentance"
+    }
+  ]
 }

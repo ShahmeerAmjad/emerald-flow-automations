@@ -2,8 +2,8 @@
   "juzNumber": 9,
   "dayNumber": 9,
   "dateGenerated": "2026-03-08T00:00:00.000Z",
-  "surahsCovered": "Al-A'raf (7:88-206) • Al-Anfal (8:1-40)",
-  "juzSummary": "Juz 9 concludes Surah Al-A'raf with a powerful sequence of prophetic stories — Shu'ayb, Musa, and the lessons of destroyed nations — culminating in profound guidance about remembering Allah, the nature of the Quran, and the etiquette of listening to it. Then it opens Surah Al-Anfal, revealed after the Battle of Badr, addressing the Muslim community's first major military victory and the principles that made it possible. Together, these passages teach a critical lesson: nations fall when they reject truth and exploit people, and communities succeed when they trust Allah, stay united, and prioritize principle over personal gain.",
+  "surahsCovered": "Al-A'raf (7:88-206) \u2022 Al-Anfal (8:1-40)",
+  "juzSummary": "Juz 9 concludes Surah Al-A'raf with a powerful sequence of prophetic stories \u2014 Shu'ayb, Musa, and the lessons of destroyed nations \u2014 culminating in profound guidance about remembering Allah, the nature of the Quran, and the etiquette of listening to it. Then it opens Surah Al-Anfal, revealed after the Battle of Badr, addressing the Muslim community's first major military victory and the principles that made it possible. Together, these passages teach a critical lesson: nations fall when they reject truth and exploit people, and communities succeed when they trust Allah, stay united, and prioritize principle over personal gain.",
   "surahBreakdowns": [
     {
       "name": "Al-A'raf",
@@ -11,23 +11,24 @@
       "surahNumber": 7,
       "verseRange": "88-206",
       "continuesFromPreviousJuz": true,
-      "meaningOfName": "Named after the 'Heights' (Al-A'raf) — the elevated barrier between Paradise and Hellfire where certain people will stand on the Day of Judgment, able to see both sides.",
-      "revelationContext": "Revealed in Makkah during a period of intense opposition to the Prophet (ﷺ). The stories of past prophets served to console him and warn the Quraysh of the consequences of rejecting Allah's messengers.",
+      "meaningOfName": "Named after the 'Heights' (Al-A'raf) \u2014 the elevated barrier between Paradise and Hellfire where certain people will stand on the Day of Judgment, able to see both sides.",
+      "revelationContext": "Revealed in Makkah during a period of intense opposition to the Prophet (\ufdfa). The stories of past prophets served to console him and warn the Quraysh of the consequences of rejecting Allah's messengers.",
       "coreTheme": "The consequences of rejecting prophets, illustrated through multiple historical accounts, followed by timeless guidance on humility before Allah, the authority of the Quran, and how to truly listen to divine revelation.",
       "keyTeachings": [
-        "Prophet Shu'ayb warned his people against cheating in business and corrupting the land (7:85-93). Economic injustice is a sin serious enough to destroy a civilization — a lesson that resonates powerfully today.",
+        "Prophet Shu'ayb warned his people against cheating in business and corrupting the land (7:85-93). Economic injustice is a sin serious enough to destroy a civilization \u2014 a lesson that resonates powerfully today.",
         "Allah's pattern with nations is consistent: He sends a prophet, the elite reject him, the people suffer, then they are either saved through repentance or destroyed through arrogance (7:94-102). Recognize where your community fits in this pattern.",
-        "The story of Musa and Fir'awn is told in vivid detail (7:103-162), showing that tyranny — no matter how powerful — always falls before truth. Even Fir'awn's own magicians recognized the truth and submitted.",
+        "The story of Musa and Fir'awn is told in vivid detail (7:103-162), showing that tyranny \u2014 no matter how powerful \u2014 always falls before truth. Even Fir'awn's own magicians recognized the truth and submitted.",
         "When the Children of Israel were tested during Musa's absence, they turned to idol worship despite having witnessed miracles firsthand (7:148-153). This is a warning: spiritual highs fade quickly, and without consistent grounding, even believers can lose their way.",
-        "The Juz ends with the command to listen attentively when the Quran is recited (7:204) — a direct instruction for how to engage with what you're reading this Ramadan."
+        "The Juz ends with the command to listen attentively when the Quran is recited (7:204) \u2014 a direct instruction for how to engage with what you're reading this Ramadan."
       ],
       "standoutAyah": {
-        "arabic": "وَإِذَا قُرِئَ الْقُرْآنُ فَاسْتَمِعُوا لَهُ وَأَنصِتُوا لَعَلَّكُمْ تُرْحَمُونَ",
+        "arabic": "\u0648\u0625\u0630\u0627 \u0642\u0631\u0626 \u0627\u0644\u0642\u0631\u0622\u0646 \u0641\u0627\u0633\u0645\u0639\u0648\u0627 \u0644\u0647 \u0648\u0623\u0646\u0635\u062a\u0648\u0627 \u0644\u0639\u0644\u0643\u0645 \u062a\u0631\u062d\u0645\u0648\u0646",
+        "transliteration": "Wa idha quri'al-Qur'anu fastami'u lahu wa ansitu la'allakum turhamun",
         "translation": "So when the Quran is recited, then listen to it and pay attention that you may receive mercy.",
         "translationSource": "Sahih International",
         "surahName": "Al-A'raf",
         "verseNumber": "7:204",
-        "reflection": "On Day 9 of your Quran journey, this verse is a direct instruction: don't just read — truly listen. Whether you hear the Quran in Taraweeh or read it yourself, let it penetrate beyond your ears into your heart. Mercy is the reward for real attention."
+        "reflection": "On Day 9 of your Quran journey, this verse is a direct instruction: don't just read \u2014 truly listen. Whether you hear the Quran in Taraweeh or read it yourself, let it penetrate beyond your ears into your heart. Mercy is the reward for real attention."
       }
     },
     {
@@ -37,96 +38,235 @@
       "verseRange": "1-40",
       "continuesInNextJuz": true,
       "meaningOfName": "Named after the 'anfal' (spoils/bounties of war) mentioned in the opening verse, which the companions disputed after the Battle of Badr. The name itself teaches that victory and its fruits belong to Allah, not to individual egos.",
-      "revelationContext": "Revealed in Madinah after the Battle of Badr (2 AH) — the first major military encounter between the Muslims and the Quraysh. The small Muslim force of 313 defeated an army of over 1,000, and this Surah addresses the spiritual and practical lessons of that victory.",
+      "revelationContext": "Revealed in Madinah after the Battle of Badr (2 AH) \u2014 the first major military encounter between the Muslims and the Quraysh. The small Muslim force of 313 defeated an army of over 1,000, and this Surah addresses the spiritual and practical lessons of that victory.",
       "coreTheme": "True victory comes from Allah, not from numbers or strength. It requires taqwa, unity, obedience to leadership, trust in Allah's plan, and the willingness to sacrifice personal comfort for a greater cause.",
       "keyTeachings": [
         "The Surah opens by settling the dispute over war spoils: 'The spoils are for Allah and the Messenger' (8:1). Before arguing over rewards, fix your relationships and obey Allah. The lesson: don't let material gains fracture your community.",
         "True believers are described with specific traits: their hearts tremble at Allah's remembrance, their faith increases when His verses are recited, and they rely on their Lord (8:2-4). This is a self-assessment checklist.",
-        "Allah sent angels at Badr and caused rain to fall to strengthen the believers (8:9-11). Divine help comes — but only after you take the first step of showing up despite being outnumbered and afraid.",
-        "Allah tells the believers: 'And remember when you were few and oppressed in the land... But He sheltered you, supported you with His victory, and provided you with good things' (8:26). Never forget where you came from — gratitude for past blessings keeps you grounded in present success.",
-        "Allah reveals the deeper reality of Badr: 'You did not kill them, but it was Allah who killed them. And you threw not when you threw, but it was Allah who threw' (8:17). No matter how much effort you put in, ultimate outcomes belong to Allah — this is the essence of humility after success."
+        "Allah sent angels at Badr and caused rain to fall to strengthen the believers (8:9-11). Divine help comes \u2014 but only after you take the first step of showing up despite being outnumbered and afraid.",
+        "Allah tells the believers: 'And remember when you were few and oppressed in the land... But He sheltered you, supported you with His victory, and provided you with good things' (8:26). Never forget where you came from \u2014 gratitude for past blessings keeps you grounded in present success.",
+        "Allah reveals the deeper reality of Badr: 'You did not kill them, but it was Allah who killed them. And you threw not when you threw, but it was Allah who threw' (8:17). No matter how much effort you put in, ultimate outcomes belong to Allah \u2014 this is the essence of humility after success."
       ],
       "standoutAyah": {
-        "arabic": "إِنَّمَا الْمُؤْمِنُونَ الَّذِينَ إِذَا ذُكِرَ اللَّهُ وَجِلَتْ قُلُوبُهُمْ وَإِذَا تُلِيَتْ عَلَيْهِمْ آيَاتُهُ زَادَتْهُمْ إِيمَانًا وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ",
+        "arabic": "\u0625\u0646\u0645\u0627 \u0627\u0644\u0645\u0624\u0645\u0646\u0648\u0646 \u0627\u0644\u0630\u064a\u0646 \u0625\u0630\u0627 \u0630\u0643\u0631 \u0627\u0644\u0644\u0647 \u0648\u062c\u0644\u062a \u0642\u0644\u0648\u0628\u0647\u0645 \u0648\u0625\u0630\u0627 \u062a\u0644\u064a\u062a \u0639\u0644\u064a\u0647\u0645 \u0622\u064a\u0627\u062a\u0647 \u0632\u0627\u062f\u062a\u0647\u0645 \u0625\u064a\u0645\u0627\u0646\u0627 \u0648\u0639\u0644\u0649 \u0631\u0628\u0647\u0645 \u064a\u062a\u0648\u0643\u0644\u0648\u0646",
+        "transliteration": "Innamal-mu'minunal-ladhina idha dhukiral-Lahu wajilat qulubuhum wa idha tuliyat 'alayhim ayatuhu zadathum imanan wa 'ala Rabbihim yatawakkalun",
         "translation": "The believers are only those who, when Allah is mentioned, their hearts become fearful, and when His verses are recited to them, it increases them in faith; and upon their Lord they rely.",
         "translationSource": "Sahih International",
         "surahName": "Al-Anfal",
         "verseNumber": "8:2",
-        "reflection": "This is one of the most beautiful descriptions of a believer in the entire Quran. Notice the three signs: the heart responds to Allah's name, faith grows through hearing the Quran, and reliance is placed on Allah alone. As you read this on Day 9, ask yourself — is your heart moving when you hear His words, or has routine made it numb?"
+        "reflection": "This is one of the most beautiful descriptions of a believer in the entire Quran. Notice the three signs: the heart responds to Allah's name, faith grows through hearing the Quran, and reliance is placed on Allah alone. As you read this on Day 9, ask yourself \u2014 is your heart moving when you hear His words, or has routine made it numb?"
       }
     }
   ],
-  "connectingTheDots": "Al-A'raf closes with story after story of what happens when communities reject their prophets — economic exploitation, arrogance, and eventual destruction — and then commands us to listen to the Quran with full attention. Al-Anfal then opens with the story of a community that DID listen, DID trust Allah, and DID show up despite overwhelming odds — and they were granted an extraordinary victory at Badr. The message across these two Surahs is clear: the difference between a destroyed nation and a victorious community is their response to Allah's guidance.",
+  "connectingTheDots": "Al-A'raf closes with story after story of what happens when communities reject their prophets \u2014 economic exploitation, arrogance, and eventual destruction \u2014 and then commands us to listen to the Quran with full attention. Al-Anfal then opens with the story of a community that DID listen, DID trust Allah, and DID show up despite overwhelming odds \u2014 and they were granted an extraordinary victory at Badr. The message across these two Surahs is clear: the difference between a destroyed nation and a victorious community is their response to Allah's guidance.",
   "coreThemes": [
     {
       "name": "Consequences of Arrogance",
       "explanation": "Throughout Al-A'raf's prophetic narratives, the pattern is unmistakable: the elite of each destroyed nation rejected their prophet not because the message was unclear, but because accepting it would require them to give up power, privilege, and comfort. Fir'awn's magicians recognized the truth instantly, but Fir'awn himself couldn't let go of his ego. Al-Anfal contrasts this with the Quraysh's arrogant march to Badr versus the believers' humble reliance on Allah.",
-      "dailyRelevance": "Ramadan strips away our daily comforts — food, drink, routine pleasures. This is training in humility. On Day 9, reflect honestly: is there an area of your life where pride is preventing you from accepting a truth you already know? Maybe it's apologizing to someone, admitting you're wrong about something, or accepting that a habit you've been defending is actually harmful."
+      "dailyRelevance": "Ramadan strips away our daily comforts \u2014 food, drink, routine pleasures. This is training in humility. On Day 9, reflect honestly: is there an area of your life where pride is preventing you from accepting a truth you already know? Maybe it's apologizing to someone, admitting you're wrong about something, or accepting that a habit you've been defending is actually harmful."
     },
     {
       "name": "Divine Help After Human Effort",
-      "explanation": "At Badr, the Muslims were outnumbered three to one. They didn't sit back and wait for a miracle — they prepared, showed up, and then Allah sent reinforcement (angels, rain, tranquility). Similarly, Musa confronted Fir'awn first, and then Allah's signs followed. The Quran consistently shows that Allah's help comes AFTER we make the effort, not instead of it.",
-      "dailyRelevance": "By Day 9 of Ramadan, the initial enthusiasm may be fading. You might feel tired, your worship routine might be slipping. This theme reminds you: keep showing up. Pray even when you don't feel it. Read even when you're tired. Allah's help — the spiritual breakthroughs, the inner peace, the strength to change — comes to those who persist, not those who wait for motivation."
+      "explanation": "At Badr, the Muslims were outnumbered three to one. They didn't sit back and wait for a miracle \u2014 they prepared, showed up, and then Allah sent reinforcement (angels, rain, tranquility). Similarly, Musa confronted Fir'awn first, and then Allah's signs followed. The Quran consistently shows that Allah's help comes AFTER we make the effort, not instead of it.",
+      "dailyRelevance": "By Day 9 of Ramadan, the initial enthusiasm may be fading. You might feel tired, your worship routine might be slipping. This theme reminds you: keep showing up. Pray even when you don't feel it. Read even when you're tired. Allah's help \u2014 the spiritual breakthroughs, the inner peace, the strength to change \u2014 comes to those who persist, not those who wait for motivation."
     },
     {
       "name": "Community Unity Over Personal Gain",
-      "explanation": "Al-Anfal opens with a dispute among companions about war spoils — and Allah's immediate response is to redirect their focus toward fixing relationships and obeying Allah. The Quraysh lost at Badr partly because of infighting and ego. The believers won because they were united under a common purpose. Individual greed destroys groups; shared sacrifice builds them.",
-      "dailyRelevance": "Ramadan is a communal experience — iftars, Taraweeh, family gatherings. But it can also bring tension: disagreements over how to do things, frustration with family members, competition over who's more religious. Let this Juz remind you that unity is more valuable than being right. Prioritize harmony in your home and community today."
+      "explanation": "Al-Anfal opens with a dispute among companions about war spoils \u2014 and Allah's immediate response is to redirect their focus toward fixing relationships and obeying Allah. The Quraysh lost at Badr partly because of infighting and ego. The believers won because they were united under a common purpose. Individual greed destroys groups; shared sacrifice builds them.",
+      "dailyRelevance": "Ramadan is a communal experience \u2014 iftars, Taraweeh, family gatherings. But it can also bring tension: disagreements over how to do things, frustration with family members, competition over who's more religious. Let this Juz remind you that unity is more valuable than being right. Prioritize harmony in your home and community today."
     }
   ],
   "keyAyat": [
     {
-      "arabic": "وَلَمَّا جَاءَ مُوسَىٰ لِمِيقَاتِنَا وَكَلَّمَهُ رَبُّهُ قَالَ رَبِّ أَرِنِي أَنظُرْ إِلَيْكَ ۚ قَالَ لَن تَرَانِي وَلَٰكِنِ انظُرْ إِلَى الْجَبَلِ فَإِنِ اسْتَقَرَّ مَكَانَهُ فَسَوْفَ تَرَانِي ۚ فَلَمَّا تَجَلَّىٰ رَبُّهُ لِلْجَبَلِ جَعَلَهُ دَكًّا وَخَرَّ مُوسَىٰ صَعِقًا",
+      "arabic": "\u0648\u0644\u0645\u0627 \u062c\u0627\u0621 \u0645\u0648\u0633\u0649 \u0644\u0645\u064a\u0642\u0627\u062a\u0646\u0627 \u0648\u0643\u0644\u0645\u0647 \u0631\u0628\u0647 \u0642\u0627\u0644 \u0631\u0628 \u0623\u0631\u0646\u064a \u0623\u0646\u0638\u0631 \u0625\u0644\u064a\u0643 \u0642\u0627\u0644 \u0644\u0646 \u062a\u0631\u0627\u0646\u064a \u0648\u0644\u0643\u0646 \u0627\u0646\u0638\u0631 \u0625\u0644\u0649 \u0627\u0644\u062c\u0628\u0644 \u0641\u0625\u0646 \u0627\u0633\u062a\u0642\u0631 \u0645\u0643\u0627\u0646\u0647 \u0641\u0633\u0648\u0641 \u062a\u0631\u0627\u0646\u064a \u0641\u0644\u0645\u0627 \u062a\u062c\u0644\u0649 \u0631\u0628\u0647 \u0644\u0644\u062c\u0628\u0644 \u062c\u0639\u0644\u0647 \u062f\u0643\u0627 \u0648\u062e\u0631 \u0645\u0648\u0633\u0649 \u0635\u0639\u0642\u0627",
+      "transliteration": "Wa lamma ja'a Musa li miqatina wa kallamahu Rabbuhu qala Rabbi arini andhur ilayk. Qala lan tarani wa lakinindur ilal-jabali fa inistaqarra makanahu fasawfa tarani. Falamma tajalla Rabbuhu lil-jabali ja'alahu dakkan wa kharra Musa sa'iqa",
       "translation": "And when Moses arrived at Our appointed time and his Lord spoke to him, he said, 'My Lord, show me [Yourself] that I may look at You.' [Allah] said, 'You will not see Me, but look at the mountain; if it should remain in place, then you will see Me.' But when his Lord appeared to the mountain, He rendered it level, and Moses fell unconscious.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-A'raf, 7:143",
-      "significance": "One of the most awe-inspiring moments in the Quran. Even Musa (AS) — who spoke directly with Allah — could not bear to see Him. The mountain crumbled from Allah's manifestation. This verse teaches the absolute greatness and majesty of Allah that transcends all human comprehension.",
+      "significance": "One of the most awe-inspiring moments in the Quran. Even Musa (AS) \u2014 who spoke directly with Allah \u2014 could not bear to see Him. The mountain crumbled from Allah's manifestation. This verse teaches the absolute greatness and majesty of Allah that transcends all human comprehension.",
       "reflectionPrompt": "If a mountain could not withstand a glimpse of Allah's manifestation, how should that reshape the way you stand before Him in prayer? Are you approaching salah with the awe it deserves?"
     },
     {
-      "arabic": "وَاخْتَارَ مُوسَىٰ قَوْمَهُ سَبْعِينَ رَجُلًا لِّمِيقَاتِنَا ۖ فَلَمَّا أَخَذَتْهُمُ الرَّجْفَةُ قَالَ رَبِّ لَوْ شِئْتَ أَهْلَكْتَهُم مِّن قَبْلُ وَإِيَّايَ ۖ أَتُهْلِكُنَا بِمَا فَعَلَ السُّفَهَاءُ مِنَّا ۖ إِنْ هِيَ إِلَّا فِتْنَتُكَ تُضِلُّ بِهَا مَن تَشَاءُ وَتَهْدِي مَن تَشَاءُ ۖ أَنتَ وَلِيُّنَا فَاغْفِرْ لَنَا وَارْحَمْنَا ۖ وَأَنتَ خَيْرُ الْغَافِرِينَ",
+      "arabic": "\u0648\u0627\u062e\u062a\u0627\u0631 \u0645\u0648\u0633\u0649 \u0642\u0648\u0645\u0647 \u0633\u0628\u0639\u064a\u0646 \u0631\u062c\u0644\u0627 \u0644\u0645\u064a\u0642\u0627\u062a\u0646\u0627 \u0641\u0644\u0645\u0627 \u0623\u062e\u0630\u062a\u0647\u0645 \u0627\u0644\u0631\u062c\u0641\u0629 \u0642\u0627\u0644 \u0631\u0628 \u0644\u0648 \u0634\u0626\u062a \u0623\u0647\u0644\u0643\u062a\u0647\u0645 \u0645\u0646 \u0642\u0628\u0644 \u0648\u0625\u064a\u0627\u064a \u0623\u062a\u0647\u0644\u0643\u0646\u0627 \u0628\u0645\u0627 \u0641\u0639\u0644 \u0627\u0644\u0633\u0641\u0647\u0627\u0621 \u0645\u0646\u0627 \u0625\u0646 \u0647\u064a \u0625\u0644\u0627 \u0641\u062a\u0646\u062a\u0643 \u062a\u0636\u0644 \u0628\u0647\u0627 \u0645\u0646 \u062a\u0634\u0627\u0621 \u0648\u062a\u0647\u062f\u064a \u0645\u0646 \u062a\u0634\u0627\u0621 \u0623\u0646\u062a \u0648\u0644\u064a\u0646\u0627 \u0641\u0627\u063a\u0641\u0631 \u0644\u0646\u0627 \u0648\u0627\u0631\u062d\u0645\u0646\u0627 \u0648\u0623\u0646\u062a \u062e\u064a\u0631 \u0627\u0644\u063a\u0627\u0641\u0631\u064a\u0646",
+      "transliteration": "Wakhtara Musa qawmahu sab'ina rajulan li miqatina. Falamma akhadhat-humur-rajfatu qala Rabbi law shi'ta ahlaktahum min qablu wa iyyaya. Atuhlikuna bima fa'alas-sufahaa'u minna. In hiya illa fitnatuka tudillu biha man tasha'u wa tahdi man tasha'. Anta waliyyuna faghfir lana warhamna wa Anta khayrul-ghafirin",
       "translation": "And Moses chose from his people seventy men for Our appointment. And when the earthquake seized them, he said, 'My Lord, if You had willed, You could have destroyed them before and me [as well]. Would You destroy us for what the foolish among us have done? This is not but Your trial by which You send astray whom You will and guide whom You will. You are our Protector, so forgive us and have mercy upon us; and You are the best of forgivers.'",
       "translationSource": "Sahih International",
       "reference": "Surah Al-A'raf, 7:155",
       "significance": "Musa's du'a in crisis is a masterclass in turning to Allah: he acknowledges Allah's power, accepts that this is a test, and asks for forgiveness and mercy. Even a prophet of Allah's caliber turns to Him with complete humility when things go wrong.",
-      "reflectionPrompt": "When crisis hits, is your first instinct to complain, blame, or panic — or to turn to Allah like Musa did? What would it look like to make du'a your first response, not your last resort?"
+      "reflectionPrompt": "When crisis hits, is your first instinct to complain, blame, or panic \u2014 or to turn to Allah like Musa did? What would it look like to make du'a your first response, not your last resort?"
     },
     {
-      "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا اسْتَجِيبُوا لِلَّهِ وَلِلرَّسُولِ إِذَا دَعَاكُمْ لِمَا يُحْيِيكُمْ",
+      "arabic": "\u064a\u0627 \u0623\u064a\u0647\u0627 \u0627\u0644\u0630\u064a\u0646 \u0622\u0645\u0646\u0648\u0627 \u0627\u0633\u062a\u062c\u064a\u0628\u0648\u0627 \u0644\u0644\u0647 \u0648\u0644\u0644\u0631\u0633\u0648\u0644 \u0625\u0630\u0627 \u062f\u0639\u0627\u0643\u0645 \u0644\u0645\u0627 \u064a\u062d\u064a\u064a\u0643\u0645",
+      "transliteration": "Ya ayyuhal-ladhina amanus-tajibu lillahi wa lir-Rasuli idha da'akum lima yuhyikum",
       "translation": "O you who have believed, respond to Allah and to the Messenger when he calls you to that which gives you life.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-Anfal, 8:24",
-      "significance": "Allah describes His guidance as something that 'gives you life' — not just rules to follow, but a source of vitality, purpose, and meaning. Responding to Allah's call is choosing to truly live.",
+      "significance": "Allah describes His guidance as something that 'gives you life' \u2014 not just rules to follow, but a source of vitality, purpose, and meaning. Responding to Allah's call is choosing to truly live.",
       "reflectionPrompt": "What is Allah calling you toward right now that you've been slow to respond to? How might your life feel more alive, more purposeful, if you answered that call?"
     },
     {
-      "arabic": "وَاعْلَمُوا أَنَّمَا أَمْوَالُكُمْ وَأَوْلَادُكُمْ فِتْنَةٌ وَأَنَّ اللَّهَ عِندَهُ أَجْرٌ عَظِيمٌ",
+      "arabic": "\u0648\u0627\u0639\u0644\u0645\u0648\u0627 \u0623\u0646\u0645\u0627 \u0623\u0645\u0648\u0627\u0644\u0643\u0645 \u0648\u0623\u0648\u0644\u0627\u062f\u0643\u0645 \u0641\u062a\u0646\u0629 \u0648\u0623\u0646 \u0627\u0644\u0644\u0647 \u0639\u0646\u062f\u0647 \u0623\u062c\u0631 \u0639\u0638\u064a\u0645",
+      "transliteration": "Wa'lamu annama amwalukum wa awladukum fitnatun wa annal-Laha 'indahu ajrun 'adhim",
       "translation": "And know that your properties and your children are but a trial and that Allah has with Him a great reward.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-Anfal, 8:28",
-      "significance": "A sobering reminder that the things we love most — our wealth and families — are tests. They can either bring us closer to Allah through gratitude and responsible stewardship, or pull us away through attachment and distraction.",
+      "significance": "A sobering reminder that the things we love most \u2014 our wealth and families \u2014 are tests. They can either bring us closer to Allah through gratitude and responsible stewardship, or pull us away through attachment and distraction.",
       "reflectionPrompt": "How has your wealth or family life become a test for you? Is there a way you've been letting love of dunya distract you from what truly matters this Ramadan?"
     },
     {
-      "arabic": "إِذْ تَسْتَغِيثُونَ رَبَّكُمْ فَاسْتَجَابَ لَكُمْ أَنِّي مُمِدُّكُم بِأَلْفٍ مِّنَ الْمَلَائِكَةِ مُرْدِفِينَ",
+      "arabic": "\u0625\u0630 \u062a\u0633\u062a\u063a\u064a\u062b\u0648\u0646 \u0631\u0628\u0643\u0645 \u0641\u0627\u0633\u062a\u062c\u0627\u0628 \u0644\u0643\u0645 \u0623\u0646\u064a \u0645\u0645\u062f\u0643\u0645 \u0628\u0623\u0644\u0641 \u0645\u0646 \u0627\u0644\u0645\u0644\u0627\u0626\u0643\u0629 \u0645\u0631\u062f\u0641\u064a\u0646",
+      "transliteration": "Idh tastaghithuna Rabbakum fastajaba lakum anni mumiddukum bi alfin minal-mala'ikati murdifin",
       "translation": "[Remember] when you asked help of your Lord, and He answered you, 'Indeed, I will reinforce you with a thousand from the angels, following one another.'",
       "translationSource": "Sahih International",
       "reference": "Surah Al-Anfal, 8:9",
-      "significance": "At the Battle of Badr, the believers were outnumbered and afraid — but they turned to Allah sincerely. This verse captures the essence of tawakkul in action: they didn't just hope for help, they asked for it after making every effort they could. And Allah responded beyond what they imagined.",
-      "reflectionPrompt": "When was the last time you truly called upon Allah from a place of genuine need — not routine du'a, but desperate, sincere supplication? What are you facing right now that deserves that level of turning to Him?"
+      "significance": "At the Battle of Badr, the believers were outnumbered and afraid \u2014 but they turned to Allah sincerely. This verse captures the essence of tawakkul in action: they didn't just hope for help, they asked for it after making every effort they could. And Allah responded beyond what they imagined.",
+      "reflectionPrompt": "When was the last time you truly called upon Allah from a place of genuine need \u2014 not routine du'a, but desperate, sincere supplication? What are you facing right now that deserves that level of turning to Him?"
     }
   ],
   "hadithOfTheDay": {
-    "text": "The Messenger of Allah (ﷺ) said: 'Allah the Almighty said: I am as My servant expects Me to be. I am with him when he remembers Me. If he remembers Me in himself, I remember him in Myself; and if he remembers Me in an assembly, I remember him in an assembly better than it.'",
+    "text": "The Messenger of Allah (\ufdfa) said: 'Allah the Almighty said: I am as My servant expects Me to be. I am with him when he remembers Me. If he remembers Me in himself, I remember him in Myself; and if he remembers Me in an assembly, I remember him in an assembly better than it.'",
     "source": "Sahih al-Bukhari #7405; Sahih Muslim #2675. Also referenced in principle in Al-Kafi, Vol. 2, Book of Du'a",
-    "reflection": "This Hadith Qudsi perfectly connects to Al-A'raf's closing instruction to remember Allah with humility (7:205) and Al-Anfal's description of hearts trembling at His mention (8:2). Your expectation of Allah shapes your experience of Him. If you expect mercy, you'll find it. If you expect closeness, you'll feel it. During Ramadan, expect the best from Allah — and watch how your worship transforms."
+    "reflection": "This Hadith Qudsi perfectly connects to Al-A'raf's closing instruction to remember Allah with humility (7:205) and Al-Anfal's description of hearts trembling at His mention (8:2). Your expectation of Allah shapes your experience of Him. If you expect mercy, you'll find it. If you expect closeness, you'll feel it. During Ramadan, expect the best from Allah \u2014 and watch how your worship transforms."
   },
-  "dailyPractice": "Today, build the habit of truly listening to the Quran. Inspired by 7:204 ('When the Quran is recited, listen to it and pay attention that you may receive mercy'), dedicate 10-15 minutes to listening to a recitation of any portion of today's Juz — not as background audio, but with full, undivided attention. Put your phone face-down, close other tabs, and just listen. If you don't understand Arabic, follow along with a translation. The goal is to break the habit of distracted, passive consumption that dominates our daily lives and replace it — even briefly — with deep, intentional engagement. This practice builds focus, reverence, and the capacity to be truly present. If the Quran cannot hold your attention for 10 minutes, what does that say about your relationship with distraction?",
+  "dailyPractice": "Today, build the habit of truly listening to the Quran. Inspired by 7:204 ('When the Quran is recited, listen to it and pay attention that you may receive mercy'), dedicate 10-15 minutes to listening to a recitation of any portion of today's Juz \u2014 not as background audio, but with full, undivided attention. Put your phone face-down, close other tabs, and just listen. If you don't understand Arabic, follow along with a translation. The goal is to break the habit of distracted, passive consumption that dominates our daily lives and replace it \u2014 even briefly \u2014 with deep, intentional engagement. This practice builds focus, reverence, and the capacity to be truly present. If the Quran cannot hold your attention for 10 minutes, what does that say about your relationship with distraction?",
   "discussionQuestions": {
-    "reflectionQuestion": "Al-A'raf 7:94-102 describes a pattern: Allah tests nations with hardship so they might humble themselves, then blesses them with ease — but instead of being grateful, they say 'we deserve this.' Where in your own life have you mistaken Allah's blessings for personal achievement, and how might that be affecting your relationship with Him?",
-    "applicationQuestion": "Al-Anfal opens with Allah redirecting the companions away from arguing over spoils toward fixing their relationships (8:1). Is there a relationship in your life — with a family member, friend, or community member — that's been fractured by ego or disagreement over something material? What's one specific step you can take today to repair it, even if you believe you were right?"
+    "reflectionQuestion": "Al-A'raf 7:94-102 describes a pattern: Allah tests nations with hardship so they might humble themselves, then blesses them with ease \u2014 but instead of being grateful, they say 'we deserve this.' Where in your own life have you mistaken Allah's blessings for personal achievement, and how might that be affecting your relationship with Him?",
+    "applicationQuestion": "Al-Anfal opens with Allah redirecting the companions away from arguing over spoils toward fixing their relationships (8:1). Is there a relationship in your life \u2014 with a family member, friend, or community member \u2014 that's been fractured by ego or disagreement over something material? What's one specific step you can take today to repair it, even if you believe you were right?"
   },
-  "habitCheckIn": "Day 9 — you're almost a third of the way through Ramadan. By now, the initial excitement has likely worn off and you're settling into a routine. This is the critical phase where real habits are either built or abandoned. Quick check: How is your screen time? Many of us replace eating with scrolling during fasting hours. Today, try this: every time you reach for your phone out of boredom or habit, make dhikr instead — even just 'SubhanAllah' three times. You're not banning your phone; you're inserting a pause between the urge and the action. That pause is where self-discipline is built. Also, how are your prayers feeling? If they've become rushed, slow down just one prayer today. Quality over quantity. You're not just getting through Ramadan — you're being shaped by it.",
-  "closingMessage": "Nine days in, and you're still here. That matters more than you might realize. The destroyed nations in Al-A'raf had every chance to turn back — they just kept choosing not to. The believers at Badr had every reason to run — they just kept choosing to stay. Every day you show up for this challenge, you're choosing to stay. You're choosing guidance over convenience, growth over comfort, and transformation over routine. The Quran you're reading is not just information — it's what 'gives you life' (8:24). Keep letting it in.",
-  "closingDua": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ — O Allah, I ask You for pardon and well-being in this world and the Hereafter."
+  "habitCheckIn": "Day 9 \u2014 you're almost a third of the way through Ramadan. By now, the initial excitement has likely worn off and you're settling into a routine. This is the critical phase where real habits are either built or abandoned. Quick check: How is your screen time? Many of us replace eating with scrolling during fasting hours. Today, try this: every time you reach for your phone out of boredom or habit, make dhikr instead \u2014 even just 'SubhanAllah' three times. You're not banning your phone; you're inserting a pause between the urge and the action. That pause is where self-discipline is built. Also, how are your prayers feeling? If they've become rushed, slow down just one prayer today. Quality over quantity. You're not just getting through Ramadan \u2014 you're being shaped by it.",
+  "closingMessage": "Nine days in, and you're still here. That matters more than you might realize. The destroyed nations in Al-A'raf had every chance to turn back \u2014 they just kept choosing not to. The believers at Badr had every reason to run \u2014 they just kept choosing to stay. Every day you show up for this challenge, you're choosing to stay. You're choosing guidance over convenience, growth over comfort, and transformation over routine. The Quran you're reading is not just information \u2014 it's what 'gives you life' (8:24). Keep letting it in.",
+  "closingDua": "\u0627\u0644\u0644\u0647\u0645 \u0625\u0646\u064a \u0623\u0633\u0623\u0644\u0643 \u0627\u0644\u0639\u0641\u0648 \u0648\u0627\u0644\u0639\u0627\u0641\u064a\u0629 \u0641\u064a \u0627\u0644\u062f\u0646\u064a\u0627 \u0648\u0627\u0644\u0622\u062e\u0631\u0629 \u2014 O Allah, I ask You for pardon and well-being in this world and the Hereafter.",
+  "closingDuaTransliteration": "Allahumma inni as'alukal-'afwa wal-'afiyata fid-dunya wal-akhirah",
+  "stories": [
+    {
+      "id": "musa-and-the-magicians",
+      "title": "Musa and the Magicians of Fir'awn",
+      "subtitle": "When truth defeated the greatest illusion of an empire",
+      "triggerLabel": "The Story of Musa (AS) and the Magicians",
+      "paragraphs": [
+        "Fir'awn had ruled Egypt as a self-proclaimed god. When Musa (AS) arrived at his court with the message of tawhid, Fir'awn saw it as a political threat. Rather than engage with the message, he turned to his most powerful weapon: spectacle. He summoned the greatest magicians in the land and arranged a public showdown, confident that when his sorcerers defeated Musa, the people would dismiss him forever.",
+        "The magicians arrived motivated by worldly reward \u2014 Fir'awn had promised them wealth and status if they won. They cast their ropes and staffs, which appeared to move like serpents through powerful illusions. The crowd was terrified. But when Musa cast his staff by Allah's command, it became a real serpent that consumed every illusion they had created. The truth, in a single moment, devoured an entire empire's worth of deception.",
+        "What happened next stunned everyone, especially Fir'awn. The magicians \u2014 the very people he had hired to destroy Musa's credibility \u2014 fell into prostration. They declared: 'We believe in the Lord of the worlds, the Lord of Musa and Harun' (7:121-122). As experts in illusion, they recognized immediately that what Musa produced was no trick. It was real, and they submitted on the spot.",
+        "Fir'awn was enraged. He threatened them with torture and execution: 'I will surely cut off your hands and your feet on opposite sides, and I will crucify you all' (7:124). But the magicians, who just minutes ago were motivated by money and status, responded with one of the most powerful declarations of faith in the Quran: 'We are only returning to our Lord' (7:125). In a single encounter with truth, they went from serving a tyrant for worldly gain to accepting death for the sake of Allah.",
+        "Their story teaches us that recognizing truth is not the hard part \u2014 the hard part is what you are willing to sacrifice once you see it. The magicians saw it and gave up everything. Fir'awn saw it too, but his ego would not let him bow."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "\u0641\u0644\u0645\u0627 \u0623\u0644\u0642\u0648\u0627 \u0642\u0627\u0644 \u0645\u0648\u0633\u0649 \u0645\u0627 \u062c\u0626\u062a\u0645 \u0628\u0647 \u0627\u0644\u0633\u062d\u0631 \u0625\u0646 \u0627\u0644\u0644\u0647 \u0633\u064a\u0628\u0637\u0644\u0647 \u0625\u0646 \u0627\u0644\u0644\u0647 \u0644\u0627 \u064a\u0635\u0644\u062d \u0639\u0645\u0644 \u0627\u0644\u0645\u0641\u0633\u062f\u064a\u0646",
+          "transliteration": "Falamma alqaw qala Musa ma ji'tum bihis-sihr. Innal-Laha sayubtiluhu. Innal-Laha la yuslihu 'amalal-mufsidin",
+          "translation": "So when they threw, Moses said, 'What you have brought is [only] magic. Indeed, Allah will expose its worthlessness. Indeed, Allah does not amend the work of corrupters.'",
+          "reference": "7:81"
+        },
+        {
+          "arabic": "\u0648\u0623\u0644\u0642\u064a \u0627\u0644\u0633\u062d\u0631\u0629 \u0633\u0627\u062c\u062f\u064a\u0646 \u0642\u0627\u0644\u0648\u0627 \u0622\u0645\u0646\u0627 \u0628\u0631\u0628 \u0627\u0644\u0639\u0627\u0644\u0645\u064a\u0646",
+          "transliteration": "Wa ulqiyas-saharatu sajidin. Qalu amanna bi Rabbil-'alamin",
+          "translation": "And the magicians fell down in prostration. They said, 'We have believed in the Lord of the worlds.'",
+          "reference": "7:120-121"
+        },
+        {
+          "arabic": "\u0642\u0627\u0644\u0648\u0627 \u0625\u0646\u0627 \u0625\u0644\u0649 \u0631\u0628\u0646\u0627 \u0645\u0646\u0642\u0644\u0628\u0648\u0646",
+          "transliteration": "Qalu inna ila Rabbina munqalibun",
+          "translation": "They said, 'Indeed, to our Lord we will return.'",
+          "reference": "7:125"
+        }
+      ],
+      "lessonsLearned": [
+        "Truth has an unmistakable quality that even its opponents can recognize \u2014 the magicians knew real power from illusion instantly. When the Quran speaks to your heart, trust that recognition.",
+        "Transformation can be instantaneous. The magicians went from serving a tyrant to defying him in a single encounter with truth. Never underestimate how quickly Allah can change a heart \u2014 including yours.",
+        "The real test is not recognizing truth but sacrificing for it. Fir'awn saw the same miracle as his magicians, but pride prevented him from submitting. Ask yourself: what truth have you recognized but not yet acted on?"
+      ]
+    },
+    {
+      "id": "musa-and-the-mountain",
+      "title": "Musa's Request to See Allah",
+      "subtitle": "The moment a mountain crumbled and a prophet fell",
+      "triggerLabel": "The Story of Musa (AS) at Mount Tur",
+      "paragraphs": [
+        "After the Children of Israel were delivered from Fir'awn's tyranny and crossed the sea, Allah summoned Musa (AS) to Mount Tur for a private audience. There, Allah spoke to Musa directly \u2014 a privilege given to no other prophet in the same way, earning him the title Kalimullah, the one who spoke with Allah. In that intimate moment, overwhelmed by the closeness, Musa made a request that arose from pure love and longing: 'My Lord, show me [Yourself] that I may look at You' (7:143).",
+        "Allah's response was gentle but clear: 'You will not see Me.' But rather than simply refusing, Allah gave Musa a way to understand why. He directed Musa's attention to the mountain: 'But look at the mountain; if it should remain in place, then you will see Me.' The mountain \u2014 massive, ancient, seemingly unshakable \u2014 became the measure by which Musa could comprehend the incomprehensibility of seeing Allah in this worldly life.",
+        "Then Allah manifested just a fraction of His light upon the mountain. The result was cataclysmic: the mountain was reduced to dust, leveled completely. And Musa, the strongest and most courageous of prophets, fell unconscious. When he awoke, his first words were words of repentance and glorification: 'Glory be to You! I turn to You in repentance, and I am the first of the believers' (7:143).",
+        "This moment reveals something profound about the relationship between the human soul and the Divine. Musa's desire to see Allah was not sinful \u2014 it was born of love. But Allah showed him that in this life, there are limits to what the human form can bear. The mountain's destruction was not punishment; it was a demonstration of Allah's overwhelming majesty. The message is that some realities are too vast for this world, and patience is required until the next."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "\u0648\u0644\u0645\u0627 \u062c\u0627\u0621 \u0645\u0648\u0633\u0649 \u0644\u0645\u064a\u0642\u0627\u062a\u0646\u0627 \u0648\u0643\u0644\u0645\u0647 \u0631\u0628\u0647 \u0642\u0627\u0644 \u0631\u0628 \u0623\u0631\u0646\u064a \u0623\u0646\u0638\u0631 \u0625\u0644\u064a\u0643",
+          "transliteration": "Wa lamma ja'a Musa li miqatina wa kallamahu Rabbuhu qala Rabbi arini andhur ilayk",
+          "translation": "And when Moses arrived at Our appointed time and his Lord spoke to him, he said, 'My Lord, show me [Yourself] that I may look at You.'",
+          "reference": "7:143"
+        },
+        {
+          "arabic": "\u0641\u0644\u0645\u0627 \u062a\u062c\u0644\u0649 \u0631\u0628\u0647 \u0644\u0644\u062c\u0628\u0644 \u062c\u0639\u0644\u0647 \u062f\u0643\u0627 \u0648\u062e\u0631 \u0645\u0648\u0633\u0649 \u0635\u0639\u0642\u0627",
+          "transliteration": "Falamma tajalla Rabbuhu lil-jabali ja'alahu dakkan wa kharra Musa sa'iqa",
+          "translation": "But when his Lord appeared to the mountain, He rendered it level, and Moses fell unconscious.",
+          "reference": "7:143"
+        }
+      ],
+      "lessonsLearned": [
+        "Longing for Allah is not a flaw \u2014 it is the highest form of love. Musa's request came from desire to be close, and Allah responded with gentleness, not anger. Your yearning for closeness to Allah during Ramadan is itself a sign of faith.",
+        "Some of the greatest realities require patience. Just as Musa was told he could not see Allah in this world, we too must accept that some answers, some closeness, some fulfillment is reserved for the Hereafter. Trust the journey.",
+        "If a mountain could not withstand Allah's manifestation, how should we approach our salah? This story redefines awe. Let it transform the way you stand before Him in prayer tonight."
+      ]
+    },
+    {
+      "id": "battle-of-badr",
+      "title": "The Battle of Badr: 313 Against an Empire",
+      "subtitle": "How faith, not numbers, determined the outcome",
+      "triggerLabel": "The Story of the Battle of Badr",
+      "paragraphs": [
+        "In the second year after the Hijrah, the young Muslim community in Madinah received word that a large Quraysh caravan, led by Abu Sufyan, was passing nearby. The Prophet (\ufdfa) gathered whoever was willing to go out \u2014 only 313 men answered the call. They were poorly equipped: just two horses, seventy camels shared between them, and simple weapons. They did not set out planning for a major battle. But Allah had a different plan.",
+        "When the Quraysh in Makkah learned that the Muslims had moved toward the caravan, they dispatched an army of over 1,000 well-armed, well-supplied warriors. By the time the two forces met at the wells of Badr, the Muslims found themselves facing a force three times their size. Many were afraid. The Prophet (\ufdfa) spent the night before the battle in prayer, raising his hands and pleading with Allah until his cloak fell from his shoulders. Abu Bakr (RA) gently placed it back, saying, 'Enough, O Messenger of Allah. Allah will fulfill what He promised you.'",
+        "Allah's response is captured in Surah Al-Anfal: 'When you asked help of your Lord, and He answered you: Indeed, I will reinforce you with a thousand from the angels, following one another' (8:9). He sent rain to firm the sandy ground beneath the Muslims' feet while making it slippery for the Quraysh. He cast tranquility into the believers' hearts and drowsiness over them the night before, so they woke refreshed. And He made each side see the other as fewer in number, so the believers would not lose courage and the Quraysh would advance into Allah's decree (8:43-44).",
+        "The battle ended in a decisive Muslim victory. Seventy of the Quraysh elite were killed and seventy captured, while the Muslim losses were fourteen. But the Quran's commentary on this victory is stunning in its humility: 'You did not kill them, but it was Allah who killed them. And you threw not when you threw, but it was Allah who threw' (8:17). The lesson was not 'you are strong.' The lesson was 'Allah gave you this, and He can take it away.'",
+        "Badr became the defining moment of early Islam \u2014 not because of military strategy, but because a small group of people chose to show up when every rational calculation said they should stay home. They trusted Allah more than they trusted the numbers."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "\u0625\u0630 \u062a\u0633\u062a\u063a\u064a\u062b\u0648\u0646 \u0631\u0628\u0643\u0645 \u0641\u0627\u0633\u062a\u062c\u0627\u0628 \u0644\u0643\u0645 \u0623\u0646\u064a \u0645\u0645\u062f\u0643\u0645 \u0628\u0623\u0644\u0641 \u0645\u0646 \u0627\u0644\u0645\u0644\u0627\u0626\u0643\u0629 \u0645\u0631\u062f\u0641\u064a\u0646",
+          "transliteration": "Idh tastaghithuna Rabbakum fastajaba lakum anni mumiddukum bi alfin minal-mala'ikati murdifin",
+          "translation": "[Remember] when you asked help of your Lord, and He answered you, 'Indeed, I will reinforce you with a thousand from the angels, following one another.'",
+          "reference": "8:9"
+        },
+        {
+          "arabic": "\u0641\u0644\u0645 \u062a\u0642\u062a\u0644\u0648\u0647\u0645 \u0648\u0644\u0643\u0646 \u0627\u0644\u0644\u0647 \u0642\u062a\u0644\u0647\u0645 \u0648\u0645\u0627 \u0631\u0645\u064a\u062a \u0625\u0630 \u0631\u0645\u064a\u062a \u0648\u0644\u0643\u0646 \u0627\u0644\u0644\u0647 \u0631\u0645\u0649",
+          "transliteration": "Falam taqtuluhum wa lakinnal-Laha qatalahum wa ma ramayta idh ramayta wa lakinnal-Laha rama",
+          "translation": "You did not kill them, but it was Allah who killed them. And you threw not when you threw, but it was Allah who threw.",
+          "reference": "8:17"
+        }
+      ],
+      "lessonsLearned": [
+        "Showing up is half the battle. The believers at Badr did not win because they had a superior army \u2014 they won because they showed up despite every reason not to. Your Ramadan commitment works the same way: keep showing up, and let Allah handle the results.",
+        "Divine help comes after human effort, not instead of it. The Prophet (\ufdfa) spent the night in prayer, the companions prepared what they could, and then Allah sent His support. Do your part first, then trust Him completely.",
+        "Success belongs to Allah, not to you. The Quran's insistence that 'you did not kill them, but Allah killed them' is a permanent antidote to arrogance after any achievement. Whatever you accomplish this Ramadan, remember Whose help made it possible."
+      ]
+    }
+  ],
+  "dailyDuas": [
+    {
+      "arabic": "\u0623\u0646\u062a \u0648\u0644\u064a\u0646\u0627 \u0641\u0627\u063a\u0641\u0631 \u0644\u0646\u0627 \u0648\u0627\u0631\u062d\u0645\u0646\u0627 \u0648\u0623\u0646\u062a \u062e\u064a\u0631 \u0627\u0644\u063a\u0627\u0641\u0631\u064a\u0646",
+      "transliteration": "Anta waliyyuna faghfir lana warhamna wa Anta khayrul-ghafirin",
+      "translation": "You are our Protector, so forgive us and have mercy upon us; and You are the best of forgivers.",
+      "reference": "7:155",
+      "surahName": "Al-A'raf",
+      "context": "Part of Musa's (AS) supplication to Allah when seventy men from the Children of Israel were seized by an earthquake as punishment for their people's worship of the golden calf. In the face of collective calamity, Musa turned to Allah acknowledging His lordship and begging for mercy.",
+      "purpose": "Seeking Forgiveness"
+    },
+    {
+      "arabic": "\u0631\u0628\u0646\u0627 \u0627\u0641\u062a\u062d \u0628\u064a\u0646\u0646\u0627 \u0648\u0628\u064a\u0646 \u0642\u0648\u0645\u0646\u0627 \u0628\u0627\u0644\u062d\u0642 \u0648\u0623\u0646\u062a \u062e\u064a\u0631 \u0627\u0644\u0641\u0627\u062a\u062d\u064a\u0646",
+      "transliteration": "Rabbana-ftah baynana wa bayna qawmina bil-haqqi wa Anta khayrul-fatihin",
+      "translation": "Our Lord, decide between us and our people in truth, and You are the best of those who give decision.",
+      "reference": "7:89",
+      "surahName": "Al-A'raf",
+      "context": "The dua of Prophet Shu'ayb (AS) when his people rejected his message and threatened to expel him. After exhausting all efforts to guide them, he turned the matter over to Allah as the ultimate Judge, trusting in divine justice.",
+      "purpose": "Trusting Divine Justice"
+    },
+    {
+      "arabic": "\u0631\u0628\u0646\u0627 \u0623\u0641\u0631\u063a \u0639\u0644\u064a\u0646\u0627 \u0635\u0628\u0631\u0627 \u0648\u062a\u0648\u0641\u0646\u0627 \u0645\u0633\u0644\u0645\u064a\u0646",
+      "transliteration": "Rabbana afrigh 'alayna sabran wa tawaffana muslimin",
+      "translation": "Our Lord, pour upon us patience and let us die as Muslims [in submission to You].",
+      "reference": "7:126",
+      "surahName": "Al-A'raf",
+      "context": "The dua of Fir'awn's magicians after they believed in Allah and Fir'awn threatened them with torture and crucifixion. Having just discovered the truth, they asked Allah not for rescue from death but for patience to endure it and to die upon faith. One of the most powerful supplications in the Quran.",
+      "purpose": "Steadfastness in Faith"
+    }
+  ]
 }

@@ -3,7 +3,7 @@
   "dayNumber": 12,
   "dateGenerated": "2026-03-11T00:00:00.000Z",
   "surahsCovered": "Hud (11:6-123) \u2022 Yusuf (12:1-52)",
-  "juzSummary": "Juz 12 carries forward the powerful narratives of Surah Hud and opens the magnificent story of Yusuf (Joseph). In Hud, we witness a rapid succession of prophets — Nuh, Hud, Salih, Ibrahim, Lut, and Shu'ayb — each sent to a different nation with the same message: worship Allah alone and deal justly with people. Every nation that rejected its prophet was destroyed, and every prophet who persevered was vindicated. Then Surah Yusuf begins with one of the most beautifully told stories in the Quran — a young boy's dream, his brothers' jealousy, and the beginning of a journey through betrayal, slavery, and temptation that will ultimately lead to triumph. Together, these two Surahs ask one question: when life tests you with hardship and injustice, will you hold firm to your principles or will you break?",
+  "juzSummary": "Juz 12 carries forward the powerful narratives of Surah Hud and opens the magnificent story of Yusuf (Joseph). In Hud, we witness a rapid succession of prophets \u2014 Nuh, Hud, Salih, Ibrahim, Lut, and Shu'ayb \u2014 each sent to a different nation with the same message: worship Allah alone and deal justly with people. Every nation that rejected its prophet was destroyed, and every prophet who persevered was vindicated. Then Surah Yusuf begins with one of the most beautifully told stories in the Quran \u2014 a young boy's dream, his brothers' jealousy, and the beginning of a journey through betrayal, slavery, and temptation that will ultimately lead to triumph. Together, these two Surahs ask one question: when life tests you with hardship and injustice, will you hold firm to your principles or will you break?",
   "surahBreakdowns": [
     {
       "name": "Hud",
@@ -13,21 +13,22 @@
       "continuesFromPreviousJuz": true,
       "meaningOfName": "Named after Prophet Hud, who was sent to the people of 'Ad. The Surah uses his story and those of other prophets to illustrate the consequences of rejecting divine guidance.",
       "revelationContext": "Revealed in Makkah during a period of intense persecution of the early Muslims. The Prophet Muhammad (peace be upon him) said this Surah aged him, due to the weight of its warnings about the fate of nations that rejected their prophets. It was revealed to console the Prophet and the believers by showing that every prophet faced opposition.",
-      "coreTheme": "The unchanging pattern of divine justice — every nation is sent a messenger, given clear warnings, and then held accountable for its response. Persistence in faith and upright conduct is the path to salvation, regardless of how the majority behaves.",
+      "coreTheme": "The unchanging pattern of divine justice \u2014 every nation is sent a messenger, given clear warnings, and then held accountable for its response. Persistence in faith and upright conduct is the path to salvation, regardless of how the majority behaves.",
       "keyTeachings": [
-        "The story of Nuh (11:25-49) shows that even a prophet's own son can reject faith. You cannot force guidance on those you love — your job is to convey the message and trust Allah's decree. Nuh's heartbreak when his son drowned is one of the most emotionally powerful moments in the Quran.",
-        "The people of Shu'ayb (11:84-95) were destroyed not for idolatry but for economic corruption — cheating in business, shortchanging people in trade. Allah takes financial honesty as seriously as theological correctness.",
+        "The story of Nuh (11:25-49) shows that even a prophet's own son can reject faith. You cannot force guidance on those you love \u2014 your job is to convey the message and trust Allah's decree. Nuh's heartbreak when his son drowned is one of the most emotionally powerful moments in the Quran.",
+        "The people of Shu'ayb (11:84-95) were destroyed not for idolatry but for economic corruption \u2014 cheating in business, shortchanging people in trade. Allah takes financial honesty as seriously as theological correctness.",
         "Ibrahim (11:69-76) received the angels with generosity and hospitality, then advocated for the people of Lut even though they were sinful. His character teaches that a believer combines strength of faith with compassion for others.",
-        "Allah commands the Prophet: 'So remain on a right course as you have been commanded' (11:112). Istiqamah — steadfastness on the straight path — is harder than any single heroic act. It is the daily, unglamorous discipline of staying consistent.",
+        "Allah commands the Prophet: 'So remain on a right course as you have been commanded' (11:112). Istiqamah \u2014 steadfastness on the straight path \u2014 is harder than any single heroic act. It is the daily, unglamorous discipline of staying consistent.",
         "The Surah ends with the powerful command to be patient: 'And be patient, for indeed, Allah does not allow to be lost the reward of those who do good' (11:115). Your good deeds are never wasted, even if you do not see their results immediately."
       ],
       "standoutAyah": {
         "arabic": "\u0641\u0627\u0633\u0652\u062a\u0642\u0650\u0645\u0652 \u0643\u064e\u0645\u064e\u0627 \u0623\u064f\u0645\u0650\u0631\u0652\u062a\u064e \u0648\u064e\u0645\u064e\u0646 \u062a\u064e\u0627\u0628\u064e \u0645\u064e\u0639\u064e\u0643\u064e \u0648\u064e\u0644\u064e\u0627 \u062a\u064e\u0637\u0652\u063a\u064e\u0648\u0652\u0627",
+        "transliteration": "Fa-staqim kama umirta wa man taba ma'aka wa la tatghaw",
         "translation": "So remain on a right course as you have been commanded, [you] and those who have turned back with you [to Allah], and do not transgress.",
         "translationSource": "Sahih International",
         "surahName": "Hud",
         "verseNumber": "11:112",
-        "reflection": "This verse is deceptively simple but carries enormous weight. The Prophet (peace be upon him) said Surah Hud and its sisters made his hair turn gray, and scholars point to this verse as the reason. Istiqamah — being consistently upright, day after day, without deviation — is the hardest thing Allah asks of us. Not a single dramatic act, but a lifetime of steady faithfulness."
+        "reflection": "This verse is deceptively simple but carries enormous weight. The Prophet (peace be upon him) said Surah Hud and its sisters made his hair turn gray, and scholars point to this verse as the reason. Istiqamah \u2014 being consistently upright, day after day, without deviation \u2014 is the hardest thing Allah asks of us. Not a single dramatic act, but a lifetime of steady faithfulness."
       }
     },
     {
@@ -37,78 +38,84 @@
       "verseRange": "1-52",
       "continuesInNextJuz": true,
       "meaningOfName": "Named after Prophet Yusuf (Joseph), son of Ya'qub (Jacob). Allah calls his story 'the best of stories' (ahsan al-qasas), and it is the only story in the Quran told in its entirety within a single Surah.",
-      "revelationContext": "Revealed in Makkah during the 'Year of Sorrow' (Aam al-Huzn), when the Prophet (peace be upon him) had lost both his wife Khadijah and his uncle Abu Talib. The story of Yusuf — a man who lost his family, was betrayed, enslaved, and imprisoned, yet ultimately triumphed — was a direct consolation to the Prophet in his darkest hour.",
+      "revelationContext": "Revealed in Makkah during the 'Year of Sorrow' (Aam al-Huzn), when the Prophet (peace be upon him) had lost both his wife Khadijah and his uncle Abu Talib. The story of Yusuf \u2014 a man who lost his family, was betrayed, enslaved, and imprisoned, yet ultimately triumphed \u2014 was a direct consolation to the Prophet in his darkest hour.",
       "coreTheme": "The journey from betrayal and hardship to vindication and honor, guided entirely by trust in Allah's plan. Yusuf's story teaches that what appears to be destruction may actually be divine redirection.",
       "keyTeachings": [
-        "Yusuf's dream (12:4-6) was a prophecy, and Ya'qub immediately recognized it — but told his son not to share it with his brothers. Wisdom means knowing when to keep blessings private. Not every good thing in your life needs to be announced.",
+        "Yusuf's dream (12:4-6) was a prophecy, and Ya'qub immediately recognized it \u2014 but told his son not to share it with his brothers. Wisdom means knowing when to keep blessings private. Not every good thing in your life needs to be announced.",
         "The brothers' jealousy (12:8-18) was rooted in a false belief that their father's love was a limited resource. Jealousy blinds you to your own blessings and leads you to destroy what others have instead of building what you lack.",
-        "When tempted by the wife of al-Aziz, Yusuf said 'I seek refuge in Allah' (12:23). His first instinct was not willpower or self-discipline alone — it was turning to Allah. In the moment of temptation, your spiritual reflexes matter more than your rational arguments.",
+        "When tempted by the wife of al-Aziz, Yusuf said 'I seek refuge in Allah' (12:23). His first instinct was not willpower or self-discipline alone \u2014 it was turning to Allah. In the moment of temptation, your spiritual reflexes matter more than your rational arguments.",
         "Yusuf chose prison over sin (12:33). He understood that short-term comfort at the cost of your principles leads to long-term destruction. True freedom is the ability to say no to what harms your soul.",
         "Despite being the victim of injustice at every turn, Yusuf never expressed bitterness or sought revenge. He responded to every test with patience, excellence, and trust in Allah's timeline."
       ],
       "standoutAyah": {
         "arabic": "\u0642\u064e\u0627\u0644\u064e \u0645\u064e\u0639\u064e\u0627\u0630\u064e \u0627\u0644\u0644\u0651\u064e\u0647\u0650 \u0625\u0650\u0646\u0651\u064e\u0647\u064f \u0631\u064e\u0628\u0651\u064a \u0623\u064e\u062d\u0652\u0633\u064e\u0646\u064e \u0645\u064e\u062b\u0652\u0648\u064e\u0627\u064a\u064e",
+        "transliteration": "Qala ma'adha'Allahi innahu rabbi ahsana mathwaya",
         "translation": "He said, 'I seek refuge in Allah. Indeed, he is my master, who has made good my residence. Indeed, wrongdoers will not succeed.'",
         "translationSource": "Sahih International",
         "surahName": "Yusuf",
         "verseNumber": "12:23",
-        "reflection": "In the moment of greatest temptation — alone, young, far from family, with no one watching — Yusuf's immediate response was to invoke Allah. This tells us that true piety is not about external circumstances but about what you do when no one else is watching. Your private choices define your character far more than your public ones."
+        "reflection": "In the moment of greatest temptation \u2014 alone, young, far from family, with no one watching \u2014 Yusuf's immediate response was to invoke Allah. This tells us that true piety is not about external circumstances but about what you do when no one else is watching. Your private choices define your character far more than your public ones."
       }
     }
   ],
-  "connectingTheDots": "Surah Hud and Surah Yusuf are deeply connected: Hud shows us prophet after prophet facing rejection and staying firm, while Yusuf shows us a single prophet's journey through personal betrayal, temptation, and imprisonment with the same unwavering steadfastness. Hud demonstrates istiqamah (steadfastness) at the communal level — entire nations tested and judged — while Yusuf demonstrates it at the intensely personal level. Both Surahs deliver the same message: Allah's plan unfolds on His timeline, and those who remain patient and principled will be vindicated, whether in this world or the next.",
+  "connectingTheDots": "Surah Hud and Surah Yusuf are deeply connected: Hud shows us prophet after prophet facing rejection and staying firm, while Yusuf shows us a single prophet's journey through personal betrayal, temptation, and imprisonment with the same unwavering steadfastness. Hud demonstrates istiqamah (steadfastness) at the communal level \u2014 entire nations tested and judged \u2014 while Yusuf demonstrates it at the intensely personal level. Both Surahs deliver the same message: Allah's plan unfolds on His timeline, and those who remain patient and principled will be vindicated, whether in this world or the next.",
   "coreThemes": [
     {
       "name": "Steadfastness Under Pressure",
-      "explanation": "From Nuh preaching for 950 years to Yusuf resisting temptation in a locked room, this Juz is a masterclass in holding firm when everything around you pushes you to compromise. Every prophet in Surah Hud was mocked, threatened, or isolated — and every one of them stayed the course. Yusuf was betrayed by his own brothers, enslaved, and propositioned — and he chose prison over sin. Steadfastness is not the absence of difficulty; it is faithfulness in the midst of it.",
-      "dailyRelevance": "By Day 12, the initial Ramadan motivation may be fading. The fasts feel longer, the Taraweeh heavier, and old habits start creeping back. This is your istiqamah moment. The Quran is not asking you for a spectacular one-time act — it is asking you to keep showing up, day after day, prayer after prayer. That consistency is more beloved to Allah than any burst of energy."
+      "explanation": "From Nuh preaching for 950 years to Yusuf resisting temptation in a locked room, this Juz is a masterclass in holding firm when everything around you pushes you to compromise. Every prophet in Surah Hud was mocked, threatened, or isolated \u2014 and every one of them stayed the course. Yusuf was betrayed by his own brothers, enslaved, and propositioned \u2014 and he chose prison over sin. Steadfastness is not the absence of difficulty; it is faithfulness in the midst of it.",
+      "dailyRelevance": "By Day 12, the initial Ramadan motivation may be fading. The fasts feel longer, the Taraweeh heavier, and old habits start creeping back. This is your istiqamah moment. The Quran is not asking you for a spectacular one-time act \u2014 it is asking you to keep showing up, day after day, prayer after prayer. That consistency is more beloved to Allah than any burst of energy."
     },
     {
       "name": "Trusting Allah's Timeline",
-      "explanation": "Yusuf's journey from the well to the palace took years of slavery, false accusations, and imprisonment. At no point did the outcome look promising. Yet every apparent disaster was a divinely orchestrated step toward his ultimate purpose. Similarly, the prophets in Hud did not see the results of their preaching in their lifetimes — Nuh's own son rejected him. Yet Allah's plan was unfolding perfectly the entire time.",
-      "dailyRelevance": "If you are going through something painful — a broken relationship, financial hardship, illness, a du'a that seems unanswered — Yusuf's story is your reminder that Allah sees the full picture and you see only a frame. The thing you are crying about today may be the very thing that leads you to your greatest blessing. Keep making du'a and keep trusting."
+      "explanation": "Yusuf's journey from the well to the palace took years of slavery, false accusations, and imprisonment. At no point did the outcome look promising. Yet every apparent disaster was a divinely orchestrated step toward his ultimate purpose. Similarly, the prophets in Hud did not see the results of their preaching in their lifetimes \u2014 Nuh's own son rejected him. Yet Allah's plan was unfolding perfectly the entire time.",
+      "dailyRelevance": "If you are going through something painful \u2014 a broken relationship, financial hardship, illness, a du'a that seems unanswered \u2014 Yusuf's story is your reminder that Allah sees the full picture and you see only a frame. The thing you are crying about today may be the very thing that leads you to your greatest blessing. Keep making du'a and keep trusting."
     },
     {
       "name": "Resisting Temptation",
-      "explanation": "Yusuf's encounter with the wife of al-Aziz (12:23-34) is one of the Quran's most detailed examinations of how temptation works and how to overcome it. She planned, she locked the doors, she pressured him — and he ran toward the door, not away from it. He sought refuge in Allah before relying on his own strength. This teaches that overcoming temptation requires both spiritual reliance (turning to Allah) and physical action (removing yourself from the situation).",
-      "dailyRelevance": "Ramadan is your training ground for resisting temptation. Every moment of hunger and thirst is practice for saying no. Use this muscle beyond food: when you feel the pull toward gossip, social media scrolling, anger, or anything that diminishes your soul — say 'ma'adh Allah' (I seek refuge in Allah) like Yusuf did, and physically remove yourself from the trigger."
+      "explanation": "Yusuf's encounter with the wife of al-Aziz (12:23-34) is one of the Quran's most detailed examinations of how temptation works and how to overcome it. She planned, she locked the doors, she pressured him \u2014 and he ran toward the door, not away from it. He sought refuge in Allah before relying on his own strength. This teaches that overcoming temptation requires both spiritual reliance (turning to Allah) and physical action (removing yourself from the situation).",
+      "dailyRelevance": "Ramadan is your training ground for resisting temptation. Every moment of hunger and thirst is practice for saying no. Use this muscle beyond food: when you feel the pull toward gossip, social media scrolling, anger, or anything that diminishes your soul \u2014 say 'ma'adh Allah' (I seek refuge in Allah) like Yusuf did, and physically remove yourself from the trigger."
     }
   ],
   "keyAyat": [
     {
       "arabic": "\u0648\u064e\u0645\u064e\u0627 \u0645\u0650\u0646 \u062f\u064e\u0627\u0628\u0651\u064e\u0629\u064d \u0641\u0650\u064a \u0627\u0644\u0652\u0623\u064e\u0631\u0652\u0636\u0650 \u0625\u0650\u0644\u0651\u064e\u0627 \u0639\u064e\u0644\u064e\u0649 \u0627\u0644\u0644\u0651\u064e\u0647\u0650 \u0631\u0650\u0632\u0652\u0642\u064f\u0647\u064e\u0627 \u0648\u064e\u064a\u064e\u0639\u0652\u0644\u064e\u0645\u064f \u0645\u064f\u0633\u0652\u062a\u064e\u0642\u064e\u0631\u0651\u064e\u0647\u064e\u0627 \u0648\u064e\u0645\u064f\u0633\u0652\u062a\u064e\u0648\u0652\u062f\u064e\u0639\u064e\u0647\u064e\u0627",
+      "transliteration": "Wa ma min dabbatin fi'l-ardi illa 'ala'Allahi rizquha wa ya'lamu mustaqarraha wa mustawda'aha",
       "translation": "And there is no creature on earth but that upon Allah is its provision, and He knows its place of dwelling and place of storage.",
       "translationSource": "Sahih International",
       "reference": "Surah Hud, 11:6",
-      "significance": "The very first verse of this Juz establishes a fundamental truth: every living creature's sustenance is guaranteed by Allah. This is not limited to food — it encompasses all provisions, including opportunity, safety, and guidance. If Allah provides for every ant and bird, He will certainly provide for you.",
-      "reflectionPrompt": "What anxiety about provision — money, career, future — are you carrying right now? Can you hand that anxiety to the One who has guaranteed sustenance for every creature on earth?"
+      "significance": "The very first verse of this Juz establishes a fundamental truth: every living creature's sustenance is guaranteed by Allah. This is not limited to food \u2014 it encompasses all provisions, including opportunity, safety, and guidance. If Allah provides for every ant and bird, He will certainly provide for you.",
+      "reflectionPrompt": "What anxiety about provision \u2014 money, career, future \u2014 are you carrying right now? Can you hand that anxiety to the One who has guaranteed sustenance for every creature on earth?"
     },
     {
       "arabic": "\u0641\u0627\u0633\u0652\u062a\u0642\u0650\u0645\u0652 \u0643\u064e\u0645\u064e\u0627 \u0623\u064f\u0645\u0650\u0631\u0652\u062a\u064e \u0648\u064e\u0645\u064e\u0646 \u062a\u064e\u0627\u0628\u064e \u0645\u064e\u0639\u064e\u0643\u064e \u0648\u064e\u0644\u064e\u0627 \u062a\u064e\u0637\u0652\u063a\u064e\u0648\u0652\u0627",
+      "transliteration": "Fa-staqim kama umirta wa man taba ma'aka wa la tatghaw",
       "translation": "So remain on a right course as you have been commanded, [you] and those who have turned back with you [to Allah], and do not transgress.",
       "translationSource": "Sahih International",
       "reference": "Surah Hud, 11:112",
-      "significance": "This command for istiqamah (steadfastness) is considered one of the most weighty verses in the Quran. The Prophet (peace be upon him) said that Surah Hud and its companions gave him gray hair, and many scholars identify this verse as the reason. Istiqamah is not a one-time achievement — it is the daily discipline of staying on the straight path without swerving.",
+      "significance": "This command for istiqamah (steadfastness) is considered one of the most weighty verses in the Quran. The Prophet (peace be upon him) said that Surah Hud and its companions gave him gray hair, and many scholars identify this verse as the reason. Istiqamah is not a one-time achievement \u2014 it is the daily discipline of staying on the straight path without swerving.",
       "reflectionPrompt": "Consistency is harder than intensity. Where in your worship or character has inconsistency crept in? What would it look like to choose istiqamah over perfection?"
     },
     {
       "arabic": "\u0648\u064e\u0623\u064e\u0642\u0650\u0645\u0650 \u0627\u0644\u0635\u0651\u064e\u0644\u064e\u0627\u0629\u064e \u0637\u064e\u0631\u064e\u0641\u064e\u064a\u0650 \u0627\u0644\u0646\u0651\u064e\u0647\u064e\u0627\u0631\u0650 \u0648\u064e\u0632\u064f\u0644\u064e\u0641\u064b\u0627 \u0645\u0651\u0650\u0646\u064e \u0627\u0644\u0644\u0651\u064e\u064a\u0652\u0644\u0650 \u0625\u0650\u0646\u0651\u064e \u0627\u0644\u0652\u062d\u064e\u0633\u064e\u0646\u064e\u0627\u062a\u0650 \u064a\u064f\u0630\u0652\u0647\u0650\u0628\u0652\u0646\u064e \u0627\u0644\u0633\u0651\u064e\u064a\u0651\u0650\u0626\u064e\u0627\u062a\u0650",
+      "transliteration": "Wa aqimi's-salata tarafayi'n-nahari wa zulafan mina'l-layli inna'l-hasanati yudh-hibna's-sayyi'at",
       "translation": "And establish prayer at the two ends of the day and at the approach of the night. Indeed, good deeds do away with misdeeds.",
       "translationSource": "Sahih International",
       "reference": "Surah Hud, 11:114",
-      "significance": "This verse contains one of the Quran's most hopeful principles: good deeds erase bad deeds. If you slipped up today — missed a prayer, lost your temper, wasted time — you are not defined by that mistake. The next good deed can wipe it away. This is Allah's mercy in action: He did not just forgive sins upon repentance, He built a system where your good deeds actively cancel out your bad ones.",
-      "reflectionPrompt": "If good deeds erase bad deeds, what is one good deed you can do right now — even a small one — to tip the scales back in your favor?"
+      "significance": "This verse contains one of the Quran's most hopeful principles: good deeds erase bad deeds. If you slipped up today \u2014 missed a prayer, lost your temper, wasted time \u2014 you are not defined by that mistake. The next good deed can wipe it away. This is Allah's mercy in action: He did not just forgive sins upon repentance, He built a system where your good deeds actively cancel out your bad ones.",
+      "reflectionPrompt": "If good deeds erase bad deeds, what is one good deed you can do right now \u2014 even a small one \u2014 to tip the scales back in your favor?"
     },
     {
       "arabic": "\u0646\u064e\u062d\u0652\u0646\u064f \u0646\u064e\u0642\u064f\u0635\u0651\u064f \u0639\u064e\u0644\u064e\u064a\u0652\u0643\u064e \u0623\u064e\u062d\u0652\u0633\u064e\u0646\u064e \u0627\u0644\u0652\u0642\u064e\u0635\u064e\u0635\u0650 \u0628\u0650\u0645\u064e\u0627 \u0623\u064e\u0648\u0652\u062d\u064e\u064a\u0652\u0646\u064e\u0627 \u0625\u0650\u0644\u064e\u064a\u0652\u0643\u064e \u0647\u064e\u0670\u0630\u064e\u0627 \u0627\u0644\u0652\u0642\u064f\u0631\u0652\u0622\u0646\u064e",
+      "transliteration": "Nahnu naqussu 'alayka ahsana'l-qasasi bima awhayna ilayka hadha'l-Qur'an",
       "translation": "We relate to you, [O Muhammad], the best of stories in what We have revealed to you of this Quran.",
       "translationSource": "Sahih International",
       "reference": "Surah Yusuf, 12:3",
-      "significance": "Allah Himself calls the story of Yusuf 'the best of stories' — not because it has the most dramatic plot, but because it contains every human emotion and every spiritual lesson compressed into a single narrative: jealousy, betrayal, temptation, patience, forgiveness, and ultimately divine vindication. When you read it, you are reading what Allah considers His finest storytelling.",
+      "significance": "Allah Himself calls the story of Yusuf 'the best of stories' \u2014 not because it has the most dramatic plot, but because it contains every human emotion and every spiritual lesson compressed into a single narrative: jealousy, betrayal, temptation, patience, forgiveness, and ultimately divine vindication. When you read it, you are reading what Allah considers His finest storytelling.",
       "reflectionPrompt": "Why do you think Allah calls this 'the best of stories'? Which part of Yusuf's journey so far speaks most directly to something you are going through?"
     },
     {
       "arabic": "\u0642\u064e\u0627\u0644\u064e \u0631\u064e\u0628\u0651\u0650 \u0627\u0644\u0633\u0651\u0650\u062c\u0652\u0646\u064f \u0623\u064e\u062d\u064e\u0628\u0651\u064f \u0625\u0650\u0644\u064e\u064a\u0651\u064e \u0645\u0650\u0645\u0651\u064e\u0627 \u064a\u064e\u062f\u0652\u0639\u064f\u0648\u0646\u064e\u0646\u0650\u064a \u0625\u0650\u0644\u064e\u064a\u0652\u0647\u0650",
+      "transliteration": "Qala Rabbi's-sijnu ahabbu ilayya mimma yad'unani ilayh",
       "translation": "He said, 'My Lord, prison is more to my liking than that to which they invite me.'",
       "translationSource": "Sahih International",
       "reference": "Surah Yusuf, 12:33",
@@ -117,16 +124,152 @@
     }
   ],
   "hadithOfTheDay": {
-    "text": "The Messenger of Allah (peace be upon him) said: 'How wonderful is the affair of the believer, for all of it is good for him — and that is for no one except the believer. If something good happens to him, he is grateful and that is good for him. And if something bad befalls him, he is patient and that is good for him.'",
+    "text": "The Messenger of Allah (peace be upon him) said: 'How wonderful is the affair of the believer, for all of it is good for him \u2014 and that is for no one except the believer. If something good happens to him, he is grateful and that is good for him. And if something bad befalls him, he is patient and that is good for him.'",
     "source": "Sahih Muslim #2999; also referenced in Al-Kafi, Vol. 2, Book of Faith and Disbelief, Chapter on Gratitude",
-    "reflection": "This hadith captures the essence of Juz 12 perfectly. Every prophet in Surah Hud and Yusuf himself embodied this principle — when things went well, they were grateful; when things went terribly wrong, they were patient. The believer is in a win-win situation because their relationship with Allah transforms every circumstance into a means of growth. Your Ramadan difficulties, your life challenges, even the hunger of your fast — all of it is good for you if you meet it with the right heart."
+    "reflection": "This hadith captures the essence of Juz 12 perfectly. Every prophet in Surah Hud and Yusuf himself embodied this principle \u2014 when things went well, they were grateful; when things went terribly wrong, they were patient. The believer is in a win-win situation because their relationship with Allah transforms every circumstance into a means of growth. Your Ramadan difficulties, your life challenges, even the hunger of your fast \u2014 all of it is good for you if you meet it with the right heart."
   },
-  "dailyPractice": "Today, practice the 'Yusuf Response' to temptation. Identify one recurring temptation or bad habit that you struggle with — whether it is mindless phone scrolling, backbiting, overeating at iftar, losing your temper, or procrastinating on prayer. The next time you feel the pull toward it today, do exactly what Yusuf did: (1) Say 'a'udhu billah' or 'ma'adh Allah' — seek refuge in Allah out loud, (2) Physically remove yourself from the situation — leave the room, put the phone in another room, walk away from the conversation. Yusuf did not try to negotiate with temptation or rely on willpower alone. He called on Allah and he moved his body. Do both. Track how many times you use this technique today.",
+  "dailyPractice": "Today, practice the 'Yusuf Response' to temptation. Identify one recurring temptation or bad habit that you struggle with \u2014 whether it is mindless phone scrolling, backbiting, overeating at iftar, losing your temper, or procrastinating on prayer. The next time you feel the pull toward it today, do exactly what Yusuf did: (1) Say 'a'udhu billah' or 'ma'adh Allah' \u2014 seek refuge in Allah out loud, (2) Physically remove yourself from the situation \u2014 leave the room, put the phone in another room, walk away from the conversation. Yusuf did not try to negotiate with temptation or rely on willpower alone. He called on Allah and he moved his body. Do both. Track how many times you use this technique today.",
   "discussionQuestions": {
-    "reflectionQuestion": "Yusuf's brothers were driven by jealousy to commit a terrible crime against their own brother. Jealousy often disguises itself as fairness ('It's not fair that he gets more attention'). Where in your own life might jealousy be hiding behind a mask of reasonable frustration — and what would it look like to genuinely celebrate someone else's blessings instead?",
-    "applicationQuestion": "Verse 11:112 commands istiqamah — consistency on the straight path. This Ramadan, what is one specific act of worship or good habit that you started strong but have already begun to slip on? Commit to one concrete action today to get back on track — not perfectly, just consistently."
+    "reflectionQuestion": "Yusuf's brothers were driven by jealousy to commit a terrible crime against their own brother. Jealousy often disguises itself as fairness ('It's not fair that he gets more attention'). Where in your own life might jealousy be hiding behind a mask of reasonable frustration \u2014 and what would it look like to genuinely celebrate someone else's blessings instead?",
+    "applicationQuestion": "Verse 11:112 commands istiqamah \u2014 consistency on the straight path. This Ramadan, what is one specific act of worship or good habit that you started strong but have already begun to slip on? Commit to one concrete action today to get back on track \u2014 not perfectly, just consistently."
   },
-  "habitCheckIn": "Day 12 check-in — you are nearly halfway through Ramadan. This is the point where many people hit a wall. The excitement of the first week has faded, and the push of the last ten nights has not yet begun. Be honest with yourself right now: How is your prayer quality? Are you rushing through salah just to check a box, or are you still present? How is your screen time — has it crept back up since the first few days? And how are you treating the people closest to you — has fasting made you short-tempered? If any of these have slipped, do not beat yourself up. Remember verse 11:114: 'Good deeds erase bad deeds.' You do not need to be perfect. You just need to course-correct. Pick the one area that has slipped the most and give it focused attention for the rest of today. That is istiqamah — not being flawless, but getting back up every time you stumble.",
-  "closingMessage": "Twelve days in. You are building something real. The prophets in Surah Hud preached for decades and faced rejection their entire lives — and they did not quit. Yusuf was thrown into a well by his own brothers, sold into slavery, falsely accused, and imprisoned for years — and he did not quit. Whatever difficulty you are facing in your Ramadan journey right now — fatigue, distraction, spiritual dryness — it is temporary. But the character you are building through this perseverance is permanent. You are not just completing a reading plan. You are becoming the kind of person who holds firm when it is hard, who says no when it matters, and who trusts Allah's plan even when the path makes no sense. That is the transformation this month is designed to produce. Keep going.",
-  "closingDua": "\u0631\u064e\u0628\u0651\u064e\u0646\u064e\u0627 \u0623\u064e\u0641\u0652\u0631\u0650\u063a\u0652 \u0639\u064e\u0644\u064e\u064a\u0652\u0646\u064e\u0627 \u0635\u064e\u0628\u0652\u0631\u064b\u0627 \u0648\u064e\u062a\u064e\u0648\u064e\u0641\u0651\u064e\u0646\u064e\u0627 \u0645\u064f\u0633\u0652\u0644\u0650\u0645\u0650\u064a\u0646\u064e \u2014 Our Lord, pour upon us patience and let us die as Muslims [in submission to You]. (7:126)"
+  "habitCheckIn": "Day 12 check-in \u2014 you are nearly halfway through Ramadan. This is the point where many people hit a wall. The excitement of the first week has faded, and the push of the last ten nights has not yet begun. Be honest with yourself right now: How is your prayer quality? Are you rushing through salah just to check a box, or are you still present? How is your screen time \u2014 has it crept back up since the first few days? And how are you treating the people closest to you \u2014 has fasting made you short-tempered? If any of these have slipped, do not beat yourself up. Remember verse 11:114: 'Good deeds erase bad deeds.' You do not need to be perfect. You just need to course-correct. Pick the one area that has slipped the most and give it focused attention for the rest of today. That is istiqamah \u2014 not being flawless, but getting back up every time you stumble.",
+  "closingMessage": "Twelve days in. You are building something real. The prophets in Surah Hud preached for decades and faced rejection their entire lives \u2014 and they did not quit. Yusuf was thrown into a well by his own brothers, sold into slavery, falsely accused, and imprisoned for years \u2014 and he did not quit. Whatever difficulty you are facing in your Ramadan journey right now \u2014 fatigue, distraction, spiritual dryness \u2014 it is temporary. But the character you are building through this perseverance is permanent. You are not just completing a reading plan. You are becoming the kind of person who holds firm when it is hard, who says no when it matters, and who trusts Allah's plan even when the path makes no sense. That is the transformation this month is designed to produce. Keep going.",
+  "closingDua": "\u0631\u064e\u0628\u0651\u064e\u0646\u064e\u0627 \u0623\u064e\u0641\u0652\u0631\u0650\u063a\u0652 \u0639\u064e\u0644\u064e\u064a\u0652\u0646\u064e\u0627 \u0635\u064e\u0628\u0652\u0631\u064b\u0627 \u0648\u064e\u062a\u064e\u0648\u064e\u0641\u0651\u064e\u0646\u064e\u0627 \u0645\u064f\u0633\u0652\u0644\u0650\u0645\u0650\u064a\u0646\u064e \u2014 Our Lord, pour upon us patience and let us die as Muslims [in submission to You]. (7:126)",
+  "closingDuaTransliteration": "Rabbana afrigh 'alayna sabran wa tawaffana muslimin.",
+  "stories": [
+    {
+      "id": "nuh-and-his-son",
+      "title": "Nuh and His Son: When Love Cannot Override Divine Decree",
+      "subtitle": "The most heartbreaking moment in a father-prophet's 950-year mission",
+      "triggerLabel": "The Story of Prophet Nuh (AS) and the Flood",
+      "paragraphs": [
+        "Prophet Nuh (Noah, peace be upon him) is one of the most patient figures in all of human history. For nine hundred and fifty years, he called his people to the worship of Allah alone. They mocked him, threatened him, and accused him of being followed only by the lowest members of society. Yet he never gave up. He preached in public and in private, by day and by night, using every approach he could think of.",
+        "When Allah finally commanded Nuh to build the Ark, his people's ridicule intensified. They laughed at the sight of a prophet building a ship far from any body of water. But Nuh persevered, and when the waters began to rise, he called his family to board. His wife had already turned away from faith, and now, in the most devastating moment of his life, he watched his own son refuse to join him on the Ark.",
+        "As the waves surged like mountains between them, Nuh cried out to his son: 'O my son, come aboard with us and be not with the disbelievers!' His son replied with the arrogance of someone who thinks he can save himself: 'I will take refuge on a mountain to protect me from the water.' Nuh pleaded: 'There is no protector today from the decree of Allah, except for whom He gives mercy.' And then a wave came between them, and his son was among the drowned.",
+        "Devastated, Nuh turned to Allah and said: 'My Lord, indeed my son is of my family, and indeed Your promise is true.' But Allah corrected him: 'O Nuh, indeed he is not of your family; indeed, his work was other than righteous.' In that moment, Nuh understood that the bonds of faith are stronger than the bonds of blood. He immediately repented: 'My Lord, I seek refuge in You from asking that of which I have no knowledge. And unless You forgive me and have mercy upon me, I will be among the losers.'",
+        "The story of Nuh and his son teaches one of the hardest lessons in the Quran: you cannot force guidance on someone you love, even if you are a prophet. Your responsibility is to convey the message with love, patience, and persistence. The outcome belongs entirely to Allah. This is a comfort for every parent who prays for a child who has strayed, every spouse who wishes their partner were more devout, every friend who watches someone they care about make destructive choices. Do your part, then trust Allah with the rest."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "\u0648\u064e\u0646\u064e\u0627\u062f\u064e\u0649\u0670 \u0646\u064f\u0648\u062d\u064c \u0627\u0628\u0652\u0646\u064e\u0647\u064f \u0648\u064e\u0643\u064e\u0627\u0646\u064e \u0641\u0650\u064a \u0645\u064e\u0639\u0652\u0632\u0650\u0644\u064d \u064a\u064e\u0627 \u0628\u064f\u0646\u064e\u064a\u0651\u064e \u0627\u0631\u0652\u0643\u064e\u0628 \u0645\u0651\u064e\u0639\u064e\u0646\u064e\u0627 \u0648\u064e\u0644\u064e\u0627 \u062a\u064e\u0643\u064f\u0646 \u0645\u0651\u064e\u0639\u064e \u0627\u0644\u0652\u0643\u064e\u0627\u0641\u0650\u0631\u0650\u064a\u0646\u064e",
+          "transliteration": "Wa nada Nuhuni-bnahu wa kana fi ma'zilin ya bunayya-rkab ma'ana wa la takun ma'a'l-kafirin",
+          "translation": "And Nuh called to his son who was apart [from them], 'O my son, come aboard with us and be not with the disbelievers.'",
+          "reference": "11:42"
+        },
+        {
+          "arabic": "\u0642\u064e\u0627\u0644\u064e \u064a\u064e\u0627 \u0646\u064f\u0648\u062d\u064f \u0625\u0650\u0646\u0651\u064e\u0647\u064f \u0644\u064e\u064a\u0652\u0633\u064e \u0645\u0650\u0646\u0652 \u0623\u064e\u0647\u0652\u0644\u0650\u0643\u064e \u0625\u0650\u0646\u0651\u064e\u0647\u064f \u0639\u064e\u0645\u064e\u0644\u064c \u063a\u064e\u064a\u0652\u0631\u064f \u0635\u064e\u0627\u0644\u0650\u062d\u064d",
+          "transliteration": "Qala ya Nuhu innahu laysa min ahlika innahu 'amalun ghayru salih",
+          "translation": "He said, 'O Nuh, indeed he is not of your family; indeed, his work was other than righteous.'",
+          "reference": "11:46"
+        }
+      ],
+      "lessonsLearned": [
+        "You cannot control another person's guidance, even if they are your own child. Your role is to convey the truth with love and patience; the outcome is in Allah's hands alone.",
+        "The bonds of faith can be stronger than the bonds of blood. True family in the sight of Allah is defined by shared belief and righteous action, not merely by lineage.",
+        "When corrected by Allah, the response of a believer is immediate humility and repentance. Nuh did not argue or bargain — he sought forgiveness and accepted Allah's decree.",
+        "Patience in the face of loss does not mean the absence of grief. Nuh's heartbreak was real and valid, but he channeled it toward submission rather than rebellion."
+      ]
+    },
+    {
+      "id": "yusuf-betrayal-to-egypt",
+      "title": "Yusuf: From the Well to the Palace",
+      "subtitle": "How a boy thrown into darkness by his own brothers became the most powerful man in Egypt",
+      "triggerLabel": "The Story of Prophet Yusuf (AS) - Part 1",
+      "paragraphs": [
+        "It began with a dream. The young Yusuf (Joseph, peace be upon him) came to his father Ya'qub (Jacob) and said: 'O my father, indeed I have seen eleven stars and the sun and the moon; I saw them prostrating to me.' Ya'qub, himself a prophet, immediately recognized the significance — this was a vision from Allah. But he also sensed danger: 'O my son, do not relate your vision to your brothers, or they will contrive against you a plan. Indeed, Satan is to man a clear enemy.'",
+        "Ya'qub's fear was justified. His older sons already seethed with jealousy. They said to one another: 'Yusuf and his brother are more beloved to our father than we, while we are a group. Indeed, our father is in clear error.' Their jealousy blinded them to their own blessings and convinced them that the only solution was to eliminate the source of their envy. They devised a plan: they would take Yusuf out to play, throw him into a deep well, and tell their father that a wolf had devoured him.",
+        "They executed their plan with chilling precision. They came to their father weeping, with Yusuf's shirt stained with false blood. Ya'qub, though his heart shattered, saw through the deception: 'Rather, your souls have enticed you to something, so patience is most fitting. And Allah is the one sought for help against that which you describe.' He chose beautiful patience — sabr jamil — the kind of patience that bears no complaint to anyone except Allah.",
+        "In the darkness of the well, alone and abandoned by the very people who should have protected him, the boy Yusuf received a revelation: Allah informed him that he would one day remind his brothers of what they had done, from a position they could not imagine. A passing caravan discovered him and sold him into slavery in Egypt. He was purchased by al-Aziz, a high-ranking Egyptian official, who told his wife: 'Make his stay comfortable. Perhaps he will benefit us, or we shall adopt him as a son.'",
+        "Years passed. Yusuf grew into a young man of extraordinary beauty and character. Then came his greatest test: the wife of al-Aziz, in whose household he had been raised, attempted to seduce him. She locked the doors. She planned. She pressured. But in that moment of extreme temptation, Yusuf's response was immediate and instinctive: 'I seek refuge in Allah.' He ran — not away from the door, but toward it. She tore his shirt from behind as he fled. When confronted by her husband, evidence proved Yusuf's innocence. Yet he was still imprisoned to protect the reputation of the powerful family. He chose prison over sin, declaring: 'My Lord, prison is more to my liking than that to which they invite me.'"
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "\u0625\u0650\u0630\u0652 \u0642\u064e\u0627\u0644\u064e \u064a\u064f\u0648\u0633\u064f\u0641\u064f \u0644\u0650\u0623\u064e\u0628\u0650\u064a\u0647\u0650 \u064a\u064e\u0627 \u0623\u064e\u0628\u064e\u062a\u0650 \u0625\u0650\u0646\u0651\u0650\u064a \u0631\u064e\u0623\u064e\u064a\u0652\u062a\u064f \u0623\u064e\u062d\u064e\u062f\u064e \u0639\u064e\u0634\u064e\u0631\u064e \u0643\u064e\u0648\u0652\u0643\u064e\u0628\u064b\u0627 \u0648\u064e\u0627\u0644\u0634\u0651\u064e\u0645\u0652\u0633\u064e \u0648\u064e\u0627\u0644\u0652\u0642\u064e\u0645\u064e\u0631\u064e \u0631\u064e\u0623\u064e\u064a\u0652\u062a\u064f\u0647\u064f\u0645\u0652 \u0644\u0650\u064a \u0633\u064e\u0627\u062c\u0650\u062f\u0650\u064a\u0646\u064e",
+          "transliteration": "Idh qala Yusufu li-abihi ya abati inni ra'aytu ahada 'ashara kawkaban wa'sh-shamsa wa'l-qamara ra'aytuhum li sajideen",
+          "translation": "When Yusuf said to his father, 'O my father, indeed I have seen [in a dream] eleven stars and the sun and the moon; I saw them prostrating to me.'",
+          "reference": "12:4"
+        },
+        {
+          "arabic": "\u0642\u064e\u0627\u0644\u064e \u0645\u064e\u0639\u064e\u0627\u0630\u064e \u0627\u0644\u0644\u0651\u064e\u0647\u0650 \u0625\u0650\u0646\u0651\u064e\u0647\u064f \u0631\u064e\u0628\u0651\u064a \u0623\u064e\u062d\u0652\u0633\u064e\u0646\u064e \u0645\u064e\u062b\u0652\u0648\u064e\u0627\u064a\u064e \u0625\u0650\u0646\u0651\u064e\u0647\u064f \u0644\u064e\u0627 \u064a\u064f\u0641\u0652\u0644\u0650\u062d\u064f \u0627\u0644\u0638\u0651\u064e\u0627\u0644\u0650\u0645\u064f\u0648\u0646\u064e",
+          "transliteration": "Qala ma'adha'Allahi innahu rabbi ahsana mathwaya innahu la yuflihu'z-zalimun",
+          "translation": "He said, 'I seek refuge in Allah. Indeed, he is my master, who has made good my residence. Indeed, wrongdoers will not succeed.'",
+          "reference": "12:23"
+        },
+        {
+          "arabic": "\u0642\u064e\u0627\u0644\u064e \u0631\u064e\u0628\u0651\u0650 \u0627\u0644\u0633\u0651\u0650\u062c\u0652\u0646\u064f \u0623\u064e\u062d\u064e\u0628\u0651\u064f \u0625\u0650\u0644\u064e\u064a\u0651\u064e \u0645\u0650\u0645\u0651\u064e\u0627 \u064a\u064e\u062f\u0652\u0639\u064f\u0648\u0646\u064e\u0646\u0650\u064a \u0625\u0650\u0644\u064e\u064a\u0652\u0647\u0650",
+          "transliteration": "Qala Rabbi's-sijnu ahabbu ilayya mimma yad'unani ilayh",
+          "translation": "He said, 'My Lord, prison is more to my liking than that to which they invite me.'",
+          "reference": "12:33"
+        }
+      ],
+      "lessonsLearned": [
+        "Not every blessing should be shared publicly. Ya'qub's advice to Yusuf about keeping his dream private teaches that wisdom includes knowing when to guard what Allah has given you from the envy of others.",
+        "Jealousy destroys the one who carries it before it harms the one it targets. The brothers' jealousy led them to commit a crime that haunted them for decades, while Yusuf's journey, though painful, led to greatness.",
+        "In moments of temptation, turn to Allah before relying on your own strength. Yusuf's first words were 'I seek refuge in Allah' — spiritual reliance came before physical action.",
+        "Short-term suffering for the sake of your principles is always preferable to short-term comfort at the cost of your soul. Yusuf chose prison over sin and was ultimately elevated to the highest position in the land."
+      ]
+    },
+    {
+      "id": "shuayb-and-economic-justice",
+      "title": "Prophet Shu'ayb and the People of Madyan: When Cheating Became Worship",
+      "subtitle": "The nation destroyed not for idol worship, but for corruption in business",
+      "triggerLabel": "The Story of Prophet Shu'ayb (AS) and Economic Justice",
+      "paragraphs": [
+        "While many nations in the Quran were destroyed for idol worship or rejecting their prophets outright, the people of Madyan stand out for a different reason: their primary sin was economic corruption. They cheated in their business dealings, shortchanged people in weights and measures, and manipulated markets for personal gain. They saw nothing wrong with this — after all, it was just business.",
+        "Allah sent them Prophet Shu'ayb (peace be upon him), known in Islamic tradition as 'the orator of the prophets' for his eloquent speech. His message was direct: 'O my people, worship Allah; you have no deity other than Him. And do not decrease from the measure and the scale. Indeed, I see you in prosperity, but indeed, I fear for you the punishment of an all-encompassing Day.' He connected their economic dishonesty directly to their relationship with Allah — cheating people is not just a financial crime, it is a spiritual one.",
+        "The elites of Madyan were outraged. They said: 'O Shu'ayb, does your prayer command you that we should leave what our fathers worship or not do with our wealth what we please?' In this response lies a timeless attitude: the belief that faith should stay in the mosque and not interfere with how one does business. They wanted a religion that was personal and private — one that would not challenge their profits or their practices.",
+        "Shu'ayb's reply was remarkable in its humility and firmness: 'O my people, have you considered: if I am upon clear evidence from my Lord and He has provided me with a good provision from Him? And I do not intend to differ from you in that which I have forbidden you; I only intend reform as much as I am able. And my success is not but through Allah.' He practiced what he preached — his own business dealings were impeccable. He did not ask of others what he would not do himself.",
+        "When they persisted in their corruption and rejected Shu'ayb's message, the punishment came: a mighty blast and an earthquake that left them lifeless in their homes, as though they had never prospered there. Allah's destruction of Madyan stands as a permanent warning that financial integrity is not optional in Islam — it is a fundamental expression of one's faith. How you handle money, transactions, and the trust people place in you is, in Allah's sight, an act of worship or an act of rebellion."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "\u0648\u064e\u0625\u0650\u0644\u064e\u0649\u0670 \u0645\u064e\u062f\u0652\u064a\u064e\u0646\u064e \u0623\u064e\u062e\u064e\u0627\u0647\u064f\u0645\u0652 \u0634\u064f\u0639\u064e\u064a\u0652\u0628\u064b\u0627 \u0642\u064e\u0627\u0644\u064e \u064a\u064e\u0627 \u0642\u064e\u0648\u0652\u0645\u0650 \u0627\u0639\u0652\u0628\u064f\u062f\u064f\u0648\u0627 \u0627\u0644\u0644\u0651\u064e\u0647\u064e \u0645\u064e\u0627 \u0644\u064e\u0643\u064f\u0645 \u0645\u0651\u0650\u0646\u0652 \u0625\u0650\u0644\u064e\u0670\u0647\u064d \u063a\u064e\u064a\u0652\u0631\u064f\u0647\u064f \u0648\u064e\u0644\u064e\u0627 \u062a\u064e\u0646\u0642\u064f\u0635\u064f\u0648\u0627 \u0627\u0644\u0652\u0645\u0650\u0643\u0652\u064a\u064e\u0627\u0644\u064e \u0648\u064e\u0627\u0644\u0652\u0645\u0650\u064a\u0632\u064e\u0627\u0646\u064e",
+          "transliteration": "Wa ila Madyana akhahum Shu'ayban qala ya qawmi'budu'Allaha ma lakum min ilahin ghayruhu wa la tanqusu'l-mikyala wa'l-mizan",
+          "translation": "And to Madyan [We sent] their brother Shu'ayb. He said, 'O my people, worship Allah; you have no deity other than Him. And do not decrease from the measure and the scale.'",
+          "reference": "11:84"
+        },
+        {
+          "arabic": "\u0648\u064e\u0645\u064e\u0627 \u0623\u064f\u0631\u0650\u064a\u062f\u064f \u0623\u064e\u0646\u0652 \u0623\u064f\u062e\u064e\u0627\u0644\u0650\u0641\u064e\u0643\u064f\u0645\u0652 \u0625\u0650\u0644\u064e\u0649\u0670 \u0645\u064e\u0627 \u0623\u064e\u0646\u0652\u0647\u064e\u0627\u0643\u064f\u0645\u0652 \u0639\u064e\u0646\u0652\u0647\u064f \u0625\u0650\u0646\u0652 \u0623\u064f\u0631\u0650\u064a\u062f\u064f \u0625\u0650\u0644\u0651\u064e\u0627 \u0627\u0644\u0652\u0625\u0650\u0635\u0652\u0644\u064e\u0627\u062d\u064e \u0645\u064e\u0627 \u0627\u0633\u0652\u062a\u064e\u0637\u064e\u0639\u0652\u062a\u064f",
+          "transliteration": "Wa ma uridu an ukhalifakum ila ma anhakum 'anhu in uridu illa'l-islaha ma-stata't",
+          "translation": "And I do not intend to differ from you in that which I have forbidden you; I only intend reform as much as I am able.",
+          "reference": "11:88"
+        }
+      ],
+      "lessonsLearned": [
+        "Financial integrity is an act of worship. Allah destroyed an entire nation not for idol worship but for cheating in their business dealings. How you handle money, contracts, and transactions matters to Allah as much as how you pray.",
+        "Faith cannot be compartmentalized. The people of Madyan wanted a religion that stayed in the prayer hall and did not interfere with their marketplace. Islam rejects this separation — your deen encompasses every area of your life.",
+        "A reformer must practice what they preach. Shu'ayb's credibility came from the fact that his own conduct matched his message. Integrity means living by the standards you call others to."
+      ]
+    }
+  ],
+  "dailyDuas": [
+    {
+      "arabic": "\u0631\u064e\u0628\u0651\u0650 \u0625\u0650\u0646\u0651\u0650\u064a \u0623\u064e\u0639\u064f\u0648\u0630\u064f \u0628\u0650\u0643\u064e \u0623\u064e\u0646\u0652 \u0623\u064e\u0633\u0652\u0623\u064e\u0644\u064e\u0643\u064e \u0645\u064e\u0627 \u0644\u064e\u064a\u0652\u0633\u064e \u0644\u0650\u064a \u0628\u0650\u0647\u0650 \u0639\u0650\u0644\u0652\u0645\u064c \u0648\u064e\u0625\u0650\u0644\u0651\u064e\u0627 \u062a\u064e\u063a\u0652\u0641\u0650\u0631\u0652 \u0644\u0650\u064a \u0648\u064e\u062a\u064e\u0631\u0652\u062d\u064e\u0645\u0652\u0646\u0650\u064a \u0623\u064e\u0643\u064f\u0646 \u0645\u0651\u0650\u0646\u064e \u0627\u0644\u0652\u062e\u064e\u0627\u0633\u0650\u0631\u0650\u064a\u0646\u064e",
+      "transliteration": "Rabbi inni a'udhu bika an as'alaka ma laysa li bihi 'ilm. Wa illa taghfir li wa tarhamni akun mina'l-khasirin.",
+      "translation": "My Lord, I seek refuge in You from asking that of which I have no knowledge. And unless You forgive me and have mercy upon me, I will be among the losers.",
+      "reference": "11:47",
+      "surahName": "Hud",
+      "context": "This is the dua of Prophet Nuh (AS) after Allah corrected him for asking about his disbelieving son. Nuh immediately humbled himself and sought forgiveness. It is a dua of ultimate humility — acknowledging that even our most heartfelt requests may overstep what Allah has decreed, and that our only safety is in His forgiveness.",
+      "purpose": "Humility and Forgiveness"
+    },
+    {
+      "arabic": "\u0631\u064e\u0628\u0651\u064e\u0646\u064e\u0627 \u0623\u064e\u0641\u0652\u0631\u0650\u063a\u0652 \u0639\u064e\u0644\u064e\u064a\u0652\u0646\u064e\u0627 \u0635\u064e\u0628\u0652\u0631\u064b\u0627 \u0648\u064e\u062a\u064e\u0648\u064e\u0641\u0651\u064e\u0646\u064e\u0627 \u0645\u064f\u0633\u0652\u0644\u0650\u0645\u0650\u064a\u0646\u064e",
+      "transliteration": "Rabbana afrigh 'alayna sabran wa tawaffana muslimin.",
+      "translation": "Our Lord, pour upon us patience and let us die as Muslims [in submission to You].",
+      "reference": "7:126",
+      "surahName": "Al-A'raf",
+      "context": "This dua was made by the magicians of Pharaoh after they recognized the truth of Musa's message and believed. When Pharaoh threatened them with torture and death, they responded with this powerful supplication. It resonates deeply with Juz 12's theme of steadfastness under pressure — asking Allah for patience and a good end, no matter what hardship one faces.",
+      "purpose": "Patience and Good Ending"
+    },
+    {
+      "arabic": "\u0631\u064e\u0628\u0651\u0650 \u0627\u062c\u0652\u0639\u064e\u0644\u0652\u0646\u0650\u064a \u0645\u064f\u0642\u0650\u064a\u0645\u064e \u0627\u0644\u0635\u0651\u064e\u0644\u064e\u0627\u0629\u0650 \u0648\u064e\u0645\u0650\u0646 \u0630\u064f\u0631\u0651\u0650\u064a\u0651\u064e\u062a\u0650\u064a \u0631\u064e\u0628\u0651\u064e\u0646\u064e\u0627 \u0648\u064e\u062a\u064e\u0642\u064e\u0628\u0651\u064e\u0644\u0652 \u062f\u064f\u0639\u064e\u0627\u0621\u0650",
+      "transliteration": "Rabbi-j'alni muqima's-salati wa min dhurriyyati Rabbana wa taqabbal du'a'.",
+      "translation": "My Lord, make me an establisher of prayer, and [many] from my descendants. Our Lord, and accept my supplication.",
+      "reference": "14:40",
+      "surahName": "Ibrahim",
+      "context": "This is the dua of Prophet Ibrahim (AS), who appears prominently in Surah Hud as a model of hospitality and advocacy. Ibrahim asked Allah not only for his own steadfastness in prayer but for his children and descendants as well. It connects to Juz 12's themes of prophetic patience and concern for future generations — the same concern Nuh had for his son and Ya'qub had for Yusuf.",
+      "purpose": "Steadfastness in Prayer"
+    }
+  ]
 }

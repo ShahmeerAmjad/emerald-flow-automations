@@ -23,6 +23,7 @@
       ],
       "standoutAyah": {
         "arabic": "\u0642\u064f\u0644\u0652 \u0625\u0650\u0646\u0651\u064e \u0635\u064e\u0644\u064e\u0627\u062a\u0650\u064a \u0648\u064e\u0646\u064f\u0633\u064f\u0643\u0650\u064a \u0648\u064e\u0645\u064e\u062d\u0652\u064a\u064e\u0627\u064a\u064e \u0648\u064e\u0645\u064e\u0645\u064e\u0627\u062a\u0650\u064a \u0644\u0650\u0644\u0651\u064e\u0647\u0650 \u0631\u064e\u0628\u0651\u0650 \u0627\u0644\u0652\u0639\u064e\u0627\u0644\u064e\u0645\u0650\u064a\u0646\u064e",
+        "transliteration": "Qul inna salati wa nusuki wa mahyaya wa mamati lillahi Rabbi al-'alamin",
         "translation": "Say, 'Indeed, my prayer, my rites of sacrifice, my living and my dying are for Allah, Lord of the worlds.'",
         "translationSource": "Sahih International",
         "surahName": "Al-An'am",
@@ -48,6 +49,7 @@
       ],
       "standoutAyah": {
         "arabic": "\u064a\u064e\u0627 \u0628\u064e\u0646\u0650\u064a \u0622\u062f\u064e\u0645\u064e \u0642\u064e\u062f\u0652 \u0623\u064e\u0646\u0632\u064e\u0644\u0652\u0646\u064e\u0627 \u0639\u064e\u0644\u064e\u064a\u0652\u0643\u064f\u0645\u0652 \u0644\u0650\u0628\u064e\u0627\u0633\u064b\u0627 \u064a\u064f\u0648\u064e\u0627\u0631\u0650\u064a \u0633\u064e\u0648\u0652\u0621\u064e\u0627\u062a\u0650\u0643\u064f\u0645\u0652 \u0648\u064e\u0631\u0650\u064a\u0634\u064b\u0627 \u0648\u064e\u0644\u0650\u0628\u064e\u0627\u0633\u064f \u0627\u0644\u062a\u0651\u064e\u0642\u0652\u0648\u064e\u0649\u0670 \u0630\u064e\u0670\u0644\u0650\u0643\u064e \u062e\u064e\u064a\u0652\u0631\u0651",
+        "transliteration": "Ya bani Adama qad anzalna 'alaykum libasan yuwari saw'atikum wa rishan wa libasu at-taqwa dhalika khayr",
         "translation": "O Children of Adam, We have bestowed upon you clothing to conceal your private parts and as adornment. But the clothing of righteousness \u2014 that is best.",
         "translationSource": "Sahih International",
         "surahName": "Al-A'raf",
@@ -77,6 +79,7 @@
   "keyAyat": [
     {
       "arabic": "\u0648\u064e\u0623\u064e\u0646\u0651\u064e \u0647\u064e\u0670\u0630\u064e\u0627 \u0635\u0650\u0631\u064e\u0627\u0637\u0650\u064a \u0645\u064f\u0633\u0652\u062a\u064e\u0642\u0650\u064a\u0645\u064b\u0627 \u0641\u064e\u0627\u062a\u0651\u064e\u0628\u0650\u0639\u064f\u0648\u0647\u064f \u0648\u064e\u0644\u064e\u0627 \u062a\u064e\u062a\u0651\u064e\u0628\u0650\u0639\u064f\u0648\u0627 \u0627\u0644\u0633\u0651\u064f\u0628\u064f\u0644\u064e \u0641\u064e\u062a\u064e\u0641\u064e\u0631\u0651\u064e\u0642\u064e \u0628\u0650\u0643\u064f\u0645\u0652 \u0639\u064e\u0646 \u0633\u064e\u0628\u0650\u064a\u0644\u0650\u0647\u0650",
+      "transliteration": "Wa anna hadha sirati mustaqiman fattabi'uhu wa la tattabi'u as-subula fatafar-raqa bikum 'an sabilihi",
       "translation": "And, [moreover], this is My path, which is straight, so follow it; and do not follow [other] ways, for you will be separated from His way.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-An'am, 6:153",
@@ -85,6 +88,7 @@
     },
     {
       "arabic": "\u0642\u064e\u0627\u0644\u064e \u0623\u064e\u0646\u064e\u0627 \u062e\u064e\u064a\u0652\u0631\u0651 \u0645\u0651\u0650\u0646\u0652\u0647\u064f \u062e\u064e\u0644\u064e\u0642\u0652\u062a\u064e\u0646\u0650\u064a \u0645\u0650\u0646 \u0646\u0651\u064e\u0627\u0631\u064d \u0648\u064e\u062e\u064e\u0644\u064e\u0642\u0652\u062a\u064e\u0647\u064f \u0645\u0650\u0646 \u0637\u0650\u064a\u0646\u064d",
+      "transliteration": "Qala ana khayrun minhu khalaqtani min narin wa khalaqtahu min tin",
       "translation": "He said, 'I am better than him. You created me from fire and created him from clay.'",
       "translationSource": "Sahih International",
       "reference": "Surah Al-A'raf, 7:12",
@@ -93,6 +97,7 @@
     },
     {
       "arabic": "\u064a\u064e\u0627 \u0628\u064e\u0646\u0650\u064a \u0622\u062f\u064e\u0645\u064e \u0644\u064e\u0627 \u064a\u064e\u0641\u0652\u062a\u0650\u0646\u064e\u0646\u0651\u064e\u0643\u064f\u0645\u064f \u0627\u0644\u0634\u0651\u064e\u064a\u0652\u0637\u064e\u0627\u0646\u064f \u0643\u064e\u0645\u064e\u0627 \u0623\u064e\u062e\u0652\u0631\u064e\u062c\u064e \u0623\u064e\u0628\u064e\u0648\u064e\u064a\u0652\u0643\u064f\u0645 \u0645\u0651\u0650\u0646\u064e \u0627\u0644\u0652\u062c\u064e\u0646\u0651\u064e\u0629\u0650",
+      "transliteration": "Ya bani Adama la yaftinannakumu ash-Shaytanu kama akhraja abawaykum mina al-jannah",
       "translation": "O Children of Adam, let not Satan tempt you as he removed your parents from Paradise.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-A'raf, 7:27",
@@ -101,6 +106,7 @@
     },
     {
       "arabic": "\u0648\u064e\u0644\u064e\u0627 \u062a\u064f\u0641\u0652\u0633\u0650\u062f\u064f\u0648\u0627 \u0641\u0650\u064a \u0627\u0644\u0652\u0623\u064e\u0631\u0652\u0636\u0650 \u0628\u064e\u0639\u0652\u062f\u064e \u0625\u0650\u0635\u0652\u0644\u064e\u0627\u062d\u0650\u0647\u064e\u0627 \u0648\u064e\u0627\u062f\u0652\u0639\u064f\u0648\u0647\u064f \u062e\u064e\u0648\u0652\u0641\u064b\u0627 \u0648\u064e\u0637\u064e\u0645\u064e\u0639\u064b\u0627 \u0625\u0650\u0646\u0651\u064e \u0631\u064e\u062d\u0652\u0645\u064e\u062a\u064e \u0627\u0644\u0644\u0651\u064e\u0647\u0650 \u0642\u064e\u0631\u0650\u064a\u0628\u0651 \u0645\u0651\u0650\u0646\u064e \u0627\u0644\u0652\u0645\u064f\u062d\u0652\u0633\u0650\u0646\u0650\u064a\u0646\u064e",
+      "transliteration": "Wa la tufsidu fi al-ardi ba'da islahiha wad'uhu khawfan wa tama'an inna rahmata Allahi qaribun mina al-muhsinin",
       "translation": "And cause not corruption upon the earth after its reformation. And invoke Him in fear and aspiration. Indeed, the mercy of Allah is near to the doers of good.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-A'raf, 7:56",
@@ -109,6 +115,7 @@
     },
     {
       "arabic": "\u0648\u064e\u0644\u064e\u0642\u064e\u062f\u0652 \u062e\u064e\u0644\u064e\u0642\u0652\u0646\u064e\u0627\u0643\u064f\u0645\u0652 \u062b\u064f\u0645\u0651\u064e \u0635\u064e\u0648\u0651\u064e\u0631\u0652\u0646\u064e\u0627\u0643\u064f\u0645\u0652 \u062b\u064f\u0645\u0651\u064e \u0642\u064f\u0644\u0652\u0646\u064e\u0627 \u0644\u0650\u0644\u0652\u0645\u064e\u0644\u064e\u0627\u0626\u0650\u0643\u064e\u0629\u0650 \u0627\u0633\u0652\u062c\u064f\u062f\u064f\u0648\u0627 \u0644\u0650\u0622\u062f\u064e\u0645\u064e \u0641\u064e\u0633\u064e\u062c\u064e\u062f\u064f\u0648\u0627 \u0625\u0650\u0644\u0651\u064e\u0627 \u0625\u0650\u0628\u0652\u0644\u0650\u064a\u0633\u064e \u0644\u064e\u0645\u0652 \u064a\u064e\u0643\u064f\u0646 \u0645\u0651\u0650\u0646\u064e \u0627\u0644\u0633\u0651\u064e\u0627\u062c\u0650\u062f\u0650\u064a\u0646\u064e",
+      "transliteration": "Wa laqad khalaqnakum thumma sawwarnakum thumma qulna lil-mala'ikati usjudu li'Adama fasajadu illa Iblisa lam yakun mina as-sajidin",
       "translation": "And We have certainly created you, [O mankind], and given you [human] form. Then We said to the angels, 'Prostrate to Adam'; so they prostrated, except for Iblis. He was not of those who prostrated.",
       "translationSource": "Sahih International",
       "reference": "Surah Al-A'raf, 7:11",
@@ -128,5 +135,138 @@
   },
   "habitCheckIn": "Day 8 \u2014 you're more than a quarter of the way through Ramadan. By now, your body has likely adjusted to fasting, which means the physical challenge is easing. That is exactly when Shaytan shifts tactics from 'this is too hard' to 'you're doing enough.' Today's check-in is on prayer quality. Are you still praying with focus, or has it become robotic? Before your next salah, take thirty seconds to stand in silence before saying 'Allahu Akbar.' Remind yourself Who you are about to speak to. If Iblis refused to prostrate out of arrogance, let your sujood today be an intentional act of humility \u2014 the exact opposite of his choice.",
   "closingMessage": "You've now read through some of the most foundational stories in the Quran \u2014 Adam and Iblis, the first temptation, the first sin, and the first repentance. Here is the good news: Adam fell, but Allah taught him words of repentance and accepted them (referenced in 2:37 and 7:23). You are Adam's child. If you've stumbled this week \u2014 missed a prayer, lost your temper, broke a commitment \u2014 remember that your father stumbled too, and Allah's mercy was there to catch him. Get back up. The path forward is not perfection; it is persistence.",
-  "closingDua": "\u0631\u064e\u0628\u0651\u064e\u0646\u064e\u0627 \u0638\u064e\u0644\u064e\u0645\u0652\u0646\u064e\u0627 \u0623\u064e\u0646\u0641\u064f\u0633\u064e\u0646\u064e\u0627 \u0648\u064e\u0625\u0650\u0646 \u0644\u0651\u064e\u0645\u0652 \u062a\u064e\u063a\u0652\u0641\u0650\u0631\u0652 \u0644\u064e\u0646\u064e\u0627 \u0648\u064e\u062a\u064e\u0631\u0652\u062d\u064e\u0645\u0652\u0646\u064e\u0627 \u0644\u064e\u0646\u064e\u0643\u064f\u0648\u0646\u064e\u0646\u0651\u064e \u0645\u0650\u0646\u064e \u0627\u0644\u0652\u062e\u064e\u0627\u0633\u0650\u0631\u0650\u064a\u0646\u064e \u2014 Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers. (7:23) \u2014 The du'a of Adam and Hawwa, and the du'a of every human being who has ever made a mistake and turned back to Allah."
+  "closingDua": "\u0631\u064e\u0628\u0651\u064e\u0646\u064e\u0627 \u0638\u064e\u0644\u064e\u0645\u0652\u0646\u064e\u0627 \u0623\u064e\u0646\u0641\u064f\u0633\u064e\u0646\u064e\u0627 \u0648\u064e\u0625\u0650\u0646 \u0644\u0651\u064e\u0645\u0652 \u062a\u064e\u063a\u0652\u0641\u0650\u0631\u0652 \u0644\u064e\u0646\u064e\u0627 \u0648\u064e\u062a\u064e\u0631\u0652\u062d\u064e\u0645\u0652\u0646\u064e\u0627 \u0644\u064e\u0646\u064e\u0643\u064f\u0648\u0646\u064e\u0646\u0651\u064e \u0645\u0650\u0646\u064e \u0627\u0644\u0652\u062e\u064e\u0627\u0633\u0650\u0631\u0650\u064a\u0646\u064e \u2014 Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers. (7:23) \u2014 The du'a of Adam and Hawwa, and the du'a of every human being who has ever made a mistake and turned back to Allah.",
+  "closingDuaTransliteration": "Rabbana zalamna anfusana wa in lam taghfir lana wa tarhamna lanakunnna mina al-khasirin",
+  "stories": [
+    {
+      "id": "adam-iblis-and-the-fall",
+      "title": "Adam, Iblis, and the Fall from the Garden",
+      "subtitle": "The origin of the human struggle between humility and arrogance",
+      "triggerLabel": "The Story of Adam (AS) and Iblis",
+      "paragraphs": [
+        "Allah created Adam (AS) with His own hands, shaped him from clay, breathed into him from His spirit, and then commanded the angels to prostrate before this new creation. Every angel obeyed without hesitation \u2014 every one, except Iblis. When asked why he refused, Iblis gave the first argument rooted in arrogance and prejudice: 'I am better than him. You created me from fire and created him from clay.' He did not dispute Allah's existence or power. He disputed Allah's command, believing his own judgment of superiority trumped divine instruction.",
+        "Allah expelled Iblis from his elevated station, but Iblis made a vow: 'Because You have put me in error, I will surely sit in wait for them on Your straight path. Then I will come to them from before them and from behind them and on their right and on their left, and You will not find most of them grateful.' This declaration reveals Shaytan's strategy \u2014 he attacks from every direction, and his primary goal is to make human beings ungrateful to their Creator.",
+        "Then came Adam and Hawwa's test. They were placed in the Garden and given freedom to enjoy everything except one tree. Shaytan whispered to them, swearing by Allah that he was a sincere adviser, telling them the tree would make them angels or grant them immortality. They ate from it, and immediately their garments fell away \u2014 they were exposed, physically and spiritually. They scrambled to cover themselves with leaves from the Garden.",
+        "But here is where the story diverges from despair into hope. Adam and Hawwa did not make excuses. They did not blame each other. They turned immediately to Allah and said: 'Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers.' Allah accepted their repentance and sent them to earth \u2014 not as a punishment, but as a beginning. Every human being since carries both the vulnerability of Adam and the capacity for his repentance.",
+        "The contrast between Iblis and Adam defines the entire human condition. Iblis sinned through arrogance and then refused to repent, instead blaming Allah for his misguidance. Adam sinned through weakness and immediately took responsibility, turning back to Allah in humility. Two responses to the same moment \u2014 one leads to eternal damnation, the other to divine mercy. The choice is yours, every single day."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "\u0642\u064e\u0627\u0644\u064e \u0623\u064e\u0646\u064e\u0627 \u062e\u064e\u064a\u0652\u0631\u0651 \u0645\u0651\u0650\u0646\u0652\u0647\u064f \u062e\u064e\u0644\u064e\u0642\u0652\u062a\u064e\u0646\u0650\u064a \u0645\u0650\u0646 \u0646\u0651\u064e\u0627\u0631\u064d \u0648\u064e\u062e\u064e\u0644\u064e\u0642\u0652\u062a\u064e\u0647\u064f \u0645\u0650\u0646 \u0637\u0650\u064a\u0646\u064d",
+          "transliteration": "Qala ana khayrun minhu khalaqtani min narin wa khalaqtahu min tin",
+          "translation": "He said, 'I am better than him. You created me from fire and created him from clay.'",
+          "reference": "7:12"
+        },
+        {
+          "arabic": "\u0631\u064e\u0628\u0651\u064e\u0646\u064e\u0627 \u0638\u064e\u0644\u064e\u0645\u0652\u0646\u064e\u0627 \u0623\u064e\u0646\u0641\u064f\u0633\u064e\u0646\u064e\u0627 \u0648\u064e\u0625\u0650\u0646 \u0644\u0651\u064e\u0645\u0652 \u062a\u064e\u063a\u0652\u0641\u0650\u0631\u0652 \u0644\u064e\u0646\u064e\u0627 \u0648\u064e\u062a\u064e\u0631\u0652\u062d\u064e\u0645\u0652\u0646\u064e\u0627 \u0644\u064e\u0646\u064e\u0643\u064f\u0648\u0646\u064e\u0646\u0651\u064e \u0645\u0650\u0646\u064e \u0627\u0644\u0652\u062e\u064e\u0627\u0633\u0650\u0631\u0650\u064a\u0646\u064e",
+          "transliteration": "Rabbana zalamna anfusana wa in lam taghfir lana wa tarhamna lanakunnna mina al-khasirin",
+          "translation": "Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers.",
+          "reference": "7:23"
+        },
+        {
+          "arabic": "\u0642\u064e\u0627\u0644\u064e \u0641\u064e\u0628\u0650\u0645\u064e\u0627 \u0623\u064e\u063a\u0652\u0648\u064e\u064a\u0652\u062a\u064e\u0646\u0650\u064a \u0644\u064e\u0623\u064e\u0642\u0652\u0639\u064f\u062f\u064e\u0646\u0651\u064e \u0644\u064e\u0647\u064f\u0645\u0652 \u0635\u0650\u0631\u064e\u0627\u0637\u064e\u0643\u064e \u0627\u0644\u0652\u0645\u064f\u0633\u0652\u062a\u064e\u0642\u0650\u064a\u0645\u064e",
+          "transliteration": "Qala fabima aghwaytani la'aq'udanna lahum sirataka al-mustaqim",
+          "translation": "He said, 'Because You have put me in error, I will surely sit in wait for them on Your straight path.'",
+          "reference": "7:16"
+        }
+      ],
+      "lessonsLearned": [
+        "The difference between a believer and a persistent sinner is not the absence of sin \u2014 it is the presence of repentance. Adam sinned and turned back to Allah; Iblis sinned and turned against Allah. Your response to your mistakes defines you more than the mistakes themselves.",
+        "Arrogance is the root of all disobedience. Iblis had knowledge, had worshipped Allah for ages, and yet arrogance destroyed everything. No amount of knowledge or worship protects you if pride takes root in your heart.",
+        "Shaytan's strategy is consistent and predictable: he beautifies sin, minimizes consequences, and attacks from every direction. Knowing his playbook is your first defense. Every time you are tempted, ask: is this my desire speaking, or his whisper?",
+        "Allah's mercy is always available to those who seek it sincerely. Adam and Hawwa were forgiven immediately upon repentance. No sin is too great for Allah's forgiveness \u2014 the only barrier is your unwillingness to ask."
+      ]
+    },
+    {
+      "id": "salih-and-the-she-camel",
+      "title": "Prophet Salih and the She-Camel of Thamud",
+      "subtitle": "A miraculous sign that was met with defiance",
+      "triggerLabel": "The Story of Salih (AS) and Thamud",
+      "paragraphs": [
+        "The people of Thamud were a powerful civilization who carved magnificent homes into the mountains. They succeeded the people of 'Ad and inherited the earth's resources, building grand structures and living in luxury. But with their power came arrogance, and they turned away from the worship of Allah. So Allah sent to them their brother Salih (AS), a man from among their own people, calling them to worship Allah alone.",
+        "Salih reminded them of the blessings Allah had given them: 'Remember when He made you successors after 'Ad and settled you in the land, and you take for yourselves palaces from its plains and carve from the mountains, homes. Then remember the favors of Allah and do not commit abuse on the earth, spreading corruption.' But the elite among his people, those who were arrogant, dismissed him. They demanded a sign \u2014 a miracle that would prove he was truly sent by Allah.",
+        "Allah answered by sending a miraculous she-camel, a sign unlike anything they had seen. Salih told his people: 'This is the she-camel of Allah \u2014 a sign for you. So leave her to eat upon Allah's earth and do not touch her with harm, or you will be taken by a painful punishment.' The she-camel was to share their water supply on alternating days \u2014 one day for her, one day for them. It was a simple test of obedience and trust.",
+        "But the arrogant elite could not bear it. They conspired, and one of them \u2014 the most wretched among them \u2014 hamstrung the she-camel and killed her. It was not merely the killing of an animal; it was a deliberate rejection of Allah's sign, a throwing down of the gauntlet against divine authority. Salih warned them: 'Enjoy yourselves in your homes for three days. That is a promise not to be denied.' Three days later, a mighty blast seized them, and the civilization of Thamud was destroyed, leaving nothing but their empty, carved-out mountain homes as silent witnesses to their arrogance."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "\u0648\u064e\u0625\u0650\u0644\u064e\u0649\u0670 \u062b\u064e\u0645\u064f\u0648\u062f\u064e \u0623\u064e\u062e\u064e\u0627\u0647\u064f\u0645\u0652 \u0635\u064e\u0627\u0644\u0650\u062d\u064b\u0627 \u0642\u064e\u0627\u0644\u064e \u064a\u064e\u0627 \u0642\u064e\u0648\u0652\u0645\u0650 \u0627\u0639\u0652\u0628\u064f\u062f\u064f\u0648\u0627 \u0627\u0644\u0644\u0651\u064e\u0647\u064e \u0645\u064e\u0627 \u0644\u064e\u0643\u064f\u0645 \u0645\u0651\u0650\u0646\u0652 \u0625\u0650\u0644\u064e\u0670\u0647\u064d \u063a\u064e\u064a\u0652\u0631\u064f\u0647\u064f",
+          "transliteration": "Wa ila Thamuda akhahum Salihan qala ya qawmi u'budu Allaha ma lakum min ilahin ghayruhu",
+          "translation": "And to Thamud [We sent] their brother Salih. He said, 'O my people, worship Allah; you have no deity other than Him.'",
+          "reference": "7:73"
+        },
+        {
+          "arabic": "\u0647\u064e\u0670\u0630\u0650\u0647\u0650 \u0646\u064e\u0627\u0642\u064e\u0629\u064f \u0627\u0644\u0644\u0651\u064e\u0647\u0650 \u0644\u064e\u0643\u064f\u0645\u0652 \u0622\u064a\u064e\u0629\u064b \u0641\u064e\u0630\u064e\u0631\u064f\u0648\u0647\u064e\u0627 \u062a\u064e\u0623\u0652\u0643\u064f\u0644\u0652 \u0641\u0650\u064a \u0623\u064e\u0631\u0652\u0636\u0650 \u0627\u0644\u0644\u0651\u064e\u0647\u0650 \u0648\u064e\u0644\u064e\u0627 \u062a\u064e\u0645\u064e\u0633\u0651\u064f\u0648\u0647\u064e\u0627 \u0628\u0650\u0633\u064f\u0648\u0621\u064d \u0641\u064e\u064a\u064e\u0623\u0652\u062e\u064f\u0630\u064e\u0643\u064f\u0645\u0652 \u0639\u064e\u0630\u064e\u0627\u0628\u0651 \u0623\u064e\u0644\u0650\u064a\u0645\u0651",
+          "transliteration": "Hadhihi naqatu Allahi lakum ayatan fadharuha ta'kul fi ardi Allahi wa la tamassuha bisu'in faya'khudhakum 'adhabun alim",
+          "translation": "This is the she-camel of Allah \u2014 a sign for you. So leave her to eat upon Allah's earth and do not touch her with harm, or you will be taken by a painful punishment.",
+          "reference": "7:73"
+        }
+      ],
+      "lessonsLearned": [
+        "Demanding signs from Allah and then rejecting them brings the severest of consequences. In our own lives, we are surrounded by signs of Allah's existence and mercy \u2014 in nature, in the Quran, in answered prayers. Ignoring them is a dangerous form of ingratitude.",
+        "Wealth and power do not protect anyone from divine accountability. The people of Thamud had carved homes into mountains, but their architecture could not shield them from Allah's punishment when they crossed the line.",
+        "Sometimes the test Allah gives you seems small \u2014 share water with a camel, avoid one tree in a garden \u2014 but obedience in the 'small' things reveals the true state of your heart."
+      ]
+    },
+    {
+      "id": "shuayb-and-the-people-of-madyan",
+      "title": "Prophet Shu'ayb and the Cheaters of Madyan",
+      "subtitle": "When corruption in business became corruption of the soul",
+      "triggerLabel": "The Story of Shu'ayb (AS) and Madyan",
+      "paragraphs": [
+        "The people of Madyan were prosperous traders who sat at a crossroads of commerce. They had been blessed with fertile land and thriving markets. But their prosperity had corrupted them in a very specific way: they cheated in their business dealings. They would give short measure and short weight \u2014 taking full payment but delivering less than what was owed. They would devalue people's goods and spread corruption in the land. Their sin was not merely economic; it was a betrayal of trust, a refusal to deal justly with their fellow human beings.",
+        "Allah sent to them Shu'ayb (AS), known in the Islamic tradition as 'the orator of the prophets' for his eloquence. His message was comprehensive: 'O my people, worship Allah; you have no deity other than Him. There has come to you clear evidence from your Lord. So give full measure and weight and do not deprive people of their due. And do not cause corruption upon the earth after its reformation. That is better for you, if you should be believers.'",
+        "Shu'ayb drew a direct line between worship of Allah and honest dealing. You cannot claim to believe in God while cheating His creation. The elite of Madyan threatened to expel him: 'We will surely drive you out, O Shu'ayb, and those who have believed with you from our city, or you must return to our religion.' Shu'ayb responded with quiet strength: 'Even if we were unwilling?' He could not return to falsehood once he had been shown the truth.",
+        "The people of Madyan refused to reform, and the earthquake seized them. They were found in their homes, lifeless, as though they had never prospered there. Their markets fell silent. Their scales, which they had manipulated for so long, became irrelevant. Shu'ayb turned away from them with grief, not satisfaction, saying: 'O my people, I had certainly conveyed to you the messages of my Lord and advised you. So how could I grieve for a disbelieving people?' The story of Madyan is a warning to every society where economic injustice becomes normalized: when dishonesty becomes the system, the system collapses."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "\u0648\u064e\u0625\u0650\u0644\u064e\u0649\u0670 \u0645\u064e\u062f\u0652\u064a\u064e\u0646\u064e \u0623\u064e\u062e\u064e\u0627\u0647\u064f\u0645\u0652 \u0634\u064f\u0639\u064e\u064a\u0652\u0628\u064b\u0627 \u0642\u064e\u0627\u0644\u064e \u064a\u064e\u0627 \u0642\u064e\u0648\u0652\u0645\u0650 \u0627\u0639\u0652\u0628\u064f\u062f\u064f\u0648\u0627 \u0627\u0644\u0644\u0651\u064e\u0647\u064e \u0645\u064e\u0627 \u0644\u064e\u0643\u064f\u0645 \u0645\u0651\u0650\u0646\u0652 \u0625\u0650\u0644\u064e\u0670\u0647\u064d \u063a\u064e\u064a\u0652\u0631\u064f\u0647\u064f",
+          "transliteration": "Wa ila Madyana akhahum Shu'ayban qala ya qawmi u'budu Allaha ma lakum min ilahin ghayruhu",
+          "translation": "And to Madyan [We sent] their brother Shu'ayb. He said, 'O my people, worship Allah; you have no deity other than Him.'",
+          "reference": "7:85"
+        },
+        {
+          "arabic": "\u0648\u064e\u0644\u064e\u0627 \u062a\u064e\u0628\u0652\u062e\u064e\u0633\u064f\u0648\u0627 \u0627\u0644\u0646\u0651\u064e\u0627\u0633\u064e \u0623\u064e\u0634\u0652\u064a\u064e\u0627\u0621\u064e\u0647\u064f\u0645\u0652 \u0648\u064e\u0644\u064e\u0627 \u062a\u064f\u0641\u0652\u0633\u0650\u062f\u064f\u0648\u0627 \u0641\u0650\u064a \u0627\u0644\u0652\u0623\u064e\u0631\u0652\u0636\u0650 \u0628\u064e\u0639\u0652\u062f\u064e \u0625\u0650\u0635\u0652\u0644\u064e\u0627\u062d\u0650\u0647\u064e\u0627",
+          "transliteration": "Wa la tabkhasu an-nasa ashya'ahum wa la tufsidu fi al-ardi ba'da islahiha",
+          "translation": "And do not deprive people of their due and do not cause corruption upon the earth after its reformation.",
+          "reference": "7:85"
+        }
+      ],
+      "lessonsLearned": [
+        "Your business ethics are inseparable from your worship. Cheating in trade, cutting corners at work, or exploiting others financially is not just a legal issue \u2014 it is a spiritual one. Shu'ayb connected worship of Allah directly to honest dealing.",
+        "Corruption becomes normalized gradually. The people of Madyan did not wake up one day and decide to cheat \u2014 it crept in over time until it became 'just how business works.' Examine your own financial dealings for small compromises that have become habits.",
+        "When society's leaders are corrupt, the whole system suffers. The elite of Madyan not only cheated but pressured others to do the same. Stand firm on integrity even when the people around you normalize dishonesty."
+      ]
+    }
+  ],
+  "dailyDuas": [
+    {
+      "arabic": "\u0631\u064e\u0628\u0651\u064e\u0646\u064e\u0627 \u0638\u064e\u0644\u064e\u0645\u0652\u0646\u064e\u0627 \u0623\u064e\u0646\u0641\u064f\u0633\u064e\u0646\u064e\u0627 \u0648\u064e\u0625\u0650\u0646 \u0644\u0651\u064e\u0645\u0652 \u062a\u064e\u063a\u0652\u0641\u0650\u0631\u0652 \u0644\u064e\u0646\u064e\u0627 \u0648\u064e\u062a\u064e\u0631\u0652\u062d\u064e\u0645\u0652\u0646\u064e\u0627 \u0644\u064e\u0646\u064e\u0643\u064f\u0648\u0646\u064e\u0646\u0651\u064e \u0645\u0650\u0646\u064e \u0627\u0644\u0652\u062e\u064e\u0627\u0633\u0650\u0631\u0650\u064a\u0646\u064e",
+      "transliteration": "Rabbana zalamna anfusana wa in lam taghfir lana wa tarhamna lanakunnna mina al-khasirin",
+      "translation": "Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers.",
+      "reference": "7:23",
+      "surahName": "Al-A'raf",
+      "context": "This is the first recorded du'a of repentance in human history. When Adam and Hawwa ate from the forbidden tree and realized their mistake, Allah taught them these words. It is the model for every act of tawbah (repentance) \u2014 acknowledging your own wrongdoing, affirming your need for Allah's forgiveness, and recognizing that without His mercy, you are lost.",
+      "purpose": "Seeking Forgiveness"
+    },
+    {
+      "arabic": "\u0642\u064f\u0644\u0652 \u0625\u0650\u0646\u0651\u064e \u0635\u064e\u0644\u064e\u0627\u062a\u0650\u064a \u0648\u064e\u0646\u064f\u0633\u064f\u0643\u0650\u064a \u0648\u064e\u0645\u064e\u062d\u0652\u064a\u064e\u0627\u064a\u064e \u0648\u064e\u0645\u064e\u0645\u064e\u0627\u062a\u0650\u064a \u0644\u0650\u0644\u0651\u064e\u0647\u0650 \u0631\u064e\u0628\u0651\u0650 \u0627\u0644\u0652\u0639\u064e\u0627\u0644\u064e\u0645\u0650\u064a\u0646\u064e",
+      "transliteration": "Qul inna salati wa nusuki wa mahyaya wa mamati lillahi Rabbi al-'alamin",
+      "translation": "Say, 'Indeed, my prayer, my rites of sacrifice, my living and my dying are for Allah, Lord of the worlds.'",
+      "reference": "6:162",
+      "surahName": "Al-An'am",
+      "context": "This verse is the culminating declaration at the end of Surah Al-An'am. The Prophet (\ufdfa) is commanded to declare that every aspect of his existence \u2014 worship, sacrifice, life, and death \u2014 belongs entirely to Allah. Many scholars note that the Prophet would recite this or similar words when beginning his night prayer (qiyam al-layl), making it a practical du'a of total dedication.",
+      "purpose": "Total Devotion"
+    },
+    {
+      "arabic": "\u0631\u064e\u0628\u0651\u064e\u0646\u064e\u0627 \u0627\u0641\u0652\u062a\u064e\u062d\u0652 \u0628\u064e\u064a\u0652\u0646\u064e\u0646\u064e\u0627 \u0648\u064e\u0628\u064e\u064a\u0652\u0646\u064e \u0642\u064e\u0648\u0652\u0645\u0650\u0646\u064e\u0627 \u0628\u0650\u0627\u0644\u0652\u062d\u064e\u0642\u0651\u0650 \u0648\u064e\u0623\u064e\u0646\u062a\u064e \u062e\u064e\u064a\u0652\u0631\u064f \u0627\u0644\u0652\u0641\u064e\u0627\u062a\u0650\u062d\u0650\u064a\u0646\u064e",
+      "transliteration": "Rabbana iftah baynana wa bayna qawmina bil-haqqi wa Anta khayru al-fatihin",
+      "translation": "Our Lord, decide between us and our people in truth, and You are the best of those who give decision.",
+      "reference": "7:89",
+      "surahName": "Al-A'raf",
+      "context": "This is the du'a of Shu'ayb (AS) after his people rejected his message and threatened to expel him. Facing opposition from the powerful elite of Madyan, Shu'ayb did not respond with aggression or despair. He turned to Allah and asked Him to judge between truth and falsehood. It is a du'a for anyone who faces injustice or opposition while standing for what is right.",
+      "purpose": "Seeking Justice"
+    }
+  ]
 }

@@ -23,6 +23,7 @@
       ],
       "standoutAyah": {
         "arabic": "وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا",
+        "transliteration": "Wa'tasimuu bi-hablillahi jami'an wa la tafarraqu.",
         "translation": "And hold firmly to the rope of Allah all together and do not become divided.",
         "translationSource": "Sahih International",
         "surahName": "Aal-Imran",
@@ -47,6 +48,7 @@
       ],
       "standoutAyah": {
         "arabic": "يَا أَيُّهَا النَّاسُ اتَّقُوا رَبَّكُمُ الَّذِي خَلَقَكُم مِّن نَّفْسٍ وَاحِدَةٍ",
+        "transliteration": "Ya ayyuhan-nasu-ttaqu Rabbakumul-ladhi khalaqakum min nafsin wahidah.",
         "translation": "O mankind, fear your Lord, who created you from one soul.",
         "translationSource": "Sahih International",
         "surahName": "An-Nisa",
@@ -76,6 +78,7 @@
   "keyAyat": [
     {
       "arabic": "لَن تَنَالُوا الْبِرَّ حَتَّىٰ تُنفِقُوا مِمَّا تُحِبُّونَ",
+      "transliteration": "Lan tanalul-birra hatta tunfiqu mimma tuhibbun.",
       "translation": "Never will you attain the good [reward] until you spend [in the way of Allah] from that which you love.",
       "translationSource": "Sahih International",
       "reference": "Surah Aal-Imran, 3:92",
@@ -84,6 +87,7 @@
     },
     {
       "arabic": "كُنتُمْ خَيْرَ أُمَّةٍ أُخْرِجَتْ لِلنَّاسِ تَأْمُرُونَ بِالْمَعْرُوفِ وَتَنْهَوْنَ عَنِ الْمُنكَرِ",
+      "transliteration": "Kuntum khayra ummatin ukhrijat linnasi ta'muruna bil-ma'rufi wa tanhawna 'anil-munkar.",
       "translation": "You are the best nation produced [as an example] for mankind. You enjoin what is right and forbid what is wrong.",
       "translationSource": "Sahih International",
       "reference": "Surah Aal-Imran, 3:110",
@@ -92,6 +96,7 @@
     },
     {
       "arabic": "كُلُّ نَفْسٍ ذَائِقَةُ الْمَوْتِ ۗ وَإِنَّمَا تُوَفَّوْنَ أُجُورَكُمْ يَوْمَ الْقِيَامَةِ",
+      "transliteration": "Kullu nafsin dha'iqatul-mawt. Wa innama tuwaffawna ujurakum Yawmal-Qiyamah.",
       "translation": "Every soul will taste death, and you will only be given your [full] compensation on the Day of Resurrection.",
       "translationSource": "Sahih International",
       "reference": "Surah Aal-Imran, 3:185",
@@ -100,6 +105,7 @@
     },
     {
       "arabic": "إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ وَاخْتِلَافِ اللَّيْلِ وَالنَّهَارِ لَآيَاتٍ لِّأُولِي الْأَلْبَابِ",
+      "transliteration": "Inna fi khalqis-samawati wal-ardi wakhtilaafil-layli wan-nahari la-ayaatil-li-ulil-albab.",
       "translation": "Indeed, in the creation of the heavens and the earth and the alternation of the night and the day are signs for those of understanding.",
       "translationSource": "Sahih International",
       "reference": "Surah Aal-Imran, 3:190",
@@ -119,5 +125,95 @@
   },
   "habitCheckIn": "Day 4 — By now your Ramadan rhythm should be forming. How is your Quran reading going? Are you just reciting, or are you pausing to understand? Today's Juz is heavy with lessons from Uhud and family law — both require reflection, not speed. If you've been rushing through pages, slow down. Read fewer verses with more thought. Quality over quantity will transform your relationship with the Quran this month.",
   "closingMessage": "Juz 4 doesn't let us off easy. It asks us to give from what we love, to learn from painful defeat, to protect those who cannot protect themselves, and to remember that every soul — including ours — will taste death. But it also reminds us that Allah never wastes the effort of any worker among us (3:195), male or female. Your sacrifices are seen. Your struggles count. Keep going.",
-  "closingDua": "رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا وَكَفِّرْ عَنَّا سَيِّئَاتِنَا وَتَوَفَّنَا مَعَ الْأَبْرَارِ — Our Lord, forgive us our sins and remove from us our misdeeds and cause us to die among the righteous. (3:193)"
+  "closingDua": "رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا وَكَفِّرْ عَنَّا سَيِّئَاتِنَا وَتَوَفَّنَا مَعَ الْأَبْرَارِ — Our Lord, forgive us our sins and remove from us our misdeeds and cause us to die among the righteous. (3:193)",
+  "closingDuaTransliteration": "Rabbana faghfir lana dhunubana wa kaffir 'anna sayyi'atina wa tawaffana ma'al-abrar.",
+  "stories": [
+    {
+      "id": "battle-of-uhud",
+      "title": "The Battle of Uhud: Victory Turned to Defeat",
+      "subtitle": "How one moment of disobedience changed the course of battle",
+      "triggerLabel": "The Battle of Uhud",
+      "paragraphs": [
+        "It was the third year of Hijrah. The Quraysh, humiliated by their defeat at Badr, marched toward Madinah with 3,000 soldiers — three times the Muslim force. The Prophet (ﷺ) positioned his army at the foot of Mount Uhud and placed 50 archers on a strategic hilltop with one clear instruction: do NOT leave your positions, no matter what happens.",
+        "The battle began brilliantly for the Muslims. The Quraysh lines broke, their soldiers scattered, and victory seemed certain. But then came the moment that would haunt the Ummah forever. Seeing the enemy in retreat, most of the archers abandoned their hilltop positions to collect war spoils. Only a handful remained, pleading with the others to obey the Prophet's command.",
+        "Khalid ibn al-Walid — then fighting for the Quraysh — saw the exposed hilltop and seized the opportunity. His cavalry swept around the mountain, attacked from behind, and turned the tide completely. The Muslims were caught in a devastating pincer movement. Chaos erupted. Rumors spread that the Prophet (ﷺ) had been killed.",
+        "The Prophet (ﷺ) was not killed, but he was wounded — his face was cut, his tooth was broken, and rings from his helmet were driven into his cheek. Hamza (RA), his beloved uncle, was martyred and mutilated. Seventy Muslims were killed that day.",
+        "The Quran's analysis of Uhud is not a blame session — it's a teaching moment. 'Allah had already given you victory at Badr when you were few. Among you are some who desire this world, and among you are some who desire the Hereafter. Then He turned you back from them so He might test you' (3:152). The defeat was not a punishment — it was a purification. It taught the Muslim community that victory belongs to Allah alone, and that discipline in obedience matters more than numbers or strength."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "وَلَقَدْ صَدَقَكُمُ اللَّهُ وَعْدَهُ إِذْ تَحُسُّونَهُم بِإِذْنِهِ ۖ حَتَّىٰ إِذَا فَشِلْتُمْ وَتَنَازَعْتُمْ فِي الْأَمْرِ وَعَصَيْتُم مِّن بَعْدِ مَا أَرَاكُم مَّا تُحِبُّونَ",
+          "transliteration": "Wa laqad sadaqakumullahu wa'dahu idh tahussoonahum bi-idhnih. Hatta idha fashiltum wa tanaza'tum fil-amri wa 'asaytum min ba'di ma arakum ma tuhibbun.",
+          "translation": "And Allah had certainly fulfilled His promise to you when you were killing them by His permission until [the time] when you lost courage and fell to disputing about the order and disobeyed after He had shown you that which you love.",
+          "reference": "Surah Aal-Imran, 3:152"
+        },
+        {
+          "arabic": "إِن يَمْسَسْكُمْ قَرْحٌ فَقَدْ مَسَّ الْقَوْمَ قَرْحٌ مِّثْلُهُ ۚ وَتِلْكَ الْأَيَّامُ نُدَاوِلُهَا بَيْنَ النَّاسِ",
+          "transliteration": "In yamsaskum qarhun faqad massal-qawma qarhum mithluh. Wa tilkal-ayyamu nudawiluhaa baynan-nas.",
+          "translation": "If a wound should touch you — there has already touched the [opposing] people a wound similar to it. And these days [of varying conditions] We alternate among the people.",
+          "reference": "Surah Aal-Imran, 3:140"
+        }
+      ],
+      "lessonsLearned": [
+        "Obedience to leadership — especially in moments of temptation — is non-negotiable. The archers' disobedience cost 70 lives.",
+        "Allah uses setbacks to purify and strengthen believers, not to abandon them. Defeat can be a greater teacher than victory.",
+        "Short-term worldly gain (war spoils) at the cost of long-term discipline leads to disaster — in battle and in life.",
+        "The Prophet (ﷺ) was wounded but not broken. True leadership endures hardship alongside its people."
+      ]
+    },
+    {
+      "id": "abu-talha-charity",
+      "title": "Abu Talhah's Garden: Giving What You Love",
+      "subtitle": "When a Companion heard one verse and gave away his most prized possession",
+      "triggerLabel": "Abu Talhah's Act of Sacrifice",
+      "paragraphs": [
+        "Abu Talhah al-Ansari (RA) was one of the wealthiest Companions in Madinah, and his most prized possession was a beautiful garden called Bayruha — the most valuable property he owned, located near the Prophet's Mosque. He loved this garden deeply; it was his pride and his primary source of income.",
+        "When the verse was revealed — 'Never will you attain righteousness until you spend from that which you love' (3:92) — Abu Talhah stood up and went directly to the Prophet (ﷺ). He said: 'O Messenger of Allah, Allah says we will never attain righteousness until we spend from what we love, and the most beloved of my possessions is Bayruha. So I give it as charity for Allah's sake, hoping for its reward with Him. Dispose of it as Allah shows you, O Messenger of Allah.'",
+        "The Prophet (ﷺ) was moved. He said: 'That is a profitable property! That is a profitable property! I have heard what you said about it, and I suggest you distribute it among your relatives.' And so Abu Talhah divided it among his relatives and cousins.",
+        "This was not a performative act. Abu Talhah didn't give away something he barely used. He gave away the thing he loved most — immediately, without negotiation, without 'let me think about it.' The verse demanded sincerity, and he responded with the purest form of it."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "لَن تَنَالُوا الْبِرَّ حَتَّىٰ تُنفِقُوا مِمَّا تُحِبُّونَ",
+          "transliteration": "Lan tanalul-birra hatta tunfiqu mimma tuhibbun.",
+          "translation": "Never will you attain the good [reward] until you spend [in the way of Allah] from that which you love.",
+          "reference": "Surah Aal-Imran, 3:92"
+        }
+      ],
+      "lessonsLearned": [
+        "True generosity costs something. If your charity doesn't make you feel a pinch, it hasn't truly begun.",
+        "The Companions' response to revelation was immediate action — no delays, no excuses, no committee meetings.",
+        "The Prophet (ﷺ) directed the charity toward relatives, teaching that family has a stronger right to your generosity than strangers."
+      ]
+    }
+  ],
+  "dailyDuas": [
+    {
+      "arabic": "رَبَّنَا اغْفِرْ لَنَا ذُنُوبَنَا وَإِسْرَافَنَا فِي أَمْرِنَا وَثَبِّتْ أَقْدَامَنَا وَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
+      "transliteration": "Rabbana-ghfir lana dhunubana wa israfana fi amrina wa thabbit aqdamana wansurna 'alal-qawmil-kafirin.",
+      "translation": "Our Lord, forgive us our sins and the excess [committed] in our affairs and plant firmly our feet and give us victory over the disbelieving people.",
+      "reference": "3:147",
+      "surahName": "Aal-Imran",
+      "context": "This was the du'a of the righteous who fought alongside prophets before Muhammad (ﷺ). Even in the heat of battle, their first request was forgiveness — recognizing that spiritual purification comes before military victory.",
+      "purpose": "Steadfastness in Hardship"
+    },
+    {
+      "arabic": "رَبَّنَا مَا خَلَقْتَ هَٰذَا بَاطِلًا سُبْحَانَكَ فَقِنَا عَذَابَ النَّارِ",
+      "transliteration": "Rabbana ma khalaqta hadha batilan Subhanaka faqina 'adhaban-Nar.",
+      "translation": "Our Lord, You did not create this aimlessly; exalted are You [above such a thing]; then protect us from the punishment of the Fire.",
+      "reference": "3:191",
+      "surahName": "Aal-Imran",
+      "context": "The du'a of 'those of understanding' (ulu al-albab) who reflect on creation — the heavens, the earth, the alternation of night and day — and conclude that none of it is purposeless. Their reflection leads them to seek Allah's protection.",
+      "purpose": "Reflecting on Creation"
+    },
+    {
+      "arabic": "رَبَّنَا فَاغْفِرْ لَنَا ذُنُوبَنَا وَكَفِّرْ عَنَّا سَيِّئَاتِنَا وَتَوَفَّنَا مَعَ الْأَبْرَارِ",
+      "transliteration": "Rabbana faghfir lana dhunubana wa kaffir 'anna sayyi'atina wa tawaffana ma'al-abrar.",
+      "translation": "Our Lord, forgive us our sins and remove from us our misdeeds and cause us to die among the righteous.",
+      "reference": "3:193",
+      "surahName": "Aal-Imran",
+      "context": "The climax of the 'ulu al-albab' prayer sequence. After reflecting on creation and seeking protection from the Fire, they ask for the ultimate ending: to die in the company of the righteous. This is a du'a about your final state.",
+      "purpose": "A Righteous Ending"
+    }
+  ]
 }

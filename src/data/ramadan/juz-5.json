@@ -24,6 +24,7 @@
       ],
       "standoutAyah": {
         "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا كُونُوا قَوَّامِينَ بِالْقِسْطِ شُهَدَاءَ لِلَّهِ وَلَوْ عَلَىٰ أَنفُسِكُمْ أَوِ الْوَالِدَيْنِ وَالْأَقْرَبِينَ",
+        "transliteration": "Ya ayyuha alladhina amanu kunu qawwamina bil-qisti shuhada'a lillahi wa law 'ala anfusikum awi al-walidayni wal-aqrabin",
         "translation": "O you who have believed, be persistently standing firm in justice, witnesses for Allah, even if it be against yourselves or parents and relatives.",
         "translationSource": "Sahih International",
         "surahName": "An-Nisa",
@@ -53,6 +54,7 @@
   "keyAyat": [
     {
       "arabic": "يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَأْكُلُوا أَمْوَالَكُم بَيْنَكُم بِالْبَاطِلِ إِلَّا أَن تَكُونَ تِجَارَةً عَن تَرَاضٍ مِّنكُمْ ۚ وَلَا تَقْتُلُوا أَنفُسَكُمْ ۚ إِنَّ اللَّهَ كَانَ بِكُمْ رَحِيمًا",
+      "transliteration": "Ya ayyuha alladhina amanu la ta'kulu amwalakum baynakum bil-batili illa an takuna tijaratan 'an taradin minkum, wa la taqtulu anfusakum, inna Allaha kana bikum rahima",
       "translation": "O you who have believed, do not consume one another's wealth unjustly but only [in lawful] business by mutual consent. And do not kill yourselves [or one another]. Indeed, Allah is to you ever Merciful.",
       "translationSource": "Sahih International",
       "reference": "Surah An-Nisa, 4:29",
@@ -61,6 +63,7 @@
     },
     {
       "arabic": "إِنَّ اللَّهَ يَأْمُرُكُمْ أَن تُؤَدُّوا الْأَمَانَاتِ إِلَىٰ أَهْلِهَا وَإِذَا حَكَمْتُم بَيْنَ النَّاسِ أَن تَحْكُمُوا بِالْعَدْلِ",
+      "transliteration": "Inna Allaha ya'murukum an tu'addu al-amanati ila ahliha wa idha hakamtum bayna al-nasi an tahkumu bil-'adl",
       "translation": "Indeed, Allah commands you to render trusts to whom they are due and when you judge between people to judge with justice.",
       "translationSource": "Sahih International",
       "reference": "Surah An-Nisa, 4:58",
@@ -69,6 +72,7 @@
     },
     {
       "arabic": "أَفَلَا يَتَدَبَّرُونَ الْقُرْآنَ ۚ وَلَوْ كَانَ مِنْ عِندِ غَيْرِ اللَّهِ لَوَجَدُوا فِيهِ اخْتِلَافًا كَثِيرًا",
+      "transliteration": "Afala yatadabbaruna al-Qur'ana, wa law kana min 'indi ghayri Allahi la-wajadu fihi ikhtilafan kathira",
       "translation": "Then do they not reflect upon the Quran? If it had been from [anyone] other than Allah, they would have found within it much contradiction.",
       "translationSource": "Sahih International",
       "reference": "Surah An-Nisa, 4:82",
@@ -77,6 +81,7 @@
     },
     {
       "arabic": "وَاعْبُدُوا اللَّهَ وَلَا تُشْرِكُوا بِهِ شَيْئًا ۖ وَبِالْوَالِدَيْنِ إِحْسَانًا وَبِذِي الْقُرْبَىٰ وَالْيَتَامَىٰ وَالْمَسَاكِينِ وَالْجَارِ ذِي الْقُرْبَىٰ وَالْجَارِ الْجُنُبِ وَالصَّاحِبِ بِالْجَنبِ وَابْنِ السَّبِيلِ",
+      "transliteration": "Wa'budu Allaha wa la tushriku bihi shay'an, wa bil-walidayni ihsanan, wa bidhi al-qurba wal-yatama wal-masakini wal-jari dhi al-qurba wal-jari al-junubi was-sahibi bil-janbi wabni al-sabil",
       "translation": "Worship Allah and associate nothing with Him, and to parents do good, and to relatives, orphans, the needy, the near neighbor, the neighbor farther away, the companion at your side, the traveler...",
       "translationSource": "Sahih International",
       "reference": "Surah An-Nisa, 4:36",
@@ -96,5 +101,93 @@
   },
   "habitCheckIn": "Day 5 check-in: You're almost a week into Ramadan. By now your body is adjusting to the fasting rhythm. How is your Quran consistency? If you've been keeping up, alhamdulillah — don't let the momentum drop. If you've missed a day or two, don't beat yourself up. The Quran itself says Allah is merciful (4:29). Reset today and keep going. Also check: have you been making du'a at iftar time? That moment before breaking fast is one of the most accepted times for supplication.",
   "closingMessage": "Juz 5 is a masterclass in what it means to be a just, trustworthy, sincere believer. Allah isn't just asking you to pray and fast — He's asking you to be someone others can rely on, someone who stands for truth even when it's costly, and someone whose faith goes deeper than appearances. You're one-sixth of the way through the Quran this Ramadan. Keep reflecting, keep correcting, keep going.",
-  "closingDua": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الثَّبَاتَ فِي الْأَمْرِ وَالْعَزِيمَةَ عَلَى الرُّشْدِ — O Allah, I ask You for steadfastness in my affairs and determination upon guidance."
+  "closingDua": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الثَّبَاتَ فِي الْأَمْرِ وَالْعَزِيمَةَ عَلَى الرُّشْدِ — O Allah, I ask You for steadfastness in my affairs and determination upon guidance.",
+  "closingDuaTransliteration": "Allahumma inni as'aluka ath-thabata fil-amri wal-'azimata 'ala al-rushd",
+  "stories": [
+    {
+      "id": "the-hypocrites-of-madinah",
+      "title": "The Hypocrites of Madinah",
+      "subtitle": "How outward faith concealed inner treachery in the early Muslim community",
+      "triggerLabel": "The Story of the Hypocrites",
+      "paragraphs": [
+        "When the Prophet Muhammad (SAW) arrived in Madinah, the Muslim community was not as unified as it appeared. Among those who publicly declared Islam were individuals whose hearts had never truly accepted faith. Their leader was Abdullah ibn Ubayy ibn Salul, a man who had been on the verge of being crowned king of Madinah before the Prophet's arrival. His resentment ran deep, and he spent years undermining the Muslim community from within.",
+        "The hypocrites attended prayers, fasted during Ramadan, and spoke the words of faith — but their actions told a different story. Before the Battle of Uhud, Abdullah ibn Ubayy withdrew a third of the Muslim army at the last moment, nearly causing a catastrophic defeat. When confronted, he offered excuses and justifications, always maintaining the appearance of loyalty while working against the community's interests.",
+        "The Quran describes their prayer as one of laziness — they stand reluctantly, showing off to people, and remembering Allah only a little (4:142). They would oscillate between the believers and the disbelievers, hedging their bets to see which side would prevail. This spiritual duplicity was more dangerous to the community than open opposition, because it eroded trust from within.",
+        "The Prophet (SAW), despite knowing their hypocrisy, treated them with patience and wisdom. He never publicly humiliated them or expelled them from the community, understanding that Allah's exposure through the Quran was a more powerful corrective. The verses at the end of Juz 5 serve as a timeless warning: faith that does not penetrate the heart and manifest in consistent action is not faith at all — it is performance."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "إِنَّ الْمُنَافِقِينَ يُخَادِعُونَ اللَّهَ وَهُوَ خَادِعُهُمْ وَإِذَا قَامُوا إِلَى الصَّلَاةِ قَامُوا كُسَالَىٰ يُرَاءُونَ النَّاسَ وَلَا يَذْكُرُونَ اللَّهَ إِلَّا قَلِيلًا",
+          "transliteration": "Inna al-munafiqina yukhadhi'una Allaha wa huwa khadi'uhum, wa idha qamu ila al-salati qamu kusala yura'una al-nasa wa la yadhkuruna Allaha illa qalila",
+          "translation": "Indeed, the hypocrites [think to] deceive Allah, but He is deceiving them. And when they stand for prayer, they stand lazily, showing [themselves to] the people and not remembering Allah except a little.",
+          "reference": "4:142"
+        },
+        {
+          "arabic": "مُذَبْذَبِينَ بَيْنَ ذَٰلِكَ لَا إِلَىٰ هَٰؤُلَاءِ وَلَا إِلَىٰ هَٰؤُلَاءِ",
+          "transliteration": "Mudhabdhabina bayna dhalika la ila ha'ula'i wa la ila ha'ula'i",
+          "translation": "Wavering between them, [belonging] neither to these [believers] nor to those [disbelievers].",
+          "reference": "4:143"
+        }
+      ],
+      "lessonsLearned": [
+        "Sincerity is the foundation of faith — outward religious practice without inner conviction is the definition of hypocrisy, and the Quran treats it as more dangerous than open disbelief.",
+        "Consistency reveals character. The hypocrites were exposed not by a single act but by a pattern of unreliability. Our own sincerity is tested by whether we show up for Allah when no one is watching.",
+        "Community trust is fragile. The hypocrites' greatest damage was eroding the internal cohesion of the Muslim community. Guard your own trustworthiness as an act of worship."
+      ]
+    },
+    {
+      "id": "the-command-to-migrate",
+      "title": "The Migration for Allah's Sake",
+      "subtitle": "Why some believers were held accountable for staying in oppression when they had the means to leave",
+      "triggerLabel": "The Story of Migration (Hijrah)",
+      "paragraphs": [
+        "After the Prophet (SAW) migrated to Madinah and the Muslim community established itself there, a group of Muslims remained in Makkah. Some were genuinely unable to leave — the weak, the elderly, women and children who had no means or protection for the dangerous journey. But others had the ability to migrate yet chose to stay, either out of attachment to their homes, fear of losing their wealth, or reluctance to face the hardships of starting over.",
+        "When these able-bodied Muslims who had stayed behind died or faced difficulty, the angels asked them a piercing question: 'In what condition were you?' They replied, 'We were oppressed in the land.' The angels responded: 'Was not the earth of Allah spacious enough for you to emigrate therein?' (4:97). This was not a question of geography — it was a question of spiritual courage.",
+        "The Quran makes a clear exception for those who were truly helpless — men, women, and children who could not devise a plan nor find a way (4:98). For them, Allah's forgiveness is extended generously. But for those who had the means and chose comfort over conviction, the accountability was severe.",
+        "This passage established a profound principle in Islamic ethics: when you have the ability to leave a situation of oppression or sin and you choose to remain, you share in the responsibility. It applies far beyond physical migration — it speaks to every situation where we have the power to change our circumstances but choose the familiar over the righteous."
+      ],
+      "relevantVerses": [
+        {
+          "arabic": "إِنَّ الَّذِينَ تَوَفَّاهُمُ الْمَلَائِكَةُ ظَالِمِي أَنفُسِهِمْ قَالُوا فِيمَ كُنتُمْ ۖ قَالُوا كُنَّا مُسْتَضْعَفِينَ فِي الْأَرْضِ ۚ قَالُوا أَلَمْ تَكُنْ أَرْضُ اللَّهِ وَاسِعَةً فَتُهَاجِرُوا فِيهَا",
+          "transliteration": "Inna alladhina tawaffahumu al-mala'ikatu zalimi anfusihim qalu fima kuntum, qalu kunna mustad'afina fil-ardi, qalu alam takun ardu Allahi wasi'atan fatuhajiru fiha",
+          "translation": "Indeed, those whom the angels take [in death] while wronging themselves — [the angels] will say, 'In what [condition] were you?' They will say, 'We were oppressed in the land.' They [the angels] will say, 'Was not the earth of Allah spacious [enough] for you to emigrate therein?'",
+          "reference": "4:97"
+        }
+      ],
+      "lessonsLearned": [
+        "Having the ability to change your situation and choosing not to makes you accountable. Comfort is not an excuse to remain in environments that compromise your faith or values.",
+        "Allah's mercy is vast for those who are genuinely helpless — the Quran explicitly exempts those without means. But honest self-assessment is required: are you truly unable, or simply unwilling?",
+        "Migration in Islam is not just physical — it includes migrating away from sinful habits, toxic relationships, and environments that harm your spiritual growth. Ramadan itself is a migration from old patterns to better ones."
+      ]
+    }
+  ],
+  "dailyDuas": [
+    {
+      "arabic": "رَبَّنَا أَخْرِجْنَا مِنْ هَٰذِهِ الْقَرْيَةِ الظَّالِمِ أَهْلُهَا وَاجْعَل لَّنَا مِن لَّدُنكَ وَلِيًّا وَاجْعَل لَّنَا مِن لَّدُنكَ نَصِيرًا",
+      "transliteration": "Rabbana akhrijna min hadhihi al-qaryati al-dhalimi ahluha waj'al lana min ladunka waliyyan waj'al lana min ladunka nasira",
+      "translation": "Our Lord, take us out of this city of oppressive people and appoint for us from Yourself a protector and appoint for us from Yourself a helper.",
+      "reference": "4:75",
+      "surahName": "An-Nisa",
+      "context": "This is the dua of the oppressed believers who were trapped in Makkah — the weak men, women, and children who cried out to Allah for deliverance. It appears in the context of verses urging the Muslim community to fight in defense of those who cannot defend themselves.",
+      "purpose": "Seeking Deliverance"
+    },
+    {
+      "arabic": "رَبَّنَا آمَنَّا فَاكْتُبْنَا مَعَ الشَّاهِدِينَ",
+      "transliteration": "Rabbana amanna faktubna ma'a al-shahidin",
+      "translation": "Our Lord, we have believed, so register us among the witnesses.",
+      "reference": "5:83",
+      "surahName": "Al-Ma'idah",
+      "context": "Although this verse appears in Surah Al-Ma'idah (just beyond this Juz's range), its spirit echoes the themes of sincerity in Juz 5. It describes people who, upon hearing the truth, respond with tears and genuine faith — the very opposite of the hypocrites condemned in 4:142-147.",
+      "purpose": "Affirming Faith"
+    },
+    {
+      "arabic": "رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ",
+      "transliteration": "Rabbana dhalamna anfusana wa in lam taghfir lana wa tarhamna lanakunnanna mina al-khasirin",
+      "translation": "Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers.",
+      "reference": "7:23",
+      "surahName": "Al-A'raf",
+      "context": "The dua of Adam and Hawwa (Eve) after their mistake in Paradise. While this verse is from Surah Al-A'raf, it directly connects to Juz 5's themes of self-accountability and repentance. The Quran repeatedly reminds us that acknowledging our wrongs and turning to Allah is the first step to justice — starting with justice toward ourselves.",
+      "purpose": "Seeking Forgiveness"
+    }
+  ]
 }

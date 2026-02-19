@@ -4,6 +4,7 @@
 
 export interface StandoutAyah {
   arabic: string;
+  transliteration?: string;
   translation: string;
   translationSource: string; // e.g., "Sahih International" or "The Clear Quran"
   surahName: string;
@@ -33,6 +34,7 @@ export interface CoreTheme {
 
 export interface KeyAyah {
   arabic: string;
+  transliteration?: string;
   translation: string;
   translationSource: string;
   reference: string; // e.g., "Surah Al-Baqarah, 2:255"
@@ -50,6 +52,33 @@ export interface HadithOfTheDay {
 export interface DiscussionQuestions {
   reflectionQuestion: string;
   applicationQuestion: string;
+}
+
+export interface StoryVerse {
+  arabic: string;
+  transliteration?: string;
+  translation: string;
+  reference: string;
+}
+
+export interface StoryDeepDive {
+  id: string;
+  title: string;
+  subtitle?: string;
+  paragraphs: string[];
+  relevantVerses: StoryVerse[];
+  lessonsLearned: string[];
+  triggerLabel: string;
+}
+
+export interface QuranicDua {
+  arabic: string;
+  transliteration: string;
+  translation: string;
+  reference: string;
+  surahName: string;
+  context: string;
+  purpose: string;
 }
 
 export interface JuzDigest {
@@ -75,4 +104,7 @@ export interface JuzDigest {
   habitCheckIn: string;
   closingMessage: string;
   closingDua?: string;
+  closingDuaTransliteration?: string;
+  stories?: StoryDeepDive[];
+  dailyDuas?: QuranicDua[];
 }

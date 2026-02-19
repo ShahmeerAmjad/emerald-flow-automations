@@ -1,6 +1,7 @@
 // src/components/ramadan/JuzDigest.tsx
 import { useEffect, useRef } from "react";
 import type { JuzDigest as JuzDigestType, SurahBreakdown } from "@/types/ramadan";
+import { StoryDrawer } from "./StoryDrawer";
 
 interface Props {
   digest: JuzDigestType;
@@ -82,6 +83,20 @@ export function JuzDigest({ digest }: Props) {
 
         <div className="rc-divider" />
 
+        {/* Go Deeper — Stories */}
+        {digest.stories && digest.stories.length > 0 && (
+          <>
+            <RcSection emoji="📜" label="Go Deeper">
+              <div className="rc-stories-stack">
+                {digest.stories.map((story) => (
+                  <StoryDrawer key={story.id} story={story} />
+                ))}
+              </div>
+            </RcSection>
+            <div className="rc-divider" />
+          </>
+        )}
+
         {/* Core Themes */}
         <RcSection emoji="🎯" label="Core Themes of This Juz">
           {digest.coreThemes.map((theme, i) => (
@@ -100,6 +115,9 @@ export function JuzDigest({ digest }: Props) {
           {digest.keyAyat.map((ayah, i) => (
             <div key={i} className="rc-ayah-card" style={{ marginBottom: i < digest.keyAyat.length - 1 ? "16px" : 0 }}>
               <div className="rc-ayah-arabic" dir="rtl">{ayah.arabic}</div>
+              {ayah.transliteration && (
+                <div className="rc-ayah-transliteration">{ayah.transliteration}</div>
+              )}
               <div className="rc-ayah-translation">"{ayah.translation}"</div>
               <div className="rc-ayah-ref">{ayah.reference}</div>
               <div className="rc-ayah-reflection">{ayah.reflectionPrompt}</div>
@@ -135,6 +153,25 @@ export function JuzDigest({ digest }: Props) {
 
         <div className="rc-divider" />
 
+        {/* Daily Quranic Duas */}
+        {digest.dailyDuas && digest.dailyDuas.length > 0 && (
+          <>
+            <RcSection emoji="🕌" label="Quranic Duas for Today">
+              {digest.dailyDuas.map((dua, i) => (
+                <div key={i} className="rc-dua-card" style={{ marginBottom: i < digest.dailyDuas!.length - 1 ? "16px" : 0 }}>
+                  <div className="rc-dua-purpose">{dua.purpose}</div>
+                  <div className="rc-dua-arabic" dir="rtl">{dua.arabic}</div>
+                  <div className="rc-dua-transliteration">{dua.transliteration}</div>
+                  <div className="rc-dua-translation">"{dua.translation}"</div>
+                  <div className="rc-dua-ref">{dua.reference} — {dua.surahName}</div>
+                  <div className="rc-dua-context">{dua.context}</div>
+                </div>
+              ))}
+            </RcSection>
+            <div className="rc-divider" />
+          </>
+        )}
+
         {/* Discussion Questions */}
         <RcSection emoji="💬" label="Community Discussion">
           <div className="rc-discussion-card">
@@ -155,6 +192,9 @@ export function JuzDigest({ digest }: Props) {
             <p>{digest.habitCheckIn}</p>
             {digest.closingDua && (
               <div className="rc-closing-dua" dir="rtl">{digest.closingDua}</div>
+            )}
+            {digest.closingDuaTransliteration && (
+              <div className="rc-closing-dua-transliteration">{digest.closingDuaTransliteration}</div>
             )}
             <div className="rc-closing-message">{digest.closingMessage}</div>
           </div>
@@ -237,6 +277,9 @@ function SurahBlock({ surah, index }: { surah: SurahBreakdown; index: number }) 
           Standout Ayah
         </div>
         <div className="rc-ayah-arabic" dir="rtl">{surah.standoutAyah.arabic}</div>
+        {surah.standoutAyah.transliteration && (
+          <div className="rc-ayah-transliteration">{surah.standoutAyah.transliteration}</div>
+        )}
         <div className="rc-ayah-translation">"{surah.standoutAyah.translation}"</div>
         <div className="rc-ayah-ref">
           Surah {surah.standoutAyah.surahName} {surah.standoutAyah.verseNumber}
@@ -687,6 +730,91 @@ const digestStyles = `
     margin-top: 8px;
   }
 
+  /* ── Transliteration ── */
+  .rc-ayah-transliteration {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--rc-text-muted);
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+
+  .rc-closing-dua-transliteration {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--rc-text-muted);
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+
+  /* ── Stories Stack ── */
+  .rc-stories-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* ── Dua Card ── */
+  .rc-dua-card {
+    background: linear-gradient(135deg, rgba(201, 168, 76, 0.06), rgba(26, 122, 90, 0.04));
+    border: 1px solid var(--rc-border-glow);
+    border-radius: 14px;
+    padding: 28px;
+    text-align: center;
+  }
+
+  .rc-dua-purpose {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--rc-gold);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .rc-dua-arabic {
+    font-family: 'Amiri', serif;
+    font-size: clamp(1.4rem, 4.5vw, 1.9rem);
+    color: var(--rc-gold);
+    line-height: 2;
+    margin-bottom: 10px;
+  }
+
+  .rc-dua-transliteration {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--rc-text-muted);
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+
+  .rc-dua-translation {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.08rem;
+    color: var(--rc-cream-soft);
+    margin-bottom: 10px;
+    line-height: 1.7;
+  }
+
+  .rc-dua-ref {
+    font-size: 0.8rem;
+    color: var(--rc-text-muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+  }
+
+  .rc-dua-context {
+    font-size: 0.92rem;
+    color: var(--rc-text-secondary);
+    line-height: 1.7;
+    padding-top: 12px;
+    border-top: 1px solid var(--rc-border);
+  }
+
   /* ── Divider ── */
   .rc-divider {
     width: 60px;
@@ -704,6 +832,7 @@ const digestStyles = `
     .rc-practice-card,
     .rc-habit-section { padding: 24px; }
     .rc-ayah-card { padding: 20px; }
+    .rc-dua-card { padding: 20px; }
     .rc-surah-meta { flex-direction: column; gap: 6px; }
   }
 `;
