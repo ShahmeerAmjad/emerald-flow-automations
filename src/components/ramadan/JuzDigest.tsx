@@ -318,7 +318,7 @@ const digestStyles = `
 
   .rc-ramadan-intro p {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    font-size: clamp(1.1rem, 2.8vw, 1.25rem);
     color: var(--rc-cream-soft);
     line-height: 2;
     margin-bottom: 16px;
@@ -353,7 +353,7 @@ const digestStyles = `
   }
 
   .rc-juz-info {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--rc-text-secondary);
     margin-bottom: 20px;
   }
@@ -369,7 +369,7 @@ const digestStyles = `
     padding: 8px 20px;
     border: 1px solid var(--rc-border);
     border-radius: 40px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--rc-text-secondary);
     background: var(--rc-bg-card);
   }
@@ -388,7 +388,7 @@ const digestStyles = `
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 0.7rem;
+    font-size: 0.82rem;
     text-transform: uppercase;
     letter-spacing: 0.18em;
     color: var(--rc-gold);
@@ -402,7 +402,7 @@ const digestStyles = `
     border: 1px solid var(--rc-border);
     border-radius: 16px;
     padding: 32px;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     color: var(--rc-text-secondary);
     line-height: 1.85;
   }
@@ -431,7 +431,7 @@ const digestStyles = `
 
   .rc-surah-num {
     color: var(--rc-gold);
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-family: 'Outfit', sans-serif;
     font-weight: 400;
     vertical-align: middle;
@@ -447,7 +447,7 @@ const digestStyles = `
   }
 
   .rc-surah-meta-item {
-    font-size: 0.78rem;
+    font-size: 0.88rem;
     color: var(--rc-text-muted);
   }
 
@@ -461,7 +461,7 @@ const digestStyles = `
   }
 
   .rc-surah-detail-label {
-    font-size: 0.72rem;
+    font-size: 0.82rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: var(--rc-gold-dim);
@@ -470,7 +470,7 @@ const digestStyles = `
   }
 
   .rc-surah-detail p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--rc-text-secondary);
   }
 
@@ -500,9 +500,9 @@ const digestStyles = `
   }
 
   .rc-key-teaching p {
-    font-size: 0.88rem;
+    font-size: 1rem;
     color: var(--rc-text-secondary);
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   /* ── Ayah Card ── */
@@ -516,7 +516,7 @@ const digestStyles = `
 
   .rc-ayah-arabic {
     font-family: 'Amiri', serif;
-    font-size: clamp(1.4rem, 4vw, 1.9rem);
+    font-size: clamp(1.5rem, 4.5vw, 2.1rem);
     color: var(--rc-gold);
     line-height: 2;
     margin-bottom: 12px;
@@ -525,25 +525,25 @@ const digestStyles = `
   .rc-ayah-translation {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--rc-cream-soft);
     margin-bottom: 8px;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   .rc-ayah-ref {
-    font-size: 0.72rem;
+    font-size: 0.82rem;
     color: var(--rc-text-muted);
     letter-spacing: 0.05em;
   }
 
   .rc-ayah-reflection {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--rc-text-secondary);
     margin-top: 12px;
     padding-top: 12px;
     border-top: 1px solid var(--rc-border);
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   /* ── Theme Card ── */
@@ -564,13 +564,13 @@ const digestStyles = `
   }
 
   .rc-theme-card p {
-    font-size: 0.88rem;
+    font-size: 1rem;
     color: var(--rc-text-secondary);
     line-height: 1.7;
   }
 
   .rc-ramadan-tie {
-    font-size: 0.82rem;
+    font-size: 0.92rem;
     color: var(--rc-emerald-light);
     margin-top: 10px;
     font-style: italic;
@@ -586,14 +586,14 @@ const digestStyles = `
 
   .rc-hadith-text {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     color: var(--rc-cream-soft);
     line-height: 1.8;
     margin-bottom: 16px;
   }
 
   .rc-hadith-source {
-    font-size: 0.78rem;
+    font-size: 0.88rem;
     color: var(--rc-gold-dim);
     font-weight: 600;
     letter-spacing: 0.05em;
@@ -601,9 +601,9 @@ const digestStyles = `
   }
 
   .rc-hadith-reflection {
-    font-size: 0.88rem;
+    font-size: 1rem;
     color: var(--rc-text-secondary);
-    line-height: 1.6;
+    line-height: 1.7;
     padding-top: 16px;
     border-top: 1px solid rgba(26, 122, 90, 0.2);
   }
@@ -628,7 +628,7 @@ const digestStyles = `
   }
 
   .rc-practice-card p {
-    font-size: 0.92rem;
+    font-size: 1.02rem;
     color: var(--rc-text-secondary);
     line-height: 1.7;
   }
@@ -643,7 +643,7 @@ const digestStyles = `
   }
 
   .rc-q-type {
-    font-size: 0.68rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: var(--rc-emerald-light);
@@ -652,9 +652,9 @@ const digestStyles = `
   }
 
   .rc-discussion-card p {
-    font-size: 0.92rem;
+    font-size: 1.02rem;
     color: var(--rc-text-secondary);
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   /* ── Habit Section ── */
@@ -667,14 +667,14 @@ const digestStyles = `
   }
 
   .rc-habit-section p {
-    font-size: 0.92rem;
+    font-size: 1.02rem;
     color: var(--rc-text-secondary);
     line-height: 1.7;
   }
 
   .rc-closing-dua {
     font-family: 'Amiri', serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--rc-gold);
     margin-top: 20px;
   }
@@ -682,7 +682,7 @@ const digestStyles = `
   .rc-closing-message {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--rc-cream-soft);
     margin-top: 8px;
   }

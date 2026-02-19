@@ -1,6 +1,6 @@
 // src/pages/RamadanChallenge.tsx
-import { useState, useMemo, useEffect, useRef } from "react";
-import { JuzDigest } from "@/components/ramadan/JuzDigest";
+import { useMemo } from "react";
+import { Link } from "react-router-dom";
 import type { JuzDigest as JuzDigestType } from "@/types/ramadan";
 
 // Dynamically import all juz JSON files
@@ -30,7 +30,6 @@ function getRamadanDay(): number {
 
 export default function RamadanChallenge() {
   const currentRamadanDay = useMemo(() => getRamadanDay(), []);
-  const contentRef = useRef<HTMLDivElement>(null);
 
   const isBeforeRamadan = currentRamadanDay < 1;
   const isAfterRamadan = currentRamadanDay > 30;
@@ -41,17 +40,6 @@ export default function RamadanChallenge() {
     if (isBeforeRamadan || isAfterRamadan) return true;
     return day <= currentRamadanDay;
   }
-
-  const unlockedDays = Array.from({ length: 30 }, (_, i) => i + 1).filter(isDayUnlocked);
-  const defaultDay = 1;
-  const [selectedDay, setSelectedDay] = useState<number>(defaultDay);
-  const digest = juzData[selectedDay];
-
-  const handleDaySelect = (day: number) => {
-    if (!isDayUnlocked(day)) return;
-    setSelectedDay(day);
-    contentRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <div className="ramadan-page">
@@ -73,52 +61,35 @@ export default function RamadanChallenge() {
         <p className="ramadan-hero-ayah-trans">
           "The month of Ramadan in which the Qur'an was revealed, a guidance for the people." — 2:185
         </p>
-        <button
-          onClick={() => contentRef.current?.scrollIntoView({ behavior: "smooth" })}
-          className="ramadan-hero-cta"
-        >
-          Begin Today's Reading ↓
-        </button>
         <div className="ramadan-scroll-hint">Scroll</div>
       </section>
 
-      {/* Day Navigation */}
-      <nav className="ramadan-day-nav">
+      {/* Day Grid */}
+      <nav className="ramadan-day-nav" id="day-grid">
+        <p className="ramadan-day-nav-title">Choose Your Day</p>
         {Array.from({ length: 30 }, (_, i) => i + 1).map((day) => {
           const unlocked = isDayUnlocked(day);
-          const isActive = day === selectedDay;
-          return (
-            <button
+          const isCurrent = day === currentRamadanDay;
+          return unlocked ? (
+            <Link
               key={day}
-              onClick={() => handleDaySelect(day)}
-              disabled={!unlocked}
-              className={`ramadan-day-dot${isActive ? " active" : ""}${!unlocked ? " locked" : ""}`}
-              title={unlocked ? `Day ${day}` : `Day ${day} — locked`}
+              to={`/ramadan-day${day}`}
+              className={`ramadan-day-dot${isCurrent ? " current" : ""}`}
+              title={`Day ${day}`}
             >
               {day}
-            </button>
+            </Link>
+          ) : (
+            <span
+              key={day}
+              className="ramadan-day-dot locked"
+              title={`Day ${day} — locked`}
+            >
+              {day}
+            </span>
           );
         })}
       </nav>
-
-      {/* Content */}
-      <main className="ramadan-content" id="day-content" ref={contentRef}>
-        {digest && isDayUnlocked(selectedDay) ? (
-          <JuzDigest digest={digest} />
-        ) : (
-          <div className="ramadan-container" style={{ textAlign: "center", padding: "80px 24px" }}>
-            <p style={{ fontSize: "3rem", marginBottom: "16px" }}>🌙</p>
-            <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.4rem", color: "var(--rc-cream)" }}>
-              Day {selectedDay} content coming soon...
-            </p>
-            <p style={{ fontSize: "0.9rem", color: "var(--rc-text-muted)", marginTop: "8px" }}>
-              {isBeforeRamadan
-                ? "Ramadan begins soon — check back then!"
-                : `This content will unlock on Day ${selectedDay} of Ramadan.`}
-            </p>
-          </div>
-        )}
-      </main>
 
       {/* Footer */}
       <footer className="ramadan-footer">
@@ -271,30 +242,6 @@ const ramadanStyles = `
     animation: rcFadeIn 1s ease-out 0.7s both;
   }
 
-  .ramadan-hero-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: linear-gradient(135deg, var(--rc-emerald), var(--rc-emerald-light));
-    color: var(--rc-cream);
-    padding: 16px 40px;
-    border-radius: 60px;
-    border: none;
-    cursor: pointer;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    letter-spacing: 0.04em;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 24px rgba(34, 166, 122, 0.25);
-    animation: rcFadeIn 1s ease-out 0.9s both;
-  }
-
-  .ramadan-hero-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(34, 166, 122, 0.4);
-  }
-
   .ramadan-scroll-hint {
     position: absolute;
     bottom: 32px;
@@ -314,58 +261,65 @@ const ramadanStyles = `
     margin: 8px auto 0;
   }
 
-  /* ── DAY NAV ── */
+  /* ── DAY GRID ── */
   .ramadan-day-nav {
     display: flex;
-    gap: 6px;
+    gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 32px 24px;
-    position: sticky;
-    top: 0;
-    background: linear-gradient(to bottom, var(--rc-bg-deep) 60%, transparent);
-    z-index: 10;
+    padding: 40px 24px 80px;
+    max-width: 520px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .ramadan-day-nav-title {
+    width: 100%;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--rc-cream);
+    margin-bottom: 16px;
+    font-weight: 400;
   }
 
   .ramadan-day-dot {
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     border: 1px solid var(--rc-border);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.65rem;
+    font-size: 0.85rem;
     font-family: 'Outfit', sans-serif;
-    color: var(--rc-text-muted);
+    color: var(--rc-text-secondary);
+    text-decoration: none;
     cursor: pointer;
     transition: all 0.2s ease;
-    background: transparent;
-    padding: 0;
+    background: var(--rc-bg-card);
   }
 
   .ramadan-day-dot:hover:not(.locked) {
-    border-color: var(--rc-gold-dim);
+    border-color: var(--rc-gold);
     color: var(--rc-gold);
+    background: var(--rc-bg-card-hover);
+    transform: scale(1.1);
   }
 
-  .ramadan-day-dot.active {
+  .ramadan-day-dot.current {
     background: var(--rc-gold);
     color: var(--rc-bg-deep);
     border-color: var(--rc-gold);
     font-weight: 600;
+    box-shadow: 0 0 16px rgba(201, 168, 76, 0.3);
   }
 
   .ramadan-day-dot.locked {
-    opacity: 0.3;
+    opacity: 0.25;
     cursor: default;
-  }
-
-  /* ── CONTENT ── */
-  .ramadan-content {
-    padding-bottom: 120px;
-    position: relative;
-    z-index: 1;
+    background: transparent;
   }
 
   /* ── FOOTER ── */
@@ -407,7 +361,7 @@ const ramadanStyles = `
   /* ── RESPONSIVE ── */
   @media (max-width: 480px) {
     .ramadan-container { padding: 0 16px; }
-    .ramadan-day-nav { gap: 4px; padding: 20px 12px; }
-    .ramadan-day-dot { width: 28px; height: 28px; font-size: 0.58rem; }
+    .ramadan-day-nav { gap: 8px; padding: 32px 16px 60px; }
+    .ramadan-day-dot { width: 44px; height: 44px; font-size: 0.82rem; }
   }
 `;
