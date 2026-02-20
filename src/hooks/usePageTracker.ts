@@ -1,5 +1,5 @@
 // src/hooks/usePageTracker.ts — Tracks page views to Google Sheets via Apps Script
-// Uses image beacon pattern (GET with query params) for maximum reliability
+// Uses POST with URL-encoded form data (safe-listed for no-cors, natively handled by Apps Script)
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -57,16 +57,6 @@ async function getGeoData(): Promise<GeoData> {
   }
 }
 
-/** Send tracking data as GET query params via image beacon — no CORS issues */
-function sendBeacon(params: Record<string, string | number>) {
-  const query = Object.entries(params)
-    .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
-    .join("&");
-  const url = `${ANALYTICS_SCRIPT_URL}?action=log&${query}`;
-  const img = new Image();
-  img.src = url;
-}
-
 export function usePageTracker() {
   const location = useLocation();
   const lastPath = useRef("");
@@ -84,17 +74,26 @@ export function usePageTracker() {
     (async () => {
       const geo = await getGeoData();
 
-      sendBeacon({
-        path: location.pathname,
-        referrer: document.referrer || "(direct)",
-        screenWidth: window.innerWidth,
-        timestamp: new Date().toISOString(),
-        ip: geo.ip,
-        city: geo.city,
-        country: geo.country,
-        region: geo.region,
-        browser,
-        os,
+      // Send as URL-encoded form data — safe-listed Content-Type for no-cors,
+      // and Apps Script receives it natively via e.parameter
+      const params = new URLSearchParams();
+      params.set("path", location.pathname);
+      params.set("referrer", document.referrer || "(direct)");
+      params.set("screenWidth", String(window.innerWidth));
+      params.set("timestamp", new Date().toISOString());
+      params.set("ip", geo.ip);
+      params.set("city", geo.city);
+      params.set("country", geo.country);
+      params.set("region", geo.region);
+      params.set("browser", browser);
+      params.set("os", os);
+
+      fetch(ANALYTICS_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: params,
+      }).catch(() => {
+        // Silently fail — analytics should never break the app
       });
     })();
   }, [location.pathname]);
