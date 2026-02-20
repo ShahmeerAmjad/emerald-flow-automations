@@ -10,11 +10,18 @@ import Offer from "./pages/Offer";
 import RamadanChallenge from "./pages/RamadanChallenge";
 import RamadanDay from "./pages/RamadanDay";
 import WebinarLanding from "./pages/WebinarLanding";
+import Dashboard from "./pages/Dashboard";
 import CustomCursor from "./components/CustomCursor";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { usePageTracker } from "./hooks/usePageTracker";
 
 const queryClient = new QueryClient();
+
+function PageTracker() {
+  usePageTracker();
+  return null;
+}
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -22,6 +29,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <PageTracker />
         <CustomCursor />
         <Routes>
           <Route path="/" element={<Index />} />
@@ -29,6 +37,7 @@ const App = () => (
           <Route path="/ramadan" element={<RamadanChallenge />} />
           <Route path="/ramadan/:day" element={<RamadanDay />} />
           <Route path="/landing" element={<WebinarLanding />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
