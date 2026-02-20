@@ -11,6 +11,8 @@ import RamadanChallenge from "./pages/RamadanChallenge";
 import RamadanDay from "./pages/RamadanDay";
 import WebinarLanding from "./pages/WebinarLanding";
 import CustomCursor from "./components/CustomCursor";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +33,8 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <Analytics />
+      <SpeedInsights />
     </TooltipProvider>
   </QueryClientProvider>
 );
