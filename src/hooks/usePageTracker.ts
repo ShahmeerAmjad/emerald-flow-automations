@@ -39,10 +39,9 @@ async function getGeoData(): Promise<GeoData> {
   }
 
   try {
-    const res = await fetch("https://ipwho.is/");
+    const res = await fetch("https://ipinfo.io/json");
     if (!res.ok) throw new Error("Geo lookup failed");
     const json = await res.json();
-    if (!json.success) throw new Error("Geo lookup unsuccessful");
     const geo: GeoData = {
       ip: json.ip || "",
       city: json.city || "",
