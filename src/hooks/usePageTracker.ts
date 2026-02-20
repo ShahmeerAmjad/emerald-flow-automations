@@ -39,13 +39,14 @@ async function getGeoData(): Promise<GeoData> {
   }
 
   try {
-    const res = await fetch("https://ipapi.co/json/");
+    const res = await fetch("https://ipwho.is/");
     if (!res.ok) throw new Error("Geo lookup failed");
     const json = await res.json();
+    if (!json.success) throw new Error("Geo lookup unsuccessful");
     const geo: GeoData = {
       ip: json.ip || "",
       city: json.city || "",
-      country: json.country_name || "",
+      country: json.country || "",
       region: json.region || "",
     };
     sessionStorage.setItem(GEO_CACHE_KEY, JSON.stringify(geo));
