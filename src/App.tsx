@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import Offer from "./pages/Offer";
 import RamadanChallenge from "./pages/RamadanChallenge";
 import RamadanDay from "./pages/RamadanDay";
+import WebinarLanding from "./pages/WebinarLanding";
 import CustomCursor from "./components/CustomCursor";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/offer" element={<Offer />} />
           <Route path="/ramadan" element={<RamadanChallenge />} />
           <Route path="/ramadan/:day" element={<RamadanDay />} />
+          <Route path="/landing" element={<WebinarLanding />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
