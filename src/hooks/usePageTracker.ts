@@ -1,5 +1,4 @@
 // src/hooks/usePageTracker.ts — Tracks page views to Google Sheets via Apps Script
-// Uses POST with URL-encoded form data (safe-listed for no-cors, natively handled by Apps Script)
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -74,24 +73,28 @@ export function usePageTracker() {
     (async () => {
       const geo = await getGeoData();
 
-      // Send as URL-encoded form data — safe-listed Content-Type for no-cors,
-      // and Apps Script receives it natively via e.parameter
-      const params = new URLSearchParams();
-      params.set("path", location.pathname);
-      params.set("referrer", document.referrer || "(direct)");
-      params.set("screenWidth", String(window.innerWidth));
-      params.set("timestamp", new Date().toISOString());
-      params.set("ip", geo.ip);
-      params.set("city", geo.city);
-      params.set("country", geo.country);
-      params.set("region", geo.region);
-      params.set("browser", browser);
-      params.set("os", os);
+      const payload = {
+        path: location.pathname,
+        referrer: document.referrer || "(direct)",
+        screenWidth: window.innerWidth,
+        timestamp: new Date().toISOString(),
+        ip: geo.ip,
+        city: geo.city,
+        country: geo.country,
+        region: geo.region,
+        browser,
+        os,
+      };
 
+      // Debug: log to console so we can verify data is correct
+      console.log("[PageTracker] Sending:", payload);
+
+      // Fire-and-forget — don't block rendering
       fetch(ANALYTICS_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",
-        body: params,
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify(payload),
       }).catch(() => {
         // Silently fail — analytics should never break the app
       });
