@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 const ANALYTICS_SCRIPT_URL =
-  "https://script.google.com/macros/s/ANALYTICS_SCRIPT_ID/exec";
+  "https://script.google.com/macros/s/AKfycbxggJOURfWUJZlQScsLW_DDs-t6mR_2H3mBJdqvCVPsgHQWF50DwJVG5SN4Y9YhQ3eH-A/exec";
 
 export function usePageTracker() {
   const location = useLocation();
