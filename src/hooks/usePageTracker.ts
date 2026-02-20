@@ -5,6 +5,56 @@ import { useLocation } from "react-router-dom";
 const ANALYTICS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbxggJOURfWUJZlQScsLW_DDs-t6mR_2H3mBJdqvCVPsgHQWF50DwJVG5SN4Y9YhQ3eH-A/exec";
 
+const GEO_CACHE_KEY = "visitor_geo";
+
+interface GeoData {
+  ip: string;
+  city: string;
+  country: string;
+  region: string;
+}
+
+function parseBrowserOS(): { browser: string; os: string } {
+  const ua = navigator.userAgent;
+  let browser = "Other";
+  if (ua.includes("Edg")) browser = "Edge";
+  else if (ua.includes("Chrome")) browser = "Chrome";
+  else if (ua.includes("Firefox")) browser = "Firefox";
+  else if (ua.includes("Safari")) browser = "Safari";
+
+  let os = "Other";
+  if (ua.includes("iPhone") || ua.includes("iPad")) os = "iOS";
+  else if (ua.includes("Android")) os = "Android";
+  else if (ua.includes("Windows")) os = "Windows";
+  else if (ua.includes("Mac")) os = "macOS";
+  else if (ua.includes("Linux")) os = "Linux";
+
+  return { browser, os };
+}
+
+async function getGeoData(): Promise<GeoData> {
+  const cached = sessionStorage.getItem(GEO_CACHE_KEY);
+  if (cached) {
+    return JSON.parse(cached) as GeoData;
+  }
+
+  try {
+    const res = await fetch("https://ipapi.co/json/");
+    if (!res.ok) throw new Error("Geo lookup failed");
+    const json = await res.json();
+    const geo: GeoData = {
+      ip: json.ip || "",
+      city: json.city || "",
+      country: json.country_name || "",
+      region: json.region || "",
+    };
+    sessionStorage.setItem(GEO_CACHE_KEY, JSON.stringify(geo));
+    return geo;
+  } catch {
+    return { ip: "", city: "", country: "", region: "" };
+  }
+}
+
 export function usePageTracker() {
   const location = useLocation();
   const lastPath = useRef("");
@@ -17,21 +67,32 @@ export function usePageTracker() {
     // Don't track the dashboard itself
     if (location.pathname === "/dashboard") return;
 
-    const payload = {
-      path: location.pathname,
-      referrer: document.referrer || "(direct)",
-      screenWidth: window.innerWidth,
-      timestamp: new Date().toISOString(),
-    };
+    const { browser, os } = parseBrowserOS();
 
-    // Fire-and-forget — don't block rendering
-    fetch(ANALYTICS_SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).catch(() => {
-      // Silently fail — analytics should never break the app
-    });
+    (async () => {
+      const geo = await getGeoData();
+
+      const payload = {
+        path: location.pathname,
+        referrer: document.referrer || "(direct)",
+        screenWidth: window.innerWidth,
+        timestamp: new Date().toISOString(),
+        ip: geo.ip,
+        city: geo.city,
+        country: geo.country,
+        region: geo.region,
+        browser,
+        os,
+      };
+
+      fetch(ANALYTICS_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }).catch(() => {
+        // Silently fail — analytics should never break the app
+      });
+    })();
   }, [location.pathname]);
 }

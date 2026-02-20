@@ -21,6 +21,9 @@ import {
   RefreshCw,
   TrendingUp,
   ExternalLink,
+  Users,
+  MapPin,
+  Globe,
 } from "lucide-react";
 
 /* ═══ CONSTANTS ═══ */
@@ -40,17 +43,22 @@ interface AnalyticsData {
     todayViews: number;
     weekViews: number;
     uniquePaths: number;
+    uniqueVisitors: number;
   };
   daily: { date: string; views: number }[];
   pages: { path: string; views: number }[];
   devices: { mobile: number; desktop: number };
+  topCities: { city: string; country: string; views: number }[];
+  browsers: { name: string; views: number }[];
 }
 
 const EMPTY_DATA: AnalyticsData = {
-  summary: { totalViews: 0, todayViews: 0, weekViews: 0, uniquePaths: 0 },
+  summary: { totalViews: 0, todayViews: 0, weekViews: 0, uniquePaths: 0, uniqueVisitors: 0 },
   daily: [],
   pages: [],
   devices: { mobile: 0, desktop: 0 },
+  topCities: [],
+  browsers: [],
 };
 
 /* ═══ MAIN COMPONENT ═══ */
@@ -68,7 +76,22 @@ export default function Dashboard() {
       const res = await fetch(ANALYTICS_API_URL);
       if (!res.ok) throw new Error("Failed to fetch analytics");
       const json = await res.json();
-      setData(json);
+      // Backwards-compatible: fill in new fields with defaults if Apps Script hasn't been updated yet
+      const normalized: AnalyticsData = {
+        summary: {
+          totalViews: json.summary?.totalViews ?? 0,
+          todayViews: json.summary?.todayViews ?? 0,
+          weekViews: json.summary?.weekViews ?? 0,
+          uniquePaths: json.summary?.uniquePaths ?? 0,
+          uniqueVisitors: json.summary?.uniqueVisitors ?? 0,
+        },
+        daily: json.daily ?? [],
+        pages: json.pages ?? [],
+        devices: json.devices ?? { mobile: 0, desktop: 0 },
+        topCities: json.topCities ?? [],
+        browsers: json.browsers ?? [],
+      };
+      setData(normalized);
       setLastRefresh(new Date());
     } catch {
       if (ANALYTICS_API_URL.includes("ANALYTICS_SCRIPT_ID")) {
@@ -138,8 +161,8 @@ export default function Dashboard() {
           </div>
         ) : (
           <>
-            {/* Summary Cards */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 animate-[fadeSlideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.1s_both]">
+            {/* Summary Cards — 5 cards */}
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8 animate-[fadeSlideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.1s_both]">
               <StatCard
                 icon={<Eye className="w-5 h-5" />}
                 label="Total Views"
@@ -160,48 +183,53 @@ export default function Dashboard() {
                 label="Unique Pages"
                 value={data.summary.uniquePaths}
               />
+              <StatCard
+                icon={<Users className="w-5 h-5" />}
+                label="Unique Visitors"
+                value={data.summary.uniqueVisitors}
+              />
             </div>
 
-            {/* Charts */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-              {/* Daily Views Chart */}
-              <div className="p-6 border border-[rgba(45,184,155,0.1)] bg-[#0C1210] animate-[fadeSlideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.2s_both]">
-                <div className="font-['JetBrains_Mono',monospace] text-[13px] tracking-[5px] uppercase text-[#2DB89B] font-medium mb-6">
-                  Daily Views — Last 30 Days
-                </div>
-                {data.daily.length > 0 ? (
-                  <ResponsiveContainer width="100%" height={260}>
-                    <LineChart data={data.daily}>
-                      <CartesianGrid stroke="rgba(45,184,155,0.06)" strokeDasharray="3 3" />
-                      <XAxis
-                        dataKey="date"
-                        tick={{ fill: "rgba(240,237,230,0.3)", fontSize: 11 }}
-                        tickFormatter={(v: string) => v.slice(5)}
-                        axisLine={{ stroke: "rgba(45,184,155,0.1)" }}
-                        tickLine={false}
-                      />
-                      <YAxis
-                        tick={{ fill: "rgba(240,237,230,0.3)", fontSize: 11 }}
-                        axisLine={{ stroke: "rgba(45,184,155,0.1)" }}
-                        tickLine={false}
-                        allowDecimals={false}
-                      />
-                      <Tooltip content={<CustomTooltip />} />
-                      <Line
-                        type="monotone"
-                        dataKey="views"
-                        stroke="#47ECCC"
-                        strokeWidth={2}
-                        dot={{ fill: "#2DB89B", r: 3 }}
-                        activeDot={{ fill: "#47ECCC", r: 5, stroke: "#050907", strokeWidth: 2 }}
-                      />
-                    </LineChart>
-                  </ResponsiveContainer>
-                ) : (
-                  <EmptyChart />
-                )}
+            {/* Daily Views — Full Width */}
+            <div className="p-6 border border-[rgba(45,184,155,0.1)] bg-[#0C1210] mb-8 animate-[fadeSlideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.2s_both]">
+              <div className="font-['JetBrains_Mono',monospace] text-[13px] tracking-[5px] uppercase text-[#2DB89B] font-medium mb-6">
+                Daily Views — Last 30 Days
               </div>
+              {data.daily.length > 0 ? (
+                <ResponsiveContainer width="100%" height={280}>
+                  <LineChart data={data.daily}>
+                    <CartesianGrid stroke="rgba(45,184,155,0.06)" strokeDasharray="3 3" />
+                    <XAxis
+                      dataKey="date"
+                      tick={{ fill: "rgba(240,237,230,0.3)", fontSize: 11 }}
+                      tickFormatter={(v: string) => v.slice(5)}
+                      axisLine={{ stroke: "rgba(45,184,155,0.1)" }}
+                      tickLine={false}
+                    />
+                    <YAxis
+                      tick={{ fill: "rgba(240,237,230,0.3)", fontSize: 11 }}
+                      axisLine={{ stroke: "rgba(45,184,155,0.1)" }}
+                      tickLine={false}
+                      allowDecimals={false}
+                    />
+                    <Tooltip content={<CustomTooltip />} />
+                    <Line
+                      type="monotone"
+                      dataKey="views"
+                      stroke="#47ECCC"
+                      strokeWidth={2}
+                      dot={{ fill: "#2DB89B", r: 3 }}
+                      activeDot={{ fill: "#47ECCC", r: 5, stroke: "#050907", strokeWidth: 2 }}
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
+              ) : (
+                <EmptyChart />
+              )}
+            </div>
 
+            {/* Views by Page | Top Cities */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
               {/* Per-Page Chart */}
               <div className="p-6 border border-[rgba(45,184,155,0.1)] bg-[#0C1210] animate-[fadeSlideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.3s_both]">
                 <div className="font-['JetBrains_Mono',monospace] text-[13px] tracking-[5px] uppercase text-[#2DB89B] font-medium mb-6">
@@ -241,60 +269,139 @@ export default function Dashboard() {
                   <EmptyChart />
                 )}
               </div>
+
+              {/* Top Cities Table */}
+              <div className="p-6 border border-[rgba(45,184,155,0.1)] bg-[#0C1210] animate-[fadeSlideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.3s_both]">
+                <div className="flex items-center gap-2 font-['JetBrains_Mono',monospace] text-[13px] tracking-[5px] uppercase text-[#2DB89B] font-medium mb-6">
+                  <MapPin className="w-4 h-4" />
+                  Top Cities
+                </div>
+                {data.topCities.length > 0 ? (
+                  <div className="space-y-0">
+                    {/* Table header */}
+                    <div className="grid grid-cols-[1fr_1fr_auto] gap-4 px-4 py-2 text-[11px] font-['JetBrains_Mono',monospace] text-[rgba(240,237,230,0.3)] tracking-[2px] uppercase border-b border-[rgba(45,184,155,0.08)]">
+                      <span>City</span>
+                      <span>Country</span>
+                      <span className="text-right">Views</span>
+                    </div>
+                    {/* Table rows */}
+                    {data.topCities.slice(0, 10).map((row, i) => (
+                      <div
+                        key={i}
+                        className="grid grid-cols-[1fr_1fr_auto] gap-4 px-4 py-3 border-b border-[rgba(45,184,155,0.04)] hover:bg-[rgba(45,184,155,0.03)] transition-colors"
+                      >
+                        <span className="text-sm font-medium truncate">{row.city || "Unknown"}</span>
+                        <span className="text-sm text-[rgba(240,237,230,0.5)] truncate flex items-center gap-1.5">
+                          <Globe className="w-3 h-3 shrink-0 text-[rgba(45,184,155,0.4)]" />
+                          {row.country || "Unknown"}
+                        </span>
+                        <span className="text-sm font-bold text-[#47ECCC] text-right tabular-nums">
+                          {row.views.toLocaleString()}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <EmptyChart />
+                )}
+              </div>
             </div>
 
-            {/* Device Breakdown */}
+            {/* Browser Breakdown | Device Breakdown + Quick Links */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 animate-[fadeSlideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.4s_both]">
+              {/* Browser Breakdown */}
               <div className="p-6 border border-[rgba(45,184,155,0.1)] bg-[#0C1210]">
                 <div className="font-['JetBrains_Mono',monospace] text-[13px] tracking-[5px] uppercase text-[#2DB89B] font-medium mb-6">
-                  Device Breakdown
+                  Browser Breakdown
                 </div>
-                <div className="flex gap-4">
-                  <DeviceCard
-                    icon={<Smartphone className="w-6 h-6" />}
-                    label="Mobile"
-                    count={data.devices.mobile}
-                    total={data.devices.mobile + data.devices.desktop}
-                  />
-                  <DeviceCard
-                    icon={<Monitor className="w-6 h-6" />}
-                    label="Desktop"
-                    count={data.devices.desktop}
-                    total={data.devices.mobile + data.devices.desktop}
-                  />
-                </div>
+                {data.browsers.length > 0 ? (
+                  <ResponsiveContainer width="100%" height={260}>
+                    <BarChart data={data.browsers} layout="vertical">
+                      <CartesianGrid stroke="rgba(45,184,155,0.06)" strokeDasharray="3 3" horizontal={false} />
+                      <XAxis
+                        type="number"
+                        tick={{ fill: "rgba(240,237,230,0.3)", fontSize: 11 }}
+                        axisLine={{ stroke: "rgba(45,184,155,0.1)" }}
+                        tickLine={false}
+                        allowDecimals={false}
+                      />
+                      <YAxis
+                        dataKey="name"
+                        type="category"
+                        tick={{ fill: "rgba(240,237,230,0.5)", fontSize: 12 }}
+                        axisLine={{ stroke: "rgba(45,184,155,0.1)" }}
+                        tickLine={false}
+                        width={80}
+                      />
+                      <Tooltip content={<CustomTooltip />} />
+                      <Bar dataKey="views" radius={[0, 4, 4, 0]} maxBarSize={28}>
+                        {data.browsers.map((_, i) => (
+                          <Cell
+                            key={i}
+                            fill={i === 0 ? "#47ECCC" : "rgba(45,184,155,0.4)"}
+                          />
+                        ))}
+                      </Bar>
+                    </BarChart>
+                  </ResponsiveContainer>
+                ) : (
+                  <EmptyChart />
+                )}
               </div>
 
-              {/* Quick Links */}
-              <div className="p-6 border border-[rgba(45,184,155,0.1)] bg-[#0C1210]">
-                <div className="font-['JetBrains_Mono',monospace] text-[13px] tracking-[5px] uppercase text-[#2DB89B] font-medium mb-6">
-                  Full Dashboards
+              {/* Device Breakdown + Quick Links */}
+              <div className="space-y-6">
+                <div className="p-6 border border-[rgba(45,184,155,0.1)] bg-[#0C1210]">
+                  <div className="font-['JetBrains_Mono',monospace] text-[13px] tracking-[5px] uppercase text-[#2DB89B] font-medium mb-6">
+                    Device Breakdown
+                  </div>
+                  <div className="flex gap-4">
+                    <DeviceCard
+                      icon={<Smartphone className="w-6 h-6" />}
+                      label="Mobile"
+                      count={data.devices.mobile}
+                      total={data.devices.mobile + data.devices.desktop}
+                    />
+                    <DeviceCard
+                      icon={<Monitor className="w-6 h-6" />}
+                      label="Desktop"
+                      count={data.devices.desktop}
+                      total={data.devices.mobile + data.devices.desktop}
+                    />
+                  </div>
                 </div>
-                <div className="space-y-3">
-                  <a
-                    href={VERCEL_ANALYTICS_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-between p-4 border border-[rgba(45,184,155,0.08)] bg-[rgba(45,184,155,0.03)] hover:border-[rgba(45,184,155,0.2)] hover:bg-[rgba(45,184,155,0.06)] transition-all group"
-                  >
-                    <div>
-                      <div className="text-[15px] font-semibold mb-0.5">Vercel Analytics</div>
-                      <div className="text-xs text-[rgba(240,237,230,0.3)]">Real-time visitors, Web Vitals, speed insights</div>
-                    </div>
-                    <ExternalLink className="w-4 h-4 text-[rgba(240,237,230,0.2)] group-hover:text-[#47ECCC] transition-colors" />
-                  </a>
-                  <a
-                    href={GA4_DASHBOARD_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-between p-4 border border-[rgba(45,184,155,0.08)] bg-[rgba(45,184,155,0.03)] hover:border-[rgba(45,184,155,0.2)] hover:bg-[rgba(45,184,155,0.06)] transition-all group"
-                  >
-                    <div>
-                      <div className="text-[15px] font-semibold mb-0.5">Google Analytics 4</div>
-                      <div className="text-xs text-[rgba(240,237,230,0.3)]">Traffic sources, demographics, ad attribution</div>
-                    </div>
-                    <ExternalLink className="w-4 h-4 text-[rgba(240,237,230,0.2)] group-hover:text-[#47ECCC] transition-colors" />
-                  </a>
+
+                {/* Quick Links */}
+                <div className="p-6 border border-[rgba(45,184,155,0.1)] bg-[#0C1210]">
+                  <div className="font-['JetBrains_Mono',monospace] text-[13px] tracking-[5px] uppercase text-[#2DB89B] font-medium mb-6">
+                    Full Dashboards
+                  </div>
+                  <div className="space-y-3">
+                    <a
+                      href={VERCEL_ANALYTICS_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between p-4 border border-[rgba(45,184,155,0.08)] bg-[rgba(45,184,155,0.03)] hover:border-[rgba(45,184,155,0.2)] hover:bg-[rgba(45,184,155,0.06)] transition-all group"
+                    >
+                      <div>
+                        <div className="text-[15px] font-semibold mb-0.5">Vercel Analytics</div>
+                        <div className="text-xs text-[rgba(240,237,230,0.3)]">Real-time visitors, Web Vitals, speed insights</div>
+                      </div>
+                      <ExternalLink className="w-4 h-4 text-[rgba(240,237,230,0.2)] group-hover:text-[#47ECCC] transition-colors" />
+                    </a>
+                    <a
+                      href={GA4_DASHBOARD_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between p-4 border border-[rgba(45,184,155,0.08)] bg-[rgba(45,184,155,0.03)] hover:border-[rgba(45,184,155,0.2)] hover:bg-[rgba(45,184,155,0.06)] transition-all group"
+                    >
+                      <div>
+                        <div className="text-[15px] font-semibold mb-0.5">Google Analytics 4</div>
+                        <div className="text-xs text-[rgba(240,237,230,0.3)]">Traffic sources, demographics, ad attribution</div>
+                      </div>
+                      <ExternalLink className="w-4 h-4 text-[rgba(240,237,230,0.2)] group-hover:text-[#47ECCC] transition-colors" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
