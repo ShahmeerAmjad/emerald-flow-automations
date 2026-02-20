@@ -1,4 +1,5 @@
 // src/hooks/usePageTracker.ts — Tracks page views to Google Sheets via Apps Script
+// Uses image beacon pattern (GET with query params) for maximum reliability
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -56,6 +57,16 @@ async function getGeoData(): Promise<GeoData> {
   }
 }
 
+/** Send tracking data as GET query params via image beacon — no CORS issues */
+function sendBeacon(params: Record<string, string | number>) {
+  const query = Object.entries(params)
+    .map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
+    .join("&");
+  const url = `${ANALYTICS_SCRIPT_URL}?action=log&${query}`;
+  const img = new Image();
+  img.src = url;
+}
+
 export function usePageTracker() {
   const location = useLocation();
   const lastPath = useRef("");
@@ -73,7 +84,7 @@ export function usePageTracker() {
     (async () => {
       const geo = await getGeoData();
 
-      const payload = {
+      sendBeacon({
         path: location.pathname,
         referrer: document.referrer || "(direct)",
         screenWidth: window.innerWidth,
@@ -84,15 +95,6 @@ export function usePageTracker() {
         region: geo.region,
         browser,
         os,
-      };
-
-      fetch(ANALYTICS_SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      }).catch(() => {
-        // Silently fail — analytics should never break the app
       });
     })();
   }, [location.pathname]);
