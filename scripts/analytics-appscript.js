@@ -72,7 +72,7 @@ function getOrCreateSheet(name, headers) {
 }
 
 function writePageView(data) {
-  var sheet = getOrCreateSheet("Page Views", [
+  var sheet = getOrCreateSheet("PageViews", [
     "Timestamp", "Path", "Referrer", "ScreenWidth", "IP",
     "City", "Country", "Region", "Browser", "OS",
     "SessionID", "VisitorID", "PageIndex", "EntryPage"
@@ -183,7 +183,7 @@ function clearCache() {
 /* ═══ AGGREGATION ═══ */
 
 function buildAnalyticsResponse() {
-  var pageViews = getSheetData("Page Views");
+  var pageViews = getSheetData("PageViews");
   var engagements = getSheetData("Engagement");
 
   // Filter out bots, /test paths, blank paths, dashboard
