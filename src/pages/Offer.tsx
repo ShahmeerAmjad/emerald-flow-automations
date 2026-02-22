@@ -24,7 +24,7 @@ import {
 import { CheckCircle } from "lucide-react";
 
 const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbxNRHAy5x2dZQD1tKFOsxhn7SBwQbSioDbhlamjcwE8_OdajRenwzZJ7SMSrria4n9G/exec";
+  "https://script.google.com/macros/s/AKfycbxyrEAO-ig6-Nly-uhTfBaiO9ZGpCt4iGw6UtVpDaMkxh2XV22QFC4TYuA7rlTefOAuew/exec";
 
 const applicationSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
@@ -301,7 +301,7 @@ export default function Offer() {
                 </div>
                 {[
                   { step: "1", text: "15-minute assessment call with our team" },
-                  { step: "2", text: "Cohort selection — we pick the best fit" },
+                  { step: "2", text: "Cohort selection, we pick the best fit" },
                   { step: "3", text: "Onboarding & you start building with AI" },
                 ].map((item) => (
                   <div key={item.step} className="flex items-start gap-3 mb-3 last:mb-0">
@@ -415,9 +415,9 @@ export default function Offer() {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent className="bg-[#0C1210] border-[rgba(45,184,155,0.12)]">
-                            <SelectItem value="Beginner" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Beginner — New to AI</SelectItem>
-                            <SelectItem value="Intermediate" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Intermediate — Used AI tools</SelectItem>
-                            <SelectItem value="Advanced" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Advanced — Built with AI</SelectItem>
+                            <SelectItem value="Beginner" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Beginner</SelectItem>
+                            <SelectItem value="Intermediate" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Intermediate</SelectItem>
+                            <SelectItem value="Advanced" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Advanced</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -460,12 +460,12 @@ export default function Offer() {
             <div className="flex items-center justify-center gap-2.5 mb-3">
               <span className="w-2.5 h-2.5 bg-[#F06050] rounded-full animate-[livePulse_1s_ease-in-out_infinite] shadow-[0_0_12px_#F06050]" />
               <span className="font-['JetBrains_Mono',monospace] text-sm sm:text-[15px] text-[#F06050] tracking-[3px] uppercase font-bold">
-                Only 10 spots in the first cohort
+                Limited seats in the first cohort
               </span>
             </div>
             <p className="text-sm sm:text-base text-[rgba(240,237,230,0.7)] leading-[1.7]">
-              This is <strong className="text-[#F0EDE6] font-bold">not</strong> an open enrollment. We're hand-selecting <strong className="text-[#F0EDE6] font-bold">10 people</strong> for the founding cohort — people who are ready to put in the work and represent the standard we're setting. Once the 10 are in,{" "}
-              <span className="text-[#E8705F] font-bold">the waitlist closes and you'll have to wait for the next cohort.</span>{" "}
+              This is <strong className="text-[#F0EDE6] font-bold">not</strong> an open enrollment. We're hand-selecting a <strong className="text-[#F0EDE6] font-bold">small founding cohort</strong> of people who are ready to put in the work and represent the standard we're setting. Once the seats are filled,{" "}
+              <span className="text-[#E8705F] font-bold">applications close and you'll have to wait for the next cohort.</span>{" "}
               We don't know when that will be. If you're reading this, there's still a spot with your name on it. <strong className="text-[#F0EDE6] font-bold">But not for long.</strong>
             </p>
           </div>
