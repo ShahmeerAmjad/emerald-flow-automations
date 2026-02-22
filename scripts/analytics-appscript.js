@@ -30,6 +30,8 @@ function doPost(e) {
       writeEngagement(data);
     } else if (eventType === "scroll") {
       writeScroll(data);
+    } else if (eventType === "lead") {
+      writeLead(data);
     }
 
     // Invalidate cache on new data
@@ -120,6 +122,21 @@ function writeScroll(data) {
     data.depth || 0,
     data.sessionId || "",
     data.visitorId || ""
+  ]);
+}
+
+function writeLead(data) {
+  var sheet = getOrCreateSheet("Interested Leads", [
+    "Timestamp", "FullName", "Email", "WhatsApp", "CurrentRole", "AIExperience", "WhyJoin"
+  ]);
+  sheet.appendRow([
+    data.timestamp || new Date().toISOString(),
+    data.fullName || "",
+    data.email || "",
+    data.whatsapp || "",
+    data.currentRole || "",
+    data.aiExperience || "",
+    data.whyJoin || ""
   ]);
 }
 

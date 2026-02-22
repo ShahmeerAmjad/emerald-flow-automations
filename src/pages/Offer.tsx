@@ -1,6 +1,83 @@
 // src/pages/Offer.tsx — AI Superpower Program Landing Page
 
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import {
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/select";
+import { CheckCircle } from "lucide-react";
+
+const GOOGLE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbxNRHAy5x2dZQD1tKFOsxhn7SBwQbSioDbhlamjcwE8_OdajRenwzZJ7SMSrria4n9G/exec";
+
+const applicationSchema = z.object({
+  fullName: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  whatsapp: z.string().min(10, "WhatsApp number must be at least 10 digits"),
+  currentRole: z.string().min(2, "Please enter your current role"),
+  aiExperience: z.enum(["Beginner", "Intermediate", "Advanced"], {
+    required_error: "Please select your AI experience level",
+  }),
+  whyJoin: z
+    .string()
+    .min(10, "Please write at least 10 characters")
+    .max(500, "Please keep it under 500 characters"),
+});
+
+type ApplicationValues = z.infer<typeof applicationSchema>;
+
 export default function Offer() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<ApplicationValues>({
+    resolver: zodResolver(applicationSchema),
+    defaultValues: {
+      fullName: "",
+      email: "",
+      whatsapp: "",
+      currentRole: "",
+      aiExperience: undefined,
+      whyJoin: "",
+    },
+  });
+
+  async function onSubmit(values: ApplicationValues) {
+    setIsSubmitting(true);
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          eventType: "lead",
+          ...values,
+          timestamp: new Date().toISOString(),
+        }),
+      });
+      setIsSubmitted(true);
+    } catch {
+      setIsSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
   return (
     <div className="min-h-screen bg-[#050907] text-[#F0EDE6] font-['Sora',sans-serif] antialiased relative overflow-hidden">
       {/* Ambient Orbs */}
@@ -207,18 +284,176 @@ export default function Offer() {
             We're gathering the first cohort of serious builders who want to be part of something bigger than a course — <strong className="text-[rgba(240,237,230,0.9)]">a community, a support system, and a launchpad</strong> for Pakistan's AI future. Join the waitlist to show us you're serious, and we'll build this together.
           </p>
 
-          <div className="font-['JetBrains_Mono',monospace] text-sm text-[#47ECCC] tracking-[2px] mb-8 relative z-10">
-            JOIN THE WAITLIST — SHOW YOUR INTEREST
-          </div>
+          {isSubmitted ? (
+            /* ═══ CONFIRMATION VIEW ═══ */
+            <div className="relative z-10 py-4">
+              <CheckCircle className="w-14 h-14 text-[#47ECCC] mx-auto mb-5" />
+              <h3 className="text-2xl sm:text-3xl font-extrabold tracking-[-1px] mb-3">
+                Application Received!
+              </h3>
+              <p className="text-base sm:text-lg text-[rgba(240,237,230,0.5)] leading-[1.65] max-w-[560px] mx-auto mb-8">
+                A member of our team will contact you within <strong className="text-[rgba(240,237,230,0.9)]">48 hours</strong> to schedule your 15-minute assessment call.
+              </p>
 
-          <a
-            href="https://calendly.com/YOUR_LINK"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-gradient-to-br from-[#2DB89B] to-[#47ECCC] text-[#050907] font-['Sora',sans-serif] text-base sm:text-lg md:text-[19px] font-extrabold uppercase tracking-[3px] sm:tracking-[5px] px-10 sm:px-16 md:px-20 py-5 sm:py-6 md:py-[26px] border-none cursor-pointer relative z-10 transition-all duration-300 shadow-[0_4px_24px_rgba(45,184,155,0.15)] hover:-translate-y-1 hover:shadow-[0_12px_48px_rgba(45,184,155,0.3)] hover:tracking-[5px] sm:hover:tracking-[7px]"
-          >
-            Apply For Early Access
-          </a>
+              <div className="text-left max-w-[440px] mx-auto p-6 border border-[rgba(45,184,155,0.12)] bg-[rgba(45,184,155,0.04)]">
+                <div className="font-['JetBrains_Mono',monospace] text-xs tracking-[3px] uppercase text-[#2DB89B] font-medium mb-4">
+                  What happens next?
+                </div>
+                {[
+                  { step: "1", text: "15-minute assessment call with our team" },
+                  { step: "2", text: "Cohort selection — we pick the best fit" },
+                  { step: "3", text: "Onboarding & you start building with AI" },
+                ].map((item) => (
+                  <div key={item.step} className="flex items-start gap-3 mb-3 last:mb-0">
+                    <span className="shrink-0 w-7 h-7 flex items-center justify-center bg-[rgba(45,184,155,0.1)] border border-[rgba(45,184,155,0.2)] font-['JetBrains_Mono',monospace] text-xs text-[#47ECCC] font-bold">
+                      {item.step}
+                    </span>
+                    <span className="text-[15px] text-[rgba(240,237,230,0.7)] leading-[1.5] pt-0.5">
+                      {item.text}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : (
+            /* ═══ APPLICATION FORM ═══ */
+            <div className="relative z-10">
+              <div className="font-['JetBrains_Mono',monospace] text-sm text-[#47ECCC] tracking-[2px] mb-8">
+                NOW ACCEPTING APPLICATIONS
+              </div>
+
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="max-w-[560px] mx-auto space-y-5 text-left">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <FormField
+                      control={form.control}
+                      name="fullName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-[rgba(240,237,230,0.7)] text-sm font-medium">Full Name</FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder="Your full name"
+                              className="bg-[#0C1210] border-[rgba(45,184,155,0.12)] text-[#F0EDE6] placeholder:text-[rgba(240,237,230,0.2)] focus:border-[#2DB89B] focus:ring-1 focus:ring-[#2DB89B] h-12"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-[rgba(240,237,230,0.7)] text-sm font-medium">Email Address</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="email"
+                              placeholder="you@example.com"
+                              className="bg-[#0C1210] border-[rgba(45,184,155,0.12)] text-[#F0EDE6] placeholder:text-[rgba(240,237,230,0.2)] focus:border-[#2DB89B] focus:ring-1 focus:ring-[#2DB89B] h-12"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <FormField
+                      control={form.control}
+                      name="whatsapp"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-[rgba(240,237,230,0.7)] text-sm font-medium">WhatsApp Number</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="tel"
+                              placeholder="+92 300 1234567"
+                              className="bg-[#0C1210] border-[rgba(45,184,155,0.12)] text-[#F0EDE6] placeholder:text-[rgba(240,237,230,0.2)] focus:border-[#2DB89B] focus:ring-1 focus:ring-[#2DB89B] h-12"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="currentRole"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-[rgba(240,237,230,0.7)] text-sm font-medium">Current Role</FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder="e.g. Freelancer, Student"
+                              className="bg-[#0C1210] border-[rgba(45,184,155,0.12)] text-[#F0EDE6] placeholder:text-[rgba(240,237,230,0.2)] focus:border-[#2DB89B] focus:ring-1 focus:ring-[#2DB89B] h-12"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
+                  <FormField
+                    control={form.control}
+                    name="aiExperience"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-[rgba(240,237,230,0.7)] text-sm font-medium">AI Experience Level</FormLabel>
+                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <FormControl>
+                            <SelectTrigger className="bg-[#0C1210] border-[rgba(45,184,155,0.12)] text-[#F0EDE6] focus:border-[#2DB89B] focus:ring-1 focus:ring-[#2DB89B] h-12 [&>span]:text-[rgba(240,237,230,0.2)] [&>span[data-placeholder]]:text-[rgba(240,237,230,0.2)]">
+                              <SelectValue placeholder="Select your experience level" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent className="bg-[#0C1210] border-[rgba(45,184,155,0.12)]">
+                            <SelectItem value="Beginner" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Beginner — New to AI</SelectItem>
+                            <SelectItem value="Intermediate" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Intermediate — Used AI tools</SelectItem>
+                            <SelectItem value="Advanced" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Advanced — Built with AI</SelectItem>
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="whyJoin"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-[rgba(240,237,230,0.7)] text-sm font-medium">Why do you want to join?</FormLabel>
+                        <FormControl>
+                          <Textarea
+                            placeholder="Tell us what you hope to achieve with AI..."
+                            className="bg-[#0C1210] border-[rgba(45,184,155,0.12)] text-[#F0EDE6] placeholder:text-[rgba(240,237,230,0.2)] focus:border-[#2DB89B] focus:ring-1 focus:ring-[#2DB89B] min-h-[100px] resize-none"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-br from-[#2DB89B] to-[#47ECCC] text-[#050907] font-['Sora',sans-serif] text-base sm:text-lg font-extrabold uppercase tracking-[3px] sm:tracking-[5px] py-5 sm:py-6 border-none cursor-pointer transition-all duration-300 shadow-[0_4px_24px_rgba(45,184,155,0.15)] hover:-translate-y-0.5 hover:shadow-[0_12px_48px_rgba(45,184,155,0.3)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                  >
+                    {isSubmitting ? "Submitting..." : "Submit Application"}
+                  </button>
+                </form>
+              </Form>
+            </div>
+          )}
 
           {/* FOMO Box */}
           <div className="mt-8 p-5 sm:p-6 bg-[rgba(240,96,80,0.04)] border border-[rgba(240,96,80,0.1)] inline-block max-w-[660px] animate-[fomoGlow_3s_ease-in-out_infinite] relative z-10">
