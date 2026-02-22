@@ -5,11 +5,11 @@
  *   1. Create a Google Sheet called "Site Analytics"
  *   2. Go to Extensions → Apps Script
  *   3. Paste this entire file into Code.gs
- *   4. Deploy → New deployment → Web app → Anyone can access
- *   5. Copy the deployment URL into usePageTracker.ts and Dashboard.tsx
+ *   4. Deploy → Manage deployments → Edit → New version → Deploy
+ *   5. URL stays the same
  *
- * Sheets created automatically:
- *   - PageViews: raw pageview events
+ * Sheets created/managed automatically:
+ *   - PageViews: raw pageview events (auto-migrates headers for old data)
  *   - Engagement: page exit events (duration, scroll depth)
  *   - Scroll: scroll milestone events (25/50/75/100%)
  *   - Cache: 5-min aggregation cache for fast doGet responses
@@ -32,6 +32,9 @@ function doPost(e) {
       writeScroll(data);
     }
 
+    // Invalidate cache on new data
+    clearCache();
+
     return ContentService.createTextOutput(JSON.stringify({ status: "ok" }))
       .setMimeType(ContentService.MimeType.JSON);
   } catch (err) {
@@ -40,6 +43,8 @@ function doPost(e) {
   }
 }
 
+/* ═══ SHEET HELPERS ═══ */
+
 function getOrCreateSheet(name, headers) {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName(name);
@@ -47,6 +52,21 @@ function getOrCreateSheet(name, headers) {
     sheet = ss.insertSheet(name);
     sheet.appendRow(headers);
     sheet.setFrozenRows(1);
+  } else if (headers) {
+    // Auto-migrate: add any missing headers to existing sheet
+    var existingHeaders = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+    var missing = [];
+    for (var i = 0; i < headers.length; i++) {
+      if (existingHeaders.indexOf(headers[i]) === -1) {
+        missing.push(headers[i]);
+      }
+    }
+    if (missing.length > 0) {
+      var startCol = sheet.getLastColumn() + 1;
+      for (var j = 0; j < missing.length; j++) {
+        sheet.getRange(1, startCol + j).setValue(missing[j]);
+      }
+    }
   }
   return sheet;
 }
@@ -129,12 +149,14 @@ function doGet() {
 function getCachedResult() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName("Cache");
-  if (!sheet) return null;
+  if (!sheet || sheet.getLastRow() < 2) return null;
 
-  var data = sheet.getRange("A1:B1").getValues();
+  var data = sheet.getRange("A2:B2").getValues();
   if (!data[0][0]) return null;
 
   var cachedAt = new Date(data[0][0]).getTime();
+  if (isNaN(cachedAt)) return null;
+
   var now = new Date().getTime();
   if (now - cachedAt > 5 * 60 * 1000) return null; // expired
 
@@ -143,11 +165,19 @@ function getCachedResult() {
 
 function setCachedResult(json) {
   var sheet = getOrCreateSheet("Cache", ["CachedAt", "Data"]);
-  // Clear and write
+  // Clear old cache rows and write fresh
   if (sheet.getLastRow() > 1) {
     sheet.deleteRows(2, sheet.getLastRow() - 1);
   }
   sheet.appendRow([new Date().toISOString(), json]);
+}
+
+function clearCache() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName("Cache");
+  if (sheet && sheet.getLastRow() > 1) {
+    sheet.deleteRows(2, sheet.getLastRow() - 1);
+  }
 }
 
 /* ═══ AGGREGATION ═══ */
@@ -172,17 +202,18 @@ function buildAnalyticsResponse() {
   var weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
 
   // ── Summary ──
-  var uniqueVisitors = countUnique(pageViews, "VisitorID");
+  // For unique visitors, use VisitorID if available, else fall back to IP
+  var uniqueVisitors = countUniqueWithFallback(pageViews, "VisitorID", "IP");
   var uniquePaths = countUnique(pageViews, "Path");
-  var todayViews = pageViews.filter(function(r) { return (r.Timestamp || "").substring(0, 10) === todayStr; }).length;
+  var todayViews = pageViews.filter(function(r) { return toDateStr(r.Timestamp) === todayStr; }).length;
   var weekViews = pageViews.filter(function(r) { return new Date(r.Timestamp) >= weekAgo; }).length;
 
   // ── Daily views (last 30 days) ──
   var dailyMap = {};
   var thirtyAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
   pageViews.forEach(function(r) {
-    var d = (r.Timestamp || "").substring(0, 10);
-    if (new Date(r.Timestamp) >= thirtyAgo) {
+    var d = toDateStr(r.Timestamp);
+    if (d && new Date(r.Timestamp) >= thirtyAgo) {
       dailyMap[d] = (dailyMap[d] || 0) + 1;
     }
   });
@@ -220,7 +251,7 @@ function buildAnalyticsResponse() {
   });
   var topCities = Object.keys(cityMap).map(function(k) {
     var parts = k.split("|");
-    return { city: parts[0], country: parts[1], region: parts[2], views: cityMap[k] };
+    return { city: parts[0], country: parts[1], region: parts[2] || "", views: cityMap[k] };
   }).sort(function(a, b) { return b.views - a.views; }).slice(0, 15);
 
   // ── Browsers ──
@@ -233,13 +264,19 @@ function buildAnalyticsResponse() {
     return { name: b, views: browserMap[b] };
   }).sort(function(a, b) { return b.views - a.views; });
 
-  // ── Engagement metrics ──
+  // ── Session & Engagement metrics ──
+  // For old rows without SessionID, synthesize one from IP + date
   var sessionMap = {};
   pageViews.forEach(function(r) {
     var sid = r.SessionID || "";
-    if (!sid) return;
+    if (!sid) {
+      // Synthesize session from IP + date for historical data
+      var ip = r.IP || "unknown";
+      var d = toDateStr(r.Timestamp) || "nodate";
+      sid = "legacy_" + ip + "_" + d;
+    }
     if (!sessionMap[sid]) {
-      sessionMap[sid] = { pages: 0, visitorId: r.VisitorID || "" };
+      sessionMap[sid] = { pages: 0, visitorId: r.VisitorID || r.IP || "unknown" };
     }
     sessionMap[sid].pages++;
   });
@@ -264,33 +301,39 @@ function buildAnalyticsResponse() {
   var bounceRate = totalSessions > 0 ? Math.round((singlePageSessions / totalSessions) * 100) : 0;
   var avgPagesPerSession = totalSessions > 0 ? Math.round((pageViews.length / totalSessions) * 10) / 10 : 0;
 
-  // Engagement rate: >10s + >50% scroll
+  // Engagement rate: >10s + >50% scroll (only for sessions with engagement data)
   var engagedSessions = 0;
   var totalDurationAll = 0;
+  var sessionsWithEngagement = 0;
   sessionIds.forEach(function(sid) {
     var eng = sessionEngagement[sid];
     if (eng) {
+      sessionsWithEngagement++;
       totalDurationAll += eng.totalDuration;
       if (eng.totalDuration > 10000 && eng.maxScroll > 50) {
         engagedSessions++;
       }
     }
   });
-  var engagementRate = totalSessions > 0 ? Math.round((engagedSessions / totalSessions) * 100) : 0;
-  var avgSessionDuration = totalSessions > 0 ? Math.round(totalDurationAll / totalSessions / 1000) : 0; // seconds
+  var engagementRate = sessionsWithEngagement > 0 ? Math.round((engagedSessions / sessionsWithEngagement) * 100) : 0;
+  var avgSessionDuration = sessionsWithEngagement > 0 ? Math.round(totalDurationAll / sessionsWithEngagement / 1000) : 0; // seconds
 
-  // New vs returning visitors
+  // New vs returning visitors — use VisitorID, fall back to IP
   var allVisitorIds = {};
-  var newVisitors = 0, returningVisitors = 0;
   pageViews.forEach(function(r) {
-    var vid = r.VisitorID || "";
-    if (!vid) return;
+    var vid = r.VisitorID || r.IP || "";
+    if (!vid || vid === "Unknown") return;
     if (!allVisitorIds[vid]) {
       allVisitorIds[vid] = { sessions: {} };
     }
     var sid = r.SessionID || "";
-    if (sid) allVisitorIds[vid].sessions[sid] = true;
+    if (!sid) {
+      var d = toDateStr(r.Timestamp) || "nodate";
+      sid = "legacy_" + (r.IP || "unknown") + "_" + d;
+    }
+    allVisitorIds[vid].sessions[sid] = true;
   });
+  var newVisitors = 0, returningVisitors = 0;
   Object.keys(allVisitorIds).forEach(function(vid) {
     var sessionCount = Object.keys(allVisitorIds[vid].sessions).length;
     if (sessionCount > 1) returningVisitors++;
@@ -298,8 +341,8 @@ function buildAnalyticsResponse() {
   });
 
   // ── Ramadan Funnel ──
-  var ramadanPattern = /^\/ramadan(?:\?|$)/;
-  var dayPattern = /day=(\d+)/;
+  var ramadanPattern = /^\/ramadan/;
+  var dayPattern = /(?:day=|\/)(\d+)/;
   var ramadanViews = pageViews.filter(function(r) {
     return ramadanPattern.test(r.Path || "");
   });
@@ -312,7 +355,8 @@ function buildAnalyticsResponse() {
     if (!dayMap[day]) {
       dayMap[day] = { visitors: {}, totalDuration: 0, totalScroll: 0, engagementCount: 0, readComplete: 0 };
     }
-    dayMap[day].visitors[r.VisitorID || r.SessionID || "anon"] = true;
+    var visitorKey = r.VisitorID || r.IP || r.SessionID || "anon";
+    dayMap[day].visitors[visitorKey] = true;
   });
 
   // Enrich funnel with engagement data
@@ -430,6 +474,27 @@ function countUnique(rows, key) {
     if (v) seen[v] = true;
   });
   return Object.keys(seen).length;
+}
+
+function countUniqueWithFallback(rows, primaryKey, fallbackKey) {
+  var seen = {};
+  rows.forEach(function(r) {
+    var v = r[primaryKey] || r[fallbackKey] || "";
+    if (v && v !== "Unknown") seen[v] = true;
+  });
+  return Object.keys(seen).length;
+}
+
+function toDateStr(ts) {
+  if (!ts) return "";
+  var s = String(ts);
+  // Handle both ISO strings and Date objects from Sheets
+  if (s.length >= 10) return s.substring(0, 10);
+  try {
+    return formatDate(new Date(ts));
+  } catch(e) {
+    return "";
+  }
 }
 
 function formatDate(d) {
