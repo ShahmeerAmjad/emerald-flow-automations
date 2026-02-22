@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 const ANALYTICS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbxggJOURfWUJZlQScsLW_DDs-t6mR_2H3mBJdqvCVPsgHQWF50DwJVG5SN4Y9YhQ3eH-A/exec";
+  "https://script.google.com/macros/s/AKfycbxyrEAO-ig6-Nly-uhTfBaiO9ZGpCt4iGw6UtVpDaMkxh2XV22QFC4TYuA7rlTefOAuew/exec";
 
 const GEO_CACHE_KEY = "visitor_geo";
 const SESSION_ID_KEY = "analytics_session_id";

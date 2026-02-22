@@ -9,7 +9,7 @@
  *   5. URL stays the same
  *
  * Sheets created/managed automatically:
- *   - PageViews: raw pageview events (auto-migrates headers for old data)
+ *   - Page Views: raw pageview events (auto-migrates headers for old data)
  *   - Engagement: page exit events (duration, scroll depth)
  *   - Scroll: scroll milestone events (25/50/75/100%)
  *   - Cache: 5-min aggregation cache for fast doGet responses
@@ -72,7 +72,7 @@ function getOrCreateSheet(name, headers) {
 }
 
 function writePageView(data) {
-  var sheet = getOrCreateSheet("PageViews", [
+  var sheet = getOrCreateSheet("Page Views", [
     "Timestamp", "Path", "Referrer", "ScreenWidth", "IP",
     "City", "Country", "Region", "Browser", "OS",
     "SessionID", "VisitorID", "PageIndex", "EntryPage"
@@ -183,7 +183,7 @@ function clearCache() {
 /* ═══ AGGREGATION ═══ */
 
 function buildAnalyticsResponse() {
-  var pageViews = getSheetData("PageViews");
+  var pageViews = getSheetData("Page Views");
   var engagements = getSheetData("Engagement");
 
   // Filter out bots, /test paths, blank paths, dashboard
