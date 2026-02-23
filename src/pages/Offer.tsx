@@ -24,7 +24,7 @@ import {
 import { CheckCircle } from "lucide-react";
 
 const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbxyrEAO-ig6-Nly-uhTfBaiO9ZGpCt4iGw6UtVpDaMkxh2XV22QFC4TYuA7rlTefOAuew/exec";
+  "https://script.google.com/macros/s/AKfycbzeVb68IunL6BM6AOC5tleIh8mGkHkV4lXkoHJVzKYTL57CXhdmsvJDYrgTow3A9JKV3g/exec";
 
 const applicationSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),

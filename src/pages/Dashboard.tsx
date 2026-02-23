@@ -36,7 +36,7 @@ import {
 
 // Replace with your deployed Analytics Apps Script URL (handles both doGet and doPost)
 const ANALYTICS_API_URL =
-  "https://script.google.com/macros/s/AKfycbxyrEAO-ig6-Nly-uhTfBaiO9ZGpCt4iGw6UtVpDaMkxh2XV22QFC4TYuA7rlTefOAuew/exec";
+  "https://script.google.com/macros/s/AKfycbzeVb68IunL6BM6AOC5tleIh8mGkHkV4lXkoHJVzKYTL57CXhdmsvJDYrgTow3A9JKV3g/exec";
 
 const VERCEL_ANALYTICS_URL = "https://vercel.com/shahmeeramjad/emerald-flow-automations/analytics";
 const GA4_DASHBOARD_URL = "https://analytics.google.com/analytics/web/#/p/G-PSXTZRBCQB";
