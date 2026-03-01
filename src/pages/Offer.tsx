@@ -598,7 +598,7 @@ const valueStack = [
   { name: "8-Week AI Advantage Program", desc: "6 weeks learning + 2 weeks hands-on incubator", value: "150,000" },
   { name: "Private Community + Weekly Mentorship Calls", desc: "Direct access to mentors & peer network", value: "50,000" },
   { name: "Prompt Library + Automation Templates + AI Toolkit", desc: "Battle-tested templates you can use immediately", value: "30,000" },
-  { name: "Completion Certificate + Portfolio Project", desc: "LinkedIn-ready credentials & proof of work", value: "25,000" },
+  { name: "Your Own AI Portfolio You Built From Scratch", desc: "Real projects you can show clients, employers, or investors", value: "25,000" },
   { name: "Lifetime Access to Recordings + Future Updates", desc: "Alumni network & all future cohort materials", value: "40,000" },
 ] as const;
 
