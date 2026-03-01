@@ -159,6 +159,11 @@ export default function Offer() {
                 "Generate professional images with AI",
                 "Build & ship a website with Loveable",
               ]}
+              outcomes={[
+                "Confidence to use AI daily in your work",
+                "A live website you built and launched yourself",
+                "Prompt skills that 95% of people don't have",
+              ]}
               tools={["ChatGPT", "Claude", "Gemini", "Image Gen", "Loveable"]}
             />
             <PhaseCard
@@ -171,6 +176,11 @@ export default function Offer() {
                 "Implement RAG & vector databases",
                 "Data scraping with Apify & Firecrawl",
                 "Learn Python, APIs, React basics",
+              ]}
+              outcomes={[
+                "Working automations you can sell to businesses",
+                "AI content creation skills worth Rs 50K+/month",
+                "Technical skills that command premium freelance rates",
               ]}
               tools={["Make.com", "n8n", "Video Gen", "Voice AI", "Apify", "Firecrawl", "Python", "React"]}
             />
@@ -185,6 +195,11 @@ export default function Offer() {
                 "Master GitHub & version control",
                 "Create AI skills & markdown systems",
               ]}
+              outcomes={[
+                "Deploy full-stack AI products from scratch",
+                "Autonomous agents running on your own servers",
+                "A GitHub portfolio that speaks for itself",
+              ]}
               tools={["Claude Code", "Clawd Bot", "VPS + Docker", "LangChain", "CrewAI", "GitHub"]}
             />
             <PhaseCard
@@ -196,7 +211,11 @@ export default function Offer() {
                 "1-on-1 mentor guidance throughout",
                 "Weekly project reviews & feedback",
                 "Launch-ready by Week 8",
-                "Walk away with a portfolio piece that proves your skills",
+              ]}
+              outcomes={[
+                "A finished AI product you built and launched",
+                "Real portfolio proof to show clients or employers",
+                "The confidence to build anything with AI",
               ]}
               tools={[]}
               isIncubator
@@ -242,14 +261,6 @@ export default function Offer() {
                 <div className="font-['JetBrains_Mono',monospace] text-xs tracking-[3px] uppercase text-[rgba(240,237,230,0.4)] mb-1">Total Value</div>
                 <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#47ECCC] tracking-[-1px]">
                   Rs 295,000
-                </div>
-              </div>
-              <div className="text-right">
-                <div className="text-lg sm:text-xl font-bold text-[rgba(240,237,230,0.9)] mb-1">
-                  But you won't pay anywhere near that.
-                </div>
-                <div className="text-sm text-[rgba(240,237,230,0.4)]">
-                  Apply now. Price discussed on your assessment call.
                 </div>
               </div>
             </div>
@@ -605,6 +616,7 @@ function PhaseCard({
   weeks,
   name,
   bullets,
+  outcomes,
   tools,
   isIncubator,
 }: {
@@ -612,15 +624,16 @@ function PhaseCard({
   weeks: string;
   name: string;
   bullets: string[];
+  outcomes: string[];
   tools: string[];
   isIncubator?: boolean;
 }) {
   const c = phaseColors[phase];
   return (
     <div
-      className={`p-6 sm:p-8 border bg-[#0C1210] relative transition-all duration-[400ms] hover:-translate-y-1 ${
+      className={`p-6 sm:p-8 border bg-[#0C1210] relative transition-all duration-[400ms] hover:-translate-y-1 flex flex-col ${
         isIncubator
-          ? "md:col-span-2 border-[rgba(71,236,204,0.2)]"
+          ? "border-[rgba(71,236,204,0.2)]"
           : "border-[rgba(45,184,155,0.06)] hover:border-[rgba(45,184,155,0.12)]"
       }`}
     >
@@ -649,8 +662,19 @@ function PhaseCard({
           {item}
         </div>
       ))}
-      {tools.length > 0 && (
+      {outcomes.length > 0 && (
         <div className="mt-4 pt-4 border-t border-[rgba(45,184,155,0.06)]">
+          <div className="font-['JetBrains_Mono',monospace] text-[11px] text-[rgba(240,237,230,0.28)] tracking-[3px] uppercase mb-2.5">What You Walk Away With</div>
+          {outcomes.map((item, i) => (
+            <div key={i} className="text-[14px] leading-[1.5] mb-2 pl-5 relative text-[rgba(240,237,230,0.5)]">
+              <span className="absolute left-0 top-0 font-bold text-xs" style={{ color: c.accent }}>→</span>
+              {item}
+            </div>
+          ))}
+        </div>
+      )}
+      {tools.length > 0 && (
+        <div className="mt-auto pt-4 border-t border-[rgba(45,184,155,0.06)]">
           <div className="flex flex-wrap gap-1.5">
             {tools.map((tool, i) => (
               <span key={i} className="font-['JetBrains_Mono',monospace] text-[11px] px-3 py-1.5 bg-[#050907] border border-[rgba(45,184,155,0.06)] text-[rgba(240,237,230,0.5)] tracking-[0.5px]">
