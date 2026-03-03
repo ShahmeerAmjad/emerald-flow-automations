@@ -19,18 +19,21 @@ import { Input } from "@/components/ui/input";
 
 function getNextSunday(): Date {
   const now = new Date();
-  // 15:00 PKT = 10:00 UTC (PKT is UTC+5)
-  const SESSION_UTC_HOUR = 10;
 
+  // Get current PKT date components via Intl (avoids manual UTC offset math)
   const pktFormatter = new Intl.DateTimeFormat("en-US", {
     timeZone: "Asia/Karachi",
     weekday: "short",
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
     hour: "numeric",
     hour12: false,
   });
   const parts = Object.fromEntries(
     pktFormatter.formatToParts(now).map(({ type, value }) => [type, value])
   );
+
   const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const pktDay = dayNames.indexOf(parts.weekday);
   const pktHour = parseInt(parts.hour, 10);
@@ -38,10 +41,13 @@ function getNextSunday(): Date {
   let daysUntil = (7 - pktDay) % 7;
   if (daysUntil === 0 && pktHour >= 15) daysUntil = 7;
 
-  const target = new Date(now);
-  target.setUTCDate(target.getUTCDate() + daysUntil);
-  target.setUTCHours(SESSION_UTC_HOUR, 0, 0, 0);
-  return target;
+  // Build target from PKT calendar date — avoids the PKT/UTC date mismatch bug.
+  // 3 PM PKT = 10:00 UTC on the same calendar date (PKT is UTC+5).
+  const pktYear = parseInt(parts.year, 10);
+  const pktMonth = parseInt(parts.month, 10) - 1; // JS months are 0-indexed
+  const pktDate = parseInt(parts.day, 10);
+
+  return new Date(Date.UTC(pktYear, pktMonth, pktDate + daysUntil, 10, 0, 0, 0));
 }
 
 function formatSundayLabel(date: Date): string {
@@ -254,10 +260,10 @@ function RegistrationView({
           What You'll Learn
         </div>
         {[
-          { bold: "Build your first AI automation in 60 minutes", rest: " — not theory, a working thing" },
-          { bold: "The exact AI freelancing playbook", rest: " earning Pakistanis Rs 50K-200K/month" },
-          { bold: "Live demo: I'll build something from scratch", rest: " so you see how it's done" },
-          { bold: "Q&A — bring YOUR use case", rest: " and we'll solve it together live" },
+          { bold: "Where AI is headed in 2026", rest: " — the $2.6T economy, agentic future, and what it means for you" },
+          { bold: "Hands-on demos of 10+ AI tools", rest: " — ChatGPT, Claude, Perplexity, ElevenLabs, n8n, and more" },
+          { bold: "From AI consumer to AI creator", rest: " — the mindset shift that changes everything" },
+          { bold: "Live Q&A — bring your use case", rest: " and we'll map out how AI solves it" },
         ].map((item, i) => (
           <div
             key={i}
