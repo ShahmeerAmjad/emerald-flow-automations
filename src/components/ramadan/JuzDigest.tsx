@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import type { JuzDigest as JuzDigestType, SurahBreakdown } from "@/types/ramadan";
 import { StoryDrawer } from "./StoryDrawer";
 import { AyahPlayButton } from "./AyahPlayButton";
+import { SectionReadButton } from "./SectionReadButton";
 import { parseVerseReference } from "@/lib/quran-audio";
 
 interface Props {
@@ -63,7 +64,7 @@ export function JuzDigest({ digest }: Props) {
         {digest.specialMessage && <div className="rc-divider" />}
 
         {/* Juz Summary */}
-        <RcSection emoji="📝" label="Juz Summary" id="section-summary">
+        <RcSection emoji="📝" label="Juz Summary" id="section-summary" readText={digest.juzSummary}>
           <div className="rc-summary-card">{digest.juzSummary}</div>
         </RcSection>
 
@@ -79,7 +80,7 @@ export function JuzDigest({ digest }: Props) {
         <div className="rc-divider" />
 
         {/* Connecting the Dots */}
-        <RcSection emoji="🔗" label="Connecting the Dots" id="section-connecting">
+        <RcSection emoji="🔗" label="Connecting the Dots" id="section-connecting" readText={digest.connectingTheDots}>
           <div className="rc-summary-card">{digest.connectingTheDots}</div>
         </RcSection>
 
@@ -100,7 +101,7 @@ export function JuzDigest({ digest }: Props) {
         )}
 
         {/* Core Themes */}
-        <RcSection emoji="🎯" label="Core Themes of This Juz" id="section-themes">
+        <RcSection emoji="🎯" label="Core Themes of This Juz" id="section-themes" readText={digest.coreThemes.map(t => `${t.name}. ${t.explanation} ${t.dailyRelevance}`).join("\n\n")}>
           {digest.coreThemes.map((theme, i) => (
             <div key={i} className="rc-theme-card" id={`section-theme-${i}`}>
               <h4>{i + 1}. {theme.name}</h4>
@@ -134,7 +135,7 @@ export function JuzDigest({ digest }: Props) {
         <div className="rc-divider" />
 
         {/* Hadith of the Day */}
-        <RcSection emoji="📚" label="Hadith of the Day" id="section-hadith">
+        <RcSection emoji="📚" label="Hadith of the Day" id="section-hadith" readText={digest.hadithOfTheDay.unableToVerify ? undefined : `${digest.hadithOfTheDay.text}\n\n${digest.hadithOfTheDay.reflection}`}>
           {digest.hadithOfTheDay.unableToVerify ? (
             <div className="rc-summary-card" style={{ fontStyle: "italic", color: "var(--rc-text-muted)" }}>
               A verified hadith could not be confirmed for this section.
@@ -151,7 +152,7 @@ export function JuzDigest({ digest }: Props) {
         <div className="rc-divider" />
 
         {/* Daily Practice */}
-        <RcSection emoji="🤲" label="Daily Practice" id="section-practice">
+        <RcSection emoji="🤲" label="Daily Practice" id="section-practice" readText={digest.dailyPractice}>
           <div className="rc-practice-card">
             <p>{digest.dailyPractice}</p>
           </div>
@@ -183,7 +184,7 @@ export function JuzDigest({ digest }: Props) {
         )}
 
         {/* Discussion Questions */}
-        <RcSection emoji="💬" label="Community Discussion" id="section-discussion">
+        <RcSection emoji="💬" label="Community Discussion" id="section-discussion" readText={`Reflection Question: ${digest.discussionQuestions.reflectionQuestion}\n\nApplication Question: ${digest.discussionQuestions.applicationQuestion}`}>
           <div className="rc-discussion-card">
             <div className="rc-q-type">Reflection Question</div>
             <p>{digest.discussionQuestions.reflectionQuestion}</p>
@@ -197,7 +198,7 @@ export function JuzDigest({ digest }: Props) {
         <div className="rc-divider" />
 
         {/* Habit Check-In */}
-        <RcSection emoji="🕌" label="Ramadan Habit Check-In" id="section-habit">
+        <RcSection emoji="🕌" label="Ramadan Habit Check-In" id="section-habit" readText={`${digest.habitCheckIn}\n\n${digest.closingMessage}`}>
           <div className="rc-habit-section">
             <p>{digest.habitCheckIn}</p>
             {digest.closingDua && (
@@ -218,11 +219,14 @@ export function JuzDigest({ digest }: Props) {
 
 /* ═══ HELPER COMPONENTS ═══ */
 
-function RcSection({ emoji, label, children, id }: { emoji: string; label: string; children: React.ReactNode; id?: string }) {
+function RcSection({ emoji, label, children, id, readText }: { emoji: string; label: string; children: React.ReactNode; id?: string; readText?: string }) {
   return (
     <section className="rc-section rc-reveal" id={id}>
-      <div className="rc-section-label">
-        {emoji} {label}
+      <div className="rc-section-header">
+        <div className="rc-section-label">
+          {emoji} {label}
+        </div>
+        {readText && <SectionReadButton text={readText} label={label} sectionId={id} />}
       </div>
       {children}
     </section>
@@ -441,6 +445,13 @@ const digestStyles = `
     margin-bottom: 64px;
   }
 
+  .rc-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
   .rc-section-label {
     display: inline-flex;
     align-items: center;
@@ -449,7 +460,6 @@ const digestStyles = `
     text-transform: uppercase;
     letter-spacing: 0.18em;
     color: var(--rc-gold);
-    margin-bottom: 16px;
     font-weight: 600;
   }
 

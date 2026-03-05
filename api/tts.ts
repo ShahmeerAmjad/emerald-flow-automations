@@ -21,8 +21,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ error: "text too long (max 5000 chars)" });
   }
 
-  // Default voice — will be updated after user picks voice
-  const voice = voiceId || "21m00Tcm4TlvDq8ikWAM"; // Rachel (default)
+  // Anas — middle-aged Arabic male, gentle conversational tone
+  const voice = voiceId || "R6nda3uM038xEEKi7GFl";
 
   const response = await fetch(
     `https://api.elevenlabs.io/v1/text-to-speech/${voice}`,
