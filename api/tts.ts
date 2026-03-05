@@ -18,9 +18,24 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json({ error: "text too long (max 5000 chars)" });
   }
 
+  // Clean text for natural speech
+  const cleaned = text
+    .replace(/\s*\(\d+:\d+(?:-\d+)?\)/g, "")
+    .replace(/(\d+):(\d+)-(\d+)/g, (_: string, s: string, a: string, b: string) => `Surah ${s}, verses ${a} to ${b}`)
+    .replace(/(\d+):(\d+)/g, (_: string, s: string, a: string) => `Surah ${s}, verse ${a}`)
+    .replace(/ﷺ/g, ", peace be upon him,")
+    .replace(/ﷻ/g, "")
+    .replace(/\(AS\)/gi, ", peace be upon him,")
+    .replace(/\(RA\)/gi, ", may Allah be pleased with them,")
+    .replace(/\(SWT\)/gi, "")
+    .replace(/\(\s*\)/g, "")
+    .replace(/,\s*,/g, ",")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+
   try {
     const { Communicate } = await import("edge-tts-universal");
-    const communicate = new Communicate(text, { voice: VOICE });
+    const communicate = new Communicate(cleaned, { voice: VOICE });
     const chunks: Buffer[] = [];
     for await (const chunk of communicate.stream()) {
       if (chunk.type === "audio" && chunk.data) {

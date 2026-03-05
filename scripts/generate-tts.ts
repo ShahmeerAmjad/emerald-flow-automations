@@ -175,11 +175,36 @@ function buildSegments(digest: JuzDigest): TtsSegment[] {
   return segments;
 }
 
+// ── Text cleanup for natural speech ─────────────────────────────────
+
+function cleanForSpeech(text: string): string {
+  return text
+    // Remove parenthetical verse references: (2:255), (15:28-35)
+    .replace(/\s*\(\d+:\d+(?:-\d+)?\)/g, "")
+    // Convert ranges: "15:28-35" → "Surah 15, verses 28 to 35"
+    .replace(/(\d+):(\d+)-(\d+)/g, (_, s, a, b) => `Surah ${s}, verses ${a} to ${b}`)
+    // Convert single refs: "2:255" → "Surah 2, verse 255"
+    .replace(/(\d+):(\d+)/g, (_, s, a) => `Surah ${s}, verse ${a}`)
+    // Islamic honorifics
+    .replace(/ﷺ/g, ", peace be upon him,")
+    .replace(/ﷻ/g, "")
+    .replace(/\(AS\)/gi, ", peace be upon him,")
+    .replace(/\(RA\)/gi, ", may Allah be pleased with them,")
+    .replace(/\(SWT\)/gi, "")
+    // Remove leftover empty parentheses
+    .replace(/\(\s*\)/g, "")
+    // Clean up double commas/spaces
+    .replace(/,\s*,/g, ",")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
 // ── Edge TTS call ───────────────────────────────────────────────────
 
 async function generateTts(text: string): Promise<Buffer> {
+  const cleaned = cleanForSpeech(text);
   const { Communicate } = await import("edge-tts-universal");
-  const communicate = new Communicate(text, { voice: VOICE });
+  const communicate = new Communicate(cleaned, { voice: VOICE });
   const chunks: Buffer[] = [];
   for await (const chunk of communicate.stream()) {
     if (chunk.type === "audio" && chunk.data) {
