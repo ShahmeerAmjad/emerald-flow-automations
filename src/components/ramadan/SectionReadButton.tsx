@@ -4,9 +4,10 @@ interface SectionReadButtonProps {
   text: string;
   label: string;
   sectionId?: string;
+  juzNumber?: number;
 }
 
-export function SectionReadButton({ text, label, sectionId }: SectionReadButtonProps) {
+export function SectionReadButton({ text, label, sectionId, juzNumber }: SectionReadButtonProps) {
   const { playTrack, pause, currentTrack, isPlaying, isLoading } = useAudioPlayer();
 
   const trackId = `tts-section-${sectionId || label}`;
@@ -24,6 +25,7 @@ export function SectionReadButton({ text, label, sectionId }: SectionReadButtonP
         text,
         label,
         sectionId,
+        juzNumber,
       });
     }
   }

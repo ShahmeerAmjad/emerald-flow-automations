@@ -9,6 +9,7 @@ interface ListenToLessonButtonProps {
 
 function buildPlaylist(digest: JuzDigest): AudioTrack[] {
   const tracks: AudioTrack[] = [];
+  const juz = digest.juzNumber;
 
   // 1. Juz Summary (TTS)
   tracks.push({
@@ -17,6 +18,7 @@ function buildPlaylist(digest: JuzDigest): AudioTrack[] {
     text: digest.juzSummary,
     label: "Juz Summary",
     sectionId: "section-summary",
+    juzNumber: juz,
   });
 
   // 2. Surah breakdowns
@@ -34,6 +36,7 @@ function buildPlaylist(digest: JuzDigest): AudioTrack[] {
       text: ttsText,
       label: surah.name,
       sectionId: `section-surah-${i}`,
+      juzNumber: juz,
     });
 
     // Quran: standout ayah
@@ -42,10 +45,20 @@ function buildPlaylist(digest: JuzDigest): AudioTrack[] {
       tracks.push({
         id: `quran-standout-${i}`,
         type: "quran",
-        url: getAyahAudioUrl(parsed.surah, parsed.ayah),
+        url: getAyahAudioUrl(parsed.surah, parsed.ayahStart),
         label: `Standout Ayah - ${surah.standoutAyah.surahName}`,
         sectionId: `section-surah-${i}`,
       });
+      // Queue remaining ayat if it's a range
+      for (let a = parsed.ayahStart + 1; a <= parsed.ayahEnd; a++) {
+        tracks.push({
+          id: `quran-standout-${i}-${a}`,
+          type: "quran",
+          url: getAyahAudioUrl(parsed.surah, a),
+          label: `Standout Ayah - ${surah.standoutAyah.surahName} (${parsed.surah}:${a})`,
+          sectionId: `section-surah-${i}`,
+        });
+      }
     }
   });
 
@@ -56,6 +69,7 @@ function buildPlaylist(digest: JuzDigest): AudioTrack[] {
     text: digest.connectingTheDots,
     label: "Connecting the Dots",
     sectionId: "section-connecting",
+    juzNumber: juz,
   });
 
   // 4. Core themes (TTS)
@@ -66,6 +80,7 @@ function buildPlaylist(digest: JuzDigest): AudioTrack[] {
       text: `${theme.name}. ${theme.explanation}\n\n${theme.dailyRelevance}`,
       label: theme.name,
       sectionId: `section-theme-${i}`,
+      juzNumber: juz,
     });
   });
 
@@ -76,10 +91,20 @@ function buildPlaylist(digest: JuzDigest): AudioTrack[] {
       tracks.push({
         id: `quran-ayah-${i}`,
         type: "quran",
-        url: getAyahAudioUrl(parsed.surah, parsed.ayah),
+        url: getAyahAudioUrl(parsed.surah, parsed.ayahStart),
         label: ayah.reference,
         sectionId: `section-ayah-${i}`,
       });
+      // Queue remaining ayat if it's a range
+      for (let a = parsed.ayahStart + 1; a <= parsed.ayahEnd; a++) {
+        tracks.push({
+          id: `quran-ayah-${i}-${a}`,
+          type: "quran",
+          url: getAyahAudioUrl(parsed.surah, a),
+          label: `${ayah.reference} (${parsed.surah}:${a})`,
+          sectionId: `section-ayah-${i}`,
+        });
+      }
     }
   });
 
@@ -90,6 +115,7 @@ function buildPlaylist(digest: JuzDigest): AudioTrack[] {
     text: `${digest.hadithOfTheDay.text}\n\n${digest.hadithOfTheDay.reflection}`,
     label: "Hadith of the Day",
     sectionId: "section-hadith",
+    juzNumber: juz,
   });
 
   // 7. Daily practice (TTS)
@@ -99,6 +125,7 @@ function buildPlaylist(digest: JuzDigest): AudioTrack[] {
     text: digest.dailyPractice,
     label: "Daily Practice",
     sectionId: "section-practice",
+    juzNumber: juz,
   });
 
   // 8. Habit check-in + closing (TTS)
@@ -108,6 +135,7 @@ function buildPlaylist(digest: JuzDigest): AudioTrack[] {
     text: `${digest.habitCheckIn}\n\n${digest.closingMessage}`,
     label: "Habit Check-In & Closing",
     sectionId: "section-habit",
+    juzNumber: juz,
   });
 
   return tracks;

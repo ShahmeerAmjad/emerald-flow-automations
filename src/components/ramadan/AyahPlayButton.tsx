@@ -1,18 +1,19 @@
-import { useAudioPlayer } from "./AudioPlayerProvider";
+import { useAudioPlayer, type AudioTrack } from "./AudioPlayerProvider";
 import { getAyahAudioUrl } from "@/lib/quran-audio";
 
 interface AyahPlayButtonProps {
   surahNumber: number;
-  ayahNumber: number;
+  ayahStart: number;
+  ayahEnd: number;
   label: string;
 }
 
-export function AyahPlayButton({ surahNumber, ayahNumber, label }: AyahPlayButtonProps) {
-  const { playTrack, pause, resume, isPlaying, currentTrack, isLoading } =
+export function AyahPlayButton({ surahNumber, ayahStart, ayahEnd, label }: AyahPlayButtonProps) {
+  const { playTrack, playLesson, pause, resume, isPlaying, currentTrack, isLoading } =
     useAudioPlayer();
 
-  const trackId = `quran-${surahNumber}:${ayahNumber}`;
-  const isThisTrack = currentTrack?.id === trackId;
+  const trackId = `quran-${surahNumber}:${ayahStart}${ayahEnd !== ayahStart ? `-${ayahEnd}` : ""}`;
+  const isThisTrack = currentTrack?.id.startsWith(`quran-${surahNumber}:${ayahStart}`);
   const isThisPlaying = isThisTrack && isPlaying;
   const isThisLoading = isThisTrack && isLoading;
 
@@ -21,11 +22,23 @@ export function AyahPlayButton({ surahNumber, ayahNumber, label }: AyahPlayButto
       pause();
     } else if (isThisTrack && !isPlaying) {
       resume();
+    } else if (ayahEnd > ayahStart) {
+      // Multi-ayah: queue all ayat as a lesson
+      const tracks: AudioTrack[] = [];
+      for (let a = ayahStart; a <= ayahEnd; a++) {
+        tracks.push({
+          id: `quran-${surahNumber}:${a}`,
+          type: "quran",
+          url: getAyahAudioUrl(surahNumber, a),
+          label: `${label} (${surahNumber}:${a})`,
+        });
+      }
+      playLesson(tracks);
     } else {
       playTrack({
         id: trackId,
         type: "quran",
-        url: getAyahAudioUrl(surahNumber, ayahNumber),
+        url: getAyahAudioUrl(surahNumber, ayahStart),
         label,
       });
     }

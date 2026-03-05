@@ -64,7 +64,7 @@ export function JuzDigest({ digest }: Props) {
         {digest.specialMessage && <div className="rc-divider" />}
 
         {/* Juz Summary */}
-        <RcSection emoji="📝" label="Juz Summary" id="section-summary" readText={digest.juzSummary}>
+        <RcSection emoji="📝" label="Juz Summary" id="section-summary" readText={digest.juzSummary} juzNumber={digest.juzNumber}>
           <div className="rc-summary-card">{digest.juzSummary}</div>
         </RcSection>
 
@@ -80,7 +80,7 @@ export function JuzDigest({ digest }: Props) {
         <div className="rc-divider" />
 
         {/* Connecting the Dots */}
-        <RcSection emoji="🔗" label="Connecting the Dots" id="section-connecting" readText={digest.connectingTheDots}>
+        <RcSection emoji="🔗" label="Connecting the Dots" id="section-connecting" readText={digest.connectingTheDots} juzNumber={digest.juzNumber}>
           <div className="rc-summary-card">{digest.connectingTheDots}</div>
         </RcSection>
 
@@ -92,7 +92,7 @@ export function JuzDigest({ digest }: Props) {
             <RcSection emoji="📜" label="Go Deeper" id="section-stories">
               <div className="rc-stories-stack">
                 {digest.stories.map((story) => (
-                  <StoryDrawer key={story.id} story={story} />
+                  <StoryDrawer key={story.id} story={story} juzNumber={digest.juzNumber} />
                 ))}
               </div>
             </RcSection>
@@ -101,7 +101,7 @@ export function JuzDigest({ digest }: Props) {
         )}
 
         {/* Core Themes */}
-        <RcSection emoji="🎯" label="Core Themes of This Juz" id="section-themes" readText={digest.coreThemes.map(t => `${t.name}. ${t.explanation} ${t.dailyRelevance}`).join("\n\n")}>
+        <RcSection emoji="🎯" label="Core Themes of This Juz" id="section-themes" readText={digest.coreThemes.map(t => `${t.name}. ${t.explanation} ${t.dailyRelevance}`).join("\n\n")} juzNumber={digest.juzNumber}>
           {digest.coreThemes.map((theme, i) => (
             <div key={i} className="rc-theme-card" id={`section-theme-${i}`}>
               <h4>{i + 1}. {theme.name}</h4>
@@ -119,7 +119,7 @@ export function JuzDigest({ digest }: Props) {
             const parsed = parseVerseReference(ayah.reference);
             return (
               <div key={i} className="rc-ayah-card" id={`section-ayah-${i}`} style={{ marginBottom: i < digest.keyAyat.length - 1 ? "16px" : 0 }}>
-                {parsed && <AyahPlayButton surahNumber={parsed.surah} ayahNumber={parsed.ayah} label={ayah.reference} />}
+                {parsed && <AyahPlayButton surahNumber={parsed.surah} ayahStart={parsed.ayahStart} ayahEnd={parsed.ayahEnd} label={ayah.reference} />}
                 <div className="rc-ayah-arabic" dir="rtl">{ayah.arabic}</div>
                 {ayah.transliteration && (
                   <div className="rc-ayah-transliteration">{ayah.transliteration}</div>
@@ -135,7 +135,7 @@ export function JuzDigest({ digest }: Props) {
         <div className="rc-divider" />
 
         {/* Hadith of the Day */}
-        <RcSection emoji="📚" label="Hadith of the Day" id="section-hadith" readText={digest.hadithOfTheDay.unableToVerify ? undefined : `${digest.hadithOfTheDay.text}\n\n${digest.hadithOfTheDay.reflection}`}>
+        <RcSection emoji="📚" label="Hadith of the Day" id="section-hadith" readText={digest.hadithOfTheDay.unableToVerify ? undefined : `${digest.hadithOfTheDay.text}\n\n${digest.hadithOfTheDay.reflection}`} juzNumber={digest.juzNumber}>
           {digest.hadithOfTheDay.unableToVerify ? (
             <div className="rc-summary-card" style={{ fontStyle: "italic", color: "var(--rc-text-muted)" }}>
               A verified hadith could not be confirmed for this section.
@@ -152,7 +152,7 @@ export function JuzDigest({ digest }: Props) {
         <div className="rc-divider" />
 
         {/* Daily Practice */}
-        <RcSection emoji="🤲" label="Daily Practice" id="section-practice" readText={digest.dailyPractice}>
+        <RcSection emoji="🤲" label="Daily Practice" id="section-practice" readText={digest.dailyPractice} juzNumber={digest.juzNumber}>
           <div className="rc-practice-card">
             <p>{digest.dailyPractice}</p>
           </div>
@@ -168,7 +168,7 @@ export function JuzDigest({ digest }: Props) {
                 const parsed = parseVerseReference(dua.reference);
                 return (
                   <div key={i} className="rc-dua-card" style={{ marginBottom: i < digest.dailyDuas!.length - 1 ? "16px" : 0 }}>
-                    {parsed && <AyahPlayButton surahNumber={parsed.surah} ayahNumber={parsed.ayah} label={`${dua.surahName} ${dua.reference}`} />}
+                    {parsed && <AyahPlayButton surahNumber={parsed.surah} ayahStart={parsed.ayahStart} ayahEnd={parsed.ayahEnd} label={`${dua.surahName} ${dua.reference}`} />}
                     <div className="rc-dua-purpose">{dua.purpose}</div>
                     <div className="rc-dua-arabic" dir="rtl">{dua.arabic}</div>
                     <div className="rc-dua-transliteration">{dua.transliteration}</div>
@@ -184,7 +184,7 @@ export function JuzDigest({ digest }: Props) {
         )}
 
         {/* Discussion Questions */}
-        <RcSection emoji="💬" label="Community Discussion" id="section-discussion" readText={`Reflection Question: ${digest.discussionQuestions.reflectionQuestion}\n\nApplication Question: ${digest.discussionQuestions.applicationQuestion}`}>
+        <RcSection emoji="💬" label="Community Discussion" id="section-discussion" readText={`Reflection Question: ${digest.discussionQuestions.reflectionQuestion}\n\nApplication Question: ${digest.discussionQuestions.applicationQuestion}`} juzNumber={digest.juzNumber}>
           <div className="rc-discussion-card">
             <div className="rc-q-type">Reflection Question</div>
             <p>{digest.discussionQuestions.reflectionQuestion}</p>
@@ -198,7 +198,7 @@ export function JuzDigest({ digest }: Props) {
         <div className="rc-divider" />
 
         {/* Habit Check-In */}
-        <RcSection emoji="🕌" label="Ramadan Habit Check-In" id="section-habit" readText={`${digest.habitCheckIn}\n\n${digest.closingMessage}`}>
+        <RcSection emoji="🕌" label="Ramadan Habit Check-In" id="section-habit" readText={`${digest.habitCheckIn}\n\n${digest.closingMessage}`} juzNumber={digest.juzNumber}>
           <div className="rc-habit-section">
             <p>{digest.habitCheckIn}</p>
             {digest.closingDua && (
@@ -219,14 +219,14 @@ export function JuzDigest({ digest }: Props) {
 
 /* ═══ HELPER COMPONENTS ═══ */
 
-function RcSection({ emoji, label, children, id, readText }: { emoji: string; label: string; children: React.ReactNode; id?: string; readText?: string }) {
+function RcSection({ emoji, label, children, id, readText, juzNumber }: { emoji: string; label: string; children: React.ReactNode; id?: string; readText?: string; juzNumber?: number }) {
   return (
     <section className="rc-section rc-reveal" id={id}>
       <div className="rc-section-header">
         <div className="rc-section-label">
           {emoji} {label}
         </div>
-        {readText && <SectionReadButton text={readText} label={label} sectionId={id} />}
+        {readText && <SectionReadButton text={readText} label={label} sectionId={id} juzNumber={juzNumber} />}
       </div>
       {children}
     </section>
@@ -289,7 +289,7 @@ function SurahBlock({ surah, index }: { surah: SurahBreakdown; index: number }) 
       <div className="rc-ayah-card" style={{ marginTop: "20px" }}>
         {(() => {
           const parsed = parseVerseReference(surah.standoutAyah.verseNumber);
-          return parsed ? <AyahPlayButton surahNumber={parsed.surah} ayahNumber={parsed.ayah} label={`${surah.standoutAyah.surahName} ${surah.standoutAyah.verseNumber}`} /> : null;
+          return parsed ? <AyahPlayButton surahNumber={parsed.surah} ayahStart={parsed.ayahStart} ayahEnd={parsed.ayahEnd} label={`${surah.standoutAyah.surahName} ${surah.standoutAyah.verseNumber}`} /> : null;
         })()}
         <div className="rc-surah-detail-label" style={{ textAlign: "center", marginBottom: "12px" }}>
           Standout Ayah

@@ -17,6 +17,7 @@ export interface AudioTrack {
   text?: string;
   label: string;
   sectionId?: string;
+  juzNumber?: number;
 }
 
 export interface AudioPlayerState {
@@ -53,6 +54,59 @@ export function useAudioPlayer() {
 }
 
 // ── Helpers ────────────────────────────────────────────────────────
+
+let ttsManifest: Record<string, boolean> | null = null;
+let manifestLoading: Promise<void> | null = null;
+
+function loadManifest(): Promise<void> {
+  if (ttsManifest) return Promise.resolve();
+  if (manifestLoading) return manifestLoading;
+  manifestLoading = fetch("/audio/manifest.json")
+    .then((r) => (r.ok ? r.json() : {}))
+    .then((data) => { ttsManifest = data; })
+    .catch(() => { ttsManifest = {}; });
+  return manifestLoading;
+}
+
+// Eagerly start loading manifest on module init
+loadManifest();
+
+// Map SectionReadButton IDs (tts-section-{sectionId}) → manifest IDs
+// SectionReadButton plays the same text as ListenToLessonButton tracks,
+// so they should resolve to the same pre-generated static files.
+const SECTION_TO_MANIFEST_ID: Record<string, string> = {
+  "section-summary": "tts-summary",
+  "section-connecting": "tts-connecting",
+  "section-themes": "tts-themes", // combined themes
+  "section-hadith": "tts-hadith",
+  "section-practice": "tts-practice",
+  "section-discussion": "tts-discussion",
+  "section-habit": "tts-closing",
+};
+
+function getStaticTtsUrl(track: AudioTrack): string | null {
+  if (!track.juzNumber || !ttsManifest) return null;
+  const juzPrefix = `juz-${track.juzNumber}`;
+
+  // Direct lookup (ListenToLessonButton tracks already use manifest IDs)
+  const directKey = `${juzPrefix}/${track.id}`;
+  if (ttsManifest[directKey]) return `/audio/${directKey}.mp3`;
+
+  // Map SectionReadButton IDs → manifest IDs
+  // e.g. "tts-section-section-summary" → strip "tts-section-" → "section-summary" → "tts-summary"
+  if (track.id.startsWith("tts-section-")) {
+    const sectionId = track.id.slice("tts-section-".length);
+    const mappedId = SECTION_TO_MANIFEST_ID[sectionId];
+    if (mappedId) {
+      const mappedKey = `${juzPrefix}/${mappedId}`;
+      if (ttsManifest[mappedKey]) return `/audio/${mappedKey}.mp3`;
+    }
+    // Story sections already use matching IDs (tts-section-section-story-xxx)
+    // so the directKey check above handles them
+  }
+
+  return null;
+}
 
 async function getTtsAudio(text: string): Promise<string> {
   const { fetchTtsAudio } = await import("@/lib/elevenlabs");
@@ -131,24 +185,43 @@ export function AudioPlayerProvider({ children }: { children: ReactNode }) {
       } else if (track.type === "tts" && track.text) {
         setState((s) => ({ ...s, isLoading: true, currentTrack: track }));
         try {
-          const blobUrl = await getTtsAudio(track.text);
-          // Check if this request is still current
-          if (gen !== loadGenRef.current) {
-            URL.revokeObjectURL(blobUrl);
-            return;
+          // Check for pre-generated static file first
+          await loadManifest();
+          const staticUrl = getStaticTtsUrl(track);
+
+          if (staticUrl) {
+            if (gen !== loadGenRef.current) return;
+            audio.src = staticUrl;
+            setState((s) => ({ ...s, isLoading: false }));
+            audio.play()
+              .then(() => {
+                if (gen !== loadGenRef.current) return;
+                setState((s) => ({ ...s, isPlaying: true }));
+              })
+              .catch(() => {
+                if (gen !== loadGenRef.current) return;
+                setState((s) => ({ ...s, isPlaying: false }));
+              });
+          } else {
+            // Fallback to live API
+            const blobUrl = await getTtsAudio(track.text);
+            if (gen !== loadGenRef.current) {
+              URL.revokeObjectURL(blobUrl);
+              return;
+            }
+            blobUrlRef.current = blobUrl;
+            audio.src = blobUrl;
+            setState((s) => ({ ...s, isLoading: false }));
+            audio.play()
+              .then(() => {
+                if (gen !== loadGenRef.current) return;
+                setState((s) => ({ ...s, isPlaying: true }));
+              })
+              .catch(() => {
+                if (gen !== loadGenRef.current) return;
+                setState((s) => ({ ...s, isPlaying: false }));
+              });
           }
-          blobUrlRef.current = blobUrl;
-          audio.src = blobUrl;
-          setState((s) => ({ ...s, isLoading: false }));
-          audio.play()
-            .then(() => {
-              if (gen !== loadGenRef.current) return;
-              setState((s) => ({ ...s, isPlaying: true }));
-            })
-            .catch(() => {
-              if (gen !== loadGenRef.current) return;
-              setState((s) => ({ ...s, isPlaying: false }));
-            });
         } catch {
           if (gen !== loadGenRef.current) return;
           setState((s) => ({ ...s, isLoading: false, isPlaying: false }));

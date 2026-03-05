@@ -12,11 +12,15 @@ export function getAyahAudioUrl(surahNumber: number, ayahNumber: number): string
 }
 
 /**
- * Parses a verse reference string like "2:255" or "Surah Al-Baqarah, 2:255"
- * into { surah, ayah } numbers.
+ * Parses a verse reference string like "2:255", "20:25-28", or "Surah Al-Baqarah, 2:255"
+ * into { surah, ayahStart, ayahEnd } numbers.
  */
-export function parseVerseReference(ref: string): { surah: number; ayah: number } | null {
-  const match = ref.match(/(\d+):(\d+)/);
+export function parseVerseReference(ref: string): { surah: number; ayahStart: number; ayahEnd: number } | null {
+  // Match "X:Y" or "X:Y-Z"
+  const match = ref.match(/(\d+):(\d+)(?:-(\d+))?/);
   if (!match) return null;
-  return { surah: parseInt(match[1]), ayah: parseInt(match[2]) };
+  const surah = parseInt(match[1]);
+  const ayahStart = parseInt(match[2]);
+  const ayahEnd = match[3] ? parseInt(match[3]) : ayahStart;
+  return { surah, ayahStart, ayahEnd };
 }

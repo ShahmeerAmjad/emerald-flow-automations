@@ -7,12 +7,27 @@ import {
   DrawerTitle,
   DrawerDescription,
 } from "@/components/ui/drawer";
+import { SectionReadButton } from "./SectionReadButton";
 
 interface Props {
   story: StoryDeepDive;
+  juzNumber?: number;
 }
 
-export function StoryDrawer({ story }: Props) {
+function buildStoryText(story: StoryDeepDive): string {
+  const parts = [
+    story.title,
+    story.subtitle,
+    ...story.paragraphs,
+  ];
+  if (story.lessonsLearned.length > 0) {
+    parts.push("Lessons for Today:");
+    parts.push(...story.lessonsLearned);
+  }
+  return parts.filter(Boolean).join("\n\n");
+}
+
+export function StoryDrawer({ story, juzNumber }: Props) {
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -25,7 +40,15 @@ export function StoryDrawer({ story }: Props) {
 
       <DrawerContent className="rc-story-drawer-content">
         <DrawerHeader className="rc-story-header">
-          <DrawerTitle className="rc-story-title">{story.title}</DrawerTitle>
+          <div className="rc-story-header-row">
+            <DrawerTitle className="rc-story-title">{story.title}</DrawerTitle>
+            <SectionReadButton
+              text={buildStoryText(story)}
+              label={story.title}
+              sectionId={`section-story-${story.id}`}
+              juzNumber={juzNumber}
+            />
+          </div>
           {story.subtitle && (
             <DrawerDescription className="rc-story-subtitle">
               {story.subtitle}
@@ -135,6 +158,13 @@ const storyDrawerStyles = `
   .rc-story-header {
     padding: 20px 24px 0 !important;
     text-align: center !important;
+  }
+
+  .rc-story-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
   }
 
   .rc-story-title {
