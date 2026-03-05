@@ -1,6 +1,9 @@
 import { useMemo } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { JuzDigest } from "@/components/ramadan/JuzDigest";
+import { AudioPlayerProvider } from "@/components/ramadan/AudioPlayerProvider";
+import { ListenToLessonButton } from "@/components/ramadan/ListenToLessonButton";
+import { MiniPlayer } from "@/components/ramadan/MiniPlayer";
 import type { JuzDigest as JuzDigestType } from "@/types/ramadan";
 
 const juzModules = import.meta.glob<{ default: JuzDigestType }>(
@@ -55,73 +58,80 @@ export default function RamadanDay() {
   const nextDay = Array.from({ length: 30 - dayNum }, (_, i) => dayNum + 1 + i).find(isDayUnlocked);
 
   return (
-    <div className="ramadan-page">
-      <div className="ramadan-bg-overlay" />
-      <div className="ramadan-noise" />
+    <AudioPlayerProvider>
+      <div className="ramadan-page">
+        <div className="ramadan-bg-overlay" />
+        <div className="ramadan-noise" />
 
-      {/* Top nav bar */}
-      <nav className="rd-topnav">
-        <Link to="/ramadan" className="rd-back-link">
-          ← All Days
-        </Link>
-        <span className="rd-day-label">Day {dayNum} of 30</span>
-        <div className="rd-nav-spacer" />
-      </nav>
+        {/* Top nav bar */}
+        <nav className="rd-topnav">
+          <Link to="/ramadan" className="rd-back-link">
+            ← All Days
+          </Link>
+          <span className="rd-day-label">Day {dayNum} of 30</span>
+          <div className="rd-nav-spacer" />
+        </nav>
 
-      <main className="ramadan-content" style={{ paddingTop: "24px" }}>
-        {digest && unlocked ? (
-          <>
-            <JuzDigest digest={digest} />
+        <main className="ramadan-content" style={{ paddingTop: "24px" }}>
+          {digest && unlocked ? (
+            <>
+              <div style={{ padding: "0 24px" }}>
+                <ListenToLessonButton digest={digest} />
+              </div>
+              <JuzDigest digest={digest} />
 
-            {/* Prev / Next navigation */}
-            <div className="rd-prev-next">
-              {prevDay ? (
-                <Link to={`/ramadan/${prevDay}`} className="rd-nav-btn">
-                  ← Day {prevDay}
-                </Link>
-              ) : (
-                <div />
-              )}
-              {nextDay ? (
-                <Link to={`/ramadan/${nextDay}`} className="rd-nav-btn">
-                  Day {nextDay} →
-                </Link>
-              ) : (
-                <div />
-              )}
+              {/* Prev / Next navigation */}
+              <div className="rd-prev-next">
+                {prevDay ? (
+                  <Link to={`/ramadan/${prevDay}`} className="rd-nav-btn">
+                    ← Day {prevDay}
+                  </Link>
+                ) : (
+                  <div />
+                )}
+                {nextDay ? (
+                  <Link to={`/ramadan/${nextDay}`} className="rd-nav-btn">
+                    Day {nextDay} →
+                  </Link>
+                ) : (
+                  <div />
+                )}
+              </div>
+            </>
+          ) : (
+            <div className="ramadan-container" style={{ textAlign: "center", padding: "80px 24px" }}>
+              <p style={{ fontSize: "3rem", marginBottom: "16px" }}>🌙</p>
+              <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.4rem", color: "var(--rc-cream)" }}>
+                Day {dayNum} content coming soon...
+              </p>
+              <p style={{ fontSize: "1rem", color: "var(--rc-text-muted)", marginTop: "8px" }}>
+                {isBeforeRamadan
+                  ? "Ramadan begins soon — check back then!"
+                  : `This content will unlock on Day ${dayNum} of Ramadan.`}
+              </p>
+              <Link to="/ramadan" className="rd-back-btn">
+                ← Back to all days
+              </Link>
             </div>
-          </>
-        ) : (
-          <div className="ramadan-container" style={{ textAlign: "center", padding: "80px 24px" }}>
-            <p style={{ fontSize: "3rem", marginBottom: "16px" }}>🌙</p>
-            <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.4rem", color: "var(--rc-cream)" }}>
-              Day {dayNum} content coming soon...
-            </p>
-            <p style={{ fontSize: "1rem", color: "var(--rc-text-muted)", marginTop: "8px" }}>
-              {isBeforeRamadan
-                ? "Ramadan begins soon — check back then!"
-                : `This content will unlock on Day ${dayNum} of Ramadan.`}
-            </p>
-            <Link to="/ramadan" className="rd-back-btn">
-              ← Back to all days
-            </Link>
-          </div>
-        )}
-      </main>
+          )}
+        </main>
 
-      {/* Footer */}
-      <footer className="ramadan-footer">
-        <p>Ramadan Qur'an Challenge · 30 Days · 30 Juz · One Ummah</p>
-        <p style={{ marginTop: "4px" }}>
-          Built with ❤️ by{" "}
-          <a href="https://sassolutions.ai" target="_blank" rel="noopener noreferrer">
-            SASsolutions.ai
-          </a>
-        </p>
-      </footer>
+        <MiniPlayer />
 
-      <style>{dayPageStyles}</style>
-    </div>
+        {/* Footer */}
+        <footer className="ramadan-footer">
+          <p>Ramadan Qur'an Challenge · 30 Days · 30 Juz · One Ummah</p>
+          <p style={{ marginTop: "4px" }}>
+            Built with ❤️ by{" "}
+            <a href="https://sassolutions.ai" target="_blank" rel="noopener noreferrer">
+              SASsolutions.ai
+            </a>
+          </p>
+        </footer>
+
+        <style>{dayPageStyles}</style>
+      </div>
+    </AudioPlayerProvider>
   );
 }
 
@@ -184,7 +194,7 @@ const dayPageStyles = `
   }
 
   .ramadan-content {
-    padding-bottom: 60px;
+    padding-bottom: 80px;
     position: relative;
     z-index: 1;
   }
