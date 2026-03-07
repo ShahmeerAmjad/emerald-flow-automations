@@ -21,7 +21,7 @@ import {
   SelectContent,
   SelectItem,
 } from "@/components/ui/select";
-import { CheckCircle, Shield } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 const GOOGLE_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbzeVb68IunL6BM6AOC5tleIh8mGkHkV4lXkoHJVzKYTL57CXhdmsvJDYrgTow3A9JKV3g/exec";
@@ -154,53 +154,53 @@ export default function Offer() {
               weeks="Weeks 1-2"
               name="AI Foundations"
               bullets={[
-                "Develop an AI-first mindset",
+                "Develop an AI-first mindset for work & business",
                 "Master prompt engineering across ChatGPT, Claude & Gemini",
-                "Generate professional images with AI",
-                "Build & ship a website with Loveable",
+                "Generate professional images, logos & marketing visuals",
+                "Build & ship a complete website without writing code",
               ]}
               outcomes={[
-                "Confidence to use AI daily in your work",
+                "Confidence to use AI daily in your work & side hustle",
                 "A live website you built and launched yourself",
-                "Prompt skills that 95% of people don't have",
+                "Prompt skills that 95% of professionals don't have",
               ]}
-              tools={["ChatGPT", "Claude", "Gemini", "Image Gen", "Loveable"]}
+              tools={["ChatGPT", "Claude", "Gemini", "Midjourney", "Loveable"]}
             />
             <PhaseCard
               phase="builder"
               weeks="Weeks 3-4"
               name="Builder"
               bullets={[
-                "Build automations with Make.com & n8n",
-                "Create AI video & voice content",
-                "Implement RAG & vector databases",
-                "Data scraping with Apify & Firecrawl",
-                "Learn Python, APIs, React basics",
+                "Build no-code automations with Make.com & n8n",
+                "Create AI-generated videos, reels & voice content",
+                "Turn one piece of content into 10 with AI repurposing",
+                "Data scraping & lead generation with Apify",
+                "Learn Python basics, APIs & connect everything together",
               ]}
               outcomes={[
-                "Working automations you can sell to businesses",
-                "AI content creation skills worth Rs 50K+/month",
-                "Technical skills that command premium freelance rates",
+                "Automations you can package and sell to local businesses",
+                "A content creation workflow that replaces a whole team",
+                "Technical skills that set you apart from every other freelancer",
               ]}
-              tools={["Make.com", "n8n", "Video Gen", "Voice AI", "Apify", "Firecrawl", "Python", "React"]}
+              tools={["Make.com", "n8n", "HeyGen", "ElevenLabs", "CapCut", "Apify", "Python"]}
             />
             <PhaseCard
               phase="agentic"
               weeks="Weeks 5-6"
               name="Agentic"
               bullets={[
-                "Build with Claude Code & Clawd bot",
-                "Deploy on VPS with Docker",
-                "Orchestrate multi-agent systems (LangChain, CrewAI)",
-                "Master GitHub & version control",
-                "Create AI skills & markdown systems",
+                "Build AI-powered apps with Claude Code",
+                "Deploy projects on your own server with Docker",
+                "Deploy Skills & MCPs within Claude Code to build multiple AI agents",
+                "Master GitHub & version control like a real developer",
+                "Create custom AI assistants & chatbots",
               ]}
               outcomes={[
                 "Deploy full-stack AI products from scratch",
-                "Autonomous agents running on your own servers",
-                "A GitHub portfolio that speaks for itself",
+                "Your own AI agents running 24/7 on autopilot",
+                "A GitHub portfolio that impresses clients & employers",
               ]}
-              tools={["Claude Code", "Clawd Bot", "VPS + Docker", "LangChain", "CrewAI", "GitHub"]}
+              tools={["Claude Code", "Skills", "MCPs", "Docker", "GitHub", "Vercel"]}
             />
             <PhaseCard
               phase="incubator"
@@ -275,7 +275,7 @@ export default function Offer() {
 
               {/* Daily cost breakdown */}
               <div className="font-['JetBrains_Mono',monospace] text-sm text-[rgba(240,237,230,0.5)] tracking-[1px] leading-[1.7]">
-                That's Rs 1,000/day. We spend more than that on things that don't change our lives.
+                That's Rs 1,000/day. Less than what we spend on things we won't even remember tomorrow. You choose — spend on consumption, or invest in gaining an unfair advantage.
                 <br />
                 <span className="text-[rgba(240,237,230,0.7)]">Are you willing to invest Rs 1,000/day in yourself?</span>
               </div>
@@ -289,29 +289,11 @@ export default function Offer() {
               <div className="flex items-center gap-2.5 mt-2">
                 <span className="w-2.5 h-2.5 bg-[#F06050] rounded-full animate-[livePulse_1.5s_ease-in-out_infinite] shadow-[0_0_12px_#F06050]" />
                 <span className="font-['JetBrains_Mono',monospace] text-sm tracking-[3px] uppercase text-[#F06050] font-bold">
-                  Only 25 spots in Cohort 1
+                  Only 2 spots left in Cohort 1
                 </span>
               </div>
             </div>
           </div>
-        </section>
-
-        <Separator />
-
-        {/* ═══ GUARANTEE ═══ */}
-        <section className="text-center p-8 sm:p-10 border border-[rgba(45,184,155,0.15)] bg-[rgba(45,184,155,0.03)] animate-[glowPulse_4s_ease-in-out_infinite] relative">
-          <Shield className="w-12 h-12 text-[#47ECCC] mx-auto mb-4 opacity-80" />
-          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-[-1px] mb-4">
-            14-Day Money-Back Guarantee
-          </h2>
-          <p className="text-base sm:text-lg text-[rgba(240,237,230,0.6)] leading-[1.7] max-w-[640px] mx-auto mb-4">
-            Join the first 2 weeks. Show up, do the work, complete the assignments. If you genuinely feel this program isn't for you, we'll refund every rupee.{" "}
-            <strong className="text-[rgba(240,237,230,0.9)]">No questions. No hassle.</strong>{" "}
-            We're that confident in what we've built.
-          </p>
-          <p className="text-sm text-[rgba(240,237,230,0.3)] font-['JetBrains_Mono',monospace] tracking-[1px]">
-            You have nothing to lose and an entire AI career to gain.
-          </p>
         </section>
 
         <Separator />
@@ -324,11 +306,11 @@ export default function Offer() {
             <div className="p-6 sm:p-8 border border-[rgba(45,184,155,0.12)] bg-[rgba(45,184,155,0.03)] hover:border-[rgba(45,184,155,0.25)] hover:bg-[rgba(45,184,155,0.05)] transition-all">
               <h3 className="text-[17px] font-extrabold uppercase tracking-[2px] text-[#47ECCC] mb-5">You belong here if</h3>
               {[
-                "You're tired of watching others use AI while you fall behind",
-                "You want to offer AI services and command premium rates",
-                "You're a student who wants skills that actually lead to income",
-                "You're ready to commit 8 weeks and build something real",
-                "You believe Pakistan deserves a seat at the AI table",
+                "You see everyone talking about AI and feel like you're falling behind",
+                "You're a freelancer who wants to charge 3-5x more with AI skills",
+                "You're a student who wants real skills that lead to real income",
+                "You're a business owner who wants to automate and scale with AI",
+                "You're willing to put in 8 weeks of focused work to change your career",
               ].map((line, i) => (
                 <div key={i} className="text-[17px] leading-[1.6] mb-3 pl-7 relative text-[rgba(240,237,230,0.7)]">
                   <span className="absolute left-0 top-0.5 text-[#47ECCC] font-bold text-[15px]">✓</span>
@@ -340,11 +322,11 @@ export default function Offer() {
             <div className="p-6 sm:p-8 border border-[rgba(240,96,80,0.08)] bg-[rgba(240,96,80,0.02)] hover:border-[rgba(240,96,80,0.15)] transition-all">
               <h3 className="text-[17px] font-extrabold uppercase tracking-[2px] text-[#E8705F] mb-5">Not for you if</h3>
               {[
-                "You want results without putting in the work",
-                "You think AI is a passing trend you can ignore",
-                "You won't implement what you learn",
-                "You want motivation speeches — this is execution",
-                "You're comfortable where you are and don't want change",
+                "You want a certificate to hang on the wall — this is about real skills",
+                "You're not willing to show up twice a week and do the assignments",
+                "You think AI is just ChatGPT and there's nothing more to learn",
+                "You want someone to build things for you instead of learning yourself",
+                "You're looking for a get-rich-quick scheme — this takes real effort",
               ].map((line, i) => (
                 <div key={i} className="text-[17px] leading-[1.6] mb-3 pl-7 relative text-[rgba(240,237,230,0.7)]">
                   <span className="absolute left-0 top-0.5 text-[#E8705F] font-bold">✕</span>
