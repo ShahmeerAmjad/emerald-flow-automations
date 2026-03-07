@@ -114,7 +114,7 @@ export default function Offer() {
           </div>
 
           <p className="text-base sm:text-lg md:text-[22px] text-[rgba(240,237,230,0.5)] font-normal leading-[1.65] max-w-[800px] mx-auto animate-[fadeSlideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.3s_both]">
-            In 8 weeks, go from <strong className="text-[rgba(240,237,230,0.9)] font-semibold">"I should learn AI"</strong> to building real AI products, landing clients, and leading Pakistan's AI future.
+            In 8 weeks, go from <strong className="text-[rgba(240,237,230,0.9)] font-semibold">"I should learn AI"</strong> to building real AI products, landing clients, and catching up on the AI tools & tricks that give you an unfair advantage.
             <br className="hidden sm:block" />
             6 weeks of intensive learning. 2 weeks of <span className="text-[#47ECCC] font-semibold">building your own project</span>. One transformation.
           </p>
