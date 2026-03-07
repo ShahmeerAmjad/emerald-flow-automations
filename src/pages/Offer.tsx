@@ -260,7 +260,7 @@ export default function Offer() {
               <div>
                 <div className="font-['JetBrains_Mono',monospace] text-xs tracking-[3px] uppercase text-[rgba(240,237,230,0.4)] mb-1">Total Value</div>
                 <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[rgba(240,96,80,0.5)] tracking-[-1px] line-through">
-                  Rs 295,000
+                  Rs 325,000
                 </div>
               </div>
               <div>
@@ -269,13 +269,13 @@ export default function Offer() {
                   Rs 65,000
                 </div>
                 <span className="inline-block mt-2 font-['JetBrains_Mono',monospace] text-[11px] tracking-[2px] uppercase px-3 py-1.5 bg-[rgba(45,184,155,0.1)] border border-[rgba(45,184,155,0.2)] text-[#47ECCC] font-bold">
-                  You Save Rs 230,000 — 78% Off
+                  You Save Rs 260,000 — 80% Off
                 </span>
               </div>
 
               {/* Daily cost breakdown */}
               <div className="font-['JetBrains_Mono',monospace] text-sm text-[rgba(240,237,230,0.5)] tracking-[1px] leading-[1.7]">
-                That's Rs 1,100/day. Less than what we spend on things we won't even remember tomorrow. You choose — spend on consumption, or invest in gaining an unfair advantage.
+                That's Rs 1,000/day. Less than what we spend on things we won't even remember tomorrow. You choose — spend on consumption, or invest in gaining an unfair advantage.
                 <br />
                 <span className="text-[rgba(240,237,230,0.7)]">Are you willing to invest Rs 1,000/day in yourself?</span>
               </div>
@@ -610,7 +610,7 @@ const valueStack = [
   { name: "Private Community + Weekly Mentorship Calls", desc: "Direct access to mentors & peer network", value: "50,000" },
   { name: "Prompt Library + Automation Templates + AI Toolkit", desc: "Battle-tested templates you can use immediately", value: "30,000" },
   { name: "Your Own AI Portfolio You Built From Scratch", desc: "Real projects you can show clients, employers, or investors", value: "25,000" },
-  { name: "Lifetime Access to Recordings + Future Updates", desc: "Alumni network & all future cohort materials", value: "40,000" },
+  { name: "Lifetime Access to Recordings + Future Updates", desc: "Alumni network & all future cohort materials", value: "70,000" },
 ] as const;
 
 const phaseColors = {
