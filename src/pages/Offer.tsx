@@ -96,7 +96,7 @@ export default function Offer() {
           <div className="inline-flex items-center gap-3 px-5 sm:px-7 py-2.5 border border-[rgba(45,184,155,0.12)] bg-[rgba(45,184,155,0.07)] backdrop-blur-sm mb-7 sm:mb-9 animate-[fadeSlideUp_0.6s_cubic-bezier(0.22,1,0.36,1)_both,borderGlow_4s_ease-in-out_infinite]">
             <span className="w-2 h-2 bg-[#47ECCC] rounded-full animate-[livePulse_1.5s_ease-in-out_infinite] shadow-[0_0_8px_#2DB89B]" />
             <span className="font-['JetBrains_Mono',monospace] text-[11px] sm:text-[13px] tracking-[5px] uppercase text-[#2DB89B] font-medium">
-              Now Accepting Applications&ensp;·&ensp;Cohort 1
+              Founding Member Pricing&ensp;·&ensp;Cohort 1
             </span>
           </div>
 
@@ -254,14 +254,43 @@ export default function Offer() {
             ))}
           </div>
 
-          {/* Total */}
+          {/* Total & Pricing */}
           <div className="mt-8 pt-6 border-t border-[rgba(45,184,155,0.2)]">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div className="flex flex-col gap-4">
               <div>
                 <div className="font-['JetBrains_Mono',monospace] text-xs tracking-[3px] uppercase text-[rgba(240,237,230,0.4)] mb-1">Total Value</div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#47ECCC] tracking-[-1px]">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[rgba(240,96,80,0.5)] tracking-[-1px] line-through">
                   Rs 295,000
                 </div>
+              </div>
+              <div>
+                <div className="font-['JetBrains_Mono',monospace] text-xs tracking-[3px] uppercase text-[#2DB89B] font-medium mb-1">Founding Member Price</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#47ECCC] tracking-[-2px]">
+                  Rs 60,000
+                </div>
+                <span className="inline-block mt-2 font-['JetBrains_Mono',monospace] text-[11px] tracking-[2px] uppercase px-3 py-1.5 bg-[rgba(45,184,155,0.1)] border border-[rgba(45,184,155,0.2)] text-[#47ECCC] font-bold">
+                  You Save Rs 235,000 — 80% Off
+                </span>
+              </div>
+
+              {/* Daily cost breakdown */}
+              <div className="font-['JetBrains_Mono',monospace] text-sm text-[rgba(240,237,230,0.5)] tracking-[1px] leading-[1.7]">
+                That's Rs 1,000/day. We spend more than that on things that don't change our lives.
+                <br />
+                <span className="text-[rgba(240,237,230,0.7)]">Are you willing to invest Rs 1,000/day in yourself?</span>
+              </div>
+
+              {/* Payment info */}
+              <div className="text-sm text-[rgba(240,237,230,0.3)]">
+                One-time payment · Monthly installments available on special request
+              </div>
+
+              {/* Spots remaining */}
+              <div className="flex items-center gap-2.5 mt-2">
+                <span className="w-2.5 h-2.5 bg-[#F06050] rounded-full animate-[livePulse_1.5s_ease-in-out_infinite] shadow-[0_0_12px_#F06050]" />
+                <span className="font-['JetBrains_Mono',monospace] text-sm tracking-[3px] uppercase text-[#F06050] font-bold">
+                  Only 25 spots in Cohort 1
+                </span>
               </div>
             </div>
           </div>
@@ -595,7 +624,7 @@ function Separator() {
 }
 
 const valueStack = [
-  { name: "8-Week AI Advantage Program", desc: "6 weeks learning + 2 weeks hands-on incubator", value: "150,000" },
+  { name: "8-Week AI Advantage Program", desc: "2 classes/week + 1 TA help session for those who need extra support", value: "150,000" },
   { name: "Private Community + Weekly Mentorship Calls", desc: "Direct access to mentors & peer network", value: "50,000" },
   { name: "Prompt Library + Automation Templates + AI Toolkit", desc: "Battle-tested templates you can use immediately", value: "30,000" },
   { name: "Your Own AI Portfolio You Built From Scratch", desc: "Real projects you can show clients, employers, or investors", value: "25,000" },
