@@ -64,7 +64,7 @@ export default function Offer() {
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "text/plain" },
         body: JSON.stringify({
           eventType: "lead",
           ...values,
@@ -73,7 +73,7 @@ export default function Offer() {
       });
       setIsSubmitted(true);
     } catch {
-      setIsSubmitted(true);
+      alert("Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
