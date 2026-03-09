@@ -201,17 +201,68 @@ function cleanForSpeech(text: string): string {
 
 // ── Edge TTS call ───────────────────────────────────────────────────
 
-async function generateTts(text: string): Promise<Buffer> {
-  const cleaned = cleanForSpeech(text);
-  const { Communicate } = await import("edge-tts-universal");
-  const communicate = new Communicate(cleaned, { voice: VOICE });
-  const chunks: Buffer[] = [];
-  for await (const chunk of communicate.stream()) {
-    if (chunk.type === "audio" && chunk.data) {
-      chunks.push(chunk.data);
+// Split text into chunks at sentence boundaries, each under maxLen chars
+function splitText(text: string, maxLen = 800): string[] {
+  if (text.length <= maxLen) return [text];
+  const sentences = text.split(/(?<=[.!?])\s+/);
+  const chunks: string[] = [];
+  let current = "";
+  for (const sentence of sentences) {
+    if (current.length + sentence.length + 1 > maxLen && current.length > 0) {
+      chunks.push(current.trim());
+      current = sentence;
+    } else {
+      current += (current ? " " : "") + sentence;
     }
   }
-  return Buffer.concat(chunks);
+  if (current.trim()) chunks.push(current.trim());
+  return chunks;
+}
+
+async function generateTtsChunk(text: string, retries = 3): Promise<Buffer> {
+  const { Communicate } = await import("edge-tts-universal");
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const communicate = new Communicate(text, { voice: VOICE });
+      const chunks: Buffer[] = [];
+
+      // Add a timeout to prevent hanging
+      const timeout = new Promise<never>((_, reject) =>
+        setTimeout(() => reject(new Error("TTS timeout after 30s")), 30000)
+      );
+
+      const stream = async () => {
+        for await (const chunk of communicate.stream()) {
+          if (chunk.type === "audio" && chunk.data) {
+            chunks.push(chunk.data);
+          }
+        }
+      };
+
+      await Promise.race([stream(), timeout]);
+      if (chunks.length === 0) throw new Error("No audio data received");
+      return Buffer.concat(chunks);
+    } catch (err) {
+      if (attempt < retries) {
+        console.log(`    Retry ${attempt}/${retries}...`);
+        await new Promise(r => setTimeout(r, 1000 * attempt));
+      } else {
+        throw err;
+      }
+    }
+  }
+  throw new Error("Unreachable");
+}
+
+async function generateTts(text: string): Promise<Buffer> {
+  const cleaned = cleanForSpeech(text);
+  const textChunks = splitText(cleaned);
+  const audioChunks: Buffer[] = [];
+  for (const chunk of textChunks) {
+    const audio = await generateTtsChunk(chunk);
+    audioChunks.push(audio);
+  }
+  return Buffer.concat(audioChunks);
 }
 
 // ── Main ────────────────────────────────────────────────────────────
@@ -220,11 +271,13 @@ async function main() {
   // Parse flags
   const fromIdx = process.argv.indexOf("--from");
   const fromJuz = fromIdx !== -1 ? parseInt(process.argv[fromIdx + 1], 10) : 1;
+  const toIdx = process.argv.indexOf("--to");
+  const toJuz = toIdx !== -1 ? parseInt(process.argv[toIdx + 1], 10) : 30;
   const forceRegenerate = process.argv.includes("--force");
 
   // Find all juz files
   const juzFiles: number[] = [];
-  for (let n = fromJuz; n <= 30; n++) {
+  for (let n = fromJuz; n <= toJuz; n++) {
     if (existsSync(join(DATA_DIR, `juz-${n}.json`))) {
       juzFiles.push(n);
     }
@@ -279,9 +332,14 @@ async function main() {
     }
   }
 
-  // Write manifest
+  // Merge with existing manifest (safe for parallel processes)
   mkdirSync(AUDIO_DIR, { recursive: true });
-  writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2));
+  let existing: Record<string, boolean> = {};
+  if (existsSync(MANIFEST_PATH)) {
+    try { existing = JSON.parse(readFileSync(MANIFEST_PATH, "utf-8")); } catch {}
+  }
+  const merged = { ...existing, ...manifest };
+  writeFileSync(MANIFEST_PATH, JSON.stringify(merged, null, 2));
 
   console.log(`\n✅ Done! Generated: ${generated}, Skipped: ${skipped}`);
   console.log(`Manifest written to ${MANIFEST_PATH}`);
