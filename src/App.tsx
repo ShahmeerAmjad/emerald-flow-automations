@@ -15,11 +15,13 @@ import CustomCursor from "./components/CustomCursor";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { usePageTracker } from "./hooks/usePageTracker";
+import { useMetaPixel } from "./hooks/useMetaPixel";
 
 const queryClient = new QueryClient();
 
 function PageTracker() {
   usePageTracker();
+  useMetaPixel();
   return null;
 }
 
