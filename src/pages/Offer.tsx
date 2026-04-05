@@ -136,10 +136,9 @@ export default function Offer() {
             Pakistan will <span className="text-[#47ECCC]">not</span> be left behind.
           </h2>
           <p className="text-base sm:text-lg text-[rgba(240,237,230,0.5)] leading-[1.7] max-w-[820px]">
-            The rest of the world is sprinting. AI is rewriting every industry, every job, every skill that matters.{" "}
-            <strong className="text-[rgba(240,237,230,0.9)] font-semibold">We refuse to let Pakistan watch from the sidelines.</strong>{" "}
-            This program exists to build a generation of AI-powered Pakistanis who can compete head-on with anyone on the planet — and win.
-            We're not just teaching tools. We're building a <strong className="text-[rgba(240,237,230,0.9)] font-semibold">community of builders, earners, and leaders</strong> who will define what Pakistan's future looks like.
+            The rest of the world is hiring AI consultants at $50–150/hour. Pakistani talent has the skills, the hunger, and the hustle — but not the right training.{" "}
+            <strong className="text-[rgba(240,237,230,0.9)] font-semibold">We're not teaching you to pass a quiz.</strong>{" "}
+            We're building a community of AI consultants who land global clients, solve real business problems, and prove that Pakistan competes with anyone on the planet.
           </p>
         </section>
 
@@ -158,13 +157,13 @@ export default function Offer() {
               weeks="Weeks 1-2"
               name="AI Foundations"
               bullets={[
-                "Develop an AI-first mindset for work & business",
-                "Master prompt engineering across ChatGPT, Claude & Gemini",
-                "Generate professional images, logos & marketing visuals",
-                "Build & ship a complete website without writing code",
+                "Develop an AI-first consulting mindset for work & business",
+                "Master prompts that deliver client-ready output, not just \"cool\" responses",
+                "Build a website for your AI consulting practice",
+                "Create professional visuals and branding with AI",
               ]}
               outcomes={[
-                "Confidence to use AI daily in your work & side hustle",
+                "Confidence to walk into any business and show them what AI can do",
                 "A live website you built and launched yourself",
                 "Prompt skills that 95% of professionals don't have",
               ]}
@@ -175,14 +174,14 @@ export default function Offer() {
               weeks="Weeks 3-4"
               name="Builder"
               bullets={[
-                "Build no-code automations with Make.com & n8n",
-                "Create AI-generated videos, reels & voice content",
+                "Build automations you can package and sell to local businesses",
+                "Content systems that replace entire marketing teams",
+                "Data scraping and lead generation for clients",
+                "Learn Python basics, APIs & connect everything into real solutions",
                 "Turn one piece of content into 10 with AI repurposing",
-                "Data scraping & lead generation with Apify",
-                "Learn Python basics, APIs & connect everything together",
               ]}
               outcomes={[
-                "Automations you can package and sell to local businesses",
+                "3\u20135 packaged AI services you can pitch to businesses this week",
                 "A content creation workflow that replaces a whole team",
                 "Technical skills that set you apart from every other freelancer",
               ]}
@@ -194,15 +193,15 @@ export default function Offer() {
               name="Agentic"
               bullets={[
                 "Build AI-powered apps with Claude Code",
-                "Deploy projects on your own server with Docker",
-                "Deploy Skills & MCPs within Claude Code to build multiple AI agents",
+                "Deploy AI agents that run 24/7 for clients",
+                "Custom chatbots and assistants businesses will pay for",
                 "Master GitHub & version control like a real developer",
-                "Create custom AI assistants & chatbots",
+                "Deploy Skills & MCPs within Claude Code to build multiple AI agents",
               ]}
               outcomes={[
-                "Deploy full-stack AI products from scratch",
+                "You can now build what most agencies charge $5,000\u2013$10,000 for",
                 "Your own AI agents running 24/7 on autopilot",
-                "A GitHub portfolio that impresses clients & employers",
+                "A GitHub portfolio that proves you're the real deal",
               ]}
               tools={["Claude Code", "Skills", "MCPs", "Docker", "GitHub", "Vercel"]}
             />
@@ -214,7 +213,7 @@ export default function Offer() {
                 "Apply everything you learned to build YOUR project",
                 "1-on-1 mentor guidance throughout",
                 "Weekly project reviews & feedback",
-                "Launch-ready by Week 8",
+                "Launch something real \u2014 a product, a client project, or your consulting practice",
               ]}
               outcomes={[
                 "A finished AI product you built and launched",
@@ -310,11 +309,11 @@ export default function Offer() {
             <div className="p-6 sm:p-8 border border-[rgba(45,184,155,0.12)] bg-[rgba(45,184,155,0.03)] hover:border-[rgba(45,184,155,0.25)] hover:bg-[rgba(45,184,155,0.05)] transition-all">
               <h3 className="text-[17px] font-extrabold uppercase tracking-[2px] text-[#47ECCC] mb-5">You belong here if</h3>
               {[
-                "You see everyone talking about AI and feel like you're falling behind",
-                "You're a freelancer who wants to charge 3-5x more with AI skills",
-                "You're a student who wants real skills that lead to real income",
-                "You're a business owner who wants to automate and scale with AI",
-                "You're willing to put in 8 weeks of focused work to change your career",
+                "You're tired of learning AI in isolation and want to build alongside a driven community",
+                "You're a freelancer who wants to offer AI consulting services and charge in dollars",
+                "You're a student who wants real skills that lead to real clients, not just a certificate",
+                "You're a business owner who wants to automate operations and solve problems with AI",
+                "You're ready to invest 8 weeks to become the person businesses call for AI solutions",
               ].map((line, i) => (
                 <div key={i} className="text-[17px] leading-[1.6] mb-3 pl-7 relative text-[rgba(240,237,230,0.7)]">
                   <span className="absolute left-0 top-0.5 text-[#47ECCC] font-bold text-[15px]">✓</span>
@@ -326,11 +325,11 @@ export default function Offer() {
             <div className="p-6 sm:p-8 border border-[rgba(240,96,80,0.08)] bg-[rgba(240,96,80,0.02)] hover:border-[rgba(240,96,80,0.15)] transition-all">
               <h3 className="text-[17px] font-extrabold uppercase tracking-[2px] text-[#E8705F] mb-5">Not for you if</h3>
               {[
-                "You want a certificate to hang on the wall — this is about real skills",
-                "You're not willing to show up twice a week and do the assignments",
-                "You think AI is just ChatGPT and there's nothing more to learn",
-                "You want someone to build things for you instead of learning yourself",
-                "You're looking for a get-rich-quick scheme — this takes real effort",
+                "You want a certificate to hang on the wall \u2014 this is about landing clients and earning",
+                "You can't commit to 3 live sessions per week and the assignments",
+                "You think learning AI means memorizing prompts \u2014 we build real solutions here",
+                "You want someone to hand you clients \u2014 we teach you how to win them yourself",
+                "You're looking for passive income with zero effort \u2014 consulting takes real work",
               ].map((line, i) => (
                 <div key={i} className="text-[17px] leading-[1.6] mb-3 pl-7 relative text-[rgba(240,237,230,0.7)]">
                   <span className="absolute left-0 top-0.5 text-[#E8705F] font-bold">✕</span>
@@ -555,7 +554,7 @@ function Separator() {
 }
 
 const valueStack = [
-  { name: "8-Week AI Advantage Program", desc: "2 classes/week + 1 TA help session for those who need extra support", value: "150,000" },
+  { name: "8-Week AI Advantage Program", desc: "3 live classes/week + community building sessions", value: "150,000" },
   { name: "Private Community + Weekly Mentorship Calls", desc: "Direct access to mentors & peer network", value: "50,000" },
   { name: "Prompt Library + Automation Templates + AI Toolkit", desc: "Battle-tested templates you can use immediately", value: "30,000" },
   { name: "Your Own AI Portfolio You Built From Scratch", desc: "Real projects you can show clients, employers, or investors", value: "25,000" },
