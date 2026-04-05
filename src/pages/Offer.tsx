@@ -13,7 +13,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectTrigger,
@@ -28,16 +27,16 @@ const GOOGLE_SCRIPT_URL =
 
 const applicationSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email address"),
   whatsapp: z.string().min(10, "WhatsApp number must be at least 10 digits"),
-  currentRole: z.string().min(2, "Please enter your current role"),
-  aiExperience: z.enum(["Beginner", "Intermediate", "Advanced"], {
-    required_error: "Please select your AI experience level",
+  goal: z.enum([
+    "Land freelance/consulting clients",
+    "Earn income in dollars",
+    "Automate my business with AI",
+    "Get a better job / advance my career",
+    "Learn AI skills to future-proof myself",
+  ], {
+    required_error: "Please select what you want to achieve",
   }),
-  whyJoin: z
-    .string()
-    .min(10, "Please write at least 10 characters")
-    .max(500, "Please keep it under 500 characters"),
 });
 
 type ApplicationValues = z.infer<typeof applicationSchema>;
@@ -50,11 +49,8 @@ export default function Offer() {
     resolver: zodResolver(applicationSchema),
     defaultValues: {
       fullName: "",
-      email: "",
       whatsapp: "",
-      currentRole: "",
-      aiExperience: undefined,
-      whyJoin: "",
+      goal: undefined,
     },
   });
 
@@ -96,7 +92,7 @@ export default function Offer() {
           <div className="inline-flex items-center gap-3 px-5 sm:px-7 py-2.5 border border-[rgba(45,184,155,0.12)] bg-[rgba(45,184,155,0.07)] backdrop-blur-sm mb-7 sm:mb-9 animate-[fadeSlideUp_0.6s_cubic-bezier(0.22,1,0.36,1)_both,borderGlow_4s_ease-in-out_infinite]">
             <span className="w-2 h-2 bg-[#47ECCC] rounded-full animate-[livePulse_1.5s_ease-in-out_infinite] shadow-[0_0_8px_#2DB89B]" />
             <span className="font-['JetBrains_Mono',monospace] text-[11px] sm:text-[13px] tracking-[5px] uppercase text-[#2DB89B] font-medium">
-              Founding Member Pricing&ensp;·&ensp;Cohort 1
+              Starts April 20&ensp;·&ensp;Cohort 1&ensp;·&ensp;Limited Seats
             </span>
           </div>
 
@@ -110,19 +106,27 @@ export default function Offer() {
           </h1>
 
           <div className="font-['JetBrains_Mono',monospace] text-sm sm:text-base tracking-[4px] uppercase text-[#47ECCC] mt-3 mb-5 animate-[fadeSlideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.22s_both]">
-            Unlock Your Superpower
+            Become The Person Businesses Call
           </div>
 
           <p className="text-base sm:text-lg md:text-[22px] text-[rgba(240,237,230,0.5)] font-normal leading-[1.65] max-w-[800px] mx-auto animate-[fadeSlideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.3s_both]">
-            In 8 weeks, go from <strong className="text-[rgba(240,237,230,0.9)] font-semibold">"I should learn AI"</strong> to building real AI products, landing clients, and catching up on the AI tools & tricks that give you an unfair advantage.
+            In 8 weeks, go from <strong className="text-[rgba(240,237,230,0.9)] font-semibold">"I should learn AI"</strong> to landing real clients, solving real business problems, and earning dollars — with a consulting mindset that makes you indispensable in 2026 and beyond.
             <br className="hidden sm:block" />
-            6 weeks of intensive learning. 2 weeks of <span className="text-[#47ECCC] font-semibold">building your own project</span>. One transformation.
+            6 weeks of intensive learning. 2 weeks of <span className="text-[#47ECCC] font-semibold">building your own AI consulting project</span>. One career-defining transformation.
           </p>
 
           <span className="inline-block mt-5 text-sm sm:text-base text-[rgba(240,237,230,0.28)] animate-[fadeSlideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.45s_both]">
-            Applications closing soon. Limited spots in Cohort 1.
+            Limited spots in Cohort 1. Your seat won't wait.
           </span>
         </section>
+
+        <ScheduleBanner />
+
+        <Separator />
+
+        <ProblemSection />
+
+        <Separator />
 
         {/* ═══ MISSION BANNER ═══ */}
         <section className="p-6 sm:p-8 md:p-10 border border-[rgba(45,184,155,0.12)] bg-gradient-to-br from-[rgba(45,184,155,0.07)] to-transparent relative overflow-hidden animate-[fadeSlideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.1s_both]">
@@ -414,27 +418,6 @@ export default function Offer() {
 
                     <FormField
                       control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-[rgba(240,237,230,0.7)] text-sm font-medium">Email Address</FormLabel>
-                          <FormControl>
-                            <Input
-                              type="email"
-                              placeholder="you@example.com"
-                              className="bg-[#0C1210] border-[rgba(45,184,155,0.12)] text-[#F0EDE6] placeholder:text-[rgba(240,237,230,0.2)] focus:border-[#2DB89B] focus:ring-1 focus:ring-[#2DB89B] h-12"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <FormField
-                      control={form.control}
                       name="whatsapp"
                       render={({ field }) => (
                         <FormItem>
@@ -451,62 +434,28 @@ export default function Offer() {
                         </FormItem>
                       )}
                     />
-
-                    <FormField
-                      control={form.control}
-                      name="currentRole"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-[rgba(240,237,230,0.7)] text-sm font-medium">Current Role</FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="e.g. Freelancer, Student"
-                              className="bg-[#0C1210] border-[rgba(45,184,155,0.12)] text-[#F0EDE6] placeholder:text-[rgba(240,237,230,0.2)] focus:border-[#2DB89B] focus:ring-1 focus:ring-[#2DB89B] h-12"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
                   </div>
 
                   <FormField
                     control={form.control}
-                    name="aiExperience"
+                    name="goal"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[rgba(240,237,230,0.7)] text-sm font-medium">AI Experience Level</FormLabel>
+                        <FormLabel className="text-[rgba(240,237,230,0.7)] text-sm font-medium">What do you want to achieve?</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger className="bg-[#0C1210] border-[rgba(45,184,155,0.12)] text-[#F0EDE6] focus:border-[#2DB89B] focus:ring-1 focus:ring-[#2DB89B] h-12 [&>span]:text-[rgba(240,237,230,0.2)] [&>span[data-placeholder]]:text-[rgba(240,237,230,0.2)]">
-                              <SelectValue placeholder="Select your experience level" />
+                              <SelectValue placeholder="Select your primary goal" />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent className="bg-[#0C1210] border-[rgba(45,184,155,0.12)]">
-                            <SelectItem value="Beginner" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Beginner</SelectItem>
-                            <SelectItem value="Intermediate" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Intermediate</SelectItem>
-                            <SelectItem value="Advanced" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Advanced</SelectItem>
+                            <SelectItem value="Land freelance/consulting clients" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Land freelance/consulting clients</SelectItem>
+                            <SelectItem value="Earn income in dollars" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Earn income in dollars</SelectItem>
+                            <SelectItem value="Automate my business with AI" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Automate my business with AI</SelectItem>
+                            <SelectItem value="Get a better job / advance my career" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Get a better job / advance my career</SelectItem>
+                            <SelectItem value="Learn AI skills to future-proof myself" className="text-[#F0EDE6] focus:bg-[rgba(45,184,155,0.1)] focus:text-[#F0EDE6]">Learn AI skills to future-proof myself</SelectItem>
                           </SelectContent>
                         </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="whyJoin"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-[rgba(240,237,230,0.7)] text-sm font-medium">Why do you want to join?</FormLabel>
-                        <FormControl>
-                          <Textarea
-                            placeholder="Tell us what you hope to achieve with AI..."
-                            className="bg-[#0C1210] border-[rgba(45,184,155,0.12)] text-[#F0EDE6] placeholder:text-[rgba(240,237,230,0.2)] focus:border-[#2DB89B] focus:ring-1 focus:ring-[#2DB89B] min-h-[100px] resize-none"
-                            {...field}
-                          />
-                        </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
@@ -696,5 +645,66 @@ function PhaseCard({
         </div>
       )}
     </div>
+  );
+}
+
+function ScheduleBanner() {
+  return (
+    <section className="p-6 sm:p-8 md:p-10 bg-[#0C1210] border border-[rgba(45,184,155,0.12)] relative overflow-hidden animate-[fadeSlideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.1s_both]">
+      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#2DB89B] via-[#47ECCC] to-[#2DB89B]" />
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4">
+        {[
+          { label: "Start Date", value: "April 20, 2026" },
+          { label: "Weekdays", value: "Tue & Thu, 7:00\u2013\u20098:30 PM" },
+          { label: "Weekend", value: "Sat or Sun, Afternoon" },
+          { label: "Format", value: "100% Online \u00B7 Live" },
+        ].map((item, i) => (
+          <div key={i}>
+            <div className="font-['JetBrains_Mono',monospace] text-[11px] tracking-[3px] uppercase text-[#2DB89B] font-medium mb-1.5">
+              {item.label}
+            </div>
+            <div className="text-lg sm:text-xl font-bold text-[rgba(240,237,230,0.9)] leading-[1.3]">
+              {item.value}
+            </div>
+          </div>
+        ))}
+      </div>
+      <p className="mt-6 text-base sm:text-lg text-[rgba(240,237,230,0.5)] leading-[1.7]">
+        3 live sessions/week. You don't learn AI alone — you build alongside a{" "}
+        <strong className="text-[rgba(240,237,230,0.9)] font-semibold">community of driven builders</strong> who push each other forward.
+      </p>
+    </section>
+  );
+}
+
+function ProblemSection() {
+  return (
+    <section className="p-6 sm:p-8 md:p-10 border border-[rgba(240,96,80,0.08)] bg-[rgba(240,96,80,0.02)] relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[#E8705F] to-transparent" />
+      <div className="font-['JetBrains_Mono',monospace] text-[13px] tracking-[5px] uppercase text-[#E8705F] font-medium mb-2">
+        The Problem
+      </div>
+      <h2 className="text-2xl sm:text-[30px] font-extrabold leading-[1.25] tracking-[-1px] mb-6">
+        Everyone's "Learning AI."{" "}
+        <span className="text-[rgba(240,237,230,0.5)]">Nobody's</span>{" "}
+        <span className="text-[#E8705F]">Earning</span> From It.
+      </h2>
+      {[
+        "You've watched 100 YouTube tutorials and still can't land a single client",
+        "You know how to prompt ChatGPT but have no idea how to turn that into income",
+        "Every course teaches you tools \u2014 none teach you how to solve real business problems",
+        "You're \u201Clearning AI\u201D but your career path looks exactly the same as it did last year",
+        "The world is hiring AI consultants and you're stuck wondering where to even start",
+      ].map((line, i) => (
+        <div key={i} className="text-[17px] leading-[1.6] mb-3 pl-7 relative text-[rgba(240,237,230,0.7)]">
+          <span className="absolute left-0 top-0.5 text-[#E8705F] font-bold">✕</span>
+          {line}
+        </div>
+      ))}
+      <p className="mt-5 text-base sm:text-lg text-[rgba(240,237,230,0.5)] leading-[1.7] border-t border-[rgba(240,96,80,0.1)] pt-5">
+        This program doesn't teach you AI tools and wish you luck. It turns you into{" "}
+        <strong className="text-[rgba(240,237,230,0.9)] font-semibold">the person businesses pay to solve their problems.</strong>
+      </p>
+    </section>
   );
 }
