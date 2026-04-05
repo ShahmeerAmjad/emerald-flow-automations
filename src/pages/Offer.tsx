@@ -349,11 +349,11 @@ export default function Offer() {
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-[-1px] sm:tracking-[-1.5px] leading-[1.2] mb-4 relative z-10">
             Your Transformation Starts<br />
-            With <span className="text-[#47ECCC]">One Application.</span>
+            With <span className="text-[#47ECCC]">One Call.</span>
           </h2>
 
           <p className="text-base sm:text-lg md:text-[19px] text-[rgba(240,237,230,0.5)] leading-[1.65] max-w-[680px] mx-auto mb-3 relative z-10">
-            We're not selling a course. We're building a movement. Apply now and a member of our team will contact you within <strong className="text-[rgba(240,237,230,0.9)]">48 hours</strong>.
+            Reserve your spot and a member of our team will call you within <strong className="text-[rgba(240,237,230,0.9)]">48 hours</strong> to walk you through the program.
           </p>
 
           {isSubmitted ? (
@@ -364,7 +364,7 @@ export default function Offer() {
                 Application Received!
               </h3>
               <p className="text-base sm:text-lg text-[rgba(240,237,230,0.5)] leading-[1.65] max-w-[560px] mx-auto mb-8">
-                A member of our team will contact you within <strong className="text-[rgba(240,237,230,0.9)]">48 hours</strong> to schedule your 15-minute assessment call.
+                A member of our team will call you within <strong className="text-[rgba(240,237,230,0.9)]">48 hours</strong> to walk you through the program.
               </p>
 
               <div className="text-left max-w-[440px] mx-auto p-6 border border-[rgba(45,184,155,0.12)] bg-[rgba(45,184,155,0.04)]">
@@ -372,9 +372,9 @@ export default function Offer() {
                   What happens next?
                 </div>
                 {[
-                  { step: "1", text: "15-minute assessment call with our team" },
-                  { step: "2", text: "Cohort selection, we pick the best fit" },
-                  { step: "3", text: "Onboarding & you start building with AI" },
+                  { step: "1", text: "A team member calls you within 48 hours" },
+                  { step: "2", text: "We walk you through the program and answer your questions" },
+                  { step: "3", text: "You're in \u2014 onboarding and community access begins" },
                 ].map((item) => (
                   <div key={item.step} className="flex items-start gap-3 mb-3 last:mb-0">
                     <span className="shrink-0 w-7 h-7 flex items-center justify-center bg-[rgba(45,184,155,0.1)] border border-[rgba(45,184,155,0.2)] font-['JetBrains_Mono',monospace] text-xs text-[#47ECCC] font-bold">
@@ -391,7 +391,7 @@ export default function Offer() {
             /* ═══ APPLICATION FORM ═══ */
             <div className="relative z-10">
               <div className="font-['JetBrains_Mono',monospace] text-sm text-[#47ECCC] tracking-[2px] mb-8">
-                NOW ACCEPTING APPLICATIONS
+                RESERVE YOUR SPOT
               </div>
 
               <Form {...form}>
@@ -465,7 +465,7 @@ export default function Offer() {
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-br from-[#2DB89B] to-[#47ECCC] text-[#050907] font-['Sora',sans-serif] text-base sm:text-lg font-extrabold uppercase tracking-[3px] sm:tracking-[5px] py-5 sm:py-6 border-none cursor-pointer transition-all duration-300 shadow-[0_4px_24px_rgba(45,184,155,0.15)] hover:-translate-y-0.5 hover:shadow-[0_12px_48px_rgba(45,184,155,0.3)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                   >
-                    {isSubmitting ? "Submitting..." : "Apply Now \u2014 Limited Spots"}
+                    {isSubmitting ? "Submitting..." : "Reserve Your Spot \u2014 Starting April 20"}
                   </button>
                 </form>
               </Form>
