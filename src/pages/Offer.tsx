@@ -21,6 +21,7 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { CheckCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const GOOGLE_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbzeVb68IunL6BM6AOC5tleIh8mGkHkV4lXkoHJVzKYTL57CXhdmsvJDYrgTow3A9JKV3g/exec";
@@ -76,6 +77,17 @@ export default function Offer() {
   }
   return (
     <div className="min-h-screen bg-[#050907] text-[#F0EDE6] font-['Sora',sans-serif] antialiased relative overflow-hidden">
+      <Helmet>
+        <title>The AI Advantage Program — SASsolutions.ai</title>
+        <meta name="description" content="In 8 weeks, go from 'I should learn AI' to landing real clients, solving real business problems, and earning dollars. Cohort 1 — limited seats." />
+        <meta property="og:title" content="The AI Advantage Program — SASsolutions.ai" />
+        <meta property="og:description" content="In 8 weeks, go from 'I should learn AI' to landing real clients, solving real business problems, and earning dollars. Cohort 1 — limited seats." />
+        <meta property="og:image" content="https://www.sassolutions.ai/og-image.png" />
+        <meta property="og:url" content="https://www.sassolutions.ai/offer" />
+        <meta name="twitter:title" content="The AI Advantage Program — SASsolutions.ai" />
+        <meta name="twitter:description" content="In 8 weeks, go from 'I should learn AI' to landing real clients and earning dollars. Cohort 1 — limited seats." />
+        <meta name="twitter:image" content="https://www.sassolutions.ai/og-image.png" />
+      </Helmet>
       {/* Ambient Orbs */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div className="absolute -top-64 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full blur-[130px] bg-[radial-gradient(circle,rgba(45,184,155,0.1)_0%,transparent_70%)] animate-[orbFloat_22s_ease-in-out_infinite]" />

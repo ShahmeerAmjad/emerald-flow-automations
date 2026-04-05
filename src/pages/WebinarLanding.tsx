@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { CheckCircle, Calendar, Clock, Video, MessageCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import {
   Form,
   FormField,
@@ -132,6 +133,17 @@ export default function WebinarLanding() {
 
   return (
     <div className="min-h-screen bg-[#050907] text-[#F0EDE6] font-['Sora',sans-serif] antialiased relative overflow-hidden">
+      <Helmet>
+        <title>Free AI Live Session — SASsolutions.ai</title>
+        <meta name="description" content="Join our free live session every Sunday. Learn to build, automate, and earn with AI. Reserve your seat now." />
+        <meta property="og:title" content="Free AI Live Session — SASsolutions.ai" />
+        <meta property="og:description" content="Join our free live session every Sunday. Learn to build, automate, and earn with AI. Reserve your seat now." />
+        <meta property="og:image" content="https://www.sassolutions.ai/og-image.png" />
+        <meta property="og:url" content="https://www.sassolutions.ai/landing" />
+        <meta name="twitter:title" content="Free AI Live Session — SASsolutions.ai" />
+        <meta name="twitter:description" content="Join our free live session every Sunday. Learn to build, automate, and earn with AI." />
+        <meta name="twitter:image" content="https://www.sassolutions.ai/og-image.png" />
+      </Helmet>
       {/* Ambient Orbs */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         <div className="absolute -top-64 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full blur-[130px] bg-[radial-gradient(circle,rgba(45,184,155,0.1)_0%,transparent_70%)] animate-[orbFloat_22s_ease-in-out_infinite]" />
