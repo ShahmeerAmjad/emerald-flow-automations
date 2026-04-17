@@ -588,12 +588,12 @@ function buildAnalyticsResponse(from, to) {
 }
 
 /* ═══════════════════════════════════════════
-   auditLeads — run manually from Apps Script editor
-   (select the function, click Run, then View → Logs)
+   auditLeads — run manually from Apps Script editor.
+   Output goes to (a) the Executions panel via console.log, and
+   (b) a persistent "AuditReport" sheet so the result is always readable.
 
    Cross-references /offer PageViews, Interested Leads rows, and the
-   LeadsLog audit trail from a given date forward. Flags days where
-   PageViews happened but no leads were written — those are the gaps.
+   LeadsLog audit trail from `fromDateStr` forward.
    ═══════════════════════════════════════════ */
 
 function auditLeads() {
@@ -605,18 +605,22 @@ function auditLeads() {
     return !isNaN(t) && t >= fromMs;
   }
 
-  var pageViews = getSheetData("PageViews").filter(function(r) {
+  var offerViews = getSheetData("PageViews").filter(function(r) {
     return inRange(r.Timestamp) && String(r.Path || "").indexOf("/offer") === 0;
+  });
+  var landingViews = getSheetData("PageViews").filter(function(r) {
+    return inRange(r.Timestamp) && String(r.Path || "").indexOf("/landing") === 0;
   });
   var leads = getSheetData("Interested Leads").filter(function(r) { return inRange(r.Timestamp); });
   var leadsLog = getSheetData("LeadsLog").filter(function(r) { return inRange(r.Timestamp); });
 
   var byDay = {};
   function bucket(d) {
-    if (!byDay[d]) byDay[d] = { offerViews: 0, leads: 0, logOk: 0, logErr: 0 };
+    if (!byDay[d]) byDay[d] = { offerViews: 0, landingViews: 0, leads: 0, logOk: 0, logErr: 0 };
     return byDay[d];
   }
-  pageViews.forEach(function(r) { bucket(toDateStr(r.Timestamp)).offerViews++; });
+  offerViews.forEach(function(r) { bucket(toDateStr(r.Timestamp)).offerViews++; });
+  landingViews.forEach(function(r) { bucket(toDateStr(r.Timestamp)).landingViews++; });
   leads.forEach(function(r) { bucket(toDateStr(r.Timestamp)).leads++; });
   leadsLog.forEach(function(r) {
     var b = bucket(toDateStr(r.Timestamp));
@@ -625,20 +629,34 @@ function auditLeads() {
   });
 
   var days = Object.keys(byDay).sort();
-  Logger.log("Day\tOfferViews\tLeads\tLogOK\tLogErr");
-  days.forEach(function(d) {
-    var b = byDay[d];
-    Logger.log(d + "\t" + b.offerViews + "\t" + b.leads + "\t" + b.logOk + "\t" + b.logErr);
-  });
-  Logger.log("---");
   var okCount = leadsLog.filter(function(r) { return r.Status === "ok"; }).length;
   var errCount = leadsLog.filter(function(r) { return r.Status === "error"; }).length;
-  Logger.log("Totals from " + fromDateStr + ":");
-  Logger.log("  /offer views: " + pageViews.length);
-  Logger.log("  Interested Leads rows: " + leads.length);
-  Logger.log("  LeadsLog OK: " + okCount);
-  Logger.log("  LeadsLog ERROR: " + errCount);
-  Logger.log("  Gap (views without leads): " + Math.max(0, pageViews.length - leads.length));
+
+  // Print to execution log (console.log is visible in Executions panel)
+  console.log("auditLeads from " + fromDateStr);
+  console.log("Day\tOfferViews\tLandingViews\tLeads\tLogOK\tLogErr");
+  days.forEach(function(d) {
+    var b = byDay[d];
+    console.log(d + "\t" + b.offerViews + "\t" + b.landingViews + "\t" + b.leads + "\t" + b.logOk + "\t" + b.logErr);
+  });
+  console.log("---");
+  console.log("Totals: offerViews=" + offerViews.length + " landingViews=" + landingViews.length +
+              " leads=" + leads.length + " logOk=" + okCount + " logErr=" + errCount);
+
+  // Persist to sheet so output is always visible (open the "AuditReport" tab).
+  var reportSheet = getOrCreateSheet("AuditReport",
+    ["Day", "OfferViews", "LandingViews", "Leads", "LogOK", "LogErr"]);
+  if (reportSheet.getLastRow() > 1) {
+    reportSheet.deleteRows(2, reportSheet.getLastRow() - 1);
+  }
+  days.forEach(function(d) {
+    var b = byDay[d];
+    reportSheet.appendRow([d, b.offerViews, b.landingViews, b.leads, b.logOk, b.logErr]);
+  });
+  reportSheet.appendRow([]);
+  reportSheet.appendRow(["TOTAL", offerViews.length, landingViews.length, leads.length, okCount, errCount]);
+  reportSheet.appendRow([]);
+  reportSheet.appendRow(["Generated", new Date().toISOString(), "from: " + fromDateStr]);
 }
 
 /* ═══ UTILITY ═══ */
