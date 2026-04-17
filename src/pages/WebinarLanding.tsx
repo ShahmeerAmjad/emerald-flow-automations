@@ -86,8 +86,14 @@ function calcTimeLeft(target: Date) {
 const WHATSAPP_GROUP_URL =
   "https://chat.whatsapp.com/CYOvHM2nLLQ2vUnLZU18EH?mode=gi_t";
 
-// Replace this with your deployed Google Apps Script URL
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxNRHAy5x2dZQD1tKFOsxhn7SBwQbSioDbhlamjcwE8_OdajRenwzZJ7SMSrria4n9G/exec";
+const LEAD_API_URL = "/api/lead";
+
+function getCookie(name: string): string | undefined {
+  const match = document.cookie.match(
+    new RegExp("(?:^|; )" + name.replace(/([.$?*|{}()[\]\\/+^])/g, "\\$1") + "=([^;]*)")
+  );
+  return match ? decodeURIComponent(match[1]) : undefined;
+}
 
 /* ═══ FORM SCHEMA ═══ */
 
@@ -113,30 +119,57 @@ export default function WebinarLanding() {
   async function onSubmit(values: FormValues) {
     setIsSubmitting(true);
     try {
+      const eventId =
+        (typeof crypto !== "undefined" && "randomUUID" in crypto)
+          ? crypto.randomUUID()
+          : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+
       if (typeof window.fbq === "function") {
-        window.fbq("track", "Lead", {
-          content_name: "Free AI Webinar Registration",
-          content_category: "webinar",
-        });
+        window.fbq(
+          "track",
+          "Lead",
+          {
+            content_name: "Free AI Webinar Registration",
+            content_category: "webinar",
+          },
+          { eventID: eventId }
+        );
       }
 
-      await fetch(GOOGLE_SCRIPT_URL, {
+      const sessionId = sessionStorage.getItem("analytics_session_id") || "";
+      const visitorId = localStorage.getItem("analytics_visitor_id") || "";
+      const fbp = getCookie("_fbp");
+      const fbc = getCookie("_fbc");
+
+      const res = await fetch(LEAD_API_URL, {
         method: "POST",
-        mode: "no-cors",
-        // text/plain avoids the CORS preflight path and matches what
-        // Apps Script reads via e.postData.contents. application/json with
-        // no-cors is the likely cause of the doPost "Failed" rows.
-        headers: { "Content-Type": "text/plain" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          eventType: "lead",
+          leadType: "webinar",
           ...values,
-          timestamp: new Date().toISOString(),
+          sessionId,
+          visitorId,
+          eventId,
+          pageUrl: window.location.href,
+          fbp,
+          fbc,
         }),
       });
+
+      const result = await res.json().catch(() => ({ ok: false }));
+      if (!result.ok) {
+        console.error("Lead submission failed:", result);
+        alert(
+          "We couldn't register you. Please try again, or message us on WhatsApp directly."
+        );
+        return;
+      }
       setIsSubmitted(true);
-    } catch {
-      // no-cors won't throw on success — if we get here something is really wrong
-      setIsSubmitted(true);
+    } catch (err) {
+      console.error("Lead submission error:", err);
+      alert(
+        "Something went wrong. Please try again, or message us on WhatsApp directly."
+      );
     } finally {
       setIsSubmitting(false);
     }

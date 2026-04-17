@@ -23,8 +23,14 @@ import {
 import { CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
-const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbzeVb68IunL6BM6AOC5tleIh8mGkHkV4lXkoHJVzKYTL57CXhdmsvJDYrgTow3A9JKV3g/exec";
+const LEAD_API_URL = "/api/lead";
+
+function getCookie(name: string): string | undefined {
+  const match = document.cookie.match(
+    new RegExp("(?:^|; )" + name.replace(/([.$?*|{}()[\]\\/+^])/g, "\\$1") + "=([^;]*)")
+  );
+  return match ? decodeURIComponent(match[1]) : undefined;
+}
 
 const applicationSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
@@ -58,28 +64,59 @@ export default function Offer() {
   async function onSubmit(values: ApplicationValues) {
     setIsSubmitting(true);
     try {
-      // Fire Meta Pixel Lead event first so Meta counts the conversion even if
-      // the Apps Script request is blocked by an ad-blocker or ITP downstream.
+      // Shared id between the browser pixel and the server-side CAPI event
+      // so Meta dedupes them into one Lead event.
+      const eventId =
+        (typeof crypto !== "undefined" && "randomUUID" in crypto)
+          ? crypto.randomUUID()
+          : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+
       if (typeof window.fbq === "function") {
-        window.fbq("track", "Lead", {
-          content_name: "AI Advantage Program Application",
-          content_category: "offer",
-        });
+        window.fbq(
+          "track",
+          "Lead",
+          {
+            content_name: "AI Advantage Program Application",
+            content_category: "offer",
+          },
+          { eventID: eventId }
+        );
       }
 
-      await fetch(GOOGLE_SCRIPT_URL, {
+      const sessionId = sessionStorage.getItem("analytics_session_id") || "";
+      const visitorId = localStorage.getItem("analytics_visitor_id") || "";
+      const fbp = getCookie("_fbp");
+      const fbc = getCookie("_fbc");
+
+      const res = await fetch(LEAD_API_URL, {
         method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "text/plain" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          eventType: "lead",
+          leadType: "offer",
           ...values,
-          timestamp: new Date().toISOString(),
+          sessionId,
+          visitorId,
+          eventId,
+          pageUrl: window.location.href,
+          fbp,
+          fbc,
         }),
       });
+
+      const result = await res.json().catch(() => ({ ok: false }));
+      if (!result.ok) {
+        console.error("Lead submission failed:", result);
+        alert(
+          "We couldn't submit your application. Please try again, or message us on WhatsApp directly."
+        );
+        return;
+      }
       setIsSubmitted(true);
-    } catch {
-      alert("Something went wrong. Please try again.");
+    } catch (err) {
+      console.error("Lead submission error:", err);
+      alert(
+        "Something went wrong. Please try again, or message us on WhatsApp directly."
+      );
     } finally {
       setIsSubmitting(false);
     }

@@ -134,7 +134,9 @@ function writeScroll(data) {
 
 function writeLead(data) {
   var sheet = getOrCreateSheet("Interested Leads", [
-    "Timestamp", "FullName", "Email", "WhatsApp", "Goal", "CurrentRole", "AIExperience", "WhyJoin"
+    "Timestamp", "FullName", "Email", "WhatsApp", "Goal",
+    "LeadType", "SessionID", "VisitorID", "EventID",
+    "CurrentRole", "AIExperience", "WhyJoin"
   ]);
   // Write by header name — robust to the live sheet having extra columns or a
   // different order than the canonical schema above (preserves existing rows).
@@ -144,6 +146,10 @@ function writeLead(data) {
     "Email": data.email || "",
     "WhatsApp": data.whatsapp || "",
     "Goal": data.goal || "",
+    "LeadType": data.leadType || "",
+    "SessionID": data.sessionId || "",
+    "VisitorID": data.visitorId || "",
+    "EventID": data.eventId || "",
     "CurrentRole": data.currentRole || "",
     "AIExperience": data.aiExperience || "",
     "WhyJoin": data.whyJoin || ""
@@ -157,7 +163,9 @@ function writeLead(data) {
  */
 function logLeadAttempt(rawBody, parsed, status, errorMessage) {
   var sheet = getOrCreateSheet("LeadsLog", [
-    "Timestamp", "EventType", "Status", "Error", "FullName", "WhatsApp", "Email", "Goal", "RawBody"
+    "Timestamp", "EventType", "Status", "Error",
+    "FullName", "WhatsApp", "Email", "Goal", "LeadType",
+    "SessionID", "VisitorID", "EventID", "RawBody"
   ]);
   appendRowByHeaders(sheet, {
     "Timestamp": new Date().toISOString(),
@@ -168,6 +176,10 @@ function logLeadAttempt(rawBody, parsed, status, errorMessage) {
     "WhatsApp": (parsed && parsed.whatsapp) || "",
     "Email": (parsed && parsed.email) || "",
     "Goal": (parsed && parsed.goal) || "",
+    "LeadType": (parsed && parsed.leadType) || "",
+    "SessionID": (parsed && parsed.sessionId) || "",
+    "VisitorID": (parsed && parsed.visitorId) || "",
+    "EventID": (parsed && parsed.eventId) || "",
     "RawBody": (rawBody || "").substring(0, 5000)
   });
 }
@@ -657,6 +669,74 @@ function auditLeads() {
   reportSheet.appendRow(["TOTAL", offerViews.length, landingViews.length, leads.length, okCount, errCount]);
   reportSheet.appendRow([]);
   reportSheet.appendRow(["Generated", new Date().toISOString(), "from: " + fromDateStr]);
+
+  // ── Ghost-session detection ──
+  // A "ghost" session is one that hit /offer or /landing, stayed >=30s and
+  // scrolled >=50%, but never produced a lead row. These are the real signal
+  // for lost leads (either form friction or a silent submit failure).
+  var leadSessionIds = {};
+  leads.forEach(function(r) {
+    if (r.SessionID) leadSessionIds[r.SessionID] = true;
+  });
+  var leadVisitorIds = {};
+  leads.forEach(function(r) {
+    if (r.VisitorID) leadVisitorIds[r.VisitorID] = true;
+  });
+
+  var sessionInfo = {};
+  function ensureSession(sid, path, ts, visitorId) {
+    if (!sid) return null;
+    if (!sessionInfo[sid]) {
+      sessionInfo[sid] = {
+        sessionId: sid,
+        visitorId: visitorId || "",
+        path: path,
+        date: toDateStr(ts),
+        duration: 0,
+        maxScroll: 0,
+      };
+    }
+    return sessionInfo[sid];
+  }
+  offerViews.forEach(function(r) { ensureSession(r.SessionID, r.Path, r.Timestamp, r.VisitorID); });
+  landingViews.forEach(function(r) { ensureSession(r.SessionID, r.Path, r.Timestamp, r.VisitorID); });
+
+  var allEngagement = getSheetData("Engagement").filter(function(r) { return inRange(r.Timestamp); });
+  allEngagement.forEach(function(r) {
+    var s = sessionInfo[r.SessionID];
+    if (!s) return;
+    var dur = parseInt(r.Duration) || 0;
+    var scroll = parseInt(r.MaxScrollDepth) || 0;
+    if (dur > s.duration) s.duration = dur;
+    if (scroll > s.maxScroll) s.maxScroll = scroll;
+  });
+
+  var sids = Object.keys(sessionInfo);
+  var highIntent = sids.filter(function(sid) {
+    var s = sessionInfo[sid];
+    return s.duration >= 30000 && s.maxScroll >= 50;
+  });
+  var ghosts = highIntent.filter(function(sid) {
+    var s = sessionInfo[sid];
+    return !leadSessionIds[sid] && !(s.visitorId && leadVisitorIds[s.visitorId]);
+  });
+
+  console.log("Sessions on /offer or /landing: " + sids.length);
+  console.log("High-intent (30s+, 50%+ scroll): " + highIntent.length);
+  console.log("Ghosts (high-intent, no lead): " + ghosts.length);
+
+  var ghostSheet = getOrCreateSheet("GhostSessions",
+    ["Date", "Path", "SessionID", "VisitorID", "DurationMs", "MaxScrollPct"]);
+  if (ghostSheet.getLastRow() > 1) {
+    ghostSheet.deleteRows(2, ghostSheet.getLastRow() - 1);
+  }
+  ghosts
+    .map(function(sid) { return sessionInfo[sid]; })
+    .sort(function(a, b) { return b.duration - a.duration; })
+    .slice(0, 500)
+    .forEach(function(s) {
+      ghostSheet.appendRow([s.date, s.path, s.sessionId, s.visitorId, s.duration, s.maxScroll]);
+    });
 }
 
 /* ═══ UTILITY ═══ */
