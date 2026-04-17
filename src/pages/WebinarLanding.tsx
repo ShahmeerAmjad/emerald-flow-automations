@@ -113,11 +113,22 @@ export default function WebinarLanding() {
   async function onSubmit(values: FormValues) {
     setIsSubmitting(true);
     try {
+      if (typeof window.fbq === "function") {
+        window.fbq("track", "Lead", {
+          content_name: "Free AI Webinar Registration",
+          content_category: "webinar",
+        });
+      }
+
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
+        // text/plain avoids the CORS preflight path and matches what
+        // Apps Script reads via e.postData.contents. application/json with
+        // no-cors is the likely cause of the doPost "Failed" rows.
+        headers: { "Content-Type": "text/plain" },
         body: JSON.stringify({
+          eventType: "lead",
           ...values,
           timestamp: new Date().toISOString(),
         }),

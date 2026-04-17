@@ -58,6 +58,15 @@ export default function Offer() {
   async function onSubmit(values: ApplicationValues) {
     setIsSubmitting(true);
     try {
+      // Fire Meta Pixel Lead event first so Meta counts the conversion even if
+      // the Apps Script request is blocked by an ad-blocker or ITP downstream.
+      if (typeof window.fbq === "function") {
+        window.fbq("track", "Lead", {
+          content_name: "AI Advantage Program Application",
+          content_category: "offer",
+        });
+      }
+
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
         mode: "no-cors",

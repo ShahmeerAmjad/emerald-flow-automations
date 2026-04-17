@@ -20,18 +20,22 @@
    ═══════════════════════════════════════════ */
 
 function doPost(e) {
+  var rawBody = "";
+  var parsed = null;
   try {
-    var data = JSON.parse(e.postData.contents);
-    var eventType = data.eventType || "pageview"; // backward compat
+    rawBody = (e && e.postData && e.postData.contents) || "";
+    parsed = JSON.parse(rawBody);
+    var eventType = parsed.eventType || "pageview"; // backward compat
 
     if (eventType === "pageview") {
-      writePageView(data);
+      writePageView(parsed);
     } else if (eventType === "engagement") {
-      writeEngagement(data);
+      writeEngagement(parsed);
     } else if (eventType === "scroll") {
-      writeScroll(data);
+      writeScroll(parsed);
     } else if (eventType === "lead") {
-      writeLead(data);
+      writeLead(parsed);
+      logLeadAttempt(rawBody, parsed, "ok", "");
     }
 
     // Invalidate cache on new data
@@ -40,7 +44,10 @@ function doPost(e) {
     return ContentService.createTextOutput(JSON.stringify({ status: "ok" }))
       .setMimeType(ContentService.MimeType.JSON);
   } catch (err) {
-    return ContentService.createTextOutput(JSON.stringify({ status: "error", message: err.message }))
+    var msg = (err && err.message) || String(err);
+    // ALWAYS capture the raw body so we can reconstruct lost leads forensically.
+    try { logLeadAttempt(rawBody, parsed, "error", msg); } catch (_) {}
+    return ContentService.createTextOutput(JSON.stringify({ status: "error", message: msg }))
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
@@ -127,17 +134,54 @@ function writeScroll(data) {
 
 function writeLead(data) {
   var sheet = getOrCreateSheet("Interested Leads", [
-    "Timestamp", "FullName", "Email", "WhatsApp", "CurrentRole", "AIExperience", "WhyJoin"
+    "Timestamp", "FullName", "Email", "WhatsApp", "Goal", "CurrentRole", "AIExperience", "WhyJoin"
   ]);
-  sheet.appendRow([
-    data.timestamp || new Date().toISOString(),
-    data.fullName || "",
-    data.email || "",
-    data.whatsapp || "",
-    data.currentRole || "",
-    data.aiExperience || "",
-    data.whyJoin || ""
+  // Write by header name — robust to the live sheet having extra columns or a
+  // different order than the canonical schema above (preserves existing rows).
+  appendRowByHeaders(sheet, {
+    "Timestamp": data.timestamp || new Date().toISOString(),
+    "FullName": data.fullName || "",
+    "Email": data.email || "",
+    "WhatsApp": data.whatsapp || "",
+    "Goal": data.goal || "",
+    "CurrentRole": data.currentRole || "",
+    "AIExperience": data.aiExperience || "",
+    "WhyJoin": data.whyJoin || ""
+  });
+}
+
+/**
+ * Every lead attempt (success or failure) is appended here.
+ * On error, `parsed` may be null; RawBody preserves the exact payload the
+ * browser sent so we can reconstruct lost leads or diagnose parse failures.
+ */
+function logLeadAttempt(rawBody, parsed, status, errorMessage) {
+  var sheet = getOrCreateSheet("LeadsLog", [
+    "Timestamp", "EventType", "Status", "Error", "FullName", "WhatsApp", "Email", "Goal", "RawBody"
   ]);
+  appendRowByHeaders(sheet, {
+    "Timestamp": new Date().toISOString(),
+    "EventType": (parsed && parsed.eventType) || "",
+    "Status": status,
+    "Error": errorMessage || "",
+    "FullName": (parsed && parsed.fullName) || "",
+    "WhatsApp": (parsed && parsed.whatsapp) || "",
+    "Email": (parsed && parsed.email) || "",
+    "Goal": (parsed && parsed.goal) || "",
+    "RawBody": (rawBody || "").substring(0, 5000)
+  });
+}
+
+function appendRowByHeaders(sheet, dataMap) {
+  var lastCol = sheet.getLastColumn();
+  if (lastCol === 0) return;
+  var headers = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
+  var row = new Array(lastCol);
+  for (var i = 0; i < headers.length; i++) {
+    var v = dataMap[headers[i]];
+    row[i] = (v === undefined || v === null) ? "" : v;
+  }
+  sheet.appendRow(row);
 }
 
 /* ═══════════════════════════════════════════
@@ -541,6 +585,60 @@ function buildAnalyticsResponse(from, to) {
     contentEngagement: contentEngagement,
     rangeMeta: { from: from || "", to: to || "", applied: rangeApplied }
   };
+}
+
+/* ═══════════════════════════════════════════
+   auditLeads — run manually from Apps Script editor
+   (select the function, click Run, then View → Logs)
+
+   Cross-references /offer PageViews, Interested Leads rows, and the
+   LeadsLog audit trail from a given date forward. Flags days where
+   PageViews happened but no leads were written — those are the gaps.
+   ═══════════════════════════════════════════ */
+
+function auditLeads() {
+  var fromDateStr = "2026-03-30"; // edit as needed
+  var fromMs = new Date(fromDateStr + "T00:00:00").getTime();
+
+  function inRange(ts) {
+    var t = new Date(ts).getTime();
+    return !isNaN(t) && t >= fromMs;
+  }
+
+  var pageViews = getSheetData("PageViews").filter(function(r) {
+    return inRange(r.Timestamp) && String(r.Path || "").indexOf("/offer") === 0;
+  });
+  var leads = getSheetData("Interested Leads").filter(function(r) { return inRange(r.Timestamp); });
+  var leadsLog = getSheetData("LeadsLog").filter(function(r) { return inRange(r.Timestamp); });
+
+  var byDay = {};
+  function bucket(d) {
+    if (!byDay[d]) byDay[d] = { offerViews: 0, leads: 0, logOk: 0, logErr: 0 };
+    return byDay[d];
+  }
+  pageViews.forEach(function(r) { bucket(toDateStr(r.Timestamp)).offerViews++; });
+  leads.forEach(function(r) { bucket(toDateStr(r.Timestamp)).leads++; });
+  leadsLog.forEach(function(r) {
+    var b = bucket(toDateStr(r.Timestamp));
+    if (r.Status === "ok") b.logOk++;
+    else if (r.Status === "error") b.logErr++;
+  });
+
+  var days = Object.keys(byDay).sort();
+  Logger.log("Day\tOfferViews\tLeads\tLogOK\tLogErr");
+  days.forEach(function(d) {
+    var b = byDay[d];
+    Logger.log(d + "\t" + b.offerViews + "\t" + b.leads + "\t" + b.logOk + "\t" + b.logErr);
+  });
+  Logger.log("---");
+  var okCount = leadsLog.filter(function(r) { return r.Status === "ok"; }).length;
+  var errCount = leadsLog.filter(function(r) { return r.Status === "error"; }).length;
+  Logger.log("Totals from " + fromDateStr + ":");
+  Logger.log("  /offer views: " + pageViews.length);
+  Logger.log("  Interested Leads rows: " + leads.length);
+  Logger.log("  LeadsLog OK: " + okCount);
+  Logger.log("  LeadsLog ERROR: " + errCount);
+  Logger.log("  Gap (views without leads): " + Math.max(0, pageViews.length - leads.length));
 }
 
 /* ═══ UTILITY ═══ */
