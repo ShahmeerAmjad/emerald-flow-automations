@@ -30,6 +30,7 @@ import {
   UserPlus,
   UserCheck,
   ArrowDownRight,
+  Calendar,
 } from "lucide-react";
 
 /* ═══ CONSTANTS ═══ */
@@ -78,6 +79,39 @@ interface AnalyticsData {
     avgScrollDepth: number;
     readCompletionRate: number;
   }[];
+  rangeMeta: { from: string; to: string; applied: boolean };
+}
+
+type RangePreset = "all" | "today" | "7d" | "30d" | "month" | "custom";
+type DateRange = { from: string; to: string };
+
+function formatDateLocal(d: Date): string {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
+function getPresetRange(preset: RangePreset): DateRange {
+  if (preset === "all" || preset === "custom") return { from: "", to: "" };
+  const today = new Date();
+  const todayStr = formatDateLocal(today);
+  if (preset === "today") return { from: todayStr, to: todayStr };
+  if (preset === "7d") {
+    const start = new Date(today);
+    start.setDate(start.getDate() - 6);
+    return { from: formatDateLocal(start), to: todayStr };
+  }
+  if (preset === "30d") {
+    const start = new Date(today);
+    start.setDate(start.getDate() - 29);
+    return { from: formatDateLocal(start), to: todayStr };
+  }
+  if (preset === "month") {
+    const start = new Date(today.getFullYear(), today.getMonth(), 1);
+    return { from: formatDateLocal(start), to: todayStr };
+  }
+  return { from: "", to: "" };
 }
 
 const EMPTY_DATA: AnalyticsData = {
@@ -97,6 +131,7 @@ const EMPTY_DATA: AnalyticsData = {
   },
   ramadanFunnel: [],
   contentEngagement: [],
+  rangeMeta: { from: "", to: "", applied: false },
 };
 
 /* ═══ MAIN COMPONENT ═══ */
@@ -106,12 +141,24 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [lastRefresh, setLastRefresh] = useState<Date | null>(null);
+  const [preset, setPreset] = useState<RangePreset>("all");
+  const [customFrom, setCustomFrom] = useState("");
+  const [customTo, setCustomTo] = useState("");
+  const [appliedRange, setAppliedRange] = useState<DateRange>({ from: "", to: "" });
 
-  const fetchData = useCallback(async () => {
+  const fetchData = useCallback(async (range: DateRange) => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(ANALYTICS_API_URL);
+      const params = new URLSearchParams();
+      if (range.from && range.to) {
+        params.set("from", range.from);
+        params.set("to", range.to);
+      }
+      const url = params.toString()
+        ? `${ANALYTICS_API_URL}?${params.toString()}`
+        : ANALYTICS_API_URL;
+      const res = await fetch(url);
       if (!res.ok) throw new Error("Failed to fetch analytics");
       const json = await res.json();
       // Backwards-compatible: fill in new fields with defaults if Apps Script hasn't been updated yet
@@ -142,6 +189,7 @@ export default function Dashboard() {
         },
         ramadanFunnel: json.ramadanFunnel ?? [],
         contentEngagement: json.contentEngagement ?? [],
+        rangeMeta: json.rangeMeta ?? { from: "", to: "", applied: false },
       };
       setData(normalized);
       setLastRefresh(new Date());
@@ -157,8 +205,19 @@ export default function Dashboard() {
   }, []);
 
   useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    fetchData(appliedRange);
+  }, [fetchData, appliedRange]);
+
+  const handlePresetClick = (p: RangePreset) => {
+    setPreset(p);
+    if (p === "custom") return; // wait for user to fill inputs + apply
+    setAppliedRange(getPresetRange(p));
+  };
+
+  const handleApplyCustom = () => {
+    if (!customFrom || !customTo || customFrom > customTo) return;
+    setAppliedRange({ from: customFrom, to: customTo });
+  };
 
   return (
     <div className="min-h-screen bg-[#050907] text-[#F0EDE6] font-['Sora',sans-serif] antialiased relative overflow-hidden">
@@ -188,7 +247,7 @@ export default function Dashboard() {
           </div>
           <div className="flex items-center gap-3">
             <button
-              onClick={fetchData}
+              onClick={() => fetchData(appliedRange)}
               disabled={loading}
               className="inline-flex items-center gap-2 px-4 py-2.5 border border-[rgba(45,184,155,0.2)] bg-[rgba(45,184,155,0.07)] text-[#2DB89B] text-sm font-medium hover:bg-[rgba(45,184,155,0.12)] transition-all disabled:opacity-50"
             >
@@ -203,6 +262,17 @@ export default function Dashboard() {
             Last updated: {lastRefresh.toLocaleTimeString()}
           </div>
         )}
+
+        <DateRangeBar
+          preset={preset}
+          customFrom={customFrom}
+          customTo={customTo}
+          appliedRange={appliedRange}
+          onPresetClick={handlePresetClick}
+          onFromChange={setCustomFrom}
+          onToChange={setCustomTo}
+          onApplyCustom={handleApplyCustom}
+        />
 
         {error === "setup" ? (
           <SetupGuide />
@@ -652,6 +722,110 @@ function formatDuration(seconds: number): string {
 }
 
 /* ═══ SUBCOMPONENTS ═══ */
+
+function DateRangeBar({
+  preset,
+  customFrom,
+  customTo,
+  appliedRange,
+  onPresetClick,
+  onFromChange,
+  onToChange,
+  onApplyCustom,
+}: {
+  preset: RangePreset;
+  customFrom: string;
+  customTo: string;
+  appliedRange: DateRange;
+  onPresetClick: (p: RangePreset) => void;
+  onFromChange: (v: string) => void;
+  onToChange: (v: string) => void;
+  onApplyCustom: () => void;
+}) {
+  const presets: { id: RangePreset; label: string }[] = [
+    { id: "all", label: "All time" },
+    { id: "today", label: "Today" },
+    { id: "7d", label: "Last 7d" },
+    { id: "30d", label: "Last 30d" },
+    { id: "month", label: "This month" },
+    { id: "custom", label: "Custom" },
+  ];
+  const customInvalid = !customFrom || !customTo || customFrom > customTo;
+
+  return (
+    <div className="mb-8 p-4 sm:p-5 border border-[rgba(45,184,155,0.1)] bg-[#0C1210] animate-[fadeSlideUp_0.8s_cubic-bezier(0.22,1,0.36,1)_0.05s_both]">
+      <div className="flex flex-col gap-3">
+        <div className="flex items-center justify-between gap-3 flex-wrap">
+          <div className="flex items-center gap-2">
+            <Calendar className="w-4 h-4 text-[#2DB89B]" />
+            <span className="font-['JetBrains_Mono',monospace] text-[11px] tracking-[3px] uppercase text-[#2DB89B] font-medium">
+              Date Range
+            </span>
+          </div>
+          {appliedRange.from && appliedRange.to ? (
+            <span className="font-['JetBrains_Mono',monospace] text-[11px] text-[rgba(240,237,230,0.5)]">
+              {appliedRange.from} → {appliedRange.to}
+            </span>
+          ) : (
+            <span className="font-['JetBrains_Mono',monospace] text-[11px] text-[rgba(240,237,230,0.3)]">
+              All time
+            </span>
+          )}
+        </div>
+
+        <div className="flex flex-wrap gap-2">
+          {presets.map((p) => (
+            <button
+              key={p.id}
+              onClick={() => onPresetClick(p.id)}
+              className={`px-3 py-1.5 text-xs font-medium border transition-all ${
+                preset === p.id
+                  ? "border-[#2DB89B] bg-[rgba(45,184,155,0.15)] text-[#47ECCC]"
+                  : "border-[rgba(45,184,155,0.15)] bg-transparent text-[rgba(240,237,230,0.5)] hover:border-[rgba(45,184,155,0.3)] hover:text-[#F0EDE6]"
+              }`}
+            >
+              {p.label}
+            </button>
+          ))}
+        </div>
+
+        {preset === "custom" && (
+          <div className="flex flex-wrap items-center gap-3 pt-3 border-t border-[rgba(45,184,155,0.08)]">
+            <div className="flex items-center gap-2">
+              <label className="text-[11px] font-['JetBrains_Mono',monospace] text-[rgba(240,237,230,0.4)] uppercase tracking-[2px]">
+                From
+              </label>
+              <input
+                type="date"
+                value={customFrom}
+                onChange={(e) => onFromChange(e.target.value)}
+                className="bg-[#050907] border border-[rgba(45,184,155,0.15)] text-[#F0EDE6] text-sm px-2.5 py-1.5 focus:outline-none focus:border-[#2DB89B] [color-scheme:dark]"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <label className="text-[11px] font-['JetBrains_Mono',monospace] text-[rgba(240,237,230,0.4)] uppercase tracking-[2px]">
+                To
+              </label>
+              <input
+                type="date"
+                value={customTo}
+                onChange={(e) => onToChange(e.target.value)}
+                className="bg-[#050907] border border-[rgba(45,184,155,0.15)] text-[#F0EDE6] text-sm px-2.5 py-1.5 focus:outline-none focus:border-[#2DB89B] [color-scheme:dark]"
+              />
+            </div>
+            <button
+              onClick={onApplyCustom}
+              disabled={customInvalid}
+              className="px-4 py-1.5 text-xs font-bold tracking-[2px] uppercase border border-[#2DB89B] bg-[rgba(45,184,155,0.15)] text-[#47ECCC] hover:bg-[rgba(45,184,155,0.25)] transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              Apply
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
 
 function StatCard({
   icon,

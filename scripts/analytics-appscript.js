@@ -144,18 +144,28 @@ function writeLead(data) {
    doGet — Returns aggregated analytics data
    ═══════════════════════════════════════════ */
 
-function doGet() {
-  // Check cache first (5-min TTL)
-  var cached = getCachedResult();
+function doGet(e) {
+  // Optional date range params: ?from=YYYY-MM-DD&to=YYYY-MM-DD
+  // Both bounds required; otherwise the response covers all-time.
+  var dateRe = /^\d{4}-\d{2}-\d{2}$/;
+  var from = (e && e.parameter && e.parameter.from) || "";
+  var to = (e && e.parameter && e.parameter.to) || "";
+  if (!dateRe.test(from)) from = "";
+  if (!dateRe.test(to)) to = "";
+  if (!from || !to) { from = ""; to = ""; }
+  if (from && to && from > to) { var tmp = from; from = to; to = tmp; }
+
+  var cacheKey = from && to ? "range_" + from + "_" + to : "all";
+  var cached = getCachedResult(cacheKey);
   if (cached) {
     return ContentService.createTextOutput(cached)
       .setMimeType(ContentService.MimeType.JSON);
   }
 
-  var result = buildAnalyticsResponse();
+  var result = buildAnalyticsResponse(from, to);
   var json = JSON.stringify(result);
 
-  setCachedResult(json);
+  setCachedResult(cacheKey, json);
 
   return ContentService.createTextOutput(json)
     .setMimeType(ContentService.MimeType.JSON);
@@ -163,43 +173,73 @@ function doGet() {
 
 /* ═══ CACHE ═══ */
 
-function getCachedResult() {
+function ensureCacheSheet() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName("Cache");
-  if (!sheet || sheet.getLastRow() < 2) return null;
-
-  var data = sheet.getRange("A2:B2").getValues();
-  if (!data[0][0]) return null;
-
-  var cachedAt = new Date(data[0][0]).getTime();
-  if (isNaN(cachedAt)) return null;
-
-  var now = new Date().getTime();
-  if (now - cachedAt > 5 * 60 * 1000) return null; // expired
-
-  return data[0][1];
+  if (!sheet) {
+    sheet = ss.insertSheet("Cache");
+    sheet.appendRow(["CachedAt", "Key", "Data"]);
+    sheet.setFrozenRows(1);
+    return sheet;
+  }
+  // Migrate old 2-column [CachedAt, Data] schema → 3-column [CachedAt, Key, Data]
+  var lastCol = sheet.getLastColumn();
+  var headers = lastCol > 0 ? sheet.getRange(1, 1, 1, lastCol).getValues()[0] : [];
+  if (headers[0] !== "CachedAt" || headers[1] !== "Key" || headers[2] !== "Data") {
+    sheet.clear();
+    sheet.appendRow(["CachedAt", "Key", "Data"]);
+    sheet.setFrozenRows(1);
+  }
+  return sheet;
 }
 
-function setCachedResult(json) {
-  var sheet = getOrCreateSheet("Cache", ["CachedAt", "Data"]);
-  // Clear old cache rows and write fresh
-  if (sheet.getLastRow() > 1) {
-    sheet.deleteRows(2, sheet.getLastRow() - 1);
+function getCachedResult(key) {
+  var sheet = ensureCacheSheet();
+  if (sheet.getLastRow() < 2) return null;
+
+  var rows = sheet.getRange(2, 1, sheet.getLastRow() - 1, 3).getValues();
+  var now = new Date().getTime();
+  var ttl = 5 * 60 * 1000;
+
+  for (var i = 0; i < rows.length; i++) {
+    if (rows[i][1] !== key) continue;
+    var cachedAt = new Date(rows[i][0]).getTime();
+    if (isNaN(cachedAt) || now - cachedAt > ttl) return null;
+    return rows[i][2];
   }
-  sheet.appendRow([new Date().toISOString(), json]);
+  return null;
+}
+
+function setCachedResult(key, json) {
+  var sheet = ensureCacheSheet();
+  // Sweep existing entry for this key + any expired rows
+  if (sheet.getLastRow() > 1) {
+    var rows = sheet.getRange(2, 1, sheet.getLastRow() - 1, 2).getValues();
+    var now = new Date().getTime();
+    var ttl = 5 * 60 * 1000;
+    for (var i = rows.length - 1; i >= 0; i--) {
+      var cachedAt = new Date(rows[i][0]).getTime();
+      var expired = isNaN(cachedAt) || now - cachedAt > ttl;
+      if (rows[i][1] === key || expired) {
+        sheet.deleteRow(i + 2);
+      }
+    }
+  }
+  sheet.appendRow([new Date().toISOString(), key, json]);
 }
 
 function clearCache() {
-  var ss = SpreadsheetApp.getActiveSpreadsheet();
-  var sheet = ss.getSheetByName("Cache");
-  if (sheet && sheet.getLastRow() > 1) {
+  var sheet = ensureCacheSheet();
+  if (sheet.getLastRow() > 1) {
     sheet.deleteRows(2, sheet.getLastRow() - 1);
   }
 }
 
 /* ═══ AGGREGATION ═══ */
 
-function buildAnalyticsResponse() {
+function buildAnalyticsResponse(from, to) {
+  var rangeApplied = !!(from && to);
+
   var pageViews = getSheetData("PageViews");
   var engagements = getSheetData("Engagement");
 
@@ -218,25 +258,63 @@ function buildAnalyticsResponse() {
   var todayStr = formatDate(now);
   var weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
 
+  // Today / week views always reflect current activity (computed against the FULL
+  // unfiltered set so the cards stay useful even when a custom range is active).
+  var todayViews = pageViews.filter(function(r) { return toDateStr(r.Timestamp) === todayStr; }).length;
+  var weekViews = pageViews.filter(function(r) { return new Date(r.Timestamp) >= weekAgo; }).length;
+
+  // Apply date-range filter to all subsequent aggregations (inclusive both ends).
+  if (rangeApplied) {
+    var fromMs = new Date(from + "T00:00:00").getTime();
+    var toMs = new Date(to + "T23:59:59.999").getTime();
+    pageViews = pageViews.filter(function(r) {
+      var t = new Date(r.Timestamp).getTime();
+      return !isNaN(t) && t >= fromMs && t <= toMs;
+    });
+    engagements = engagements.filter(function(r) {
+      var t = new Date(r.Timestamp).getTime();
+      return !isNaN(t) && t >= fromMs && t <= toMs;
+    });
+  }
+
   // ── Summary ──
   // For unique visitors, use VisitorID if available, else fall back to IP
   var uniqueVisitors = countUniqueWithFallback(pageViews, "VisitorID", "IP");
   var uniquePaths = countUnique(pageViews, "Path");
-  var todayViews = pageViews.filter(function(r) { return toDateStr(r.Timestamp) === todayStr; }).length;
-  var weekViews = pageViews.filter(function(r) { return new Date(r.Timestamp) >= weekAgo; }).length;
 
-  // ── Daily views (last 30 days) ──
+  // ── Daily views ──
+  // Range mode: cover every day in [from, to] (zero-filled). Default: last 30 days.
   var dailyMap = {};
-  var thirtyAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
-  pageViews.forEach(function(r) {
-    var d = toDateStr(r.Timestamp);
-    if (d && new Date(r.Timestamp) >= thirtyAgo) {
-      dailyMap[d] = (dailyMap[d] || 0) + 1;
-    }
-  });
+  if (rangeApplied) {
+    pageViews.forEach(function(r) {
+      var d = toDateStr(r.Timestamp);
+      if (d) dailyMap[d] = (dailyMap[d] || 0) + 1;
+    });
+  } else {
+    var thirtyAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+    pageViews.forEach(function(r) {
+      var d = toDateStr(r.Timestamp);
+      if (d && new Date(r.Timestamp) >= thirtyAgo) {
+        dailyMap[d] = (dailyMap[d] || 0) + 1;
+      }
+    });
+  }
   var daily = Object.keys(dailyMap).sort().map(function(d) {
     return { date: d, views: dailyMap[d] };
   });
+
+  // Zero-fill missing days so the chart is continuous across the selected range
+  if (rangeApplied) {
+    var filled = [];
+    var cursor = new Date(from + "T00:00:00");
+    var end = new Date(to + "T00:00:00");
+    while (cursor.getTime() <= end.getTime()) {
+      var key = formatDate(cursor);
+      filled.push({ date: key, views: dailyMap[key] || 0 });
+      cursor.setDate(cursor.getDate() + 1);
+    }
+    daily = filled;
+  }
 
   // ── Pages ──
   var pageMap = {};
@@ -460,7 +538,8 @@ function buildAnalyticsResponse() {
       returningVisitors: returningVisitors
     },
     ramadanFunnel: ramadanFunnel,
-    contentEngagement: contentEngagement
+    contentEngagement: contentEngagement,
+    rangeMeta: { from: from || "", to: to || "", applied: rangeApplied }
   };
 }
 
