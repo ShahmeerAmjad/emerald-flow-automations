@@ -150,7 +150,7 @@ export default function Offer() {
           <div className="inline-flex items-center gap-3 px-5 sm:px-7 py-2.5 border border-[rgba(45,184,155,0.12)] bg-[rgba(45,184,155,0.07)] backdrop-blur-sm mb-7 sm:mb-9 animate-[fadeSlideUp_0.6s_cubic-bezier(0.22,1,0.36,1)_both,borderGlow_4s_ease-in-out_infinite]">
             <span className="w-2 h-2 bg-[#47ECCC] rounded-full animate-[livePulse_1.5s_ease-in-out_infinite] shadow-[0_0_8px_#2DB89B]" />
             <span className="font-['JetBrains_Mono',monospace] text-[11px] sm:text-[13px] tracking-[5px] uppercase text-[#2DB89B] font-medium">
-              Starts April 20&ensp;·&ensp;Cohort 1&ensp;·&ensp;Limited Seats
+              Starts April 21&ensp;·&ensp;Cohort 1&ensp;·&ensp;Limited Seats
             </span>
           </div>
 
@@ -329,7 +329,10 @@ export default function Offer() {
                 <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#47ECCC] tracking-[-2px]">
                   Rs 65,000
                 </div>
-                <span className="inline-block mt-2 font-['JetBrains_Mono',monospace] text-[11px] tracking-[2px] uppercase px-3 py-1.5 bg-[rgba(45,184,155,0.1)] border border-[rgba(45,184,155,0.2)] text-[#47ECCC] font-bold">
+                <div className="mt-2 font-['JetBrains_Mono',monospace] text-sm sm:text-base text-[rgba(240,237,230,0.7)] tracking-[1px]">
+                  or <span className="text-[#47ECCC] font-bold">2 payments of Rs 35,000/month</span>
+                </div>
+                <span className="inline-block mt-3 font-['JetBrains_Mono',monospace] text-[11px] tracking-[2px] uppercase px-3 py-1.5 bg-[rgba(45,184,155,0.1)] border border-[rgba(45,184,155,0.2)] text-[#47ECCC] font-bold">
                   You Save Rs 260,000 — 80% Off
                 </span>
               </div>
@@ -343,7 +346,7 @@ export default function Offer() {
 
               {/* Payment info */}
               <div className="text-sm text-[rgba(240,237,230,0.3)]">
-                One-time payment · Monthly installments available on special request
+                Pay in full or split into 2 monthly installments
               </div>
 
               {/* Spots remaining */}
@@ -523,7 +526,7 @@ export default function Offer() {
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-br from-[#2DB89B] to-[#47ECCC] text-[#050907] font-['Sora',sans-serif] text-base sm:text-lg font-extrabold uppercase tracking-[3px] sm:tracking-[5px] py-5 sm:py-6 border-none cursor-pointer transition-all duration-300 shadow-[0_4px_24px_rgba(45,184,155,0.15)] hover:-translate-y-0.5 hover:shadow-[0_12px_48px_rgba(45,184,155,0.3)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                   >
-                    {isSubmitting ? "Submitting..." : "Reserve Your Spot \u2014 Starting April 20"}
+                    {isSubmitting ? "Submitting..." : "Reserve Your Spot \u2014 Starting April 21"}
                   </button>
                 </form>
               </Form>
@@ -711,8 +714,8 @@ function ScheduleBanner() {
       <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#2DB89B] via-[#47ECCC] to-[#2DB89B]" />
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4">
         {[
-          { label: "Start Date", value: "April 20, 2026" },
-          { label: "Weekdays", value: "Tue & Thu, 7:00\u2013\u20098:30 PM" },
+          { label: "Start Date", value: "April 21, 2026" },
+          { label: "Weekdays", value: "Tue & Thu, 8:00\u2013\u20099:30 PM" },
           { label: "Weekend", value: "Sat or Sun, Afternoon" },
           { label: "Format", value: "100% Online \u00B7 Live" },
         ].map((item, i) => (
